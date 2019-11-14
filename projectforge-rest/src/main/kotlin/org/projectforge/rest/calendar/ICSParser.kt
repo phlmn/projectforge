@@ -44,10 +44,6 @@ import kotlin.String
 class ICSParser {
     private val log = org.slf4j.LoggerFactory.getLogger(ICalParser::class.java)
 
-    //------------------------------------------------------------------------------------------------------------
-    // None static part
-    //------------------------------------------------------------------------------------------------------------
-
     private var parseVEvent: List<String>? = null
     private var events: MutableList<VEvent>? = null
     var extractedEvents: MutableList<CalEvent>? = null

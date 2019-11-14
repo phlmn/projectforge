@@ -49,7 +49,7 @@ import javax.servlet.http.HttpServletRequest
 
 @RestController
 @RequestMapping("${Rest.URL}/calEvent")
-class CalEventRest() : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
+class CalEventRest : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
         CalEventDao::class.java,
         "plugins.teamcal.event.title",
         cloneSupported = true) {
@@ -73,6 +73,12 @@ class CalEventRest() : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
 
     override fun transformForDB(dto: CalEvent): CalEventDO {
         val calendarEventDO = CalEventDO()
+
+        val generator = ICalGenerator()
+
+        generator.addEvent(dto)
+        calendarEventDO.icsData = generator.calendarAsByteStream.toString()
+
         dto.copyTo(calendarEventDO)
         if (dto.selectedSeriesEvent != null) {
             calendarEventDO.setTransientAttribute(CalEventDao.ATTR_SELECTED_ELEMENT, dto.selectedSeriesEvent)
@@ -82,8 +88,15 @@ class CalEventRest() : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
     }
 
     override fun transformFromDB(obj: CalEventDO, editMode: Boolean): CalEvent {
-        val calendarEvent = CalEvent()
+        var calendarEvent = CalEvent()
+        val parser = ICSParser()
+        parser.parse(obj.icsData)
+        if(parser.extractedEvents!!.isNotEmpty()){
+            calendarEvent = parser.extractedEvents!![0]
+        }
+
         calendarEvent.copyFrom(obj)
+
         return calendarEvent
     }
 
