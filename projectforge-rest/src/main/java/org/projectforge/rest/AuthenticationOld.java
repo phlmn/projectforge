@@ -21,28 +21,21 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-package org.projectforge.rest.calendar.converter
+package org.projectforge.rest;
 
-import net.fortuna.ical4j.model.Property
-import net.fortuna.ical4j.model.component.VEvent
-import net.fortuna.ical4j.model.property.Description
-import org.apache.commons.lang3.StringUtils
-import org.projectforge.rest.dto.CalEvent
 
-class DescriptionConverter : PropertyConverter() {
-    override fun toVEvent(event: CalEvent): Property? {
-        return if (StringUtils.isNotBlank(event.note)) {
-            Description(event.note)
-        } else null
+/**
+ * Serialization and deserialization for rest calls.
+ * @author Kai Reinhard (k.reinhard@micromata.de)
+ *
+ */
+public class AuthenticationOld
+{
+  public static final String AUTHENTICATION_USER_ID = "authenticationUserId";
 
-    }
+  public static final String AUTHENTICATION_TOKEN = "authenticationToken";
 
-    override fun fromVEvent(event: CalEvent, vEvent: VEvent): Boolean {
-        if (vEvent.description != null) {
-            event.note = vEvent.description.value
-            return true
-        }
+  public static final String AUTHENTICATION_USERNAME = "authenticationUsername";
 
-        return false
-    }
+  public static final String AUTHENTICATION_PASSWORD = "authenticationPassword";
 }

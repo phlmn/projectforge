@@ -37,9 +37,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
+ *
  * @author Kai Reinhard (k.reinhard@micromata.de)
- * 
+ *
  */
 @Repository
 public class LiquidityEntryDao extends BaseDao<LiquidityEntryDO>
@@ -76,16 +76,16 @@ public class LiquidityEntryDao extends BaseDao<LiquidityEntryDO>
     if (myFilter.getPaymentStatus() == PaymentStatus.ALL
         && myFilter.getAmountType() == AmountType.ALL
         && myFilter.getNextDays() <= 0
-        || myFilter.isDeleted() == true) {
+        || myFilter.isDeleted()) {
       return list;
     }
-    final List<LiquidityEntryDO> result = new ArrayList<LiquidityEntryDO>();
+    final List<LiquidityEntryDO> result = new ArrayList<>();
     final DayHolder today = new DayHolder();
     for (final LiquidityEntryDO entry : list) {
-      if (myFilter.getPaymentStatus() == PaymentStatus.PAID && entry.getPaid() == false) {
+      if (myFilter.getPaymentStatus() == PaymentStatus.PAID && !entry.getPaid()) {
         continue;
       }
-      if (myFilter.getPaymentStatus() == PaymentStatus.UNPAID && entry.getPaid() == true) {
+      if (myFilter.getPaymentStatus() == PaymentStatus.UNPAID && entry.getPaid()) {
         continue;
       }
       if (entry.getAmount() != null) {
@@ -101,9 +101,9 @@ public class LiquidityEntryDao extends BaseDao<LiquidityEntryDO>
         if (dateOfPayment == null) {
           dateOfPayment = today.getSQLDate();
         }
-        if (dateOfPayment.before(today.getDate()) == true) {
+        if (dateOfPayment.before(today.getDate())) {
           // Entry is before today:
-          if (myFilter.getPaymentStatus() == PaymentStatus.PAID || entry.getPaid() == true) {
+          if (myFilter.getPaymentStatus() == PaymentStatus.PAID || entry.getPaid()) {
             // Ignore entries of the past if they were paid. Also ignore unpaid entries of the past if the user wants to filter only paid
             // entries.
             continue;
@@ -123,14 +123,5 @@ public class LiquidityEntryDao extends BaseDao<LiquidityEntryDO>
   public LiquidityEntryDO newInstance()
   {
     return new LiquidityEntryDO();
-  }
-
-  /**
-   * @see org.projectforge.framework.persistence.api.BaseDao#useOwnCriteriaCacheRegion()
-   */
-  @Override
-  protected boolean useOwnCriteriaCacheRegion()
-  {
-    return true;
   }
 }

@@ -25,8 +25,6 @@ package org.projectforge.business.address;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Restrictions;
 import org.projectforge.business.multitenancy.TenantRegistryMap;
 import org.projectforge.business.multitenancy.TenantService;
 import org.projectforge.business.user.UserRightId;
@@ -34,10 +32,7 @@ import org.projectforge.framework.access.AccessException;
 import org.projectforge.framework.access.OperationType;
 import org.projectforge.framework.configuration.Configuration;
 import org.projectforge.framework.configuration.ConfigurationParam;
-import org.projectforge.framework.persistence.api.BaseDao;
-import org.projectforge.framework.persistence.api.BaseSearchFilter;
-import org.projectforge.framework.persistence.api.QueryFilter;
-import org.projectforge.framework.persistence.api.UserRightService;
+import org.projectforge.framework.persistence.api.*;
 import org.projectforge.framework.persistence.user.api.ThreadLocalUserContext;
 import org.projectforge.framework.persistence.user.entities.PFUserDO;
 import org.projectforge.framework.persistence.user.entities.TenantDO;
@@ -45,6 +40,9 @@ import org.projectforge.framework.utils.NumberHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.io.PrintWriter;
 import java.io.Writer;
 import java.text.DateFormat;
@@ -79,21 +77,24 @@ public class AddressDao extends BaseDao<AddressDO> {
   }
 
   public List<Locale> getUsedCommunicationLanguages() {
-    @SuppressWarnings("unchecked") final List<Locale> list = (List<Locale>) getHibernateTemplate()
-            .find(
-                "select distinct a.communicationLanguage from AddressDO a where deleted=false and a.communicationLanguage is not null order by a.communicationLanguage");
-    return list;
+    CriteriaBuilder cb = em.getCriteriaBuilder();
+    CriteriaQuery<Locale> cr = cb.createQuery(Locale.class);
+    Root<AddressDO> root = cr.from(clazz);
+    cr.select(root.get("communicationLanguage")).where(
+            cb.equal(root.get("deleted"), false),
+            cb.isNotNull(root.get("communicationLanguage")))
+            .orderBy(cb.asc(root.get("communicationLanguage")))
+            .distinct(true);
+//    "select distinct a.communicationLanguage from AddressDO a where deleted=false and a.communicationLanguage is not null order by a.communicationLanguage");
+    return em.createQuery(cr).getResultList();
   }
 
   /**
    * Get the newest address entries (by time of creation).
-   *
-   * @return
-   * @see #getNewestMax()
    */
   public List<AddressDO> getNewest(final BaseSearchFilter filter) {
     final QueryFilter queryFilter = new QueryFilter();
-    queryFilter.addOrder(Order.desc("created"));
+    queryFilter.addOrder(SortProperty.desc("created"));
     addAddressbookRestriction(queryFilter, null);
     if (filter.getMaxRows() > 0) {
       filter.setSortAndLimitMaxRowsWhileSelect(true);
@@ -149,7 +150,7 @@ public class AddressDao extends BaseDao<AddressDO> {
         if (myFilter.isPersonaIngrata()) {
           col.add(ContactStatus.PERSONA_INGRATA);
         }
-        queryFilter.add(Restrictions.in("contactStatus", col));
+        queryFilter.add(QueryFilter.isIn("contactStatus", col));
       }
 
       // Proceed address status:
@@ -165,14 +166,14 @@ public class AddressDao extends BaseDao<AddressDO> {
         if (myFilter.isLeaved()) {
           col.add(AddressStatus.LEAVED);
         }
-        queryFilter.add(Restrictions.in("addressStatus", col));
+        queryFilter.add(QueryFilter.isIn("addressStatus", col));
       }
 
       //Add addressbook restriction
       addAddressbookRestriction(queryFilter, myFilter);
 
     }
-    queryFilter.addOrder(Order.asc("name"));
+    queryFilter.addOrder(SortProperty.asc("name"));
     final List<AddressDO> result = getList(queryFilter);
     if (myFilter.isDoublets()) {
       final HashSet<String> fullnames = new HashSet<>();
@@ -215,13 +216,10 @@ public class AddressDao extends BaseDao<AddressDO> {
       }
     }
     //Has to be on id value, full entity doesn't work!!!
-    queryFilter.createAlias("addressbookList", "abl");
-    queryFilter.add(Restrictions.in("abl.id", abIdList));
+    queryFilter.createJoin("addressbookList");
+    queryFilter.add(QueryFilter.isIn("addressbookList.id", abIdList));
   }
 
-  /**
-   * @see org.projectforge.framework.persistence.api.BaseDao#hasAccess(Object, OperationType)
-   */
   @Override
   public boolean hasAccess(final PFUserDO user, final AddressDO obj, final AddressDO oldObj,
                            final OperationType operationType,
@@ -587,10 +585,6 @@ public class AddressDao extends BaseDao<AddressDO> {
 
   /**
    * Simply call StringUtils.isNotBlank(String)
-   *
-   * @param str
-   * @return
-   * @see StringUtils#isNotBlank(String)
    */
   private boolean isGiven(final String str) {
     return StringUtils.isNotBlank(str);
@@ -629,14 +623,6 @@ public class AddressDao extends BaseDao<AddressDO> {
     return new AddressDO();
   }
 
-  /**
-   * @see org.projectforge.framework.persistence.api.BaseDao#useOwnCriteriaCacheRegion()
-   */
-  @Override
-  protected boolean useOwnCriteriaCacheRegion() {
-    return true;
-  }
-
   public List<AddressDO> findAll() {
     return internalLoadAll();
   }
@@ -645,6 +631,6 @@ public class AddressDao extends BaseDao<AddressDO> {
     final TenantDO tenant =
             ThreadLocalUserContext.getUser().getTenant() != null ? ThreadLocalUserContext.getUser().getTenant() : tenantService.getDefaultTenant();
     return emgrFactory.runRoTrans(emgr -> emgr.selectSingleAttached(AddressDO.class,
-        "SELECT a FROM AddressDO a WHERE a.uid = :uid AND tenant = :tenant", "uid", uid, "tenant", tenant));
+            "SELECT a FROM AddressDO a WHERE a.uid = :uid AND tenant = :tenant", "uid", uid, "tenant", tenant));
   }
 }

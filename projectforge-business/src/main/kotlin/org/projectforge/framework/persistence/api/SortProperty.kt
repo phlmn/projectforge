@@ -21,27 +21,30 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-package org.projectforge.rest.calendar.converter
+package org.projectforge.framework.persistence.api
 
-import net.fortuna.ical4j.model.Property
-import net.fortuna.ical4j.model.component.VEvent
-import net.fortuna.ical4j.model.property.Location
-import org.apache.commons.lang3.StringUtils
-import org.projectforge.rest.dto.CalEvent
 
-class LocationConverter : PropertyConverter() {
-    override fun toVEvent(event: CalEvent): Property? {
-        return if (StringUtils.isNotBlank(event.location)) {
-            Location(event.location)
-        } else null
+class SortProperty @JvmOverloads constructor(property: String? = null, var sortOrder: SortOrder = SortOrder.ASCENDING) {
+    lateinit var property: String
 
+    init {
+        if (property != null)
+            this.property = property
     }
 
-    override fun fromVEvent(event: CalEvent, vEvent: VEvent): Boolean {
-        if (vEvent.location != null) {
-            event.location = vEvent.location.value
-            return true
+    val ascending: Boolean
+        get() = (sortOrder == SortOrder.ASCENDING)
+
+    companion object {
+
+        @JvmStatic
+        fun asc(property: String): SortProperty {
+            return SortProperty(property, SortOrder.ASCENDING)
         }
-        return false
+
+        @JvmStatic
+        fun desc(property: String): SortProperty {
+            return SortProperty(property, SortOrder.DESCENDING)
+        }
     }
 }

@@ -73,7 +73,7 @@ public class SkillDao extends BaseDao<SkillDO> {
     synchronized (this) {
       checkConstraintViolation(obj);
     }
-    if (obj.getParent() == null && skillTree.isRootNode(obj) == false) {
+    if (obj.getParent() == null && !skillTree.isRootNode(obj)) {
       obj.setParent(skillTree.getRootSkillNode().getSkill());
     }
   }
@@ -95,31 +95,27 @@ public class SkillDao extends BaseDao<SkillDO> {
     SkillDO other = null;
     if (skill.getParentId() != null) {
       if (skill.getId() != null) {
-        other = getSession()
+        other = SQLHelper.ensureUniqueResult(em
                 .createNamedQuery(SkillDO.FIND_OTHER_BY_TITLE_AND_PARENT, SkillDO.class)
                 .setParameter("title", skill.getTitle())
                 .setParameter("parentId", skill.getParentId())
-                .setParameter("id", skill.getId())
-                .uniqueResult();
+                .setParameter("id", skill.getId()));
       } else {
-        other = getSession()
+        other = SQLHelper.ensureUniqueResult(em
                 .createNamedQuery(SkillDO.FIND_BY_TITLE_AND_PARENT, SkillDO.class)
                 .setParameter("title", skill.getTitle())
-                .setParameter("parentId", skill.getParentId())
-                .uniqueResult();
+                .setParameter("parentId", skill.getParentId()));
       }
     } else {
       if (skill.getId() != null) {
-        other = getSession()
+        other = SQLHelper.ensureUniqueResult(em
                 .createNamedQuery(SkillDO.FIND_OTHER_BY_TITLE_ON_TOPLEVEL, SkillDO.class)
                 .setParameter("title", skill.getTitle())
-                .setParameter("id", skill.getId())
-                .uniqueResult();
+                .setParameter("id", skill.getId()));
       } else {
-        other = getSession()
+        other = SQLHelper.ensureUniqueResult(em
                 .createNamedQuery(SkillDO.FIND_BY_TITLE_ON_TOPLEVEL, SkillDO.class)
-                .setParameter("title", skill.getTitle())
-                .uniqueResult();
+                .setParameter("title", skill.getTitle()));
       }
     }
     if (other != null) {
@@ -128,17 +124,17 @@ public class SkillDao extends BaseDao<SkillDO> {
   }
 
   private void checkCyclicReference(final SkillDO obj) {
-    if (obj.getId().equals(obj.getParentId()) == true) {
+    if (obj.getId().equals(obj.getParentId())) {
       // Self reference
       throw new UserException(I18N_KEY_ERROR_CYCLIC_REFERENCE);
     }
     final SkillNode parent = skillTree.getSkillNodeById(obj.getParentId());
-    if (parent == null && skillTree.isRootNode(obj) == false) {
+    if (parent == null && !skillTree.isRootNode(obj)) {
       // Task is orphan because it has no parent task.
       throw new UserException(I18N_KEY_ERROR_PARENT_SKILL_NOT_FOUND);
     }
     final SkillNode node = skillTree.getSkillNodeById(obj.getId());
-    if (node.isParentOf(parent) == true) {
+    if (node.isParentOf(parent)) {
       // Cyclic reference because task is ancestor of itself.
       throw new UserException(TaskDao.I18N_KEY_ERROR_CYCLIC_REFERENCE);
     }
@@ -155,7 +151,7 @@ public class SkillDao extends BaseDao<SkillDO> {
    * @see org.projectforge.framework.persistence.api.BaseDao#getAdditionalSearchFields()
    */
   @Override
-  protected String[] getAdditionalSearchFields() {
+  public String[] getAdditionalSearchFields() {
     return ADDITIONAL_SEARCH_FIELDS;
   }
 
@@ -232,7 +228,7 @@ public class SkillDao extends BaseDao<SkillDO> {
     if (title == null) {
       return null;
     }
-    return SQLHelper.ensureUniqueResult(getSession()
+    return SQLHelper.ensureUniqueResult(em
             .createNamedQuery(SkillDO.FIND_BY_TITLE, SkillDO.class)
             .setParameter("title", title));
   }

@@ -24,8 +24,6 @@
 package org.projectforge.business.user;
 
 import org.apache.commons.lang3.Validate;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Restrictions;
 import org.projectforge.business.login.Login;
 import org.projectforge.framework.access.AccessException;
 import org.projectforge.framework.access.AccessType;
@@ -33,15 +31,13 @@ import org.projectforge.framework.access.OperationType;
 import org.projectforge.framework.persistence.api.BaseDao;
 import org.projectforge.framework.persistence.api.BaseSearchFilter;
 import org.projectforge.framework.persistence.api.QueryFilter;
+import org.projectforge.framework.persistence.api.SortProperty;
 import org.projectforge.framework.persistence.history.HistoryBaseDaoAdapter;
 import org.projectforge.framework.persistence.user.entities.GroupDO;
 import org.projectforge.framework.persistence.user.entities.PFUserDO;
 import org.projectforge.framework.persistence.utils.SQLHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Isolation;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
@@ -81,10 +77,10 @@ public class GroupDao extends BaseDao<GroupDO> {
       // Check hasExternalUsermngmntSystem because otherwise the filter is may-be preset for an user and the user can't change the filter
       // (because the fields aren't visible).
       if (myFilter.getLocalGroup() != null) {
-        queryFilter.add(Restrictions.eq("localGroup", myFilter.getLocalGroup()));
+        queryFilter.add(QueryFilter.eq("localGroup", myFilter.getLocalGroup()));
       }
     }
-    queryFilter.addOrder(Order.asc("name"));
+    queryFilter.addOrder(SortProperty.asc("name"));
     return getList(queryFilter);
   }
 
@@ -99,10 +95,9 @@ public class GroupDao extends BaseDao<GroupDO> {
       dbGroup = getByName(group.getName());
     } else {
       // group already exists. Check maybe changed name:
-      dbGroup = getSession().createNamedQuery(GroupDO.FIND_OTHER_GROUP_BY_NAME, GroupDO.class)
+      dbGroup = SQLHelper.ensureUniqueResult(em.createNamedQuery(GroupDO.FIND_OTHER_GROUP_BY_NAME, GroupDO.class)
               .setParameter("name", group.getName())
-              .setParameter("id", group.getId())
-              .uniqueResult();
+              .setParameter("id", group.getId()));
     }
     return dbGroup != null;
   }
@@ -192,7 +187,6 @@ public class GroupDao extends BaseDao<GroupDO> {
    * @param groupsToUnassign Groups to unassign (nullable).
    * @throws AccessException
    */
-  @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
   public void assignGroups(final PFUserDO user, final Set<GroupDO> groupsToAssign, final Set<GroupDO> groupsToUnassign, final boolean updateUserGroupCache) {
     final List<GroupDO> assignedGroups = new ArrayList<>();
     final List<GroupDO> unassignedGroups = new ArrayList<>();
@@ -247,7 +241,6 @@ public class GroupDao extends BaseDao<GroupDO> {
     }
   }
 
-  @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
   public void assignGroups(final PFUserDO user, final Set<GroupDO> groupsToAssign, final Set<GroupDO> groupsToUnassign)
           throws AccessException {
     assignGroups(user, groupsToAssign, groupsToUnassign, true);
@@ -297,7 +290,7 @@ public class GroupDao extends BaseDao<GroupDO> {
   }
 
   @Override
-  protected String[] getAdditionalSearchFields() {
+  public String[] getAdditionalSearchFields() {
     return ADDITIONAL_SEARCH_FIELDS;
   }
 
@@ -367,7 +360,7 @@ public class GroupDao extends BaseDao<GroupDO> {
       return null;
     }
     return SQLHelper.ensureUniqueResult(
-            getSession()
+            em
                     .createNamedQuery(GroupDO.FIND_BY_NAME, GroupDO.class)
                     .setParameter("name", name));
   }

@@ -25,6 +25,7 @@ package org.projectforge.rest.core
 
 import org.apache.commons.beanutils.NestedNullException
 import org.apache.commons.beanutils.PropertyUtils
+import org.projectforge.Const
 import org.projectforge.business.user.service.UserPrefService
 import org.projectforge.favorites.Favorites
 import org.projectforge.framework.access.AccessChecker
@@ -268,7 +269,7 @@ abstract class AbstractBaseRest<
                 .addTranslations("table.showing")
         layout.add(LayoutListFilterUtils.createNamedContainer(this, lc))
         layout.postProcessPageMenu()
-        layout.add(MenuItem(CREATE_MENU, title = "+", url = "${getCategory()}/edit"), 0)
+        layout.add(MenuItem(CREATE_MENU, title = "+", url = "${Const.REACT_APP_PATH}${getCategory()}/edit"), 0)
         return InitialListData(ui = layout,
                 data = resultSet,
                 filter = filter,
@@ -286,6 +287,7 @@ abstract class AbstractBaseRest<
      */
     @RequestMapping(RestPaths.LIST)
     fun getList(@RequestBody filter: MagicFilter): ResultSet<*> {
+        filter.autoWildcardSearch = true
         fixMagicFilterFromClient(filter)
         val list = getList(this, baseDao, filter)
         saveCurrentFilter(filter)
@@ -762,7 +764,7 @@ abstract class AbstractBaseRest<
      * @return ResponseAction with the url of the standard list page.
      */
     internal open fun afterEdit(obj: O, dto: DTO): ResponseAction {
-        return ResponseAction("/${getCategory()}").addVariable("id", obj.id ?: -1)
+        return ResponseAction("/${Const.REACT_APP_PATH}${getCategory()}").addVariable("id", obj.id ?: -1)
     }
 
     internal open fun filterList(resultSet: MutableList<O>, filter: MagicFilter): List<O> {

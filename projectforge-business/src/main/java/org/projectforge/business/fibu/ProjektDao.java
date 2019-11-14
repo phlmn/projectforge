@@ -24,8 +24,6 @@
 package org.projectforge.business.fibu;
 
 import org.hibernate.Hibernate;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Restrictions;
 import org.projectforge.business.task.TaskDO;
 import org.projectforge.business.task.TaskDao;
 import org.projectforge.business.user.GroupDao;
@@ -33,25 +31,21 @@ import org.projectforge.business.user.UserRightId;
 import org.projectforge.framework.persistence.api.BaseDao;
 import org.projectforge.framework.persistence.api.BaseSearchFilter;
 import org.projectforge.framework.persistence.api.QueryFilter;
+import org.projectforge.framework.persistence.api.SortProperty;
 import org.projectforge.framework.persistence.jpa.PfEmgrFactory;
 import org.projectforge.framework.persistence.user.entities.GroupDO;
 import org.projectforge.framework.persistence.utils.SQLHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.NoResultException;
 import java.util.List;
 
 @Repository
 public class ProjektDao extends BaseDao<ProjektDO> {
-  private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(ProjektDao.class);
-
   public static final UserRightId USER_RIGHT_ID = UserRightId.PM_PROJECT;
-
-  private static final String[] ADDITIONAL_SEARCH_FIELDS = new String[]{"kunde.name", "kunde.division", "kost2",
-          "projektManagerGroup.name"};
+  private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(ProjektDao.class);
+  private static final String[] ADDITIONAL_SEARCH_FIELDS = new String[]{"kunde.name", "kunde.division", "projektManagerGroup.name"};
 
   @Autowired
   private KundeDao kundeDao;
@@ -72,7 +66,7 @@ public class ProjektDao extends BaseDao<ProjektDO> {
   }
 
   @Override
-  protected String[] getAdditionalSearchFields() {
+  public String[] getAdditionalSearchFields() {
     return ADDITIONAL_SEARCH_FIELDS;
   }
 
@@ -133,7 +127,6 @@ public class ProjektDao extends BaseDao<ProjektDO> {
   }
 
   @SuppressWarnings("unchecked")
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public ProjektDO getProjekt(final KundeDO kunde, final int nummer) {
     return emgrFactory.runRoTrans(emgr -> {
       try {
@@ -146,16 +139,14 @@ public class ProjektDao extends BaseDao<ProjektDO> {
   }
 
   @SuppressWarnings("unchecked")
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public ProjektDO getProjekt(final int intern_kost2_4, final int nummer) {
-    return SQLHelper.ensureUniqueResult(getSession()
+    return SQLHelper.ensureUniqueResult(em
             .createNamedQuery(ProjektDO.FIND_BY_INTERNKOST24_AND_NUMMER, ProjektDO.class)
             .setParameter("internKost24", intern_kost2_4)
             .setParameter("nummer", nummer));
   }
 
   @Override
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public List<ProjektDO> getList(final BaseSearchFilter filter) {
     final ProjektFilter myFilter;
     if (filter instanceof ProjektFilter) {
@@ -165,22 +156,21 @@ public class ProjektDao extends BaseDao<ProjektDO> {
     }
     final QueryFilter queryFilter = new QueryFilter(myFilter);
     if (myFilter.isEnded()) {
-      queryFilter.add(Restrictions.eq("status", ProjektStatus.ENDED));
+      queryFilter.add(QueryFilter.eq("status", ProjektStatus.ENDED));
     } else if (myFilter.isNotEnded()) {
-      queryFilter.add(Restrictions.or(Restrictions.ne("status", ProjektStatus.ENDED), Restrictions.isNull("status")));
+      queryFilter.add(QueryFilter.or(QueryFilter.ne("status", ProjektStatus.ENDED), QueryFilter.isNull("status")));
     }
-    queryFilter.addOrder(Order.asc("internKost2_4")).addOrder(Order.asc("kunde.id")).addOrder(Order.asc("nummer"));
+    queryFilter.addOrder(SortProperty.asc("internKost2_4")).addOrder(SortProperty.asc("kunde.nummer")).addOrder(SortProperty.asc("nummer"));
     return getList(queryFilter);
   }
 
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public List<ProjektDO> getKundenProjekte(final Integer kundeId) {
     if (kundeId == null) {
       return null;
     }
     final QueryFilter queryFilter = new QueryFilter();
-    queryFilter.add(Restrictions.eq("kunde.id", kundeId));
-    queryFilter.addOrder(Order.asc("nummer"));
+    queryFilter.add(QueryFilter.eq("kunde.id", kundeId));
+    queryFilter.addOrder(SortProperty.asc("nummer"));
     return getList(queryFilter);
   }
 

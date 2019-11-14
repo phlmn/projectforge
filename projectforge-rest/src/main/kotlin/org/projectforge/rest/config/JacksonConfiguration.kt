@@ -34,6 +34,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.deser.DeserializationProblemHandler
 import com.fasterxml.jackson.databind.module.SimpleModule
 import com.fasterxml.jackson.module.kotlin.KotlinModule
+import org.hibernate.proxy.AbstractLazyInitializer
 import org.projectforge.business.address.AddressbookDO
 import org.projectforge.business.calendar.event.model.ICalendarEvent
 import org.projectforge.business.fibu.EmployeeDO
@@ -52,6 +53,7 @@ import org.projectforge.rest.calendar.ICalendarEventDeserializer
 import org.projectforge.rest.calendar.TeamCalDOSerializer
 import org.projectforge.rest.config.JacksonConfiguration.Companion.registerAllowedUnknownProperties
 import org.projectforge.rest.json.*
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import java.math.BigDecimal
@@ -66,6 +68,8 @@ import java.time.LocalDate
 @Configuration
 open class JacksonConfiguration {
     companion object {
+        private val log = org.slf4j.LoggerFactory.getLogger(JacksonConfiguration::class.java)
+
         private val allowedUnknownProperties = mutableMapOf<Class<*>, MutableSet<String>>()
 
         /**
@@ -76,7 +80,7 @@ open class JacksonConfiguration {
             synchronized(allowedUnknownProperties) {
                 val set = allowedUnknownProperties[clazz]
                 if (set == null) {
-                    allowedUnknownProperties[clazz] =  mutableSetOf(*properties)
+                    allowedUnknownProperties[clazz] = mutableSetOf(*properties)
                 } else {
                     set.addAll(properties)
                 }
@@ -91,13 +95,19 @@ open class JacksonConfiguration {
         }
     }
 
+    @Value("\${projectforge.rest.json.allowUnkownProperties:true}")
+    private var allowUnknownJsonProperties: Boolean = true
+
     @Bean
     open fun objectMapper(): ObjectMapper {
         val mapper = ObjectMapper()
         mapper.registerModule(KotlinModule())
         mapper.configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true)
         mapper.configure(DeserializationFeature.FAIL_ON_NULL_FOR_PRIMITIVES, false)
-        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false) // Should be true in development mode!
+        if (!allowUnknownJsonProperties) {
+            log.info("Unknown JSON properties are not allowed in REST call, due to configuration in projectforge.properties:projectforge.rest.json.allowUnkownProperties (OK, but Rest calls may fail).")
+        }
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, allowUnknownJsonProperties) // Should be true in development mode!
         //mapper.configure(MapperFeature.DEFAULT_VIEW_INCLUSION, true)
         mapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.NONE)
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY)
@@ -152,6 +162,7 @@ open class JacksonConfiguration {
         module.addSerializer(TeamCalDO::class.java, TeamCalDOSerializer())
         module.addDeserializer(ICalendarEvent::class.java, ICalendarEventDeserializer())
 
+        module.addSerializer(AbstractLazyInitializer::class.java, HibernateProxySerializer())
 
         mapper.registerModule(module)
         return mapper

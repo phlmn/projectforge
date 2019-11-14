@@ -30,14 +30,7 @@ import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.PredicateUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
-import org.hibernate.Criteria;
-import org.hibernate.LockMode;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Restrictions;
-import org.hibernate.query.Query;
-import org.hibernate.search.Search;
-import org.hibernate.type.DateType;
+import org.hibernate.search.jpa.Search;
 import org.projectforge.business.multitenancy.TenantChecker;
 import org.projectforge.business.multitenancy.TenantRegistry;
 import org.projectforge.business.multitenancy.TenantRegistryMap;
@@ -47,32 +40,31 @@ import org.projectforge.business.user.UserRight;
 import org.projectforge.framework.access.AccessChecker;
 import org.projectforge.framework.access.AccessException;
 import org.projectforge.framework.access.OperationType;
-import org.projectforge.framework.i18n.InternalErrorException;
 import org.projectforge.framework.i18n.UserException;
-import org.projectforge.framework.persistence.api.impl.DBFilter;
-import org.projectforge.framework.persistence.api.impl.DBFilterQuery;
+import org.projectforge.framework.persistence.api.impl.DBQuery;
+import org.projectforge.framework.persistence.api.impl.HibernateSearchMeta;
 import org.projectforge.framework.persistence.database.DatabaseDao;
 import org.projectforge.framework.persistence.history.DisplayHistoryEntry;
 import org.projectforge.framework.persistence.history.HibernateSearchDependentObjectsReindexer;
 import org.projectforge.framework.persistence.history.HistoryBaseDaoAdapter;
-import org.projectforge.framework.persistence.history.SimpleHistoryEntry;
 import org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO;
 import org.projectforge.framework.persistence.jpa.PfEmgrFactory;
-import org.projectforge.framework.persistence.jpa.impl.BaseDaoJpaAdapter;
-import org.projectforge.framework.persistence.jpa.impl.HibernateSearchFilterUtils;
 import org.projectforge.framework.persistence.user.api.ThreadLocalUserContext;
 import org.projectforge.framework.persistence.user.entities.PFUserDO;
 import org.projectforge.framework.persistence.user.entities.TenantDO;
-import org.projectforge.framework.time.DateHolder;
+import org.projectforge.framework.persistence.utils.SQLHelper;
+import org.projectforge.framework.time.PFDateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate5.HibernateTemplate;
-import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.transaction.support.TransactionTemplate;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.io.Serializable;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -96,7 +88,7 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   /**
    * DEBUG flag. remove later
    */
-  private static final boolean NO_UPDATE_MAGIC = true;
+  static final boolean NO_UPDATE_MAGIC = true;
   /**
    * DEBUG flag. Not sure, if always has be flushed.
    */
@@ -110,26 +102,19 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   protected AccessChecker accessChecker;
 
   @Autowired
-  protected BaseDaoLegacyQueryBuilder baseDaoLegacyQueryBuilder;
-
-  @Autowired
-  protected DBFilterQuery magicFilterQueryBuilder;
+  protected DBQuery dbQuery;
 
   @Autowired
   protected DatabaseDao databaseDao;
 
-  @Autowired
-  @Deprecated
-  protected TransactionTemplate txTemplate;
+  @PersistenceContext
+  protected EntityManager em;
 
   @Autowired
   protected TenantChecker tenantChecker;
 
   @Autowired
   protected TenantService tenantService;
-
-  @Autowired
-  protected SearchService searchService;
 
   private String[] searchFields;
 
@@ -144,12 +129,6 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    * base entry in this method.
    */
   protected boolean supportAfterUpdate = false;
-
-  @Autowired
-  private HibernateTemplate hibernateTemplate;
-
-  @Autowired
-  private SessionFactory sessionFactory;
 
   @Autowired
   protected PfEmgrFactory emgrFactory;
@@ -172,19 +151,14 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    * The names are the property names or, if defined the name declared in the annotation of a field. <br/>
    * The user can search in these fields explicit by typing e. g. authors:beck (<field>:<searchString>)
    */
-  @Override
   public synchronized String[] getSearchFields() {
-    if (searchFields != null) {
-      return searchFields;
-    }
-    searchFields = HibernateSearchFilterUtils.determineSearchFields(clazz, getAdditionalSearchFields());
-    return searchFields;
+    return HibernateSearchMeta.INSTANCE.getClassInfo(this).getAllFieldNames();
   }
 
   /**
    * Overwrite this method for adding search fields manually (e. g. for embedded objects). For example see TimesheetDao.
    */
-  protected String[] getAdditionalSearchFields() {
+  public String[] getAdditionalSearchFields() {
     return null;
   }
 
@@ -207,7 +181,6 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    * If the user has select access then the object will be returned. If not, the hibernate proxy object will be get via
    * getSession().load();
    */
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public O getOrLoad(final Integer id) {
     if (!isIdValid(id)) {
       return null;
@@ -221,61 +194,55 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
             && hasLoggedInUserSelectAccess(obj, false)) {
       return obj;
     }
-    return getSession().load(clazz, id);
+    return em.getReference(clazz, id);
   }
 
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public List<O> internalLoadAllNotDeleted() {
     return internalLoadAll().stream().filter(o -> !o.isDeleted()).collect(Collectors.toList());
   }
 
-  @SuppressWarnings("unchecked")
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public List<O> internalLoadAll() {
-    return (List<O>) hibernateTemplate.find("from " + clazz.getSimpleName() + " t");
+    CriteriaBuilder cb = em.getCriteriaBuilder();
+    CriteriaQuery<O> cq = cb.createQuery(clazz);
+    CriteriaQuery<O> query = cq.select(cq.from(clazz));
+    return em.createQuery(query).getResultList();
   }
 
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public List<O> internalLoadAll(final TenantDO tenant) {
+    CriteriaBuilder cb = em.getCriteriaBuilder();
+    CriteriaQuery<O> cq = em.getCriteriaBuilder().createQuery(clazz);
+    Root<O> root = cq.from(clazz);
+    CriteriaQuery<O> query;
     if (tenant == null) {
-      return getSession().createQuery("FROM " + clazz.getSimpleName() + " t WHERE t.tenant.id is null",
-              clazz)
-              .list();
-    }
-    if (tenant.isDefault()) {
-      return getSession().createQuery("FROM " + clazz.getSimpleName() + " t WHERE t.tenant.id=:tid or t.tenant.id is null",
-              clazz)
-              .setParameter("tid", tenant.getId())
-              .list();
+      query = cq.where(cb.isNull(root.get("tenant").get("id")));
+    } else if (tenant.isDefault()) {
+      query = cq.where(cb.or(
+              cb.equal(root.get("tenant").get("id"), tenant.getId()),
+              cb.isNull(root.get("tenant").get("id"))));
+      // FROM clazz WHERE tenant.id=:tid or tenant.id is null
     } else {
-      return getSession().createQuery("FROM " + clazz.getSimpleName() + " t WHERE t.tenant.id=:tid",
-              clazz)
-              .setParameter("tid", tenant.getId())
-              .list();
+      query = cq.where(cb.equal(root.get("tenant").get("id"), tenant.getId()));
+      // FROM clazz WHERE tenant.id=:tid
     }
+    return em.createQuery(query).getResultList();
   }
 
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-  public List internalLoad(final Collection<? extends Serializable> idList) {
+  public List<O> internalLoad(final Collection<? extends Serializable> idList) {
     if (idList == null) {
       return null;
     }
-    final Session session = getSession();
-    final Criteria criteria = session.createCriteria(clazz).add(Restrictions.in("id", idList));
-
-    //noinspection unchecked
-    return selectUnique(criteria.list());
+    CriteriaQuery<O> cr = em.getCriteriaBuilder().createQuery(clazz);
+    Root<O> root = cr.from(clazz);
+    cr.select(root).where(root.get("id").in(idList)).distinct(true);
+    List<O> results = em.createQuery(cr).getResultList();
+    return results;
   }
 
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public List<O> getListByIds(final Collection<? extends Serializable> idList) {
     if (idList == null) {
       return null;
     }
-    final Session session = getSession();
-    final Criteria criteria = session.createCriteria(clazz).add(Restrictions.in("id", idList));
-    @SuppressWarnings("unchecked") final List<O> list = selectUnique(criteria.list());
-
+    final List<O> list = internalLoad(idList);
     return extractEntriesWithSelectAccess(list);
   }
 
@@ -295,47 +262,31 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    *
    * @return A list of found entries or empty list. PLEASE NOTE: Returns null only if any error occured.
    */
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   @Override
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public List<O> getList(final BaseSearchFilter filter) {
     final QueryFilter queryFilter = createQueryFilter(filter);
     return getList(queryFilter);
   }
 
   protected QueryFilter createQueryFilter(final BaseSearchFilter filter) {
-    return new QueryFilter(filter);
+    return new QueryFilter(filter, false);
   }
 
   /**
    * Gets the list filtered by the given filter.
    */
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public List<O> getList(final QueryFilter filter) throws AccessException {
-    return baseDaoLegacyQueryBuilder.getList(this, filter);
+    return dbQuery.getList(this, filter, true, filter.getIgnoreTenant());
   }
 
   /**
    * Gets the list filtered by the given filter.
    */
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public List<O> internalGetList(final QueryFilter filter) throws AccessException {
-    return baseDaoLegacyQueryBuilder.internalGetList(this, filter);
-  }
-
-  /**
-   * Gets the list filtered by the given filter.
-   */
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-  public List<O> getList(final DBFilter filter) throws AccessException {
-    return magicFilterQueryBuilder.getList(this, filter);
-  }
-
-  /**
-   * Gets the list filtered by the given filter.
-   */
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-  public List<O> internalGetList(final DBFilter filter) throws AccessException {
-    return magicFilterQueryBuilder.getList(this, filter, false, false);
+    return dbQuery.getList(this, filter, false, filter.getIgnoreTenant());
   }
 
   /**
@@ -400,7 +351,6 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    * @param id primary key of the base object.
    */
   @Override
-  @Transactional(readOnly = true, propagation = Propagation.REQUIRES_NEW)
   public O getById(final Serializable id) throws AccessException {
     if (accessChecker.isRestrictedUser()) {
       return null;
@@ -415,12 +365,16 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
     return obj;
   }
 
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public O internalGetById(final Serializable id) {
     if (id == null) {
       return null;
     }
-    final O obj = hibernateTemplate.get(clazz, id, LockMode.READ);
+    O obj = SQLHelper.ensureUniqueResult(em.createQuery(
+            "select t from " + clazz.getName() + " t where t.id = :id", clazz)
+            .setParameter("id", id));
+    if (obj == null) {
+      return null;
+    }
     afterLoad(obj);
     return obj;
   }
@@ -429,7 +383,6 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    * Gets the history entries of the object.
    */
   @SuppressWarnings("rawtypes")
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public HistoryEntry[] getHistoryEntries(final O obj) {
     accessChecker.checkRestrictedUser();
     checkPartOfCurrentTenant(obj, OperationType.SELECT);
@@ -438,7 +391,6 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   }
 
   @SuppressWarnings("rawtypes")
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public HistoryEntry[] internalGetHistoryEntries(final BaseDO<?> obj) {
     accessChecker.checkRestrictedUser();
     return HistoryBaseDaoAdapter.getHistoryFor(obj);
@@ -449,7 +401,6 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    * Please note: If user has no access an empty list will be returned.
    */
   @Override
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public List<DisplayHistoryEntry> getDisplayHistoryEntries(final O obj) {
     if (obj.getId() == null || !hasLoggedInUserHistoryAccess(obj, false)) {
       return EMPTY_HISTORY_ENTRIES;
@@ -459,34 +410,31 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
 
   protected List<DisplayHistoryEntry> internalGetDisplayHistoryEntries(final BaseDO<?> obj) {
     accessChecker.checkRestrictedUser();
-    return hibernateTemplate
-            .execute(session -> {
-              final HistoryEntry[] entries = internalGetHistoryEntries(obj);
-              if (entries == null) {
-                return null;
-              }
-              return convertAll(entries, session);
-            });
+    final HistoryEntry[] entries = internalGetHistoryEntries(obj);
+    if (entries == null) {
+      return null;
+    }
+    return convertAll(entries, em);
   }
 
   @SuppressWarnings("rawtypes")
-  private List<DisplayHistoryEntry> convertAll(final HistoryEntry[] entries, final Session session) {
+  private List<DisplayHistoryEntry> convertAll(final HistoryEntry[] entries, final EntityManager em) {
     final List<DisplayHistoryEntry> list = new ArrayList<>();
     for (final HistoryEntry entry : entries) {
-      final List<DisplayHistoryEntry> l = convert(entry, session);
+      final List<DisplayHistoryEntry> l = convert(entry, em);
       list.addAll(l);
     }
     return list;
   }
 
-  public List<DisplayHistoryEntry> convert(final HistoryEntry<?> entry, final Session session) {
+  public List<DisplayHistoryEntry> convert(final HistoryEntry<?> entry, final EntityManager em) {
     if (entry.getDiffEntries().isEmpty()) {
       final DisplayHistoryEntry se = new DisplayHistoryEntry(getUserGroupCache(), entry);
       return Collections.singletonList(se);
     }
     List<DisplayHistoryEntry> result = new ArrayList<>();
     for (DiffEntry prop : entry.getDiffEntries()) {
-      DisplayHistoryEntry se = new DisplayHistoryEntry(getUserGroupCache(), entry, prop, session);
+      DisplayHistoryEntry se = new DisplayHistoryEntry(getUserGroupCache(), entry, prop, em);
       result.add(se);
     }
 
@@ -494,18 +442,9 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   }
 
   /**
-   * Gets the history entries of the object in flat format.<br/>
-   * Please note: No check access will be done! Please check the access before getting the object.
-   */
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-  public List<SimpleHistoryEntry> getSimpleHistoryEntries(final O obj) {
-    return HistoryBaseDaoAdapter.getSimpleHistoryEntries(obj, getUserGroupCache());
-  }
-
-  /**
    * @return the generated identifier, if save method is used, otherwise null.
    */
-  @Transactional(propagation = Propagation.REQUIRES_NEW)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public Serializable saveOrUpdate(final O obj) throws AccessException {
     Serializable id = null;
     if (obj.getId() != null && obj.getCreated() != null) { // obj.created is needed for KundeDO (id isn't null for inserting new customers).
@@ -519,7 +458,7 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   /**
    * @return the generated identifier, if save method is used, otherwise null.
    */
-  @Transactional(propagation = Propagation.REQUIRES_NEW)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public Serializable internalSaveOrUpdate(final O obj) {
     Serializable id = null;
     if (obj.getId() != null) {
@@ -533,7 +472,7 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   /**
    * Call save(O) for every object in the given list.
    */
-  @Transactional(propagation = Propagation.REQUIRES_NEW)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public void save(final List<O> objects) throws AccessException {
     Validate.notNull(objects);
     for (final O obj : objects) {
@@ -545,7 +484,7 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    * @return the generated identifier.
    */
   @Override
-  @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public Integer save(final O obj) throws AccessException {
     //long begin = System.currentTimeMillis();
     Validate.notNull(obj);
@@ -563,6 +502,7 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   }
 
   @Override
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public Integer insert(O obj) throws AccessException {
     return save(obj);
   }
@@ -671,49 +611,23 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    *
    * @return the generated identifier.
    */
-  @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public Integer internalSave(final O obj) {
-    Validate.notNull(obj);
-    //TODO: Muss der richtige Tenant gesetzt werden. Ist nur Workaround.
-    if (obj.getTenant() == null) {
-      obj.setTenant(getDefaultTenant());
-    }
-    obj.setCreated();
-    obj.setLastUpdate();
-    onSave(obj);
-    onSaveOrModify(obj);
-    BaseDaoJpaAdapter.prepareInsert(obj);
-    Session session = Objects.requireNonNull(hibernateTemplate.getSessionFactory()).getCurrentSession();
-    Integer id = (Integer) session.save(obj);
-    if (logDatabaseActions) {
-      log.info("New " + this.clazz.getSimpleName() + " added (" + id + "): " + obj.toString());
-    }
-    prepareHibernateSearch(obj, OperationType.INSERT);
-    if (NO_UPDATE_MAGIC) {
-      // safe will assocated not working
-      hibernateTemplate.merge(obj);
-    }
-    flushSession();
-    flushSearchSession();
-    HistoryBaseDaoAdapter.inserted(obj);
-    afterSaveOrModify(obj);
-    afterSave(obj);
-
-    return id;
+    return BaseDaoSupport.internalSave(this, obj);
   }
 
-  private TenantDO getDefaultTenant() {
-    return hibernateTemplate.get(TenantDO.class, 1);
+  TenantDO getDefaultTenant() {
+    return em.find(TenantDO.class, 1);
   }
 
-  @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public void saveOrUpdate(final Collection<O> col) {
     for (final O obj : col) {
       saveOrUpdate(obj);
     }
   }
 
-  @Transactional(readOnly = true, propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public void saveOrUpdate(final BaseDao<O> currentProxy, final Collection<O> col, final int blockSize) {
     final List<O> list = new ArrayList<>();
     int counter = 0;
@@ -729,14 +643,14 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
     currentProxy.saveOrUpdate(list);
   }
 
-  @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public void internalSaveOrUpdate(final Collection<O> col) {
     for (final O obj : col) {
       internalSaveOrUpdate(obj);
     }
   }
 
-  @Transactional(propagation = Propagation.REQUIRED)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public void internalSaveOrUpdate(final BaseDao<O> currentProxy, final Collection<O> col, final int blockSize) {
     final List<O> list = new ArrayList<>();
     int counter = 0;
@@ -757,7 +671,7 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    * @see #internalUpdate(ExtendedBaseDO, boolean)
    */
   @Override
-  @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public ModificationStatus update(final O obj) throws AccessException {
     Validate.notNull(obj);
     if (obj.getId() == null) {
@@ -774,7 +688,7 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    * @return true, if modifications were done, false if no modification detected.
    * @see #internalUpdate(ExtendedBaseDO, boolean)
    */
-  @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public ModificationStatus internalUpdate(final O obj) {
     return internalUpdate(obj, false);
   }
@@ -786,63 +700,9 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    * @param checkAccess If false, any access check will be ignored.
    * @return true, if modifications were done, false if no modification detected.
    */
-  @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public ModificationStatus internalUpdate(final O obj, final boolean checkAccess) {
-    beforeSaveOrModify(obj);
-    tenantChecker.isTenantSet(obj, true);
-    onSaveOrModify(obj);
-    if (checkAccess) {
-      accessChecker.checkRestrictedOrDemoUser();
-    }
-    final O dbObj = hibernateTemplate.load(clazz, obj.getId(), LockMode.PESSIMISTIC_WRITE);
-    if (checkAccess) {
-      checkPartOfCurrentTenant(obj, OperationType.UPDATE);
-      checkLoggedInUserUpdateAccess(obj, dbObj);
-    }
-    onChange(obj, dbObj);
-    final O dbObjBackup;
-    if (supportAfterUpdate) {
-      dbObjBackup = getBackupObject(dbObj);
-    } else {
-      dbObjBackup = null;
-    }
-    final boolean wantsReindexAllDependentObjects = wantsReindexAllDependentObjects(obj, dbObj);
-    ModificationStatus result = HistoryBaseDaoAdapter.wrappHistoryUpdate(dbObj, () -> {
-      // Copy all values of modified user to database object, ignore field 'deleted'.
-      final ModificationStatus tresult = copyValues(obj, dbObj, "deleted");
-
-      if (tresult != ModificationStatus.NONE) {
-        BaseDaoJpaAdapter.prepareUpdate(dbObj);
-        dbObj.setLastUpdate();
-        if (logDatabaseActions) {
-          log.info(this.clazz.getSimpleName() + " updated: " + dbObj.toString());
-        }
-      } else {
-        //log.info("No modifications detected (no update needed): " + dbObj.toString());
-      }
-      prepareHibernateSearch(obj, OperationType.UPDATE);
-      // TODO HIBERNATE5 Magie nicht notwendig?!?!?!
-      if (NO_UPDATE_MAGIC) {
-        // update doesn't work, because of referenced objects
-        hibernateTemplate.merge(dbObj);
-      }
-      flushSession();
-      flushSearchSession();
-      return tresult;
-    });
-
-    afterSaveOrModify(obj);
-    if (supportAfterUpdate) {
-      afterUpdate(obj, dbObjBackup, result != ModificationStatus.NONE);
-      afterUpdate(obj, dbObjBackup);
-    } else {
-      afterUpdate(obj, null, result != ModificationStatus.NONE);
-      afterUpdate(obj, null);
-    }
-    if (wantsReindexAllDependentObjects) {
-      reindexDependentObjects(obj);
-    }
-    return result;
+    return BaseDaoSupport.internalUpdate(this, obj, checkAccess);
   }
 
   /**
@@ -874,8 +734,8 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   /**
    * Object will be marked as deleted (boolean flag), therefore undelete is always possible without any loss of data.
    */
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   @Override
-  @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
   public void markAsDeleted(final O obj) throws AccessException {
     Validate.notNull(obj);
     if (obj.getId() == null) {
@@ -883,53 +743,22 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
       log.error(msg);
       throw new RuntimeException(msg);
     }
-    final O dbObj = hibernateTemplate.load(clazz, obj.getId(), LockMode.PESSIMISTIC_WRITE);
+    final O dbObj = em.find(clazz, obj.getId());
     checkPartOfCurrentTenant(obj, OperationType.DELETE);
     checkLoggedInUserDeleteAccess(obj, dbObj);
     accessChecker.checkRestrictedOrDemoUser();
     internalMarkAsDeleted(obj);
   }
 
-  @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public void internalMarkAsDeleted(final O obj) {
-    if (!HistoryBaseDaoAdapter.isHistorizable(obj)) {
-      log.error(
-              "Object is not historizable. Therefore marking as deleted is not supported. Please use delete instead.");
-      throw new InternalErrorException("exception.internalError");
-    } else {
-      onDelete(obj);
-      final O dbObj = hibernateTemplate.load(clazz, obj.getId(), LockMode.PESSIMISTIC_WRITE);
-      onSaveOrModify(obj);
-
-      HistoryBaseDaoAdapter.wrappHistoryUpdate(dbObj, () -> {
-        BaseDaoJpaAdapter.beforeUpdateCopyMarkDelete(dbObj, obj);
-        copyValues(obj, dbObj, "deleted"); // If user has made additional changes.
-        dbObj.setDeleted(true);
-        dbObj.setLastUpdate();
-        flushSession();
-        flushSearchSession();
-        return null;
-      });
-
-      afterSaveOrModify(obj);
-      afterDelete(obj);
-      flushSession();
-      if (logDatabaseActions) {
-        log.info(clazz.getSimpleName() + " marked as deleted: " + dbObj.toString());
-      }
-    }
+    BaseDaoSupport.internalMarkAsDeleted(this, obj);
   }
 
-  private void flushSession() {
-    Session session = getSession();
-    session.flush();
-    //    Search.getFullTextSession(session).flushToIndexes();
-  }
-
-  private void flushSearchSession() {
+  void flushSearchSession(EntityManager em) {
     long begin = System.currentTimeMillis();
     if (LUCENE_FLUSH_ALWAYS) {
-      Search.getFullTextSession(getSession()).flushToIndexes();
+      Search.getFullTextEntityManager(em).flushToIndexes();
     }
     long end = System.currentTimeMillis();
     if (end - begin > 1000) {
@@ -940,8 +769,8 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   /**
    * Object will be deleted finally out of the data base.
    */
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   @Override
-  @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
   public void delete(final O obj) throws AccessException {
     Validate.notNull(obj);
     if (HistoryBaseDaoAdapter.isHistorizable(obj)) {
@@ -956,10 +785,14 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
     }
     accessChecker.checkRestrictedOrDemoUser();
     onDelete(obj);
-    final O dbObj = hibernateTemplate.load(clazz, obj.getId(), LockMode.PESSIMISTIC_WRITE);
+    final O dbObj = em.getReference(clazz, obj.getId());
     checkPartOfCurrentTenant(obj, OperationType.DELETE);
     checkLoggedInUserDeleteAccess(obj, dbObj);
-    hibernateTemplate.delete(dbObj);
+    emgrFactory.runInTrans(emgr -> {
+      EntityManager em = emgr.getEntityManager();
+      em.remove(dbObj);
+      return null;
+    });
     if (logDatabaseActions) {
       log.info(clazz.getSimpleName() + " deleted: " + obj.toString());
     }
@@ -970,8 +803,8 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   /**
    * Object will be marked as deleted (booelan flag), therefore undelete is always possible without any loss of data.
    */
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   @Override
-  @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
   public void undelete(final O obj) throws AccessException {
     Validate.notNull(obj);
     if (obj.getId() == null) {
@@ -985,31 +818,12 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
     internalUndelete(obj);
   }
 
-  @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public void internalUndelete(final O obj) {
-    final O dbObj = hibernateTemplate.load(clazz, obj.getId(), LockMode.PESSIMISTIC_WRITE);
-    onSaveOrModify(obj);
-
-    HistoryBaseDaoAdapter.wrappHistoryUpdate(dbObj, () -> {
-      BaseDaoJpaAdapter.beforeUpdateCopyMarkUnDelete(dbObj, obj);
-      copyValues(obj, dbObj, "deleted"); // If user has made additional changes.
-      dbObj.setDeleted(false);
-      obj.setDeleted(false);
-      dbObj.setLastUpdate();
-      obj.setLastUpdate(dbObj.getLastUpdate());
-      flushSession();
-      flushSearchSession();
-      return null;
-    });
-
-    afterSaveOrModify(obj);
-    afterUndelete(obj);
-    if (logDatabaseActions) {
-      log.info(clazz.getSimpleName() + " undeleted: " + dbObj.toString());
-    }
+    BaseDaoSupport.internalUndelete(this, obj);
   }
 
-  private void checkPartOfCurrentTenant(final O obj, final OperationType operationType) {
+  void checkPartOfCurrentTenant(final O obj, final OperationType operationType) {
     tenantChecker.checkPartOfCurrentTenant(obj);
   }
 
@@ -1056,7 +870,7 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   /**
    * @param dbObj The original object (stored in the database)
    */
-  private void checkLoggedInUserUpdateAccess(final O obj, final O dbObj) throws AccessException {
+  void checkLoggedInUserUpdateAccess(final O obj, final O dbObj) throws AccessException {
     checkUpdateAccess(ThreadLocalUserContext.getUser(), obj, dbObj);
   }
 
@@ -1305,6 +1119,7 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
     return dest.copyValuesFrom(src, ignoreFields);
   }
 
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   protected void createHistoryEntry(final Object entity, final Number id, final String property,
                                     final Class<?> valueClass,
                                     final Object oldValue, final Object newValue) {
@@ -1338,7 +1153,6 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    * @return All matching entries (like search) for the given property modified or updated in the last 2 years.
    */
   @Override
-  @SuppressWarnings("unchecked")
   public List<String> getAutocompletion(final String property, final String searchString) {
     checkLoggedInUserSelectAccess();
     if (!isAutocompletionPropertyEnabled(property)) {
@@ -1348,20 +1162,17 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
     if (StringUtils.isBlank(searchString)) {
       return new ArrayList<>();
     }
-    final String hql = "select distinct "
-            + property
-            + " from "
-            + clazz.getSimpleName()
-            + " t where deleted=false and lastUpdate > :lastUpdate and lower(t."
-            + property
-            + ") like :search order by t."
-            + property;
-    final Query query = getSession().createQuery(hql);
-    final DateHolder dh = new DateHolder();
-    dh.add(Calendar.YEAR, -2); // Search only for entries of the last 2 years.
-    query.setParameter("lastUpdate", dh.getDate(), DateType.INSTANCE);
-    query.setParameter("search", "%" + StringUtils.lowerCase(searchString) + "%");
-    return (List<String>) query.list();
+    CriteriaBuilder cb = em.getCriteriaBuilder();
+    CriteriaQuery<String> cr = cb.createQuery(String.class);
+    Root<O> root = cr.from(clazz);
+    Date yearsAgo = PFDateTime.now().minusYears(2).getUtilDate();
+    cr.select(root.get(property)).where(
+            cb.equal(root.get("deleted"), false),
+            cb.greaterThan(root.get("lastUpdate"), yearsAgo),
+            cb.like(cb.lower(root.get(property)), "%" + StringUtils.lowerCase(searchString) + "%"))
+            .orderBy(cb.asc(root.get(property)))
+            .distinct(true);
+    return em.createQuery(cr).getResultList();
   }
 
   /**
@@ -1369,6 +1180,7 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
    *
    * @see DatabaseDao#createReindexSettings(boolean)
    */
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   @Override
   public void rebuildDatabaseIndex4NewestEntries() {
     final ReindexSettings settings = DatabaseDao.createReindexSettings(true);
@@ -1379,21 +1191,25 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   /**
    * Re-indexes all entries (full re-index).
    */
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   @Override
   public void rebuildDatabaseIndex() {
     final ReindexSettings settings = DatabaseDao.createReindexSettings(false);
-    databaseDao.rebuildDatabaseSearchIndices(clazz, settings);
+    emgrFactory.runInTrans(emgr -> {
+      databaseDao.rebuildDatabaseSearchIndices(clazz, settings);
+      return null;
+    });
   }
 
   /**
    * Re-index all dependent objects manually (hibernate search). Hibernate doesn't re-index these objects, does it?
    */
-  @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public void reindexDependentObjects(final O obj) {
     hibernateSearchDependentObjectsReindexer.reindexDependents(obj);
   }
 
-  @Transactional(propagation = Propagation.REQUIRES_NEW)
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
   public void massUpdate(final List<O> list, final O master) {
     if (list == null || list.size() == 0) {
       // No entries to update.
@@ -1417,6 +1233,7 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
 
   /**
    * Object pass thru every massUpdateEntry call.
+   *
    * @return null if not overloaded.
    */
   protected Object prepareMassUpdateStore(final List<O> list, final O master) {
@@ -1426,64 +1243,17 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   /**
    * Overload this method for mass update support.
    *
-   * @param store  Object created with prepareMassUpdateStore if needed. Null at default.
+   * @param store Object created with prepareMassUpdateStore if needed. Null at default.
    * @return true, if entry is ready for update otherwise false (no update will be done for this entry).
    */
   protected boolean massUpdateEntry(final O entry, final O master, final Object store) {
     throw new UnsupportedOperationException("Mass update is not supported by this dao for: " + clazz.getName());
   }
 
-  /**
-   * Searches all history entries matching the given modified by user and modification intervall. Any given search
-   * string will be ignored. Use {@link #getHistoryEntriesFullTextSearch(Session, BaseSearchFilter)} for searching
-   * for strings.
-   * @see HibernateSearchFilterUtils#getHistoryEntriesDirect(Session, BaseSearchFilter, Set, Class)
-   */
-  public Set<Integer> getHistoryEntries(final Session session, final BaseSearchFilter filter) {
-    if (!hasLoggedInUserSelectAccess(false) || !hasLoggedInUserHistoryAccess(false)) {
-      // User has in general no access to history entries of the given object type (clazz).
-      return null;
-    }
-    final Set<Integer> idSet = new HashSet<>();
-    HibernateSearchFilterUtils.getHistoryEntriesDirect(session, filter, idSet, clazz);
-    if (getAdditionalHistorySearchDOs() != null) {
-      for (final Class<?> aclazz : getAdditionalHistorySearchDOs()) {
-        HibernateSearchFilterUtils.getHistoryEntriesDirect(session, filter, idSet, aclazz);
-      }
-    }
-    return idSet;
-  }
-
-  /**
-   * Searches all history entries matching the given modified by user, interval of modification and any given search string.
-   * @see HibernateSearchFilterUtils#getHistoryEntriesFromFullTextSearch(Session, BaseSearchFilter, Set, Class)
-   */
-  public Set<Integer> getHistoryEntriesFullTextSearch(final Session session, final BaseSearchFilter filter) {
-    if (!hasLoggedInUserSelectAccess(false) || !hasLoggedInUserHistoryAccess(false)) {
-      // User has in general no access to history entries of the given object type (clazz).
-      return null;
-    }
-    final Set<Integer> idSet = new HashSet();
-    HibernateSearchFilterUtils.getHistoryEntriesFromFullTextSearch(session, filter, idSet, clazz);
-    if (getAdditionalHistorySearchDOs() != null) {
-      for (final Class<?> aclazz : getAdditionalHistorySearchDOs()) {
-        HibernateSearchFilterUtils.getHistoryEntriesFromFullTextSearch(session, filter, idSet, aclazz);
-      }
-    }
-    return idSet;
-  }
-
   // TODO RK entweder so oder ueber annots.
   // siehe org.projectforge.framework.persistence.jpa.impl.HibernateSearchFilterUtils.getNestedHistoryEntities(Class<?>)
   protected Class<?>[] getAdditionalHistorySearchDOs() {
     return null;
-  }
-
-  /**
-   * @return The type of the data object (BaseDO) this dao is responsible for.
-   */
-  public Class<?> getDataObjectType() {
-    return clazz;
   }
 
   public TenantRegistry getTenantRegistry() {
@@ -1503,26 +1273,6 @@ public abstract class BaseDao<O extends ExtendedBaseDO<Integer>>
   @Override
   public boolean isHistorizable() {
     return HistoryBaseDaoAdapter.isHistorizable(clazz);
-  }
-
-  /**
-   * If true then a eh cache region is used for this dao for every criteria search of this class. <br/>
-   * Please note: If you write your own criteria searches in extended classes, don't forget to call
-   * {@link BaseDaoLegacyQueryBuilder#setCacheRegion(BaseDao, Criteria)}. <br/>
-   * Don't forget to add your base dao class name in ehcache.xml.
-   *
-   * @return false at default.
-   */
-  protected boolean useOwnCriteriaCacheRegion() {
-    return false;
-  }
-
-  public Session getSession() {
-    return sessionFactory.getCurrentSession();
-  }
-
-  public HibernateTemplate getHibernateTemplate() {
-    return hibernateTemplate;
   }
 
   @SuppressWarnings("unchecked")

@@ -9,7 +9,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.1.7.RELEASE</version>
+    <version>2.2.0.RELEASE</version>
   </parent>
 
   <name>ProjectForge</name>
@@ -245,26 +245,25 @@
 
     <downloadSources>true</downloadSources>
 
-    <maven-compile-plugin-version>3.8.0</maven-compile-plugin-version>
     <maven-surefire-plugin-version>3.0.0-M3</maven-surefire-plugin-version>
-    <java.version>1.8</java.version>
-    <!--java.version>9</java.version-->
+
+    <java.version>1.8</java.version> <!-- 1.8,1.9,1.10,11,12,13 -->
 
     <!--kotlin.compiler.incremental>true</kotlin.compiler.incremental--> <!-- It's experimentell, so don't use it for now -->
 
-    <hibernate.version>5.4.4.Final</hibernate.version>
-    <hibernate-search.version>5.11.2.Final</hibernate-search.version>
+    <hibernate.version>5.4.8.Final</hibernate.version>
+    <hibernate-search.version>5.11.3.Final</hibernate-search.version>
     <mgc.version>3.1.1</mgc.version>
 
     <commons-httpclient.version>3.1</commons-httpclient.version>
     <commons-beanutils.version>1.9.2</commons-beanutils.version>
     <aspectjtools.version>1.8.14</aspectjtools.version>
-    <flyway.version>5.2.4</flyway.version>
+    <flyway.version>6.0.8</flyway.version>
     <groovy.version>2.4.17</groovy.version>
-    <kotlin.version>1.3.41</kotlin.version>
+    <kotlin.version>1.3.50</kotlin.version>
     <poi.version>3.16</poi.version>
-    <spring.version>5.1.6.RELEASE</spring.version> <!-- Should match spring boot's parent pom -->
-    <wicket.version>7.10.0</wicket.version>
+    <spring.version>5.2.1.RELEASE</spring.version> <!-- Should match spring boot's parent pom -->
+    <wicket.version>7.15.0</wicket.version>
 
     <javax.jsp-api.version>2.3.3</javax.jsp-api.version>
     <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
@@ -286,10 +285,9 @@
     <xmlgraphics-commons.version>2.3</xmlgraphics-commons.version>
     <xmlgraphics-batik-codec.version>1.11</xmlgraphics-batik-codec.version>
     <!-- HIBERNATE5 -->
-    <postgresql.version>42.2.6</postgresql.version>
-    <hsqldb.version>2.4.1</hsqldb.version>
-    <codehaus-jackson.version>1.9.13</codehaus-jackson.version>
-    <jackson.version>2.9.9</jackson.version>
+    <postgresql.version>42.2.8</postgresql.version>
+    <hsqldb.version>2.5.0</hsqldb.version>
+    <jackson.version>2.9.10</jackson.version>
     <powermock.version>2.0.4</powermock.version>
     <joda-time.version>2.0</joda-time.version>
     <apacheds.version>1.5.7</apacheds.version>
@@ -314,18 +312,23 @@
       <version>${hibernate.version}</version>
     </dependency>
     <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-ehcache</artifactId>
+      <version>${hibernate.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.ehcache/ehcache -->
+    <dependency>
+      <groupId>org.ehcache</groupId>
+      <artifactId>ehcache</artifactId>
+      <version>3.8.1</version>
+    </dependency>
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-cache</artifactId>
     </dependency>
     <dependency>
       <groupId>javax.cache</groupId>
       <artifactId>cache-api</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.ehcache</groupId>
-      <artifactId>ehcache</artifactId>
-      <version>3.8.0</version>
     </dependency>
 
     <dependency>
@@ -458,7 +461,7 @@
       <scope>test</scope>
     </dependency>
     <!-- Java 11+ -->
-    <!--dependency>
+    <dependency>
       <groupId>javax.xml.bind</groupId>
       <artifactId>jaxb-api</artifactId>
       <version>2.3.0</version>
@@ -472,11 +475,19 @@
       <groupId>com.sun.xml.bind</groupId>
       <artifactId>jaxb-impl</artifactId>
       <version>2.3.0</version>
-    </dependency-->
+    </dependency>
   </dependencies>
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven-surefire-plugin-version}</version>

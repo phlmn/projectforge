@@ -28,9 +28,6 @@ import de.micromata.genome.jpa.CriteriaUpdate;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
-import org.hibernate.LockMode;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Restrictions;
 import org.projectforge.business.login.Login;
 import org.projectforge.business.multitenancy.TenantChecker;
 import org.projectforge.business.multitenancy.TenantService;
@@ -46,13 +43,11 @@ import org.projectforge.framework.persistence.user.api.ThreadLocalUserContext;
 import org.projectforge.framework.persistence.user.entities.PFUserDO;
 import org.projectforge.framework.persistence.user.entities.TenantDO;
 import org.projectforge.framework.persistence.user.entities.UserRightDO;
+import org.projectforge.framework.persistence.utils.SQLHelper;
 import org.projectforge.framework.utils.NumberHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Isolation;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -76,6 +71,16 @@ public class UserDao extends BaseDao<PFUserDO> {
     super(PFUserDO.class);
   }
 
+  public static List<PFUserDO> copyUsersWithoutSecrectFields(List<PFUserDO> list) {
+    if (list == null)
+      return null;
+    List<PFUserDO> result = new ArrayList<>(list.size());
+    for (PFUserDO user : list) {
+      result.add(PFUserDO.createCopyWithoutSecretFields(user));
+    }
+    return result;
+  }
+
   /**
    * Register given listener. The listener is called every time a user was inserted, updated or deleted.
    *
@@ -87,7 +92,7 @@ public class UserDao extends BaseDao<PFUserDO> {
 
   public QueryFilter getDefaultFilter() {
     final QueryFilter queryFilter = new QueryFilter(null, false);
-    queryFilter.add(Restrictions.eq("deleted", false));
+    queryFilter.add(QueryFilter.eq("deleted", false));
     return queryFilter;
   }
 
@@ -103,7 +108,6 @@ public class UserDao extends BaseDao<PFUserDO> {
     return new QueryFilter(filter, true);
   }
 
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   @Override
   public List<PFUserDO> getList(final BaseSearchFilter filter) {
     final PFUserFilter myFilter;
@@ -114,22 +118,22 @@ public class UserDao extends BaseDao<PFUserDO> {
     }
     final QueryFilter queryFilter = createQueryFilter(myFilter);
     if (myFilter.getDeactivatedUser() != null) {
-      queryFilter.add(Restrictions.eq("deactivated", myFilter.getDeactivatedUser()));
+      queryFilter.add(QueryFilter.eq("deactivated", myFilter.getDeactivatedUser()));
     }
     if (Login.getInstance().hasExternalUsermanagementSystem()) {
       // Check hasExternalUsermngmntSystem because otherwise the filter is may-be preset for an user and the user can't change the filter
       // (because the fields aren't visible).
       if (myFilter.getRestrictedUser() != null) {
-        queryFilter.add(Restrictions.eq("restrictedUser", myFilter.getRestrictedUser()));
+        queryFilter.add(QueryFilter.eq("restrictedUser", myFilter.getRestrictedUser()));
       }
       if (myFilter.getLocalUser() != null) {
-        queryFilter.add(Restrictions.eq("localUser", myFilter.getLocalUser()));
+        queryFilter.add(QueryFilter.eq("localUser", myFilter.getLocalUser()));
       }
     }
     if (myFilter.getHrPlanning() != null) {
-      queryFilter.add(Restrictions.eq("hrPlanning", myFilter.getHrPlanning()));
+      queryFilter.add(QueryFilter.eq("hrPlanning", myFilter.getHrPlanning()));
     }
-    queryFilter.addOrder(Order.asc("username"));
+    queryFilter.addOrder(SortProperty.asc("username"));
     List<PFUserDO> list = getList(queryFilter);
     if (myFilter.getIsAdminUser() != null) {
       final List<PFUserDO> origList = list;
@@ -187,7 +191,6 @@ public class UserDao extends BaseDao<PFUserDO> {
     return copyUsersWithoutSecrectFields(super.internalLoadAll(tenant));
   }
 
-
   /**
    * Removes secret fields for security reasons by copying all users without secret fields.
    * Result elements are evicted.
@@ -210,22 +213,11 @@ public class UserDao extends BaseDao<PFUserDO> {
     return copyUsersWithoutSecrectFields(super.getListByIds(idList));
   }
 
-  public static List<PFUserDO> copyUsersWithoutSecrectFields(List<PFUserDO> list) {
-    if (list == null)
-      return null;
-    List<PFUserDO> result = new ArrayList<>(list.size());
-    for (PFUserDO user : list) {
-      result.add(PFUserDO.createCopyWithoutSecretFields(user));
-    }
-    return result;
-  }
-
   /**
    * Removes secret fields for security reasons.
    *
    * @see BaseDao#getOrLoad(Integer)
    */
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   @Override
   public PFUserDO getOrLoad(Integer id) {
     return PFUserDO.createCopyWithoutSecretFields(super.getOrLoad(id));
@@ -236,10 +228,10 @@ public class UserDao extends BaseDao<PFUserDO> {
   }
 
   public Collection<Integer> getAssignedTenants(final PFUserDO user) {
-    final List<TenantDO> list = getSession()
+    final List<TenantDO> list = em
             .createNamedQuery(TenantDO.FIND_ASSIGNED_TENANTS, TenantDO.class)
             .setParameter("user", user)
-            .list();
+            .getResultList();
 
     final Set<Integer> result = new HashSet<>();
     if (list != null) {
@@ -395,11 +387,11 @@ public class UserDao extends BaseDao<PFUserDO> {
 
   @SuppressWarnings("unchecked")
   public PFUserDO getUserByStayLoggedInKey(final String username, final String stayLoggedInKey) {
-    final List<PFUserDO> list = getSession()
+    final List<PFUserDO> list = em
             .createNamedQuery(PFUserDO.FIND_BY_USERNAME_AND_STAYLOGGEDINKEY, PFUserDO.class)
             .setParameter("username", username)
             .setParameter("stayLoggedInKey", stayLoggedInKey)
-            .list();
+            .getResultList();
     PFUserDO user = null;
     if (list != null && !list.isEmpty() && list.get(0) != null) {
       user = list.get(0);
@@ -422,20 +414,18 @@ public class UserDao extends BaseDao<PFUserDO> {
       dbUser = getInternalByName(user.getUsername());
     } else {
       // user already exists. Check maybe changed username:
-      dbUser = getSession().createNamedQuery(PFUserDO.FIND_OTHER_USER_BY_USERNAME, PFUserDO.class)
+      dbUser = SQLHelper.ensureUniqueResult(em.createNamedQuery(PFUserDO.FIND_OTHER_USER_BY_USERNAME, PFUserDO.class)
               .setParameter("username", user.getUsername())
-              .setParameter("id", user.getId())
-              .uniqueResult();
+              .setParameter("id", user.getId()));
     }
     return dbUser != null;
   }
 
   public PFUserDO getUserByAuthenticationToken(final Integer userId, final String authKey) {
-    final PFUserDO user = getSession()
+    final PFUserDO user = SQLHelper.ensureUniqueResult(em
             .createNamedQuery(PFUserDO.FIND_BY_USERID_AND_AUTHENTICATIONTOKEN, PFUserDO.class)
             .setParameter("id", userId)
-            .setParameter("authenticationToken", authKey)
-            .uniqueResult();
+            .setParameter("authenticationToken", authKey));
     if (user != null && !user.hasSystemAccess()) {
       log.warn("Deleted user tried to login (via authentication token): " + user);
       return null;
@@ -447,7 +437,6 @@ public class UserDao extends BaseDao<PFUserDO> {
    * Returns the user's authentication token if exists (must be not blank with a size >= 10). If not, a new token key
    * will be generated.
    */
-  @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
   public String getAuthenticationToken(final Integer userId) {
     final PFUserDO user = internalGetById(userId);
     if (StringUtils.isBlank(user.getAuthenticationToken()) || user.getAuthenticationToken().trim().length() < 10) {
@@ -463,7 +452,6 @@ public class UserDao extends BaseDao<PFUserDO> {
   /**
    * Renews the user's authentication token (random string sequence).
    */
-  @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
   public void renewAuthenticationToken(final Integer userId) {
     if (!ThreadLocalUserContext.getUserId().equals(userId)) {
       // Only admin users are able to renew authentication token of other users:
@@ -482,11 +470,9 @@ public class UserDao extends BaseDao<PFUserDO> {
     return NumberHelper.getSecureRandomUrlSaveString(AUTHENTICATION_TOKEN_LENGTH);
   }
 
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public PFUserDO getInternalByName(final String username) {
-    return getSession().createNamedQuery(PFUserDO.FIND_BY_USERNAME, PFUserDO.class)
-            .setParameter("username", username)
-            .uniqueResult();
+    return SQLHelper.ensureUniqueResult(em.createNamedQuery(PFUserDO.FIND_BY_USERNAME, PFUserDO.class)
+            .setParameter("username", username));
   }
 
   /**
@@ -495,12 +481,11 @@ public class UserDao extends BaseDao<PFUserDO> {
    *
    * @param user
    */
-  @Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
   public void updateMyAccount(final PFUserDO user) {
     accessChecker.checkRestrictedOrDemoUser();
     final PFUserDO contextUser = ThreadLocalUserContext.getUser();
     Validate.isTrue(user.getId().equals(contextUser.getId()));
-    final PFUserDO dbUser = getHibernateTemplate().load(clazz, user.getId(), LockMode.PESSIMISTIC_WRITE);
+    final PFUserDO dbUser = em.getReference(clazz, user.getId());
     final String[] ignoreFields = {"deleted", "password", "lastLogin", "loginFailures", "username", "stayLoggedInKey",
             "authenticationToken", "rights"};
     final ModificationStatus result = HistoryBaseDaoAdapter.wrappHistoryUpdate(dbUser,
@@ -575,8 +560,8 @@ public class UserDao extends BaseDao<PFUserDO> {
   }
 
   public List<PFUserDO> findByUsername(String username) {
-    return getSession().createNamedQuery(PFUserDO.FIND_BY_USERNAME, PFUserDO.class)
+    return em.createNamedQuery(PFUserDO.FIND_BY_USERNAME, PFUserDO.class)
             .setParameter("username", username)
-            .list();
+            .getResultList();
   }
 }

@@ -40,13 +40,17 @@ function AutoCompletion({ url, type, ...props }) {
             translations={{}}
             loadOptions={loadOptions}
             {...props}
+            autoCompletion={{
+                url,
+                type,
+            }}
         />
     );
 }
 
 AutoCompletion.propTypes = {
     url: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(['USER', undefined]),
+    type: PropTypes.oneOf(['USER', 'RAW', undefined]),
 };
 
 AutoCompletion.defaultProps = {

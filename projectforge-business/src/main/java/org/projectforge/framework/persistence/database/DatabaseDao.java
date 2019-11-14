@@ -25,28 +25,29 @@ package org.projectforge.framework.persistence.database;
 
 import de.micromata.genome.jpa.StdRecord;
 import org.apache.commons.lang3.ClassUtils;
-import org.hibernate.*;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Projections;
-import org.hibernate.criterion.Restrictions;
-import org.hibernate.search.FullTextSession;
-import org.hibernate.search.Search;
+import org.hibernate.ScrollMode;
+import org.hibernate.ScrollableResults;
 import org.hibernate.search.SearchFactory;
+import org.hibernate.search.jpa.FullTextEntityManager;
+import org.hibernate.search.jpa.Search;
 import org.projectforge.business.timesheet.TimesheetDO;
 import org.projectforge.framework.persistence.api.ExtendedBaseDO;
 import org.projectforge.framework.persistence.api.ReindexSettings;
 import org.projectforge.framework.persistence.entities.AbstractBaseDO;
-import org.projectforge.framework.persistence.hibernate.HibernateCompatUtils;
 import org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO;
+import org.projectforge.framework.persistence.jpa.PfEmgrFactory;
 import org.projectforge.framework.time.DateHelper;
 import org.projectforge.framework.time.DateTimeFormatter;
 import org.projectforge.framework.time.DayHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Isolation;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.FlushModeType;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.From;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -58,9 +59,7 @@ import java.util.Locale;
  * @author Kai Reinhard (k.reinhard@micromata.de)
  */
 @Repository
-@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-public class DatabaseDao
-{
+public class DatabaseDao {
   private static final int MIN_REINDEX_ENTRIES_4_USE_SCROLL_MODE = 2000;
 
   private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(DatabaseDao.class);
@@ -68,15 +67,12 @@ public class DatabaseDao
   private Date currentReindexRun = null;
 
   @Autowired
-  private SessionFactory sessionFactory;
+  private PfEmgrFactory emgrFactory;
 
   /**
    * Since yesterday and 1,000 newest entries at maximimum.
-   *
-   * @return
    */
-  public static ReindexSettings createReindexSettings(final boolean onlyNewest)
-  {
+  public static ReindexSettings createReindexSettings(final boolean onlyNewest) {
     if (onlyNewest) {
       final DayHolder day = new DayHolder();
       day.add(Calendar.DAY_OF_MONTH, -1); // Since yesterday:
@@ -86,22 +82,18 @@ public class DatabaseDao
     }
   }
 
-  @Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
-  public String rebuildDatabaseSearchIndices(final Class<?> clazz, final ReindexSettings settings)
-  {
+  public <T> String rebuildDatabaseSearchIndices(final Class<T> clazz, final ReindexSettings settings) {
     if (currentReindexRun != null) {
       return "Another re-index job is already running. The job was started at: "
-          + DateTimeFormatter.instance().getFormattedDateTime(currentReindexRun, Locale.ENGLISH, DateHelper.UTC)
-          + " (UTC)";
+              + DateTimeFormatter.instance().getFormattedDateTime(currentReindexRun, Locale.ENGLISH, DateHelper.UTC)
+              + " (UTC)";
     }
     final StringBuffer buf = new StringBuffer();
     reindex(clazz, settings, buf);
     return buf.toString();
   }
 
-  @Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
-  public void reindex(final Class<?> clazz, final ReindexSettings settings, final StringBuffer buf)
-  {
+  public <T> void reindex(final Class<T> clazz, final ReindexSettings settings, final StringBuffer buf) {
     if (currentReindexRun != null) {
       buf.append(" (cancelled due to another running index-job)");
       return;
@@ -121,8 +113,7 @@ public class DatabaseDao
   /**
    * @param clazz
    */
-  private long reindex(final Class<?> clazz, final ReindexSettings settings)
-  {
+  private <T> long reindex(final Class<T> clazz, final ReindexSettings settings) {
     if (settings.getLastNEntries() != null || settings.getFromDate() != null) {
       // OK, only partly re-index required:
       return reindexObjects(clazz, settings);
@@ -135,8 +126,7 @@ public class DatabaseDao
     return reindexObjects(clazz, null);
   }
 
-  private boolean isIn(final Class<?> clazz, final Class<?>... classes)
-  {
+  private boolean isIn(final Class<?> clazz, final Class<?>... classes) {
     for (final Class<?> cls : classes) {
       if (clazz.equals(cls)) {
         return true;
@@ -145,107 +135,115 @@ public class DatabaseDao
     return false;
   }
 
-  private long reindexObjects(final Class<?> clazz, final ReindexSettings settings)
-  {
-    final Session session = sessionFactory.getCurrentSession();
-    Criteria criteria = createCriteria(session, clazz, settings, true);
-    final Long number = (Long) criteria.uniqueResult(); // Get number of objects to re-index (select count(*) from).
-    final boolean scrollMode = number > MIN_REINDEX_ENTRIES_4_USE_SCROLL_MODE;
-    log.info("Starting re-indexing of "
-        + number
-        + " entries (total number) of type "
-        + clazz.getName()
-        + " with scrollMode="
-        + scrollMode
-        + "...");
-    final int batchSize = 1000;// NumberUtils.createInteger(System.getProperty("hibernate.search.worker.batch_size")
-    final FullTextSession fullTextSession = Search.getFullTextSession(session);
-    HibernateCompatUtils.setFlushMode(fullTextSession, FlushMode.MANUAL);
-    HibernateCompatUtils.setCacheMode(fullTextSession, CacheMode.IGNORE);
-    long index = 0;
-    if (scrollMode) {
-      // Scroll-able results will avoid loading too many objects in memory
-      criteria = createCriteria(fullTextSession, clazz, settings, false);
-      final ScrollableResults results = criteria.scroll(ScrollMode.FORWARD_ONLY);
-      while (results.next()) {
-        final Object obj = results.get(0);
-        if (obj instanceof ExtendedBaseDO<?>) {
-          ((ExtendedBaseDO<?>) obj).recalculate();
+  private <T> long reindexObjects(final Class<T> clazz, final ReindexSettings settings) {
+    return emgrFactory.runInTrans(emgr -> {
+      final EntityManager em = emgr.getEntityManager();
+      final Long number = getRowCount(em, clazz); // Get number of objects to re-index (select count(*) from).
+      final boolean scrollMode = number > MIN_REINDEX_ENTRIES_4_USE_SCROLL_MODE;
+      log.info("Starting re-indexing of "
+              + number
+              + " entries (total number) of type "
+              + clazz.getName()
+              + " with scrollMode="
+              + scrollMode
+              + "...");
+      final int batchSize = 1000;// NumberUtils.createInteger(System.getProperty("hibernate.search.worker.batch_size")
+      final FullTextEntityManager fullTextEntityManager = Search.getFullTextEntityManager(em);
+      fullTextEntityManager.setFlushMode(FlushModeType.COMMIT);
+      //HibernateCompatUtils.setFlushMode(fullTextSession, FlushMode.MANUAL);
+      //HibernateCompatUtils.setCacheMode(fullTextSession, CacheMode.IGNORE);
+      long index = 0;
+      if (scrollMode) {
+        // Scroll-able results will avoid loading too many objects in memory
+        TypedQuery<T> query = createCriteria(em, clazz, settings);
+        org.hibernate.query.Query hquery = query.unwrap(org.hibernate.query.Query.class);
+        ScrollableResults results = hquery.scroll(ScrollMode.FORWARD_ONLY);
+        while (results.next()) {
+          final Object obj = results.get(0);
+          if (obj instanceof ExtendedBaseDO<?>) {
+            ((ExtendedBaseDO<?>) obj).recalculate();
+          }
+          fullTextEntityManager.index(obj);
+          if (index++ % batchSize == 0) {
+            fullTextEntityManager.flush(); // clear every batchSize since the queue is processed
+          }
         }
-        HibernateCompatUtils.index(fullTextSession, obj);
-        if (index++ % batchSize == 0) {
-          session.flush(); // clear every batchSize since the queue is processed
+      } else {
+        TypedQuery<T> query = createCriteria(em, clazz, settings);
+        final List<T> list = query.getResultList();
+        for (final Object obj : list) {
+          if (obj instanceof ExtendedBaseDO<?>) {
+            ((ExtendedBaseDO<?>) obj).recalculate();
+          }
+          fullTextEntityManager.index(obj);
+          if (index++ % batchSize == 0) {
+            fullTextEntityManager.flush(); // clear every batchSize since the queue is processed
+          }
         }
       }
-    } else {
-      criteria = createCriteria(session, clazz, settings, false);
-      final List<?> list = criteria.list();
-      for (final Object obj : list) {
-        if (obj instanceof ExtendedBaseDO<?>) {
-          ((ExtendedBaseDO<?>) obj).recalculate();
-        }
-        HibernateCompatUtils.index(fullTextSession, obj);
-        if (index++ % batchSize == 0) {
-          session.flush(); // clear every batchSize since the queue is processed
-        }
-      }
-    }
-    final SearchFactory searchFactory = fullTextSession.getSearchFactory();
-    searchFactory.optimize(clazz);
-    log.info("Re-indexing of " + index + " objects of type " + clazz.getName() + " done.");
-    return index;
+      final SearchFactory searchFactory = fullTextEntityManager.getSearchFactory();
+      searchFactory.optimize(clazz);
+      log.info("Re-indexing of " + index + " objects of type " + clazz.getName() + " done.");
+      return index;
+    });
   }
 
-  /**
-   * @param clazz
-   */
-  private long reindexMassIndexer(final Class<?> clazz)
-  {
-    final Session session = sessionFactory.getCurrentSession();
-    final Criteria criteria = createCriteria(session, clazz, null, true);
-    final Long number = (Long) criteria.uniqueResult(); // Get number of objects to re-index (select count(*) from).
-    log.info("Starting (mass) re-indexing of " + number + " entries of type " + clazz.getName() + "...");
-    final FullTextSession fullTextSession = Search.getFullTextSession(session);
-    try {
-
-      fullTextSession.createIndexer(clazz)//
-          .batchSizeToLoadObjects(25) //
-          //.cacheMode(CacheMode.NORMAL) //
-          .threadsToLoadObjects(5) //
-          //.threadsForIndexWriter(1) //
-          .startAndWait();
-    } catch (final InterruptedException ex) {
-      log.error("Exception encountered while reindexing: " + ex.getMessage(), ex);
-    }
-    final SearchFactory searchFactory = fullTextSession.getSearchFactory();
-    searchFactory.optimize(clazz);
-    log.info("Re-indexing of " + number + " objects of type " + clazz.getName() + " done.");
-    return number;
-
+  private <T> long reindexMassIndexer(final Class<T> clazz) {
+    return emgrFactory.runInTrans(emgr -> {
+      final EntityManager em = emgr.getEntityManager();
+      final Long number = getRowCount(em, clazz); // Get number of objects to re-index (select count(*) from).
+      log.info("Starting (mass) re-indexing of " + number + " entries of type " + clazz.getName() + "...");
+      final FullTextEntityManager fullTextEntityManager = Search.getFullTextEntityManager(em);
+      try {
+        fullTextEntityManager.createIndexer(clazz)//
+                .batchSizeToLoadObjects(25) //
+                //.cacheMode(CacheMode.NORMAL) //
+                .threadsToLoadObjects(5) //
+                //.threadsForIndexWriter(1) //
+                .startAndWait();
+      } catch (final InterruptedException ex) {
+        log.error("Exception encountered while reindexing: " + ex.getMessage(), ex);
+      }
+      final SearchFactory searchFactory = fullTextEntityManager.getSearchFactory();
+      searchFactory.optimize(clazz);
+      log.info("Re-indexing of " + number + " objects of type " + clazz.getName() + " done.");
+      return number;
+    });
   }
 
-  private Criteria createCriteria(final Session session, final Class<?> clazz, final ReindexSettings settings,
-      final boolean rowCount)
-  {
-    final Criteria criteria = session.createCriteria(clazz);
-    if (rowCount) {
-      criteria.setProjection(Projections.rowCount());
-    } else {
-      if (settings != null) {
-        if (settings.getLastNEntries() != null) {
-          criteria.addOrder(Order.desc("id")).setMaxResults(settings.getLastNEntries());
-        }
-        String lastUpdateProperty = null;
-        if (AbstractBaseDO.class.isAssignableFrom(clazz)) {
-          lastUpdateProperty = "lastUpdate";
-        } else if (StdRecord.class.isAssignableFrom(clazz)) {
-          lastUpdateProperty = "modifiedAt";
-        }
-        if (lastUpdateProperty != null && settings.getFromDate() != null) {
-          criteria.add(Restrictions.ge(lastUpdateProperty, settings.getFromDate()));
+  private <T> Long getRowCount(final EntityManager entityManager, final Class<T> clazz) {
+    final CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+    CriteriaQuery<Long> cq = cb.createQuery(Long.class);
+    cq.select(cb.count(cq.from(clazz)));
+    return entityManager.createQuery(cq).getSingleResult();
+  }
+
+  private <T> TypedQuery<T> createCriteria(final EntityManager entityManager, final Class<T> clazz, final ReindexSettings settings) {
+    final CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+    CriteriaQuery<T> cr = cb.createQuery(clazz);
+    From root = cr.from(clazz);
+    if (settings != null) {
+      String lastUpdateProperty = null;
+      if (AbstractBaseDO.class.isAssignableFrom(clazz)) {
+        lastUpdateProperty = "lastUpdate";
+      } else if (StdRecord.class.isAssignableFrom(clazz)) {
+        lastUpdateProperty = "modifiedAt";
+      }
+      if (lastUpdateProperty != null && settings.getFromDate() != null) {
+        cb.equal(root.get(lastUpdateProperty), settings.getFromDate());
+      }
+      if (settings.getLastNEntries() != null) {
+        if (clazz.isAssignableFrom(PfHistoryMasterDO.class)) {
+          cr.orderBy(cb.desc(root.get("pk")));
+        } else {
+          cr.orderBy(cb.desc(root.get("id")));
         }
       }
     }
-    return criteria;
+    TypedQuery<T> query = entityManager.createQuery(cr);
+    if (settings != null && settings.getLastNEntries() != null) {
+      query.setMaxResults(settings.getLastNEntries());
+    }
+    return query;
   }
 }

@@ -6,7 +6,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.apache.wicket.markup.html.form.CheckBox;
 import org.apache.wicket.markup.html.form.DropDownChoice;
 import org.apache.wicket.markup.html.form.Form;
@@ -38,11 +37,27 @@ public class VacationFormValidator implements IFormValidator
 
   private ConfigurationService configService;
 
+  private final Calendar now;
+
   public VacationFormValidator(VacationService vacationService, ConfigurationService configService, VacationDO data)
+  {
+    this(vacationService, configService, data, Calendar.getInstance(ThreadLocalUserContext.getTimeZone()));
+  }
+
+  /**
+   * FOR TEST USE ONLY!
+   *
+   * @param vacationService
+   * @param configService
+   * @param data
+   * @param now
+   */
+  protected VacationFormValidator(VacationService vacationService, ConfigurationService configService, VacationDO data, Calendar now)
   {
     this.configService = configService;
     this.vacationService = vacationService;
     this.data = data;
+    this.now = now;
   }
 
   @Override
@@ -70,6 +85,14 @@ public class VacationFormValidator implements IFormValidator
 
     //Getting selected calendars from form component or direct from data
     final Collection<TeamCalDO> selectedCalendars = getSelectedCalendars(calendars);
+
+    //Is new vacation data
+    if (data.getId() == null) {
+      if(startDate.before(this.now) && vacationService.hasLoggedInUserHRVacationAccess() == false) {
+        form.error(I18nHelper.getLocalizedMessage("vacation.validate.startDateBeforeNow"));
+        return;
+      }
+    }
 
     if (validateStartAndEndDate(form, startDate, endDate)) {
       return;

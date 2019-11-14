@@ -35,8 +35,6 @@ import com.fasterxml.jackson.module.kotlin.KotlinModule;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Restrictions;
 import org.projectforge.business.fibu.KundeDO;
 import org.projectforge.business.fibu.KundeDao;
 import org.projectforge.business.fibu.ProjektDO;
@@ -101,7 +99,7 @@ public class UserPrefDao extends BaseDao<UserPrefDO> {
   private UserDao userDao;
 
   @Override
-  protected String[] getAdditionalSearchFields() {
+  public String[] getAdditionalSearchFields() {
     return ADDITIONAL_SEARCH_FIELDS;
   }
 
@@ -115,10 +113,10 @@ public class UserPrefDao extends BaseDao<UserPrefDO> {
    */
   public String[] getPrefNames(final UserPrefArea area) {
     final PFUserDO user = ThreadLocalUserContext.getUser();
-    List<String> names = getSession().createNamedQuery(UserPrefDO.FIND_NAMES_BY_USER_AND_AREA, String.class)
+    List<String> names = em.createNamedQuery(UserPrefDO.FIND_NAMES_BY_USER_AND_AREA, String.class)
             .setParameter("userId", user.getId())
             .setParameter("area", area.getId())
-            .list();
+            .getResultList();
     final String[] result = new String[names.size()];
     int i = 0;
     for (final Object oa : names) {
@@ -129,11 +127,11 @@ public class UserPrefDao extends BaseDao<UserPrefDO> {
 
   public List<UserPrefDO> getListWithoutEntries(String areaId) {
     final PFUserDO user = ThreadLocalUserContext.getUser();
-    final List<Object[]> list = getSession()
+    final List<Object[]> list = em
             .createNamedQuery(UserPrefDO.FIND_IDS_AND_NAMES_BY_USER_AND_AREA, Object[].class)
             .setParameter("userId", user.getId())
             .setParameter("area", areaId)
-            .list();
+            .getResultList();
     final List<UserPrefDO> result = new ArrayList<>(list.size());
     for (final Object[] oa : list) {
       UserPrefDO userPref = new UserPrefDO();
@@ -171,18 +169,16 @@ public class UserPrefDao extends BaseDao<UserPrefDO> {
     Validate.notNull(name);
     final UserPrefDO userPref;
     if (id != null) {
-      userPref = getSession().createNamedQuery(UserPrefDO.FIND_OTHER_BY_USER_AND_AREA_AND_NAME, UserPrefDO.class)
+      userPref = SQLHelper.ensureUniqueResult(em.createNamedQuery(UserPrefDO.FIND_OTHER_BY_USER_AND_AREA_AND_NAME, UserPrefDO.class)
               .setParameter("id", id)
               .setParameter("userId", userId)
               .setParameter("area", areaId)
-              .setParameter("name", name)
-              .uniqueResult();
+              .setParameter("name", name));
     } else {
-      userPref = getSession().createNamedQuery(UserPrefDO.FIND_BY_USER_AND_AREA_AND_NAME, UserPrefDO.class)
+      userPref = SQLHelper.ensureUniqueResult(em.createNamedQuery(UserPrefDO.FIND_BY_USER_AND_AREA_AND_NAME, UserPrefDO.class)
               .setParameter("userId", userId)
               .setParameter("area", areaId)
-              .setParameter("name", name)
-              .uniqueResult();
+              .setParameter("name", name));
     }
     return userPref != null;
   }
@@ -192,11 +188,11 @@ public class UserPrefDao extends BaseDao<UserPrefDO> {
     final UserPrefFilter myFilter = (UserPrefFilter) filter;
     final QueryFilter queryFilter = new QueryFilter(filter);
     if (myFilter.getArea() != null) {
-      queryFilter.add(Restrictions.eq("area", myFilter.getArea().getId()));
+      queryFilter.add(QueryFilter.eq("area", myFilter.getArea().getId()));
     }
-    queryFilter.add(Restrictions.eq("user.id", ThreadLocalUserContext.getUserId()));
-    queryFilter.addOrder(Order.asc("area"));
-    queryFilter.addOrder(Order.asc("name"));
+    queryFilter.add(QueryFilter.eq("user.id", ThreadLocalUserContext.getUserId()));
+    queryFilter.addOrder(SortProperty.asc("area"));
+    queryFilter.addOrder(SortProperty.asc("name"));
     return getList(queryFilter);
   }
 
@@ -221,7 +217,7 @@ public class UserPrefDao extends BaseDao<UserPrefDO> {
 
   private UserPrefDO getUserPref(final Integer userId, final String areaId, final Integer id) {
     return SQLHelper.ensureUniqueResult(
-            getSession().createNamedQuery(UserPrefDO.FIND_BY_USER_AND_AREA_AND_ID, UserPrefDO.class)
+            em.createNamedQuery(UserPrefDO.FIND_BY_USER_AND_AREA_AND_ID, UserPrefDO.class)
                     .setParameter("userId", userId)
                     .setParameter("area", areaId)
                     .setParameter("id", id));
@@ -229,18 +225,18 @@ public class UserPrefDao extends BaseDao<UserPrefDO> {
 
   public List<UserPrefDO> getUserPrefs(final UserPrefArea area) {
     final PFUserDO user = ThreadLocalUserContext.getUser();
-    final List<UserPrefDO> list = getSession().createNamedQuery(UserPrefDO.FIND_BY_USER_ID_AND_AREA, UserPrefDO.class)
+    final List<UserPrefDO> list = em.createNamedQuery(UserPrefDO.FIND_BY_USER_ID_AND_AREA, UserPrefDO.class)
             .setParameter("userId", user.getId())
             .setParameter("area", area.getId())
-            .list();
+            .getResultList();
     return selectUnique(list);
   }
 
   public List<UserPrefDO> getUserPrefs() {
     final PFUserDO user = ThreadLocalUserContext.getUser();
-    final List<UserPrefDO> list = getSession().createNamedQuery(UserPrefDO.FIND_BY_USER_ID, UserPrefDO.class)
+    final List<UserPrefDO> list = em.createNamedQuery(UserPrefDO.FIND_BY_USER_ID, UserPrefDO.class)
             .setParameter("userId", user.getId())
-            .list();
+            .getResultList();
     return selectUnique(list);
   }
 
@@ -449,7 +445,7 @@ public class UserPrefDao extends BaseDao<UserPrefDO> {
           return projektDao.getOrLoad(id);
         } else {
           log.warn("getParameterValue: Type '" + type + "' not supported. May-be it does not work.");
-          return getHibernateTemplate().load(type, id);
+          return em.getReference(type, id);
         }
       } else {
         return null;
@@ -537,12 +533,12 @@ public class UserPrefDao extends BaseDao<UserPrefDO> {
     Validate.notBlank(area);
     if (name == null) {
       return SQLHelper.ensureUniqueResult(
-              getSession().createNamedQuery(UserPrefDO.FIND_BY_USER_ID_AND_AREA_AND_NULLNAME, UserPrefDO.class)
+              em.createNamedQuery(UserPrefDO.FIND_BY_USER_ID_AND_AREA_AND_NULLNAME, UserPrefDO.class)
                       .setParameter("userId", userId)
                       .setParameter("area", area));
     } else {
       return SQLHelper.ensureUniqueResult(
-              getSession().createNamedQuery(UserPrefDO.FIND_BY_USER_AND_AREA_AND_NAME, UserPrefDO.class)
+              em.createNamedQuery(UserPrefDO.FIND_BY_USER_AND_AREA_AND_NAME, UserPrefDO.class)
                       .setParameter("userId", userId)
                       .setParameter("area", area)
                       .setParameter("name", name));

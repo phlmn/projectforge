@@ -23,8 +23,6 @@
 
 package org.projectforge.business.fibu.kost;
 
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Restrictions;
 import org.projectforge.business.fibu.ProjektDO;
 import org.projectforge.business.fibu.ProjektDao;
 import org.projectforge.business.fibu.ProjektStatus;
@@ -33,22 +31,18 @@ import org.projectforge.framework.i18n.UserException;
 import org.projectforge.framework.persistence.api.BaseDao;
 import org.projectforge.framework.persistence.api.BaseSearchFilter;
 import org.projectforge.framework.persistence.api.QueryFilter;
+import org.projectforge.framework.persistence.api.SortProperty;
 import org.projectforge.framework.persistence.utils.SQLHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Isolation;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Repository
-@Transactional(readOnly = true, propagation = Propagation.SUPPORTS, isolation = Isolation.REPEATABLE_READ)
 public class Kost2Dao extends BaseDao<Kost2DO> {
   public static final UserRightId USER_RIGHT_ID = UserRightId.FIBU_COST_UNIT;
 
-  private static final String[] ADDITIONAL_SEARCH_FIELDS = new String[]{"projekt.name", "projekt.kunde.name",
-          "nummer"};
+  private static final String[] ADDITIONAL_SEARCH_FIELDS = new String[]{"projekt.name", "projekt.kunde.name"};
 
   @Autowired
   private ProjektDao projektDao;
@@ -72,7 +66,7 @@ public class Kost2Dao extends BaseDao<Kost2DO> {
   }
 
   @Override
-  protected String[] getAdditionalSearchFields() {
+  public String[] getAdditionalSearchFields() {
     return ADDITIONAL_SEARCH_FIELDS;
   }
 
@@ -105,7 +99,6 @@ public class Kost2Dao extends BaseDao<Kost2DO> {
    * @param kostString Format ######## or #.###.##.## is supported.
    * @see #getKost2(int, int, int, int)
    */
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public Kost2DO getKost2(final String kostString) {
     final int[] kost = KostHelper.parseKostString(kostString);
     if (kost == null) {
@@ -115,7 +108,7 @@ public class Kost2Dao extends BaseDao<Kost2DO> {
   }
 
   public Kost2DO getKost2(final int nummernkreis, final int bereich, final int teilbereich, final int kost2Art) {
-    return SQLHelper.ensureUniqueResult(getSession()
+    return SQLHelper.ensureUniqueResult(em
             .createNamedQuery(Kost2DO.FIND_BY_NK_BEREICH_TEILBEREICH_KOST2ART, Kost2DO.class)
             .setParameter("nummernkreis", nummernkreis)
             .setParameter("bereich", bereich)
@@ -124,11 +117,11 @@ public class Kost2Dao extends BaseDao<Kost2DO> {
   }
 
   public List<Kost2DO> getActiveKost2(final int nummernkreis, final int bereich, final int teilbereich) {
-    return getSession().createNamedQuery(Kost2DO.FIND_ACTIVES_BY_NK_BEREICH_TEILBEREICH, Kost2DO.class)
+    return em.createNamedQuery(Kost2DO.FIND_ACTIVES_BY_NK_BEREICH_TEILBEREICH, Kost2DO.class)
             .setParameter("nummernkreis", nummernkreis)
             .setParameter("bereich", bereich)
             .setParameter("teilbereich", teilbereich)
-            .list();
+            .getResultList();
   }
 
   /**
@@ -143,7 +136,6 @@ public class Kost2Dao extends BaseDao<Kost2DO> {
   }
 
   @Override
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public List<Kost2DO> getList(final BaseSearchFilter filter) {
     final KostFilter myFilter;
     if (filter instanceof KostFilter) {
@@ -152,20 +144,19 @@ public class Kost2Dao extends BaseDao<Kost2DO> {
       myFilter = new KostFilter(filter);
     }
     final QueryFilter queryFilter = new QueryFilter(myFilter);
-    queryFilter.createAlias("kost2Art", "art");
+    queryFilter.createJoin("kost2Art");
     if (myFilter.isActive()) {
-      queryFilter.add(Restrictions.eq("kostentraegerStatus", KostentraegerStatus.ACTIVE));
+      queryFilter.add(QueryFilter.eq("kostentraegerStatus", KostentraegerStatus.ACTIVE));
     } else if (myFilter.isNonActive()) {
-      queryFilter.add(Restrictions.eq("kostentraegerStatus", KostentraegerStatus.NONACTIVE));
+      queryFilter.add(QueryFilter.eq("kostentraegerStatus", KostentraegerStatus.NONACTIVE));
     } else if (myFilter.isEnded()) {
-      queryFilter.add(Restrictions.eq("kostentraegerStatus", KostentraegerStatus.ENDED));
+      queryFilter.add(QueryFilter.eq("kostentraegerStatus", KostentraegerStatus.ENDED));
     } else if (myFilter.isNotEnded()) {
-      queryFilter.add(Restrictions.or(Restrictions.ne("kostentraegerStatus", ProjektStatus.ENDED),
-              Restrictions.isNull("kostentraegerStatus")));
+      queryFilter.add(QueryFilter.or(QueryFilter.ne("kostentraegerStatus", ProjektStatus.ENDED),
+              QueryFilter.isNull("kostentraegerStatus")));
     }
-    queryFilter.addOrder(Order.asc("nummernkreis")).addOrder(Order.asc("bereich")).addOrder(Order.asc("teilbereich"))
-            .addOrder(
-                    Order.asc("art.id"));
+    queryFilter.addOrder(SortProperty.asc("nummernkreis")).addOrder(SortProperty.asc("bereich")).addOrder(SortProperty.asc("teilbereich"))
+            .addOrder(SortProperty.asc("kost2Art.id"));
     return getList(queryFilter);
   }
 
@@ -201,13 +192,12 @@ public class Kost2Dao extends BaseDao<Kost2DO> {
       other = getKost2(obj.getNummernkreis(), obj.getBereich(), obj.getTeilbereich(), obj.getKost2ArtId());
     } else {
       // kost entry already exists. Check maybe changed:
-      other = getSession().createNamedQuery(Kost2DO.FIND_OTHER_BY_NK_BEREICH_TEILBEREICH_KOST2ART, Kost2DO.class)
+      other = SQLHelper.ensureUniqueResult(em.createNamedQuery(Kost2DO.FIND_OTHER_BY_NK_BEREICH_TEILBEREICH_KOST2ART, Kost2DO.class)
               .setParameter("nummernkreis", obj.getNummernkreis())
               .setParameter("bereich", obj.getBereich())
               .setParameter("teilbereich", obj.getTeilbereich())
               .setParameter("kost2ArtId", obj.getKost2ArtId())
-              .setParameter("id", obj.getId())
-              .uniqueResult();
+              .setParameter("id", obj.getId()));
     }
     if (other != null) {
       throw new UserException("fibu.kost.error.collision");

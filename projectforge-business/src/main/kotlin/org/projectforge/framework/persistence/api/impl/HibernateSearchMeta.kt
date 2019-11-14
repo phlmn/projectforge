@@ -21,21 +21,25 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-package org.projectforge.rest.calendar.converter
+package org.projectforge.framework.persistence.api.impl
 
-import net.fortuna.ical4j.model.Property
-import net.fortuna.ical4j.model.component.VEvent
-import org.projectforge.rest.dto.CalEvent
+import org.projectforge.framework.persistence.api.BaseDao
+import org.projectforge.framework.persistence.api.IDao
 
-class TransparencyConverter : PropertyConverter() {
-    override fun toVEvent(event: CalEvent): Property? {
-        // currently not implemented
-        return null
-        //    return Transp.OPAQUE;
+object HibernateSearchMeta {
+    private val classInfos = mutableMapOf<Class<*>, HibernateSearchClassInfo>()
+
+    fun getSearchFields(dao: IDao<*>): Array<String>? {
+        if (dao !is BaseDao) return null
+        return getClassInfo(dao).allFieldNames
     }
 
-    override fun fromVEvent(event: CalEvent, vEvent: VEvent): Boolean {
-        // currently not implemented
-        return false
+    fun getClassInfo(baseDao: BaseDao<*>): HibernateSearchClassInfo {
+        var result = classInfos[baseDao.doClass]
+        if (result == null) {
+            result = HibernateSearchClassInfo(baseDao)
+            classInfos[baseDao.doClass] = result
+        }
+        return result
     }
 }

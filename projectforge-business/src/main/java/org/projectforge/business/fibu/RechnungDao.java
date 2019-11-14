@@ -26,8 +26,6 @@ package org.projectforge.business.fibu;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
-import org.hibernate.FetchMode;
-import org.hibernate.criterion.Order;
 import org.projectforge.business.fibu.kost.KostZuweisungDO;
 import org.projectforge.business.user.UserRightId;
 import org.projectforge.framework.access.AccessException;
@@ -38,6 +36,7 @@ import org.projectforge.framework.i18n.UserException;
 import org.projectforge.framework.persistence.api.BaseDao;
 import org.projectforge.framework.persistence.api.BaseSearchFilter;
 import org.projectforge.framework.persistence.api.QueryFilter;
+import org.projectforge.framework.persistence.api.SortProperty;
 import org.projectforge.framework.persistence.history.DisplayHistoryEntry;
 import org.projectforge.framework.persistence.utils.SQLHelper;
 import org.projectforge.framework.time.DateHelper;
@@ -45,16 +44,14 @@ import org.projectforge.framework.time.DayHolder;
 import org.projectforge.framework.xstream.XmlObjectWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.Tuple;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
 
 @Repository
-@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
 public class RechnungDao extends BaseDao<RechnungDO> {
   public static final UserRightId USER_RIGHT_ID = UserRightId.FIBU_AUSGANGSRECHNUNGEN;
 
@@ -65,9 +62,7 @@ public class RechnungDao extends BaseDao<RechnungDO> {
   private static final Class<?>[] ADDITIONAL_SEARCH_DOS = new Class[]{RechnungsPositionDO.class};
 
   private static final String[] ADDITIONAL_SEARCH_FIELDS = new String[]{"kunde.name", "projekt.name",
-          "projekt.kunde.name",
-          "positionen.text", "positionen.auftragsPosition.position", "positionen.auftragsPosition.position",
-          "positionen.auftragsPosition.titel", "positionen.auftragsPosition.bemerkung"};
+          "projekt.kunde.name", "positionen.auftragsPosition.auftrag.nummer"};
 
   @Autowired
   private KundeDao kundeDao;
@@ -77,6 +72,11 @@ public class RechnungDao extends BaseDao<RechnungDO> {
 
   @Autowired
   private RechnungCache rechnungCache;
+
+  public RechnungDao() {
+    super(RechnungDO.class);
+    userRightId = USER_RIGHT_ID;
+  }
 
   public static BigDecimal getNettoSumme(final Collection<RechnungsPositionVO> col) {
     BigDecimal nettoSumme = BigDecimal.ZERO;
@@ -88,7 +88,7 @@ public class RechnungDao extends BaseDao<RechnungDO> {
     return nettoSumme;
   }
 
-  static void writeUiStatusToXml(final AbstractRechnungDO<?> rechnung) {
+  static void writeUiStatusToXml(final AbstractRechnungDO rechnung) {
     final String uiStatusAsXml = XmlObjectWriter.writeAsXml(rechnung.getUiStatus());
     rechnung.setUiStatusAsXml(uiStatusAsXml);
   }
@@ -100,18 +100,12 @@ public class RechnungDao extends BaseDao<RechnungDO> {
     return rechnungCache;
   }
 
-  public RechnungDao() {
-    super(RechnungDO.class);
-    userRightId = USER_RIGHT_ID;
-  }
-
   /**
    * List of all years with invoices: select min(datum), max(datum) from t_fibu_rechnung.
    */
   public int[] getYears() {
-    final Object[] minMaxDate = getSession().createNamedQuery(RechnungDO.SELECT_MIN_MAX_DATE, Object[].class)
-            .getSingleResult();
-    return SQLHelper.getYears((java.sql.Date) minMaxDate[0], (java.sql.Date) minMaxDate[1]);
+    final Tuple minMaxDate = SQLHelper.ensureUniqueResult(em.createNamedQuery(RechnungDO.SELECT_MIN_MAX_DATE, Tuple.class));
+    return SQLHelper.getYears((java.sql.Date) minMaxDate.get(0), (java.sql.Date) minMaxDate.get(1));
   }
 
   public RechnungsStatistik buildStatistik(final List<RechnungDO> list) {
@@ -205,10 +199,9 @@ public class RechnungDao extends BaseDao<RechnungDO> {
             throw new UserException("fibu.rechnung.error.rechnungsNummerIstNichtFortlaufend");
           }
         } else {
-          final RechnungDO other = getSession().createNamedQuery(RechnungDO.FIND_OTHER_BY_NUMMER, RechnungDO.class)
+          final RechnungDO other = SQLHelper.ensureUniqueResult(em.createNamedQuery(RechnungDO.FIND_OTHER_BY_NUMMER, RechnungDO.class)
                   .setParameter("nummer", rechnung.getNummer())
-                  .setParameter("id", rechnung.getId())
-                  .uniqueResult();
+                  .setParameter("id", rechnung.getId()));
           if (other != null) {
             throw new UserException("fibu.rechnung.error.rechnungsNummerBereitsVergeben");
           }
@@ -262,7 +255,7 @@ public class RechnungDao extends BaseDao<RechnungDO> {
   }
 
   @Override
-  protected String[] getAdditionalSearchFields() {
+  public String[] getAdditionalSearchFields() {
     return ADDITIONAL_SEARCH_FIELDS;
   }
 
@@ -271,7 +264,6 @@ public class RechnungDao extends BaseDao<RechnungDO> {
    *
    * @see org.projectforge.framework.persistence.api.BaseDao#getById(java.io.Serializable)
    */
-  @Transactional(readOnly = true, propagation = Propagation.REQUIRES_NEW)
   @Override
   public RechnungDO getById(final Serializable id) throws AccessException {
     final RechnungDO rechnung = super.getById(id);
@@ -294,10 +286,10 @@ public class RechnungDao extends BaseDao<RechnungDO> {
     }
 
     final QueryFilter queryFilter = AuftragAndRechnungDaoHelper.createQueryFilterWithDateRestriction(myFilter);
-    queryFilter.addOrder(Order.desc("datum"));
-    queryFilter.addOrder(Order.desc("nummer"));
+    queryFilter.addOrder(SortProperty.desc("datum"));
+    queryFilter.addOrder(SortProperty.desc("nummer"));
     if (myFilter.isShowKostZuweisungStatus()) {
-      queryFilter.setFetchMode("positionen.kostZuweisungen", FetchMode.JOIN);
+      //queryFilter.setFetchMode("positionen.kostZuweisungen", FetchMode.JOIN);
     }
 
     AuftragAndRechnungDaoHelper.createCriterionForPeriodOfPerformance(myFilter).ifPresent(queryFilter::add);
@@ -350,7 +342,6 @@ public class RechnungDao extends BaseDao<RechnungDO> {
    *                 Rechnung bekommt die alte Nummer wieder zugeordnet.
    */
   @SuppressWarnings("unchecked")
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public Integer getNextNumber(final RechnungDO rechnung) {
     if (rechnung != null && rechnung.getId() != null) {
       final RechnungDO orig = internalGetById(rechnung.getId());
@@ -359,7 +350,7 @@ public class RechnungDao extends BaseDao<RechnungDO> {
         return orig.getNummer();
       }
     }
-    final List<Integer> list = getSession().createQuery("select max(t.nummer) from RechnungDO t").list();
+    final List<Integer> list = em.createQuery("select max(t.nummer) from RechnungDO t").getResultList();
     Validate.notNull(list);
     if (list.size() == 0 || list.get(0) == null) {
       log.info("First entry of RechnungDO");
@@ -441,13 +432,5 @@ public class RechnungDao extends BaseDao<RechnungDO> {
   @Override
   public RechnungDO newInstance() {
     return new RechnungDO();
-  }
-
-  /**
-   * @see org.projectforge.framework.persistence.api.BaseDao#useOwnCriteriaCacheRegion()
-   */
-  @Override
-  protected boolean useOwnCriteriaCacheRegion() {
-    return true;
   }
 }

@@ -9,6 +9,7 @@ import GlobalNavigation from '../components/base/navigation/GlobalNavigation';
 import TopBar from '../components/base/topbar';
 import { Alert, Container } from '../components/design';
 import history from '../utilities/history';
+import prefix from '../utilities/prefix';
 import { getServiceURL, handleHTTPErrors } from '../utilities/rest';
 import CalendarPage from './page/calendar/CalendarPage';
 import DynamicPage from './page/DynamicPage';
@@ -78,27 +79,27 @@ function ProjectForge(
                         {wicketRoute}
                         <Route
                             exact
-                            path="/"
+                            path={prefix}
                             component={IndexPage}
                         />
                         <Route
-                            path="/calendar"
+                            path={`${prefix}calendar`}
                             component={CalendarPage}
                         />
                         <Route
-                            path="/taskTree"
+                            path={`${prefix}taskTree`}
                             component={TaskTreePage}
                         />
                         <Route
-                            path="/dynamic/:page"
+                            path={`${prefix}dynamic/:page`}
                             component={DynamicPage}
                         />
                         <Route
-                            path="/:category/edit/:id?"
+                            path={`${prefix}:category/edit/:id?`}
                             component={EditPage}
                         />
                         <Route
-                            path="/:category/"
+                            path={`${prefix}:category`}
                             component={ListPage}
                         />
                     </Switch>
@@ -110,11 +111,11 @@ function ProjectForge(
             <Switch>
                 {wicketRoute}
                 <Route
-                    path="/:restPrefix/:page"
+                    path={`${prefix}:restPrefix/:page`}
                     component={DynamicPage}
                 />
                 <Route
-                    path="/"
+                    path={prefix}
                     render={props => (
                         <LoginView
                             // TODO REPLACE OLD LOGIN VIEW WITH DYNAMIC PAGE

@@ -21,27 +21,31 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-package org.projectforge.rest.calendar.converter
+package org.projectforge.framework.persistence.api.impl
 
-import net.fortuna.ical4j.model.Property
-import net.fortuna.ical4j.model.component.VEvent
-import net.fortuna.ical4j.model.property.Summary
-import org.projectforge.rest.dto.CalEvent
+internal class HibernateSearchFieldInfo(val field: String, val type: Class<*>) {
+    private var annotations: MutableList<Annotation>? = null
 
-class SummaryConverter : PropertyConverter() {
-    override fun toVEvent(event: CalEvent): Property? {
-        return if (event.subject != null) {
-            Summary(event.subject)
-        } else null
-
+    fun add(annotation: Annotation?) {
+        if (annotation == null) {
+            return
+        }
+        if (annotations == null) {
+            annotations = mutableListOf()
+        }
+        annotations!!.add(annotation)
     }
 
-    override fun fromVEvent(event: CalEvent, vEvent: VEvent): Boolean {
-        if (vEvent.summary != null) {
-            event.subject = vEvent.summary.value
-            return true
-        }
+    fun hasAnnotations(): Boolean {
+        return !annotations.isNullOrEmpty()
+    }
 
-        return false
+    fun isStringSearchSupported(): Boolean {
+        return String::class.java.isAssignableFrom(type)
+    }
+
+    fun isNumericSearchSupported(): Boolean {
+        return Integer::class.java.isAssignableFrom(type)
+                || Int::class.java.isAssignableFrom(type)
     }
 }

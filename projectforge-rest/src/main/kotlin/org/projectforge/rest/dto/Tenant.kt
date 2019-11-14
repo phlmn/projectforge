@@ -21,6 +21,8 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-package org.projectforge.framework.persistence.api.impl
+package org.projectforge.rest.dto
 
-internal class SortBy(val field: String, val ascending: Boolean = true)
+import org.projectforge.framework.persistence.user.entities.TenantDO
+
+class Tenant(var name: String? = null) : BaseDTO<TenantDO>()

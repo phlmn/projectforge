@@ -21,37 +21,14 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-package org.projectforge.framework.persistence.api;
+package org.projectforge.framework.persistence.api.impl
 
-public class SortProperty {
-  private SortOrder sortOrder;
-  private String property;
+import org.projectforge.framework.time.PFDateTime
 
-  public SortProperty() {
-  }
-
-  public SortProperty(String property) {
-    this(property, SortOrder.ASCENDING);
-  }
-
-  public SortProperty(String property, SortOrder sortOrder) {
-    this.property = property;
-    this.sortOrder = sortOrder;
-  }
-
-  public SortOrder getSortOrder() {
-    return sortOrder;
-  }
-
-  public void setSortOrder(SortOrder sortOrder) {
-    this.sortOrder = sortOrder;
-  }
-
-  public String getProperty() {
-    return property;
-  }
-
-  public void setProperty(String property) {
-    this.property = property;
-  }
-}
+/**
+ * Search for this string in all history entries of the queried entities.
+ */
+data class DBHistorySearchParams(var modifiedByUserId: Int? = null,
+                                 var modifiedFrom: PFDateTime? = null,
+                                 var modifiedTo: PFDateTime? = null,
+                                 var searchHistory: String? = null)

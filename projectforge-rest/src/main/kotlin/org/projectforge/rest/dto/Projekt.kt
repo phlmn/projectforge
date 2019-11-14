@@ -30,5 +30,5 @@ class Projekt(id: Int?,
               deleted: Boolean,
               created: Date?,
               lastUpdate: Date?,
-              tenantId: Int?)
-    : BaseDTO<ProjektDO>(id, deleted, created, lastUpdate, tenantId)
+              tenant: Tenant?)
+    : BaseDTO<ProjektDO>(id, deleted, created, lastUpdate, tenant)

@@ -26,8 +26,6 @@ package org.projectforge.business.teamcal.event;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Restrictions;
 import org.projectforge.business.calendar.event.model.ICalendarEvent;
 import org.projectforge.business.calendar.event.model.SeriesModificationMode;
 import org.projectforge.business.multitenancy.TenantService;
@@ -40,21 +38,18 @@ import org.projectforge.framework.i18n.UserException;
 import org.projectforge.framework.persistence.api.BaseDao;
 import org.projectforge.framework.persistence.api.BaseSearchFilter;
 import org.projectforge.framework.persistence.api.QueryFilter;
+import org.projectforge.framework.persistence.api.SortProperty;
 import org.projectforge.framework.persistence.jpa.PfEmgrFactory;
 import org.projectforge.framework.persistence.user.api.ThreadLocalUserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Isolation;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.NoResultException;
 import javax.persistence.NonUniqueResultException;
 import java.util.*;
 
 @Repository
-public class CalEventDao extends BaseDao<CalEventDO>
-{
+public class CalEventDao extends BaseDao<CalEventDO> {
   /**
    * For storing the selected element of the series in the transient attribute map for correct handling in {@link #onDelete(CalEventDO)}
    * and {@link #onSaveOrModify(CalEventDO)} of series (all, future, selected).
@@ -81,8 +76,7 @@ public class CalEventDao extends BaseDao<CalEventDO>
     userRightId = UserRightId.CALENDAR_EVENT;
   }
 
-  public CalEventDO getByUid(Integer calendarId, final String uid)
-  {
+  public CalEventDO getByUid(Integer calendarId, final String uid) {
     return this.getByUid(calendarId, uid, true);
   }
 
@@ -199,7 +193,6 @@ public class CalEventDao extends BaseDao<CalEventDO>
    * Handles deletion of series element (if any) for future and single events of a series.
    */
   @Override
-  @Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
   public void internalMarkAsDeleted(final CalEventDO obj) {
     ICalendarEvent selectedEvent = (ICalendarEvent) obj.removeTransientAttribute(ATTR_SELECTED_ELEMENT); // Must be removed, otherwise update below will handle this attrs again.
     SeriesModificationMode mode = (SeriesModificationMode) obj.removeTransientAttribute(ATTR_SERIES_MODIFICATION_MODE);
@@ -228,8 +221,7 @@ public class CalEventDao extends BaseDao<CalEventDO>
   }
 
   @Override
-  public CalEventDO newInstance()
-  {
+  public CalEventDO newInstance() {
     return null;
   }
 
@@ -245,8 +237,7 @@ public class CalEventDao extends BaseDao<CalEventDO>
    * recurrence events (if calculateRecurrenceEvents is true). Origin events are of type {@link TeamEventDO},
    * calculated events of type {@link ICalendarEvent}.
    */
-  public List<ICalendarEvent> getEventList(final TeamEventFilter filter, final boolean calculateRecurrenceEvents)
-  {
+  public List<ICalendarEvent> getEventList(final TeamEventFilter filter, final boolean calculateRecurrenceEvents) {
     final List<ICalendarEvent> result = new ArrayList<>();
     List<CalEventDO> list = getList(filter);
     if (CollectionUtils.isNotEmpty(list)) {
@@ -274,12 +265,15 @@ public class CalEventDao extends BaseDao<CalEventDO>
    * Sets midnight (UTC) of all day events.
    */
   @Override
-  protected void onSaveOrModify(final CalEventDO event)
-  {
+  protected void onSaveOrModify(final CalEventDO event) {
     super.onSaveOrModify(event);
     Validate.notNull(event.getCalendar());
 
-    if (event.getEndDate().getTime() - event.getStartDate().getTime() < 60000) {
+    if (event.getAllDay()) {
+      if (event.getEndDate().getTime() < event.getStartDate().getTime()) {
+        throw new UserException("plugins.teamcal.event.duration.error"); // "Duration of time sheet must be at minimum 60s!
+      }
+    } else if (event.getEndDate().getTime() - event.getStartDate().getTime() < 60000) {
       throw new UserException("plugins.teamcal.event.duration.error"); // "Duration of time sheet must be at minimum 60s!
       // Or, end date is before start date.
     }
@@ -298,22 +292,20 @@ public class CalEventDao extends BaseDao<CalEventDO>
   }
 
   @Override
-  protected void onSave(final CalEventDO event)
-  {
+  protected void onSave(final CalEventDO event) {
     // create uid if empty
     if (StringUtils.isBlank(event.getUid())) {
       event.setUid(TeamCalConfig.get().createEventUid());
     }
   }
 
-  private QueryFilter buildQueryFilter(final TeamEventFilter filter)
-  {
+  private QueryFilter buildQueryFilter(final TeamEventFilter filter) {
     final QueryFilter queryFilter = new QueryFilter(filter);
     final Collection<Integer> cals = filter.getTeamCals();
     if (CollectionUtils.isNotEmpty(cals)) {
-      queryFilter.add(Restrictions.in("calendar.id", cals));
+      queryFilter.add(QueryFilter.isIn("calendar.id", cals));
     } else if (filter.getTeamCalId() != null) {
-      queryFilter.add(Restrictions.eq("calendar.id", filter.getTeamCalId()));
+      queryFilter.add(QueryFilter.eq("calendar.id", filter.getTeamCalId()));
     }
     // Following period extension is needed due to all day events which are stored in UTC. The additional events in the result list not
     // matching the time period have to be removed by caller!
@@ -327,16 +319,16 @@ public class CalEventDao extends BaseDao<CalEventDO>
     }
     // limit events to load to chosen date view.
     if (startDate != null && endDate != null) {
-        queryFilter.add(Restrictions.or(
-          (Restrictions.or(Restrictions.between("startDate", startDate, endDate),
-            Restrictions.between("endDate", startDate, endDate))),
-          // get events whose duration overlap with chosen duration.
-          (Restrictions.and(Restrictions.le("startDate", startDate), Restrictions.ge("endDate", endDate)))));
+      queryFilter.add(QueryFilter.or(
+              (QueryFilter.or(QueryFilter.between("startDate", startDate, endDate),
+                      QueryFilter.between("endDate", startDate, endDate))),
+              // get events whose duration overlap with chosen duration.
+              (QueryFilter.and(QueryFilter.le("startDate", startDate), QueryFilter.ge("endDate", endDate)))));
 
     } else if (endDate != null) {
-      queryFilter.add(Restrictions.le("startDate", endDate));
+      queryFilter.add(QueryFilter.le("startDate", endDate));
     }
-    queryFilter.addOrder(Order.desc("startDate"));
+    queryFilter.addOrder(SortProperty.desc("startDate"));
     return queryFilter;
   }
 

@@ -21,29 +21,19 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-package org.projectforge.rest.calendar.converter
+package org.projectforge.framework.persistence.api.impl
 
-import net.fortuna.ical4j.model.DateTime
-import net.fortuna.ical4j.model.Property
-import net.fortuna.ical4j.model.component.VEvent
-import net.fortuna.ical4j.model.property.DtStamp
-import org.projectforge.rest.dto.CalEvent
+import org.projectforge.framework.ToStringUtil
+import javax.persistence.criteria.JoinType
 
-import java.sql.Timestamp
-
-class DTStampConverter : PropertyConverter() {
-    override fun toVEvent(event: CalEvent): Property? {
-        val dtStampValue = DateTime(event.dtStamp!!)
-        dtStampValue.isUtc = true
-        return DtStamp(dtStampValue)
-    }
-
-    override fun fromVEvent(event: CalEvent, vEvent: VEvent): Boolean {
-        if (vEvent.dateStamp != null) {
-            event.dtStamp = Timestamp(vEvent.dateStamp.date.time)
-            return true
-        }
-
-        return false
+/**
+ * For preparation of Joins.
+ */
+class DBJoin(val attribute: String,
+             val joinType: JoinType = JoinType.INNER,
+             val fetch: Boolean = false,
+             val parent: String? = null) {
+    override fun toString(): String {
+        return ToStringUtil.toJsonString(this)
     }
 }

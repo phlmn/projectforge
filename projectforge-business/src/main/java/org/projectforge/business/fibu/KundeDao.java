@@ -23,13 +23,13 @@
 
 package org.projectforge.business.fibu;
 
-import org.hibernate.criterion.Order;
 import org.projectforge.business.user.ProjectForgeGroup;
 import org.projectforge.framework.access.OperationType;
 import org.projectforge.framework.i18n.UserException;
 import org.projectforge.framework.persistence.api.BaseDao;
 import org.projectforge.framework.persistence.api.BaseSearchFilter;
 import org.projectforge.framework.persistence.api.QueryFilter;
+import org.projectforge.framework.persistence.api.SortProperty;
 import org.projectforge.framework.persistence.user.entities.PFUserDO;
 import org.springframework.stereotype.Repository;
 
@@ -50,14 +50,12 @@ public class KundeDao extends BaseDao<KundeDO>
   public List<KundeDO> getList(final BaseSearchFilter filter)
   {
     final QueryFilter queryFilter = new QueryFilter(filter);
-    queryFilter.addOrder(Order.asc("id"));
+    queryFilter.addOrder(SortProperty.asc("nummer"));
     return getList(queryFilter);
   }
 
   /**
    * return Always true, no generic select access needed for address objects.
-   *
-   * @see org.projectforge.framework.persistence.api.BaseDao#hasSelectAccess()
    */
   @Override
   public boolean hasUserSelectAccess(final PFUserDO user, final boolean throwException)

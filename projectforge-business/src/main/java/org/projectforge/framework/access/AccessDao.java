@@ -25,7 +25,6 @@ package org.projectforge.framework.access;
 
 import org.apache.commons.lang3.Validate;
 import org.hibernate.Hibernate;
-import org.hibernate.criterion.Restrictions;
 import org.projectforge.business.task.TaskDO;
 import org.projectforge.business.task.TaskDao;
 import org.projectforge.business.task.TaskNode;
@@ -37,9 +36,11 @@ import org.projectforge.framework.persistence.user.entities.GroupDO;
 import org.projectforge.framework.persistence.user.entities.PFUserDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.From;
+import javax.persistence.criteria.JoinType;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -90,31 +91,35 @@ public class AccessDao extends BaseDao<GroupTaskAccessDO> {
    */
   @Override
   @SuppressWarnings("unchecked")
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public List<GroupTaskAccessDO> internalLoadAll() {
-    List<GroupTaskAccessDO> list = (List<GroupTaskAccessDO>) getHibernateTemplate().find(
-            "from GroupTaskAccessDO g join fetch g.accessEntries where deleted=false order by g.task.id, g.group.id");
-    list = selectUnique(list);
-    return list;
+    CriteriaBuilder cb = em.getCriteriaBuilder();
+    CriteriaQuery<GroupTaskAccessDO> cr = cb.createQuery(GroupTaskAccessDO.class);
+    From root = cr.from(clazz);
+    root.fetch("accessEntries", JoinType.LEFT);
+    cr.select(root).where(
+            cb.equal(root.get("deleted"), false))
+            .orderBy(cb.asc(root.get("task").get("id")), cb.asc(root.get("group").get("id")))
+            .distinct(true);
+    return em.createQuery(cr).getResultList();
+    // from GroupTaskAccessDO g join fetch g.accessEntries where deleted=false order by g.task.id, g.group.id");
   }
 
   @Override
-  protected String[] getAdditionalSearchFields() {
+  public String[] getAdditionalSearchFields() {
     return ADDITIONAL_SEARCH_FIELDS;
   }
 
   @SuppressWarnings("unchecked")
-  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
   public GroupTaskAccessDO getEntry(final TaskDO task, final GroupDO group) {
     Validate.notNull(task);
     Validate.notNull(task.getId());
     Validate.notNull(group);
     Validate.notNull(group.getId());
-    final List<GroupTaskAccessDO> list = getSession()
+    final List<GroupTaskAccessDO> list = em
             .createNamedQuery(GroupTaskAccessDO.FIND_BY_TASK_AND_GROUP, GroupTaskAccessDO.class)
             .setParameter("taskId", task.getId())
             .setParameter("groupId", group.getId())
-            .list();
+            .getResultList();
     if (list != null && list.size() == 1) {
       final GroupTaskAccessDO access = list.get(0);
       checkLoggedInUserSelectAccess(access);
@@ -153,15 +158,15 @@ public class AccessDao extends BaseDao<GroupTaskAccessDO> {
           taskIds.addAll(ancestors);
         }
         taskIds.add(node.getId());
-        queryFilter.add(Restrictions.in("task.id", taskIds));
+        queryFilter.add(QueryFilter.isIn("task.id", taskIds));
       } else {
-        queryFilter.add(Restrictions.eq("task.id", myFilter.getTaskId()));
+        queryFilter.add(QueryFilter.eq("task.id", myFilter.getTaskId()));
       }
     }
     if (myFilter.getGroupId() != null) {
       final GroupDO group = new GroupDO();
       group.setId(myFilter.getGroupId());
-      queryFilter.add(Restrictions.eq("group", group));
+      queryFilter.add(QueryFilter.eq("group", group));
     }
     final List<GroupTaskAccessDO> qlist = getList(queryFilter);
     List<GroupTaskAccessDO> list;

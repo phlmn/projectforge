@@ -21,19 +21,28 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-package org.projectforge.flyway.dbmigration;
+package org.projectforge.framework.json
 
-import org.flywaydb.core.api.migration.spring.SpringJdbcMigration;
-import org.springframework.jdbc.core.JdbcTemplate;
+import com.fasterxml.jackson.core.JsonGenerator
+import com.fasterxml.jackson.core.JsonProcessingException
+import com.fasterxml.jackson.databind.SerializerProvider
+import com.fasterxml.jackson.databind.ser.std.StdSerializer
+import org.hibernate.proxy.AbstractLazyInitializer
+import java.io.IOException
 
-public class V6_18_0_1234_1__PROJECTFORGE_1234 implements SpringJdbcMigration
-{
-  private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(V6_18_0_1234_1__PROJECTFORGE_1234.class);
-
-  @Override
-  public void migrate(final JdbcTemplate jdbcTemplate) throws Exception
-  {
-    log.info("Running migration method for new version!");
-    jdbcTemplate.execute("SELECT * FROM T_PLUGIN_PLUGINTEMPLATE");
-  }
+class HibernateProxySerializer : StdSerializer<AbstractLazyInitializer>(AbstractLazyInitializer::class.java) {
+    @Throws(IOException::class, JsonProcessingException::class)
+    override fun serialize(value: AbstractLazyInitializer?, jgen: JsonGenerator, provider: SerializerProvider) {
+        if (value == null) {
+            jgen.writeNull()
+            return
+        }
+        jgen.writeStartObject()
+        if (value.identifier == null) {
+            jgen.writeNullField("id")
+        } else {
+            jgen.writeStringField("id", "${value.identifier}")
+        }
+        jgen.writeEndObject()
+    }
 }

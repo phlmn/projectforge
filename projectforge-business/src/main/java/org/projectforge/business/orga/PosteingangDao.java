@@ -24,31 +24,26 @@
 package org.projectforge.business.orga;
 
 import org.apache.commons.lang3.ArrayUtils;
-import org.hibernate.criterion.Order;
 import org.projectforge.business.user.UserRightId;
 import org.projectforge.framework.persistence.api.BaseDao;
 import org.projectforge.framework.persistence.api.BaseSearchFilter;
 import org.projectforge.framework.persistence.api.QueryFilter;
+import org.projectforge.framework.persistence.api.SortProperty;
 import org.projectforge.framework.persistence.utils.SQLHelper;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.Tuple;
 import java.util.List;
 
 @Repository
-@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-public class PosteingangDao extends BaseDao<PosteingangDO>
-{
+public class PosteingangDao extends BaseDao<PosteingangDO> {
   public static final UserRightId USER_RIGHT_ID = UserRightId.ORGA_INCOMING_MAIL;
+  private static final String[] ENABLED_AUTOCOMPLETION_PROPERTIES = {"absender", "person", "inhalt"};
 
-  protected PosteingangDao()
-  {
+  protected PosteingangDao() {
     super(PosteingangDO.class);
     userRightId = USER_RIGHT_ID;
   }
-
-  private static final String[] ENABLED_AUTOCOMPLETION_PROPERTIES = {"absender", "person", "inhalt"};
 
   @Override
   public boolean isAutocompletionPropertyEnabled(String property) {
@@ -58,16 +53,13 @@ public class PosteingangDao extends BaseDao<PosteingangDO>
   /**
    * List of all years with invoices: select min(datum), max(datum) from t_fibu_rechnung.
    */
-  public int[] getYears()
-  {
-    final Object[] minMaxDate = getSession().createNamedQuery(PosteingangDO.SELECT_MIN_MAX_DATE, Object[].class)
-            .getSingleResult();
-    return SQLHelper.getYears((java.sql.Date)minMaxDate[0], (java.sql.Date)minMaxDate[1]);
+  public int[] getYears() {
+    final Tuple minMaxDate = SQLHelper.ensureUniqueResult(em.createNamedQuery(PosteingangDO.SELECT_MIN_MAX_DATE, Tuple.class));
+    return SQLHelper.getYears((java.sql.Date) minMaxDate.get(0), (java.sql.Date) minMaxDate.get(1));
   }
 
   @Override
-  public List<PosteingangDO> getList(final BaseSearchFilter filter)
-  {
+  public List<PosteingangDO> getList(final BaseSearchFilter filter) {
     final PostFilter myFilter;
     if (filter instanceof PostFilter) {
       myFilter = (PostFilter) filter;
@@ -76,15 +68,14 @@ public class PosteingangDao extends BaseDao<PosteingangDO>
     }
     final QueryFilter queryFilter = new QueryFilter(filter);
     queryFilter.setYearAndMonth("datum", myFilter.getYear(), myFilter.getMonth());
-    queryFilter.addOrder(Order.desc("datum"));
-    queryFilter.addOrder(Order.asc("absender"));
+    queryFilter.addOrder(SortProperty.desc("datum"));
+    queryFilter.addOrder(SortProperty.asc("absender"));
     final List<PosteingangDO> list = getList(queryFilter);
     return list;
   }
 
   @Override
-  public PosteingangDO newInstance()
-  {
+  public PosteingangDO newInstance() {
     return new PosteingangDO();
   }
 }

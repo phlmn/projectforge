@@ -29,15 +29,9 @@ import de.micromata.genome.db.jpa.history.impl.HistoryServiceImpl;
 import de.micromata.genome.db.jpa.tabattr.api.TimeableService;
 import de.micromata.genome.db.jpa.tabattr.impl.TimeableServiceImpl;
 import de.micromata.mgc.jpa.spring.SpringEmgrFilterBean;
-import de.micromata.mgc.jpa.spring.factories.JpaToSessionSpringBeanFactory;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.projectforge.continuousdb.DatabaseSupport;
-import org.projectforge.framework.persistence.api.HibernateUtils;
 import org.projectforge.framework.persistence.attr.impl.AttrSchemaServiceSpringBeanImpl;
 import org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO;
 import org.projectforge.framework.persistence.jpa.PfEmgrFactory;
-import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -46,14 +40,16 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Primary;
-import org.springframework.orm.hibernate5.HibernateTemplate;
-import org.springframework.orm.hibernate5.HibernateTransactionManager;
+import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.vendor.HibernateJpaDialect;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
+import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
@@ -81,9 +77,6 @@ public class PFSpringConfiguration
   @Autowired
   private SpringEmgrFilterBean springEmgrFilterBean;
 
-  @Autowired
-  private PfEmgrFactory pfEmgrFactory;
-
   @Value("${hibernate.search.default.indexBase}")
   private String hibernateIndexDir;
 
@@ -93,17 +86,8 @@ public class PFSpringConfiguration
     return builder.build();
   }
 
-  @Bean
-  public FactoryBean<Session> hibernateSession()
-  {
-    return new JpaToSessionSpringBeanFactory();
-  }
-
-  @Bean
-  public SessionFactory sessionFactory()
-  {
-    return entityManagerFactory().unwrap(SessionFactory.class);
-  }
+  @Autowired
+  private PfEmgrFactory pfEmgrFactory;
 
   /**
    * has to be defined, otherwise spring creates a LocalContainerEntityManagerFactoryBean, which has no correct
@@ -119,30 +103,23 @@ public class PFSpringConfiguration
   }
 
   @Bean
-  public HibernateTransactionManager transactionManager() throws Exception
+  public EntityManager entityManager()
   {
-    HibernateTransactionManager ret = new HibernateTransactionManager(sessionFactory());
-    ret.setAutodetectDataSource(false);
-    ret.setDataSource(dataSource);
-    return ret;
+    return entityManagerFactory().createEntityManager();
   }
 
   @Bean
-  public TransactionTemplate txTemplate() throws Exception
-  {
-    TransactionTemplate ret = new TransactionTemplate();
-    ret.setTransactionManager(transactionManager());
-    return ret;
+  public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
+    JpaTransactionManager transactionManager = new JpaTransactionManager();
+    transactionManager.setEntityManagerFactory(emf);
+    transactionManager.setDataSource(dataSource);
+    transactionManager.setJpaDialect(new HibernateJpaDialect());
+    return transactionManager;
   }
 
   @Bean
-  public HibernateTemplate hibernateTemplate() throws Exception
-  {
-    HibernateTemplate ht = new HibernateTemplate(sessionFactory());
-    if (DatabaseSupport.getInstance() == null) {
-      DatabaseSupport.setInstance(new DatabaseSupport(HibernateUtils.getDialect()));
-    }
-    return ht;
+  public PersistenceExceptionTranslationPostProcessor exceptionTranslation(){
+    return new PersistenceExceptionTranslationPostProcessor();
   }
 
   @Bean(name = "attrSchemaService")

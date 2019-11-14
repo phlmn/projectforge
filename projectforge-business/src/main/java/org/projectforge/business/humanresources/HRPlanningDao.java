@@ -26,8 +26,6 @@ package org.projectforge.business.humanresources;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.Validate;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Restrictions;
 import org.projectforge.business.fibu.ProjektDO;
 import org.projectforge.business.fibu.ProjektDao;
 import org.projectforge.business.multitenancy.TenantRegistryMap;
@@ -41,6 +39,7 @@ import org.projectforge.framework.i18n.UserException;
 import org.projectforge.framework.persistence.api.BaseDao;
 import org.projectforge.framework.persistence.api.BaseSearchFilter;
 import org.projectforge.framework.persistence.api.QueryFilter;
+import org.projectforge.framework.persistence.api.SortProperty;
 import org.projectforge.framework.persistence.history.DisplayHistoryEntry;
 import org.projectforge.framework.persistence.user.api.ThreadLocalUserContext;
 import org.projectforge.framework.persistence.user.entities.PFUserDO;
@@ -53,7 +52,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Date;
-import java.util.*;
+import java.util.Calendar;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Locale;
 
 /**
  * @author Mario Groß (m.gross@micromata.de)
@@ -81,7 +83,7 @@ public class HRPlanningDao extends BaseDao<HRPlanningDO> {
   }
 
   @Override
-  protected String[] getAdditionalSearchFields() {
+  public String[] getAdditionalSearchFields() {
     return new String[]{"entries.projekt.name", "entries.projekt.kunde.name", "user.username", "user.firstname",
             "user.lastname"};
   }
@@ -131,17 +133,15 @@ public class HRPlanningDao extends BaseDao<HRPlanningDO> {
     final HRPlanningDO other;
     if (planningId == null) {
       // New entry
-      other = getSession().createNamedQuery(HRPlanningDO.FIND_BY_USER_AND_WEEK, HRPlanningDO.class)
+      other = SQLHelper.ensureUniqueResult(em.createNamedQuery(HRPlanningDO.FIND_BY_USER_AND_WEEK, HRPlanningDO.class)
               .setParameter("userId", userId)
-              .setParameter("week", week)
-              .uniqueResult();
+              .setParameter("week", week));
     } else {
       // Entry already exists. Check collision:
-      other = getSession().createNamedQuery(HRPlanningDO.FIND_OTHER_BY_USER_AND_WEEK, HRPlanningDO.class)
+      other = SQLHelper.ensureUniqueResult(em.createNamedQuery(HRPlanningDO.FIND_OTHER_BY_USER_AND_WEEK, HRPlanningDO.class)
               .setParameter("userId", userId)
               .setParameter("week", week)
-              .setParameter("id", planningId)
-              .uniqueResult();
+              .setParameter("id", planningId));
     }
     return other != null;
   }
@@ -156,7 +156,7 @@ public class HRPlanningDao extends BaseDao<HRPlanningDO> {
       log.error("Date is not begin of week, try to change date: " + DateHelper.formatAsUTC(date.getDate()));
       date.setBeginOfWeek();
     }
-    final HRPlanningDO planning = SQLHelper.ensureUniqueResult(getSession()
+    final HRPlanningDO planning = SQLHelper.ensureUniqueResult(em
             .createNamedQuery(HRPlanningDO.FIND_BY_USER_AND_WEEK, HRPlanningDO.class)
             .setParameter("userId", userId)
             .setParameter("week", week));
@@ -205,19 +205,19 @@ public class HRPlanningDao extends BaseDao<HRPlanningDO> {
     if (filter.getUserId() != null) {
       final PFUserDO user = new PFUserDO();
       user.setId(filter.getUserId());
-      queryFilter.add(Restrictions.eq("user", user));
+      queryFilter.add(QueryFilter.eq("user", user));
     }
     if (filter.getStartTime() != null && filter.getStopTime() != null) {
-      queryFilter.add(Restrictions.between("week", filter.getStartTime(), filter.getStopTime()));
+      queryFilter.add(QueryFilter.between("week", filter.getStartTime(), filter.getStopTime()));
     } else if (filter.getStartTime() != null) {
-      queryFilter.add(Restrictions.ge("week", filter.getStartTime()));
+      queryFilter.add(QueryFilter.ge("week", filter.getStartTime()));
     } else if (filter.getStopTime() != null) {
-      queryFilter.add(Restrictions.le("week", filter.getStopTime()));
+      queryFilter.add(QueryFilter.le("week", filter.getStopTime()));
     }
     if (filter.getProjektId() != null) {
-      queryFilter.add(Restrictions.eq("projekt.id", filter.getProjektId()));
+      queryFilter.add(QueryFilter.eq("projekt.id", filter.getProjektId()));
     }
-    queryFilter.addOrder(Order.desc("week"));
+    queryFilter.addOrder(SortProperty.desc("week"));
     if (log.isDebugEnabled()) {
       log.debug(ToStringBuilder.reflectionToString(filter));
     }
@@ -229,8 +229,6 @@ public class HRPlanningDao extends BaseDao<HRPlanningDO> {
    * <li>Checks week date on: monday, 0:00:00.000 and if check fails then the date will be set to.</li>
    * <li>Check deleted entries and re-adds them instead of inserting a new entry, if exist.</li>
    * <ul>
-   *
-   * @see org.projectforge.framework.persistence.api.BaseDao#onSaveOrModify(org.projectforge.core.ExtendedBaseDO)
    */
   @Override
   protected void onSaveOrModify(final HRPlanningDO obj) {
@@ -273,10 +271,6 @@ public class HRPlanningDao extends BaseDao<HRPlanningDO> {
     super.onSaveOrModify(obj);
   }
 
-  /**
-   * @see org.projectforge.framework.persistence.api.BaseDao#prepareHibernateSearch(org.projectforge.core.ExtendedBaseDO,
-   * org.projectforge.framework.access.OperationType)
-   */
   @Override
   protected void prepareHibernateSearch(final HRPlanningDO obj, final OperationType operationType) {
     final List<HRPlanningEntryDO> entries = obj.getEntries();
@@ -298,8 +292,6 @@ public class HRPlanningDao extends BaseDao<HRPlanningDO> {
 
   /**
    * Gets history entries of super and adds all history entries of the HRPlanningEntryDO children.
-   *
-   * @see org.projectforge.framework.persistence.api.BaseDao#getDisplayHistoryEntries(org.projectforge.core.ExtendedBaseDO)
    */
   @Override
   public List<DisplayHistoryEntry> getDisplayHistoryEntries(final HRPlanningDO obj) {

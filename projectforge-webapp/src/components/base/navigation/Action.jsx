@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import history from '../../../utilities/history';
 import { getServiceURL, handleHTTPErrors } from '../../../utilities/rest';
 import { NavLink } from '../../design';
+import MenuBadge from './categories-dropdown/MenuBadge';
 
 class NavigationAction extends React.Component {
     constructor(props) {
@@ -43,7 +44,31 @@ class NavigationAction extends React.Component {
     }
 
     render() {
-        const { type, title, url } = this.props;
+        const {
+            badge,
+            badgeIsFlying,
+            entryKey,
+            title,
+            type,
+            url,
+        } = this.props;
+        let content = title;
+
+        if (badge && badge.counter && entryKey) {
+            content = (
+                <div style={{ position: 'relative' }}>
+                    {title}
+                    <MenuBadge
+                        elementKey={entryKey}
+                        color="danger"
+                        isFlying={badgeIsFlying}
+                        style={{ right: '-1.3em' }}
+                    >
+                        {badge.counter}
+                    </MenuBadge>
+                </div>
+            );
+        }
 
         switch (type) {
             case 'RESTCALL':
@@ -53,31 +78,36 @@ class NavigationAction extends React.Component {
                         onKeyPress={() => {
                         }}
                     >
-                        {title}
+                        {content}
                     </NavLink>
                 );
             case 'DOWNLOAD':
                 return (
                     <NavLink href={getServiceURL(url)} target="_blank" rel="noopener noreferrer">
-                        {title}
+                        {content}
                     </NavLink>
                 );
             case 'LINK':
             case 'REDIRECT':
                 return (
                     <NavLink tag={Link} to={`/${url}`}>
-                        {title}
+                        {content}
                     </NavLink>
                 );
             case 'TEXT':
             default:
-                return <span className="nav-link">{title}</span>;
+                return <span className="nav-link">{content}</span>;
         }
     }
 }
 
 NavigationAction.propTypes = {
     title: PropTypes.string.isRequired,
+    badge: PropTypes.shape({
+        counter: PropTypes.number,
+    }),
+    badgeIsFlying: PropTypes.bool,
+    entryKey: PropTypes.string,
     type: PropTypes.oneOf([
         'REDIRECT',
         'RESTCALL',
@@ -89,6 +119,9 @@ NavigationAction.propTypes = {
 };
 
 NavigationAction.defaultProps = {
+    badge: undefined,
+    badgeIsFlying: true,
+    entryKey: undefined,
     type: 'LINK',
     url: '',
 };
