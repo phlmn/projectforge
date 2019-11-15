@@ -75,12 +75,12 @@ class CalEventRest : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
     override fun transformForDB(dto: CalEvent): CalEventDO {
         val calendarEventDO = CalEventDO()
 
-        val generator = ICalGenerator()
+        dto.copyTo(calendarEventDO)
 
+        val generator = ICalGenerator()
         generator.addEvent(dto)
         calendarEventDO.icsData = generator.calendarAsByteStream.toString()
 
-        dto.copyTo(calendarEventDO)
         if (dto.selectedSeriesEvent != null) {
             calendarEventDO.setTransientAttribute(CalEventDao.ATTR_SELECTED_ELEMENT, dto.selectedSeriesEvent)
             calendarEventDO.setTransientAttribute(CalEventDao.ATTR_SERIES_MODIFICATION_MODE, dto.seriesModificationMode)

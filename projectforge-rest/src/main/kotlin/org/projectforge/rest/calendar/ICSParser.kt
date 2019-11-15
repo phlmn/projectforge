@@ -33,6 +33,7 @@ import net.fortuna.ical4j.model.property.Method
 import org.apache.commons.lang3.StringUtils
 import org.projectforge.business.teamcal.TeamCalConfig
 import org.projectforge.business.teamcal.event.ical.ICalParser
+import org.projectforge.rest.calendar.ICalConverterStore.Companion.FULL_LIST
 import org.projectforge.rest.dto.CalEvent
 import java.io.IOException
 import java.io.StringReader
@@ -44,10 +45,11 @@ import kotlin.String
 class ICSParser {
     private val log = org.slf4j.LoggerFactory.getLogger(ICalParser::class.java)
 
-    private var parseVEvent: List<String>? = null
-    private var events: MutableList<VEvent>? = null
-    var extractedEvents: MutableList<CalEvent>? = null
+    private var parseVEvent: List<String>? = ArrayList()
     private var method: Method? = null
+
+    var events: MutableList<VEvent>? = ArrayList()
+    var extractedEvents: MutableList<CalEvent>? = ArrayList()
 
     private fun reset() {
         events = ArrayList()
@@ -133,4 +135,14 @@ class ICSParser {
 
         return event
     }
+
+    companion object{
+        fun parseAllFields(): ICSParser {
+            val parser = ICSParser()
+            parser.parseVEvent = ArrayList<String>(FULL_LIST)
+
+            return parser
+        }
+    }
+
 }

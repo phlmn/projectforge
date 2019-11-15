@@ -38,7 +38,7 @@ class RRuleConverter : PropertyConverter() {
     }
 
     override fun fromVEvent(event: CalEvent, vEvent: VEvent): Boolean {
-        val rule = vEvent.getProperty(Property.RRULE) as RRule
+        val rule = vEvent.getProperty(Property.RRULE) as RRule?
         event.setRecurrence(rule)
 
         return true

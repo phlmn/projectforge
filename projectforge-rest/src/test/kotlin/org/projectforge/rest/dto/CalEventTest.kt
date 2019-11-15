@@ -1,9 +1,15 @@
 package org.projectforge.rest.dto
 
-import org.junit.jupiter.api.Assertions.*
 import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNotNull
+import org.mockito.Mockito.mock
 import org.projectforge.business.teamcal.event.model.CalEventDO
+import org.projectforge.framework.persistence.user.entities.PFUserDO
 import org.projectforge.rest.calendar.ICSParser
+import org.projectforge.rest.calendar.ICalConverterStore
+import org.projectforge.rest.calendar.ICalGenerator
+import java.util.*
 
 class CalEventTest {
 
@@ -29,7 +35,6 @@ class CalEventTest {
                 "END:VEVENT\n" +
                 "END:VCALENDAR"
 
-
         var calEvent = CalEvent()
         val parser = ICSParser.parseAllFields()
         parser.parse(calEventDO.icsData)
@@ -45,6 +50,13 @@ class CalEventTest {
         assertEquals(calEvent.note, "Beschreibung des Termines")
         assertEquals(calEvent.organizer, "MAILTO:alice@example.com")
         assertEquals(calEvent.organizerAdditionalParams, "CN=\"Alice Balder, Example Inc.\"")
+
+        var generator = mock(ICalGenerator::class.java)
+        generator.exportsVEvent = ArrayList(ICalConverterStore.FULL_LIST)
+        generator.setContext(PFUserDO(), TimeZone.getDefault(), Locale.GERMAN)
+        generator = generator.reset()
+        generator.addEvent(calEvent)
+        generator.calendarAsByteStream.toString()
 
     }
 }

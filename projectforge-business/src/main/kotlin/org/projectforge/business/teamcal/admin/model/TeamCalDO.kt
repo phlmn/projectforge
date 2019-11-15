@@ -45,7 +45,7 @@ import javax.persistence.*
 @Indexed
 @ClassBridge(name = "usersgroups", index = Index.YES, store = Store.NO, impl = HibernateSearchUsersGroupsBridge::class)
 @Table(name = "T_CALENDAR", indexes = [javax.persistence.Index(name = "idx_fk_t_calendar_owner_fk", columnList = "owner_fk"), javax.persistence.Index(name = "idx_fk_t_calendar_tenant_id", columnList = "tenant_id")])
-open class TeamCalDO() : BaseUserGroupRightsDO() {
+open class TeamCalDO : BaseUserGroupRightsDO() {
 
     companion object {
         @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
@@ -56,7 +56,7 @@ open class TeamCalDO() : BaseUserGroupRightsDO() {
             return cal
         }
 
-        val TEAMCALRESTBLACKLIST = "teamCalRestBlackList"
+        const val TEAMCALRESTBLACKLIST = "teamCalRestBlackList"
     }
 
     @PropertyInfo(i18nKey = "plugins.teamcal.title")

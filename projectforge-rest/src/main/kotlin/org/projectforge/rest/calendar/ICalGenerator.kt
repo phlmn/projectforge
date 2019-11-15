@@ -40,9 +40,9 @@ import java.util.*
 
 import org.projectforge.rest.dto.CalEvent
 
-class ICalGenerator {
+open class ICalGenerator {
 
-    private var exportsVEvent: MutableList<String>? = null
+    var exportsVEvent: MutableList<String>? = null
     var calendar: Calendar? = null
     private var user: PFUserDO? = null
     private var locale: Locale? = null
@@ -225,10 +225,6 @@ class ICalGenerator {
         }
 
         return this
-    }
-
-    fun getExportsVEvent(): List<String>? {
-        return this.exportsVEvent
     }
 
     companion object {
