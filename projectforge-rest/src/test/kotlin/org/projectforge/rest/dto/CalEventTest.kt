@@ -1,8 +1,7 @@
 package org.projectforge.rest.dto
 
-import org.junit.Test
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertNotNull
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.Assertions.*
 import org.mockito.Mockito.mock
 import org.projectforge.business.teamcal.event.model.CalEventDO
 import org.projectforge.framework.persistence.user.entities.PFUserDO
@@ -56,7 +55,14 @@ class CalEventTest {
         generator.setContext(PFUserDO(), TimeZone.getDefault(), Locale.GERMAN)
         generator = generator.reset()
         generator.addEvent(calEvent)
-        generator.calendarAsByteStream.toString()
+        val result = generator.calendarAsByteStream.toString()
+
+        assertTrue(result.contains("SUMMARY:Eine Kurzinfo"))
+        assertTrue(result.contains("DESCRIPTION:Beschreibung des Termines"))
+        assertTrue(result.contains("LOCATION:Irgendwo"))
+        assertTrue(result.contains("ORGANIZER;CN=\"Alice Balder, Example Inc.\""))
+        assertTrue(result.contains("UID:461092315540@example.com"))
+
 
     }
 }
