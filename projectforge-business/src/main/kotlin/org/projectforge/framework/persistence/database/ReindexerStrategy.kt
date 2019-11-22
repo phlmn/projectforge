@@ -21,33 +21,27 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-package org.projectforge.ui
+package org.projectforge.framework.persistence.database
 
-import com.fasterxml.jackson.annotation.JsonIgnore
-
-data class UIList(
+/**
+ * You may define different strategies for hibernate search reindexing by registering in ReindexerRegistry.
+ * @author Kai Reinhard (k.reinhard@micromata.de)
+ */
+class ReindexerStrategy(
         /**
-         * Needed to register elementVar during layout processing.
+         * The fetch string for the hql, e. g. "left join fetch t.attributes"
          */
-        @JsonIgnore
-        val lc: LayoutContext,
+        join: String? = "",
         /**
-         * The path of the list in the data object.
+         * The id property of the entity ('id' for most objects, 'pk' for PfHistoryMasterDO).
          */
-        val listId: String,
+        val idProperty: String? = "id",
         /**
-         * The name of an item of the list, usable by the child elements as prefix of id.
+         * Where to find the property of last modification of the entities, if any.
+         * If not given, no re-indexing of entities updated since yesterday is supported and all entities will
+         * be re-indexed.
+         * 'lastUpdate' for AbstractBaseDO and 'modifiedAt' for StdRecord.
          */
-        val elementVar: String,
-        val content: MutableList<UIElement> = mutableListOf(),
-        var positionLabel: String = "label.position.short")
-    : UIElement(UIElementType.LIST) {
-    init {
-        lc.registerListElement(elementVar, listId)
-    }
-
-    fun add(listEntry: UIElement): UIList {
-        content.add(listEntry)
-        return this
-    }
+        val modifiedAtProperty: String? = "lastUpdate") {
+    val join = if (join.isNullOrBlank()) "" else " ${join.trim()}"
 }

@@ -24,15 +24,23 @@
 package org.projectforge.framework.persistence.api.impl
 
 import com.fasterxml.jackson.annotation.JsonIgnore
+import com.fasterxml.jackson.core.JsonGenerator
+import com.fasterxml.jackson.core.JsonProcessingException
+import com.fasterxml.jackson.databind.SerializerProvider
+import com.fasterxml.jackson.databind.annotation.JsonSerialize
+import com.fasterxml.jackson.databind.ser.std.StdSerializer
 import org.hibernate.search.annotations.ClassBridge
 import org.hibernate.search.annotations.ClassBridges
+import org.hibernate.search.annotations.DateBridge
 import org.hibernate.search.annotations.DocumentId
 import org.projectforge.common.BeanHelper
 import org.projectforge.common.ClassUtils
 import org.projectforge.common.props.PropUtils
 import org.projectforge.framework.ToStringUtil
 import org.projectforge.framework.persistence.api.BaseDao
+import org.projectforge.framework.persistence.entities.DefaultBaseDO
 import org.slf4j.LoggerFactory
+import java.io.IOException
 import java.lang.reflect.AccessibleObject
 import java.lang.reflect.Method
 import java.lang.reflect.Modifier
@@ -43,21 +51,28 @@ class HibernateSearchClassInfo(baseDao: BaseDao<*>) {
     @JsonIgnore
     private val log = LoggerFactory.getLogger(HibernateSearchClassInfo::class.java)
 
-    @JsonIgnore
-    private val fieldInfos = mutableMapOf<String, HibernateSearchFieldInfo>()
+    private val fieldInfos = mutableListOf<HibernateSearchFieldInfo>()
 
-    val stringFieldNames: Array<String>
-    val numericFieldNames: Array<String>
-    val allFieldNames: Array<String>
+    @JsonSerialize(using = ClassBridgesSerializer::class)
     val classBridges: Array<ClassBridge>
+
+    val allFieldNames
+        get() = fieldInfos.map { it.luceneField }.toTypedArray()
+
+    val stringFieldNames
+        get() = fieldInfos.filter { it.isStringSearchSupported() }.map { it.luceneField }.toTypedArray()
+
+    val numericFieldNames
+        get() = fieldInfos.filter { it.isNumericSearchSupported() }.map { it.luceneField }.toTypedArray()
 
     private val clazz: Class<*>
 
     init {
         clazz = baseDao.doClass
         val fields = BeanHelper.getAllDeclaredFields(clazz)
+        val bridges = mutableListOf<ClassBridge>()
         for (field in fields) {
-            checkAndRegister(field.name, field.type, field)
+            checkAndRegister(clazz, field.name, field.type, field)
         }
         val methods = clazz.methods
         for (method in methods) {
@@ -66,58 +81,49 @@ class HibernateSearchClassInfo(baseDao: BaseDao<*>) {
                 fieldInfo = isSetter(method)
             }
             if (fieldInfo != null) {
-                checkAndRegister(fieldInfo.fieldName, fieldInfo.type, method)
+                checkAndRegister(clazz, fieldInfo.fieldName, fieldInfo.type, method)
             }
         }
-        baseDao.additionalSearchFields?.forEach {
-            val field = PropUtils.getField(clazz, it)
-            if (field != null) {
-                checkAndRegister(it, field.type, field)
-            } else {
-                log.warn("Search property '${baseDao.doClass}.$it' not found, but declared as additional field (ignoring it).")
+        baseDao.additionalSearchFields?.forEach { fieldName ->
+            val field = PropUtils.getField(clazz, fieldName, true)
+            var fieldFound = false
+            if (field != null && checkAndRegister(clazz, fieldName, field.type, field)) {
+                fieldFound = true
+            } else if (fieldName.contains('.')) {
+                // Try to find ClassBridge of embedded object:
+                val parentClass = ClassUtils.getClassOfField(clazz, fieldName)
+                if (parentClass != null) {
+                    val name = fieldName.substring(fieldName.lastIndexOf('.') + 1)
+                    val classBridges = getClassBridges(parentClass)
+                    val bridge = classBridges.find { it.name == name }
+                    if (bridge != null) {
+                        bridges.add(bridge)
+                        fieldInfos.add(HibernateSearchFieldInfo(fieldName, ClassBridge::class.java)) // Search for class bridge name.
+                        fieldFound = true
+                    }
+                }
             }
-        }
-        val stringSearchFields = mutableListOf<String>()
-        val numericSearchFields = mutableListOf<String>()
-        val allFields = mutableListOf<String>()
-        val bridges = mutableListOf<ClassBridge>()
-        // Check @ClassBridge annotation:
-        val classBridgeAnn = ClassUtils.getClassAnnotation(clazz, ClassBridge::class.java)
-        if (classBridgeAnn != null) {
-            stringSearchFields.add(classBridgeAnn.name) // Search for class bridge name.
-            allFields.add(classBridgeAnn.name)
-            bridges.add(classBridgeAnn)
-        }
-        val classBridgesAnn = ClassUtils.getClassAnnotation(clazz, ClassBridges::class.java)
-        if (classBridgesAnn != null) {
-            classBridgesAnn.value.forEach {
-                stringSearchFields.add(it.name) // Search for class bridge name.
-                allFields.add(it.name)
-                bridges.add(it)
+            if (!fieldFound) {
+                log.warn("Search property '${baseDao.doClass}.$fieldName' not found, but declared as additional field (ignoring it).")
             }
         }
 
-        fieldInfos.values.forEach {
-            if (it.isStringSearchSupported()) {
-                stringSearchFields.add(it.field)
-            } else if (it.isNumericSearchSupported()) {
-                numericSearchFields.add(it.field)
-            }
-            allFields.add(it.field)
+        // Check @ClassBridge annotation:
+        getClassBridges(clazz).forEach {
+            fieldInfos.add(HibernateSearchFieldInfo(it.name, ClassBridge::class.java)) // Search for class bridge name.
+            bridges.add(it)
         }
-        allFieldNames = allFields.toTypedArray()
-        stringFieldNames = stringSearchFields.toTypedArray()
-        numericFieldNames = numericSearchFields.toTypedArray()
         classBridges = bridges.toTypedArray()
-        log.info("SearchInfo for class ${ClassUtils.getProxiedClass(baseDao::class.java).simpleName}: $this")
+        log.info("SearchInfo for class ${ClassUtils.getProxiedClass(baseDao::
+        class.java).simpleName}: $this")
     }
 
     fun isStringField(field: String): Boolean {
-        return stringFieldNames.contains(field)
+        return get(field)?.isStringSearchSupported() == true
     }
 
     fun containsField(field: String): Boolean {
-        return fieldInfos.contains(field)
+        return get(field) != null
     }
 
     fun getClassBridge(name: String): ClassBridge? {
@@ -125,18 +131,20 @@ class HibernateSearchClassInfo(baseDao: BaseDao<*>) {
     }
 
     internal fun get(field: String): HibernateSearchFieldInfo? {
-        return fieldInfos[field]
+        return fieldInfos.find { it.javaProp == field || it.luceneField == field }
     }
 
-    private fun checkAndRegister(fieldName: String, fieldType: Class<*>, accessible: AccessibleObject) {
-        var info = fieldInfos[fieldName]
-        var isNew = info == null
+    private fun checkAndRegister(clazz: Class<*>, fieldName: String, fieldType: Class<*>, accessible: AccessibleObject): Boolean {
+        var info = get(fieldName)
+        val isNew = info == null
         if (info == null) {
             info = HibernateSearchFieldInfo(fieldName, fieldType)
         }
+        var isSearchField = false
         if (accessible.isAnnotationPresent(org.hibernate.search.annotations.Field::class.java)) {
             // @Field(index = Index.YES /*TOKENIZED*/),
             info.add(accessible.getAnnotation(org.hibernate.search.annotations.Field::class.java))
+            isSearchField = true
         } else if (accessible.isAnnotationPresent(org.hibernate.search.annotations.Fields::class.java)) {
             // @Fields( {
             // @Field(index = Index.YES /*TOKENIZED*/),
@@ -146,17 +154,30 @@ class HibernateSearchClassInfo(baseDao: BaseDao<*>) {
             annFields?.value?.forEach {
                 info.add(it)
             }
+            isSearchField = true
         } else if (accessible.isAnnotationPresent(Id::class.java)) {
             info.add(accessible.getAnnotation(Id::class.java))
+            isSearchField = true
         } else if (accessible.isAnnotationPresent(DocumentId::class.java)) {
             info.add(accessible.getAnnotation(DocumentId::class.java))
-        } else {
-            return // No annotation found for field
+            isSearchField = true
+        } else if (fieldName.endsWith(".id")) {
+            val parentClass = ClassUtils.getClassOfField(clazz, fieldName)
+            if (parentClass != null && DefaultBaseDO::class.java.isAssignableFrom(parentClass)) {
+                // Embedded id found.
+                info.idProperty = true
+                isSearchField = true
+            }
         }
 
-        if (isNew && info.hasAnnotations()) {
-            fieldInfos[fieldName] = info
+        if (!isNew || !isSearchField) {
+            return false
         }
+        if (accessible.isAnnotationPresent(DateBridge::class.java)) {
+            info.dateBridgeAnn = accessible.getAnnotation(DateBridge::class.java)
+        }
+        fieldInfos.add(info)
+        return true
     }
 
     class FieldInfo(val fieldName: String, val type: Class<*>)
@@ -181,7 +202,32 @@ class HibernateSearchClassInfo(baseDao: BaseDao<*>) {
         return null
     }
 
+    private fun getClassBridges(clazz: Class<*>): List<ClassBridge> {
+        val result = mutableSetOf<ClassBridge>()
+        val bridge = ClassUtils.getClassAnnotation(clazz, ClassBridge::class.java)
+        if (bridge != null) {
+            result.add(bridge)
+        }
+        val bridges = ClassUtils.getClassAnnotation(clazz, ClassBridges::class.java)
+        if (bridges != null) {
+            result.addAll(bridges.value)
+        }
+        return result.toList()
+    }
+
     override fun toString(): String {
         return ToStringUtil.toJsonString(this)
+    }
+
+    class ClassBridgesSerializer : StdSerializer<Any>(Any::class.java) {
+        @Throws(IOException::class, JsonProcessingException::class)
+        override fun serialize(value: Any?, jgen: JsonGenerator, provider: SerializerProvider) {
+            if (value == null) {
+                jgen.writeNull()
+                return
+            }
+            value as Array<ClassBridge>
+            jgen.writeString(value.map { it.name }.joinToString(", "))
+        }
     }
 }

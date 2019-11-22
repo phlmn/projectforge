@@ -21,39 +21,40 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-package org.projectforge.framework.persistence.entities;
+package org.projectforge.framework.persistence.utils
 
-import org.apache.lucene.analysis.standard.ClassicAnalyzer;
-import org.hibernate.search.annotations.Analyzer;
-import org.projectforge.common.anots.PropertyInfo;
-
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-
+import org.projectforge.framework.persistence.jpa.PfEmgrFactory
+import javax.persistence.EntityManager
 
 /**
+ * Some helper methods ...
+ *
  * @author Kai Reinhard (k.reinhard@micromata.de)
  */
-@MappedSuperclass
-@Analyzer(impl = ClassicAnalyzer.class)
-public class DefaultBaseDO extends AbstractHistorizableBaseDO<Integer> {
-  private static final long serialVersionUID = 659687830219996653L;
-
-  @PropertyInfo(i18nKey = "id")
-  private Integer id;
-
-  @Override
-  @Id
-  @GeneratedValue
-  @Column(name = "pk")
-  public Integer getId() {
-    return id;
-  }
-
-  @Override
-  public void setId(final Integer id) {
-    this.id = id;
-  }
+object PFTransactionTemplate {
+    @JvmStatic
+    fun runInTrans(emf: PfEmgrFactory, run: (em: EntityManager) -> Any): Any? {
+        var cause: java.lang.Exception? = null
+        var em: EntityManager? = null
+        var result: Any? = null
+        try {
+            em = emf.entityManagerFactory.createEntityManager()
+            em.transaction.begin()
+            result = run(em)
+            em.transaction.commit()
+        } catch (ex: Exception) {
+            cause = ex
+            em?.transaction?.rollback()
+        } finally {
+            try {
+                if (em?.isOpen == true) {
+                    em.close()
+                }
+            } catch (ex: Exception) {
+                cause = ex
+            }
+            if (cause != null) throw cause
+            return result
+        }
+    }
 }
