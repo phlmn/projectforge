@@ -40,7 +40,7 @@ import java.util.*
 
 import org.projectforge.rest.dto.CalEvent
 
-open class ICalGenerator {
+open class ICSGenerator {
 
     var exportsVEvent: MutableList<String>? = null
     var calendar: Calendar? = null
@@ -79,7 +79,7 @@ open class ICalGenerator {
         this.reset()
     }
 
-    fun setContext(user: PFUserDO, timeZone: TimeZone, locale: Locale): ICalGenerator {
+    fun setContext(user: PFUserDO, timeZone: TimeZone, locale: Locale): ICSGenerator {
         this.user = user
         this.timeZone = timeZone
         this.locale = locale
@@ -87,7 +87,7 @@ open class ICalGenerator {
         return this
     }
 
-    fun reset(): ICalGenerator {
+    fun reset(): ICSGenerator {
         // creating a new calendar
         this.calendar = Calendar()
         calendar!!.properties.add(ProdId("-//" + user!!.shortDisplayName + "//ProjectForge//" + locale!!.toString().toUpperCase()))
@@ -96,7 +96,7 @@ open class ICalGenerator {
 
         // set time zone
         if (this.timeZone != null) {
-            val timezone = ICalConverterStore.TIMEZONE_REGISTRY.getTimeZone(this.timeZone!!.id)
+            val timezone = ICSConverterStore.TIMEZONE_REGISTRY.getTimeZone(this.timeZone!!.id)
             calendar!!.components.add(timezone.vTimeZone)
         }
 
@@ -118,31 +118,31 @@ open class ICalGenerator {
 
     }
 
-    fun addEvent(event: CalEvent): ICalGenerator {
+    fun addEvent(event: CalEvent): ICSGenerator {
         val vEvent = this.convertVEvent(event)
         this.calendar!!.components.add(vEvent)
         return this
     }
 
-    fun addEvent(vEvent: VEvent): ICalGenerator {
+    fun addEvent(vEvent: VEvent): ICSGenerator {
         this.calendar!!.components.add(vEvent)
         return this
     }
 
-    fun addEvent(startDate: Date, endDate: Date, allDay: Boolean, summary: String, uid: String): ICalGenerator {
+    fun addEvent(startDate: Date, endDate: Date, allDay: Boolean, summary: String, uid: String): ICSGenerator {
         this.calendar!!.components.add(this.convertVEvent(startDate, endDate, allDay, summary, uid))
         return this
     }
 
     fun convertVEvent(event: CalEvent): VEvent {
-        val store = ICalConverterStore.instance
+        val store = ICSConverterStore.instance
 
         // create vEvent
         val vEvent = VEvent(false)
 
         // set time zone
         if (this.timeZone != null) {
-            val timezone = ICalConverterStore.TIMEZONE_REGISTRY.getTimeZone(this.timeZone!!.id)
+            val timezone = ICSConverterStore.TIMEZONE_REGISTRY.getTimeZone(this.timeZone!!.id)
             vEvent.properties.add(timezone.vTimeZone.timeZoneId)
         }
 
@@ -162,7 +162,7 @@ open class ICalGenerator {
 
     fun convertVEvent(startDate: Date, endDate: Date, allDay: Boolean, summary: String, uid: String): VEvent {
         val vEvent = VEvent(false)
-        val timezone = ICalConverterStore.TIMEZONE_REGISTRY.getTimeZone(timeZone!!.id)
+        val timezone = ICSConverterStore.TIMEZONE_REGISTRY.getTimeZone(timeZone!!.id)
         val fortunaStartDate: net.fortuna.ical4j.model.Date
         val fortunaEndDate: net.fortuna.ical4j.model.Date
 
@@ -191,29 +191,29 @@ open class ICalGenerator {
         return vEvent
     }
 
-    fun editableVEvent(value: Boolean): ICalGenerator {
-        exportVEventProperty(ICalConverterStore.VEVENT_ORGANIZER_EDITABLE, value)
-        exportVEventProperty(ICalConverterStore.VEVENT_ORGANIZER, !value)
+    fun editableVEvent(value: Boolean): ICSGenerator {
+        exportVEventProperty(ICSConverterStore.VEVENT_ORGANIZER_EDITABLE, value)
+        exportVEventProperty(ICSConverterStore.VEVENT_ORGANIZER, !value)
         return this
     }
 
-    fun exportVEventAlarm(value: Boolean): ICalGenerator {
-        return exportVEventProperty(ICalConverterStore.VEVENT_ALARM, value)
+    fun exportVEventAlarm(value: Boolean): ICSGenerator {
+        return exportVEventProperty(ICSConverterStore.VEVENT_ALARM, value)
     }
 
-    fun exportVEventAttendees(value: Boolean): ICalGenerator {
-        return exportVEventProperty(ICalConverterStore.VEVENT_ATTENDEES, value)
+    fun exportVEventAttendees(value: Boolean): ICSGenerator {
+        return exportVEventProperty(ICSConverterStore.VEVENT_ATTENDEES, value)
     }
 
-    fun doExportVEventProperty(value: String): ICalGenerator {
+    fun doExportVEventProperty(value: String): ICSGenerator {
         return exportVEventProperty(value, true)
     }
 
-    fun doNotExportVEventProperty(value: String): ICalGenerator {
+    fun doNotExportVEventProperty(value: String): ICSGenerator {
         return exportVEventProperty(value, false)
     }
 
-    fun exportVEventProperty(value: String, export: Boolean): ICalGenerator {
+    fun exportVEventProperty(value: String, export: Boolean): ICSGenerator {
         if (export) {
             if (!this.exportsVEvent!!.contains(value)) {
                 this.exportsVEvent!!.add(value)
@@ -228,23 +228,23 @@ open class ICalGenerator {
     }
 
     companion object {
-        private val log = org.slf4j.LoggerFactory.getLogger(ICalGenerator::class.java)
+        private val log = org.slf4j.LoggerFactory.getLogger(ICSGenerator::class.java)
 
-        fun exportAllFields(): ICalGenerator {
-            val generator = ICalGenerator()
-            generator.exportsVEvent = ArrayList(ICalConverterStore.FULL_LIST)
+        fun exportAllFields(): ICSGenerator {
+            val generator = ICSGenerator()
+            generator.exportsVEvent = ArrayList(ICSConverterStore.FULL_LIST)
 
             return generator
         }
 
-        fun forMethod(method: Method): ICalGenerator {
-            val generator: ICalGenerator
+        fun forMethod(method: Method): ICSGenerator {
+            val generator: ICSGenerator
 
             if (Method.REQUEST == method) {
                 generator = exportAllFields()
             } else if (Method.CANCEL == method) {
-                generator = ICalGenerator()
-                generator.exportsVEvent = ArrayList(listOf(ICalConverterStore.VEVENT_UID, ICalConverterStore.VEVENT_DTSTAMP, ICalConverterStore.VEVENT_DTSTART, ICalConverterStore.VEVENT_SEQUENCE, ICalConverterStore.VEVENT_ORGANIZER, ICalConverterStore.VEVENT_ATTENDEES, ICalConverterStore.VEVENT_RRULE, ICalConverterStore.VEVENT_EX_DATE))
+                generator = ICSGenerator()
+                generator.exportsVEvent = ArrayList(listOf(ICSConverterStore.VEVENT_UID, ICSConverterStore.VEVENT_DTSTAMP, ICSConverterStore.VEVENT_DTSTART, ICSConverterStore.VEVENT_SEQUENCE, ICSConverterStore.VEVENT_ORGANIZER, ICSConverterStore.VEVENT_ATTENDEES, ICSConverterStore.VEVENT_RRULE, ICSConverterStore.VEVENT_EX_DATE))
             } else {
                 throw UnsupportedOperationException(String.format("No generator for method '%s'", method.value))
             }

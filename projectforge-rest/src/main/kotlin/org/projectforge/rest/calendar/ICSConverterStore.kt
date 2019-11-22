@@ -28,7 +28,7 @@ import org.projectforge.rest.calendar.converter.*
 
 import java.util.*
 
-class ICalConverterStore private constructor() {
+class ICSConverterStore private constructor() {
 
     private val vEventConverters: MutableMap<String, VEventComponentConverter>
 
@@ -97,6 +97,6 @@ class ICalConverterStore private constructor() {
         val FULL_LIST: List<String> = ArrayList(
                 listOf(VEVENT_DTSTART, VEVENT_DTEND, VEVENT_SUMMARY, VEVENT_UID, VEVENT_CREATED, VEVENT_LOCATION, VEVENT_DTSTAMP, VEVENT_LAST_MODIFIED, VEVENT_SEQUENCE, VEVENT_ORGANIZER, VEVENT_TRANSP, VEVENT_ALARM, VEVENT_DESCRIPTION, VEVENT_ATTENDEES, VEVENT_RRULE, VEVENT_RECURRENCE_ID, VEVENT_EX_DATE))
 
-        val instance = ICalConverterStore()
+        val instance = ICSConverterStore()
     }
 }

@@ -36,7 +36,7 @@ import org.springframework.stereotype.Component
  * Provides the events of a calendar (team calendar).
  */
 @Component
-class CalEventsProvider() {
+class CalEventsProvider {
 
     @Autowired
     private lateinit var calEventDao: CalEventDao
@@ -62,7 +62,7 @@ class CalEventsProvider() {
                 recurrentEvent = false
             }
             else {
-                eventDO = CalEventDO() //(it as TeamRecurrenceEvent).master
+                eventDO = CalEventDO() //(it as CalRecurrenceEvent).master
                 recurrentEvent = true
             }
             val recurrentDate = if (recurrentEvent) "?recurrentDate=${it.startDate!!.time / 1000}" else ""

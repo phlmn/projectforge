@@ -33,9 +33,10 @@ import net.fortuna.ical4j.model.property.Method
 import org.apache.commons.lang3.StringUtils
 import org.projectforge.business.teamcal.TeamCalConfig
 import org.projectforge.business.teamcal.event.ical.ICalParser
-import org.projectforge.rest.calendar.ICalConverterStore.Companion.FULL_LIST
+import org.projectforge.rest.calendar.ICSConverterStore.Companion.FULL_LIST
 import org.projectforge.rest.dto.CalEvent
 import java.io.IOException
+import java.io.Reader
 import java.io.StringReader
 import java.util.ArrayList
 import kotlin.Boolean
@@ -45,9 +46,10 @@ import kotlin.String
 class ICSParser {
     private val log = org.slf4j.LoggerFactory.getLogger(ICalParser::class.java)
 
+    private var calendar: Calendar? = null
     private var parseVEvent: List<String>? = ArrayList()
-    private var method: Method? = null
 
+    var method: Method? = null
     var events: MutableList<VEvent>? = ArrayList()
     var extractedEvents: MutableList<CalEvent>? = ArrayList()
 
@@ -116,8 +118,26 @@ class ICSParser {
         return true
     }
 
+    fun parse(iCalReader: Reader): Boolean {
+        this.reset()
+        val builder = CalendarBuilder()
+
+        try {
+            // parse calendar
+            this.calendar = builder.build(iCalReader)
+        } catch (e: IOException) {
+            log.error("An unknown error occurred while parsing an ICS file", e)
+            return false
+        } catch (e: ParserException) {
+            log.error("An unknown error occurred while parsing an ICS file", e)
+            return false
+        }
+
+        return this.parse(this.calendar!!)
+    }
+
     private fun parse(vEvent: VEvent): CalEvent {
-        val store = ICalConverterStore.instance
+        val store = ICSConverterStore.instance
 
         // create vEvent
         val event = CalEvent()

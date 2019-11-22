@@ -6,8 +6,8 @@ import org.mockito.Mockito.mock
 import org.projectforge.business.teamcal.event.model.CalEventDO
 import org.projectforge.framework.persistence.user.entities.PFUserDO
 import org.projectforge.rest.calendar.ICSParser
-import org.projectforge.rest.calendar.ICalConverterStore
-import org.projectforge.rest.calendar.ICalGenerator
+import org.projectforge.rest.calendar.ICSConverterStore
+import org.projectforge.rest.calendar.ICSGenerator
 import java.util.*
 
 class CalEventTest {
@@ -50,8 +50,8 @@ class CalEventTest {
         assertEquals(calEvent.organizer, "MAILTO:alice@example.com")
         assertEquals(calEvent.organizerAdditionalParams, "CN=\"Alice Balder, Example Inc.\"")
 
-        var generator = mock(ICalGenerator::class.java)
-        generator.exportsVEvent = ArrayList(ICalConverterStore.FULL_LIST)
+        var generator = mock(ICSGenerator::class.java)
+        generator.exportsVEvent = ArrayList(ICSConverterStore.FULL_LIST)
         generator.setContext(PFUserDO(), TimeZone.getDefault(), Locale.GERMAN)
         generator = generator.reset()
         generator.addEvent(calEvent)

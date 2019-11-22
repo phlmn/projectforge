@@ -77,7 +77,7 @@ class CalEventRest : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
 
         dto.copyTo(calendarEventDO)
 
-        val generator = ICalGenerator()
+        val generator = ICSGenerator()
         generator.addEvent(dto)
         calendarEventDO.icsData = generator.calendarAsByteStream.toString()
 
@@ -91,9 +91,11 @@ class CalEventRest : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
     override fun transformFromDB(obj: CalEventDO, editMode: Boolean): CalEvent {
         var calendarEvent = CalEvent()
         val parser = ICSParser()
-        parser.parse(obj.icsData)
-        if(parser.extractedEvents!!.isNotEmpty()){
-            calendarEvent = parser.extractedEvents!![0]
+        if(obj.icsData != null){
+            parser.parse(obj.icsData)
+            if(parser.extractedEvents!!.isNotEmpty()){
+                calendarEvent = parser.extractedEvents!![0]
+            }
         }
 
         calendarEvent.copyFrom(obj)
@@ -232,7 +234,7 @@ class CalEventRest : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
             calendarEvent.calendar = TeamCalDO()
             calendarEvent.calendar?.id = calendarId
         }
-        val editLayoutData = getItemAndLayout(request, calendarEvent, UILayout.UserAccess(false, true))
+        val editLayoutData = getItemAndLayout(request, calendarEvent, UILayout.UserAccess(history = false, insert = true))
         return ResponseAction(url = "/${Const.REACT_APP_PATH}calendar/${getRestPath(RestPaths.EDIT)}", targetType = TargetType.UPDATE)
                 .addVariable("data", editLayoutData.data)
                 .addVariable("ui", editLayoutData.ui)
@@ -245,7 +247,7 @@ class CalEventRest : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
     override fun createListLayout(): UILayout {
         val layout = super.createListLayout()
                 .add(UITable.UIResultSetTable()
-                        .add(lc, "subject"))
+                        .add(lc, "startDate", "endDate", "subject", "location", "note"))
         return LayoutUtils.processListPage(layout, this)
     }
 
@@ -253,7 +255,7 @@ class CalEventRest : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
      * LAYOUT Edit page
      */
     override fun createEditLayout(dto: CalEvent, userAccess: UILayout.UserAccess): UILayout {
-        val calendars = teamCalDao.getAllCalendarsWithFullAccess()
+        val calendars = teamCalDao.allCalendarsWithFullAccess
         calendars.removeIf { it.externalSubscription } // Remove full access calendars, but subscribed.
         if (dto.calendar != null && calendars.find { it.id == dto.calendar?.id } == null) {
             // Calendar of event is not in the list of editable calendars. Add this non-editable calendar to show
@@ -269,7 +271,7 @@ class CalEventRest : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
         if (dto.hasRecurrence && !userAccess.onlySelectAccess()) {
             val masterEvent = baseDao.getById(dto.id)
             val radioButtonGroup = UIGroup()
-            if (masterEvent?.startDate?.before(dto.selectedSeriesEvent?.startDate) ?: true) {
+            if (masterEvent?.startDate?.before(dto.selectedSeriesEvent?.startDate) != false) {
                 radioButtonGroup.add(UIRadioButton("seriesModificationMode", SeriesModificationMode.FUTURE, label = "plugins.teamcal.event.recurrence.change.future"))
             } else {
                 radioButtonGroup.add(UIRadioButton("seriesModificationMode", SeriesModificationMode.ALL, label = "plugins.teamcal.event.recurrence.change.all"))
@@ -281,7 +283,7 @@ class CalEventRest : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
         layout.add(UIFieldset(12)
                 .add(UIRow()
                         .add(UICol(6)
-                                .add(UISelect<Int>("calendar",
+                                .add(UISelect("calendar",
                                         values = calendarSelectValues.toMutableList(),
                                         label = "plugins.teamcal.event.teamCal",
                                         labelProperty = "title",
