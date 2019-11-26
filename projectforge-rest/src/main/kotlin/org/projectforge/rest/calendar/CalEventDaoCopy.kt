@@ -54,7 +54,7 @@ import javax.persistence.NoResultException
 import javax.persistence.NonUniqueResultException
 
 @Repository
-class CalEventDaoCopy : BaseDao<CalEventDO>(CalEventDO::class.java) {
+open class CalEventDaoCopy : BaseDao<CalEventDO>(CalEventDO::class.java) {
 
     @Autowired
     private val emgrFac: PfEmgrFactory? = null
