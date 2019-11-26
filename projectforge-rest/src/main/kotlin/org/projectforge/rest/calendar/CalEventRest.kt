@@ -72,23 +72,16 @@ class CalEventRest : AbstractDTORest<CalEventDO, CalEvent, CalEventDao>(
     @Autowired
     private lateinit var CalendarEventExternalSubscriptionCache: TeamEventExternalSubscriptionCache
 
-    private lateinit var converter: ICSConverter
+    private var converter = ICSConverter()
 
     override fun transformForDB(dto: CalEvent): CalEventDO {
         val calendarEventDO = converter.convertToDO(dto)
-
-        if (dto.selectedSeriesEvent != null) {
-            calendarEventDO.setTransientAttribute(CalEventDao.ATTR_SELECTED_ELEMENT, dto.selectedSeriesEvent)
-            calendarEventDO.setTransientAttribute(CalEventDao.ATTR_SERIES_MODIFICATION_MODE, dto.seriesModificationMode)
-        }
         return calendarEventDO
     }
 
     override fun transformFromDB(obj: CalEventDO, editMode: Boolean): CalEvent {
-        var calendarEvent = converter.convertToCalEvent(obj)
-
+        val calendarEvent = converter.convertToCalEvent(obj)
         calendarEvent.copyFrom(obj)
-
         return calendarEvent
     }
 
