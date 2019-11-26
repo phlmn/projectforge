@@ -29,8 +29,11 @@ function Formatter(
     if (!value) {
         return <React.Fragment />;
     }
+
+    let result = value;
+
+    // TODO FORMAT NUMBERS RIGHT ALIGNED
     if (formatter) {
-        let result;
         switch (formatter) {
             case COST1_FORMATTER:
                 result = value.formattedNumber;
@@ -68,17 +71,13 @@ function Formatter(
                 result = value.name;
                 break;
             default:
-                result = value;
         }
-        return <React.Fragment>{result}</React.Fragment>;
+    } else if (dataType === 'DATE') {
+        result = moment(value)
+            .format(timestampFormatMinutes);
     }
-    let result = value;
-    if (dataType) {
-        if (dataType === 'DATE') {
-            result = moment(value).format(timestampFormatMinutes);
-        }
-    }
-    return <React.Fragment>{result}</React.Fragment>;
+
+    return result;
 }
 
 Formatter.propTypes = {

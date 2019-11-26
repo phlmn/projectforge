@@ -27,10 +27,8 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.fail
-import org.projectforge.framework.configuration.ConfigXml
 import org.projectforge.framework.persistence.user.api.ThreadLocalUserContext
-import org.projectforge.framework.persistence.user.api.UserContext
-import org.projectforge.framework.persistence.user.entities.PFUserDO
+import org.projectforge.test.TestSetup
 import java.text.SimpleDateFormat
 import java.time.DateTimeException
 import java.time.Month
@@ -95,9 +93,53 @@ class PFDateTimeTest {
         try {
             PFDateTime.parseUTCDate("2019-03-31")
             fail("Exception expected, because 2019-03-31 isn't parseable due to missing time of day.")
-        } catch(ex: DateTimeException) {
+        } catch (ex: DateTimeException) {
             // OK
         }
+    }
+
+    @Test
+    fun daysOfYearTest() {
+        var dateTime = PFDateTime.parseUTCDate("2020-01-10 10:00")
+        assertEquals(366, dateTime!!.numberOfDaysInYear)
+        dateTime = PFDateTime.parseUTCDate("2019-12-31 23:00")
+        assertEquals(366, dateTime!!.numberOfDaysInYear, "Europe-Berlin: 2020! UTC: ${dateTime.isoString}")
+        dateTime = PFDateTime.parseUTCDate("2019-12-31 22:00")
+        assertEquals(365, dateTime!!.numberOfDaysInYear, "Europe-Berlin: 2020! UTC: ${dateTime.isoString}")
+    }
+
+    @Test
+    fun weekOfYearTest() {
+        // German weeks:
+        var dateTime = PFDateTime.parseUTCDate("2020-12-31 10:00")
+        assertEquals(53, dateTime!!.weekOfYear)
+        dateTime = PFDateTime.parseUTCDate("2021-01-02 10:00")
+        assertEquals(53, dateTime!!.weekOfYear)
+        dateTime = PFDateTime.parseUTCDate("2021-01-04 10:00")
+        assertEquals(1, dateTime!!.weekOfYear)
+
+        dateTime = PFDateTime.parseUTCDate("2019-12-31 10:00")
+        assertEquals(1, dateTime!!.weekOfYear)
+        dateTime = PFDateTime.parseUTCDate("2020-01-02 10:00")
+        assertEquals(1, dateTime!!.weekOfYear)
+
+        // US weeks:
+        val contextUser = ThreadLocalUserContext.getUser();
+        val storedLocale = contextUser.locale
+        contextUser.locale = Locale.US
+        dateTime = PFDateTime.parseUTCDate("2020-12-31 10:00")
+        assertEquals(1, dateTime!!.weekOfYear)
+        dateTime = PFDateTime.parseUTCDate("2021-01-02 10:00")
+        assertEquals(1, dateTime!!.weekOfYear)
+        dateTime = PFDateTime.parseUTCDate("2021-01-04 10:00")
+        assertEquals(2, dateTime!!.weekOfYear)
+
+        dateTime = PFDateTime.parseUTCDate("2019-12-31 10:00")
+        assertEquals(1, dateTime!!.weekOfYear)
+        dateTime = PFDateTime.parseUTCDate("2020-01-02 10:00")
+        assertEquals(1, dateTime!!.weekOfYear)
+
+        contextUser.locale = storedLocale
     }
 
     private fun checkDate(date: ZonedDateTime, year: Int, month: Month, dayOfMonth: Int, checkMidnight: Boolean = true) {
@@ -123,10 +165,7 @@ class PFDateTimeTest {
         @BeforeAll
         @JvmStatic
         fun setup() {
-            ConfigXml.createForJunitTests()
-            val user = PFUserDO()
-            user.setTimeZone(TimeZone.getTimeZone("Europe/Berlin"))
-            ThreadLocalUserContext.setUserContext(UserContext(user, null))
+            TestSetup.init()
         }
     }
 }

@@ -42,11 +42,9 @@ import org.projectforge.web.wicket.AbstractSecuredPage;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
-import java.lang.management.ManagementFactory;
-import java.lang.management.MemoryPoolMXBean;
-import java.lang.management.MemoryType;
-import java.lang.management.MemoryUsage;
+import java.lang.management.*;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class SystemStatisticsPage extends AbstractSecuredPage {
   private static final long serialVersionUID = 8587252641914110851L;
@@ -58,22 +56,6 @@ public class SystemStatisticsPage extends AbstractSecuredPage {
 
   public SystemStatisticsPage(final PageParameters parameters) {
     super(parameters);
-    final JdbcTemplate jdbc = new JdbcTemplate(dataSource);
-    body.add(new Label("totalNumberOfTimesheets", NumberFormatter.format(getTableCount(jdbc, TimesheetDO.class))));
-    final TaskTree taskTree = TaskTreeHelper.getTaskTree();
-    final long totalDuration = taskTree.getRootTaskNode().getDuration(taskTree, true);
-    BigDecimal tatalPersonDays = new BigDecimal(totalDuration).divide(DateHelper.SECONDS_PER_WORKING_DAY, 2,
-            BigDecimal.ROUND_HALF_UP);
-    tatalPersonDays = NumberHelper.setDefaultScale(tatalPersonDays);
-    body.add(new Label("totalNumberOfTimesheetDurations",
-            NumberHelper.getNumberFractionFormat(getLocale(), tatalPersonDays.scale())
-                    .format(tatalPersonDays)));
-    body.add(new Label("totalNumberOfUsers", NumberFormatter.format(getTableCount(jdbc, PFUserDO.class))));
-    body.add(new Label("totalNumberOfTasks", NumberFormatter.format(getTableCount(jdbc, TaskDO.class))));
-    final int totalNumberOfHistoryEntries = getTableCount(jdbc, PfHistoryMasterDO.class)
-            + getTableCount(jdbc, PfHistoryMasterDO.class);
-    body.add(new Label("totalNumberOfHistoryEntries", NumberFormatter.format(totalNumberOfHistoryEntries)));
-
     RepeatingView listItems = new RepeatingView("memoryStatisticsIterator");
     body.add(listItems);
     System.gc();
@@ -93,6 +75,26 @@ public class SystemStatisticsPage extends AbstractSecuredPage {
         log.info("Memory: " + usage);
       }
     }
+    OperatingSystemMXBean osBean = ManagementFactory.getOperatingSystemMXBean();
+    BigDecimal systemLoadAverage = new BigDecimal(osBean.getSystemLoadAverage()).setScale(2, RoundingMode.HALF_UP);
+    body.add(new Label("systemLoadAverage", systemLoadAverage));
+    log.info("System load average: " + systemLoadAverage);
+
+    final JdbcTemplate jdbc = new JdbcTemplate(dataSource);
+    body.add(new Label("totalNumberOfTimesheets", NumberFormatter.format(getTableCount(jdbc, TimesheetDO.class))));
+    final TaskTree taskTree = TaskTreeHelper.getTaskTree();
+    final long totalDuration = taskTree.getRootTaskNode().getDuration(taskTree, true);
+    BigDecimal tatalPersonDays = new BigDecimal(totalDuration).divide(DateHelper.SECONDS_PER_WORKING_DAY, 2,
+            BigDecimal.ROUND_HALF_UP);
+    tatalPersonDays = NumberHelper.setDefaultScale(tatalPersonDays);
+    body.add(new Label("totalNumberOfTimesheetDurations",
+            NumberHelper.getNumberFractionFormat(getLocale(), tatalPersonDays.scale())
+                    .format(tatalPersonDays)));
+    body.add(new Label("totalNumberOfUsers", NumberFormatter.format(getTableCount(jdbc, PFUserDO.class))));
+    body.add(new Label("totalNumberOfTasks", NumberFormatter.format(getTableCount(jdbc, TaskDO.class))));
+    final int totalNumberOfHistoryEntries = getTableCount(jdbc, PfHistoryMasterDO.class)
+            + getTableCount(jdbc, PfHistoryMasterDO.class);
+    body.add(new Label("totalNumberOfHistoryEntries", NumberFormatter.format(totalNumberOfHistoryEntries)));
   }
 
   private int getTableCount(final JdbcTemplate jdbc, final Class<?> entity) {
