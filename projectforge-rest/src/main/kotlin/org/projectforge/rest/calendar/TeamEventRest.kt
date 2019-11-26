@@ -52,7 +52,7 @@ import javax.servlet.http.HttpServletRequest
 @Deprecated("Will be replaced by CalendarEventsRest.")
 @RestController
 @RequestMapping("${Rest.URL}/teamEvent")
-class TeamEventRest() : AbstractDTORest<TeamEventDO, TeamEvent, TeamEventDao>(
+class TeamEventRest : AbstractDTORest<TeamEventDO, TeamEvent, TeamEventDao>(
         TeamEventDao::class.java,
         "plugins.teamcal.event.title",
         cloneSupported = true) {

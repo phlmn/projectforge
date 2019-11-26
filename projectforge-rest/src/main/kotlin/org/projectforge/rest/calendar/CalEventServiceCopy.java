@@ -67,7 +67,7 @@ public class CalEventServiceCopy
 
   private ICSConverter icsConverter = new ICSConverter();
 
-  public CalEventDaoCopy getTeamEventICSDao(){
+  public CalEventDaoCopy getCalEventICSDao(){
     return calEventDao;
   }
 
@@ -107,7 +107,7 @@ public class CalEventServiceCopy
     return calEventDao.getList(filter);
   }
 
-  public CalEventDO getTeamEventICSDO (CalendarEventObject calendarEventObject) {
+  public CalEventDO getCalEventICSDO(CalendarEventObject calendarEventObject) {
     CalEventDO calEventDO = new CalEventDO();
     calEventDO.setCalendar(teamCalCache.getCalendar(calendarEventObject.getCalendarId()));
     calEventDO.setStartDate((Timestamp) calendarEventObject.getStartDate());
