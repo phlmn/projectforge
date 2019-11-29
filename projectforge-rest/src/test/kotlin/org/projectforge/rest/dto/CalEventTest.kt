@@ -1,16 +1,34 @@
 package org.projectforge.rest.dto
 
-import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
 import org.mockito.Mockito.mock
+import org.projectforge.business.teamcal.event.TeamEventDao
 import org.projectforge.business.teamcal.event.model.CalEventDO
+import org.projectforge.framework.configuration.Configuration
+import org.projectforge.framework.configuration.ConfigurationParam
 import org.projectforge.framework.persistence.user.entities.PFUserDO
-import org.projectforge.rest.calendar.ICSParser
+import org.projectforge.rest.calendar.CalEventServiceCopy
 import org.projectforge.rest.calendar.ICSConverterStore
 import org.projectforge.rest.calendar.ICSGenerator
+import org.projectforge.rest.calendar.ICSParser
+import org.projectforge.test.AbstractTestBase
+import org.springframework.beans.factory.annotation.Autowired
 import java.util.*
 
-class CalEventTest {
+class CalEventTest: AbstractTestBase() {
+
+    @Autowired
+    lateinit var teamEventDao: TeamEventDao
+
+    @BeforeEach
+    fun setUp() {
+        val domain = "projectforge.org"
+        val config = Configuration.getInstance()
+        config.forceReload()
+        config.putParameterManual(ConfigurationParam.CALENDAR_DOMAIN, domain)
+    }
 
     @Test
     fun dtoTest(){
@@ -62,7 +80,26 @@ class CalEventTest {
         assertTrue(result.contains("LOCATION:Irgendwo"))
         assertTrue(result.contains("ORGANIZER;CN=\"Alice Balder, Example Inc.\""))
         assertTrue(result.contains("UID:461092315540@example.com"))
+    }
 
+    @Test
+    fun conversionTest(){
+        val list = teamEventDao.internalLoadAll()
+        val calEvent = CalEvent()
+        val calEventDO = CalEventDO()
 
+        for (teamEventDO in list) {
+            calEvent.copyFromAny(teamEventDO)
+
+            var generator = mock(ICSGenerator::class.java)
+            generator.exportsVEvent = ArrayList(ICSConverterStore.FULL_LIST)
+            generator.setContext(PFUserDO(), TimeZone.getDefault(), Locale.GERMAN)
+            generator = generator.reset()
+            generator.addEvent(calEvent)
+            calEventDO.icsData = generator.calendarAsByteStream.toString()
+
+            val service = CalEventServiceCopy()
+            service.save(calEventDO)
+        }
     }
 }
