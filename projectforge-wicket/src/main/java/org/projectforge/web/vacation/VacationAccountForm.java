@@ -148,9 +148,7 @@ public class VacationAccountForm extends AbstractStandardForm<VacationAccountFor
     GridBuilder sectionBottomGridBuilder = gridBuilder.newSplitPanel(GridSize.COL100);
     DivPanel sectionBottom = sectionBottomGridBuilder.getPanel();
     if (showAddButton) {
-      final PageParameters pageParameters = new PageParameters();
-      pageParameters.add("employeeId", employee.getId());
-      LinkPanel addLink = new LinkPanel(sectionBottom.newChildId(), I18nHelper.getLocalizedMessage("add"), VacationEditPage.class, VacationAccountPage.class, pageParameters);
+      LinkPanel addLink = new LinkPanel(sectionBottom.newChildId(), I18nHelper.getLocalizedMessage("add"), "/react/vacation/edit?employeeId=" + employee.getId());
       addLink.addLinkAttribute("class", "btn btn-sm btn-success bottom-xs-gap");
       sectionBottom.add(addLink);
     }
@@ -260,8 +258,8 @@ public class VacationAccountForm extends AbstractStandardForm<VacationAccountFor
         if (startDate.getYear() < stats.getYear()) {
           startDate = PFDay.from(vacation.getEndDate()).getBeginOfYear().getLocalDate();
         }
-        item.add(new ListSelectActionPanel(componentId, rowModel, VacationEditPage.class, vacation.getId(),
-                VacationAccountPage.class, DateTimeFormatter.instance().getFormattedDate(startDate), "employeeId", String.valueOf(vacation.getEmployeeId())));
+        item.add(new ListSelectActionPanel(componentId, rowModel, "/react/vacation/edit/" + vacation.getId() + "?returnPage=vacationAccount",
+                DateTimeFormatter.instance().getFormattedDate(startDate), "employeeId", String.valueOf(vacation.getEmployeeId())));
         cellItemListener.populateItem(item, componentId, rowModel);
         final Item<?> row = (item.findParent(Item.class));
         WicketUtils.addRowClick(row);

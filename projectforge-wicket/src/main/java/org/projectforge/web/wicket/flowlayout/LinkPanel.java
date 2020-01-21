@@ -28,7 +28,7 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
-import org.apache.wicket.request.component.IRequestablePage;
+import org.apache.wicket.request.flow.RedirectToUrlException;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.projectforge.framework.utils.ReflectionHelper;
 import org.projectforge.web.wicket.AbstractEditPage;
@@ -72,8 +72,7 @@ public class LinkPanel extends Panel
     link.add(new Label("label", linkName));
   }
 
-  public LinkPanel(final String id, final String linkName, final Class<? extends WebPage> editClass,
-                   final Class<? extends IRequestablePage> returnToPage, final PageParameters pageParameters)
+  public LinkPanel(final String id, final String linkName, String url)
   {
     super(id);
 
@@ -83,12 +82,7 @@ public class LinkPanel extends Panel
       public void onClick()
       {
         LinkPanel.this.onClick();
-        final AbstractSecuredPage editPage = (AbstractSecuredPage) ReflectionHelper.newInstance(editClass, PageParameters.class,
-                pageParameters);
-        if (editPage instanceof AbstractEditPage) {
-          ((AbstractEditPage<?, ?, ?>) editPage).setReturnToPage(returnToPage, pageParameters);
-        }
-        setResponsePage(editPage);
+        throw new RedirectToUrlException(url);
       }
     };
     add(link);
