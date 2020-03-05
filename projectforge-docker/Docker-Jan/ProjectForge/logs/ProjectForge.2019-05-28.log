@@ -1,0 +1,851 @@
+2019-05-28 00:00:34.057 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s714ms).
+2019-05-28 00:03:20.036 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m39s537ms).
+2019-05-28 00:05:01.574 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 00:05:01.579 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 00:05:01.594 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 00:06:31.187 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s724ms).
+2019-05-28 00:10:24.595 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s509ms).
+2019-05-28 00:14:43.323 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s768ms).
+2019-05-28 00:18:33.536 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s398ms).
+2019-05-28 00:25:47.053 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m43s505ms).
+2019-05-28 00:26:19.068 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 00:26:19.068 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 00:26:19.080 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 00:31:59.475 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m42s411ms).
+2019-05-28 00:37:42.178 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m39s763ms).
+2019-05-28 00:46:59.569 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m45s440ms).
+2019-05-28 00:47:41.901 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 00:47:41.901 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 00:47:41.909 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 00:52:12.580 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m35s618ms).
+2019-05-28 00:52:42.516 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 00:52:42.516 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 00:52:42.536 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 00:52:42.545 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 00:52:42.550 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 00:54:21.049 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s464ms).
+2019-05-28 01:01:30.502 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m39s451ms).
+2019-05-28 01:05:25.019 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s57ms).
+2019-05-28 01:08:41.038 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s575ms).
+2019-05-28 01:15:49.680 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s635ms).
+2019-05-28 01:16:07.014 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 01:16:07.014 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 01:16:07.029 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 01:16:07.036 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 01:16:07.041 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 01:22:31.263 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m41s583ms).
+2019-05-28 01:25:42.577 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m39s472ms).
+2019-05-28 01:28:53.515 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s500ms).
+2019-05-28 01:28:53.790 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 01:28:53.790 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 01:28:53.799 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 01:36:06.949 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m43s426ms).
+2019-05-28 01:36:13.426 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 01:36:13.427 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 01:36:13.436 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 01:43:59.423 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m37s593ms).
+2019-05-28 01:50:11.789 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m42s359ms).
+2019-05-28 01:57:25.230 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m43s430ms).
+2019-05-28 02:05:10.215 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m44s985ms).
+2019-05-28 02:11:25.458 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 02:11:25.459 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 02:11:25.474 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 02:11:33.779 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m37s628ms).
+2019-05-28 02:18:37.378 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m33s587ms).
+2019-05-28 02:25:45.921 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s531ms).
+2019-05-28 02:32:22.864 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m36s943ms).
+2019-05-28 02:33:28.200 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 02:33:28.200 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 02:33:28.204 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 02:36:33.842 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m31s808ms).
+2019-05-28 02:39:47.979 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s582ms).
+2019-05-28 02:46:28.373 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m32s817ms).
+2019-05-28 02:49:42.439 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s504ms).
+2019-05-28 02:51:50.049 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m37s601ms).
+2019-05-28 02:53:51.611 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m31s560ms).
+2019-05-28 03:00:28.666 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m37s55ms).
+2019-05-28 03:07:39.769 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m39s545ms).
+2019-05-28 03:14:48.394 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s620ms).
+2019-05-28 03:15:16.255 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 03:15:16.255 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 03:15:16.264 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 03:21:51.986 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m33s583ms).
+2019-05-28 03:26:44.521 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m31s792ms).
+2019-05-28 03:35:38.944 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m32s218ms).
+2019-05-28 03:43:02.086 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m38s533ms).
+2019-05-28 03:50:04.856 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m32s762ms).
+2019-05-28 03:56:42.272 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m37s416ms).
+2019-05-28 04:00:52.197 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m38s561ms).
+2019-05-28 04:03:58.781 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m36s582ms).
+2019-05-28 04:04:38.365 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 04:04:38.365 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 04:04:38.379 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 04:06:01.520 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s732ms).
+2019-05-28 04:06:38.185 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 04:06:38.185 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 04:06:45.286 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 04:06:45.289 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 04:06:45.291 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 04:11:16.609 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m37s463ms).
+2019-05-28 04:14:55.939 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m32s771ms).
+2019-05-28 04:18:03.412 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m37s468ms).
+2019-05-28 04:23:17.515 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m37s568ms).
+2019-05-28 04:25:20.123 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s595ms).
+2019-05-28 04:26:56.735 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s612ms).
+2019-05-28 04:34:05.215 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s473ms).
+2019-05-28 04:35:12.848 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 04:35:12.851 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 04:35:12.860 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 04:38:21.132 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s374ms).
+2019-05-28 04:40:56.414 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m35s282ms).
+2019-05-28 04:44:06.311 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m37s665ms).
+2019-05-28 04:47:15.650 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s371ms).
+2019-05-28 04:54:58.464 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m36s333ms).
+2019-05-28 04:59:03.262 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m32s528ms).
+2019-05-28 05:06:05.486 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 05:06:05.487 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 05:06:05.491 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 05:06:19.607 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m38s551ms).
+2019-05-28 05:09:28.841 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s650ms).
+2019-05-28 05:16:13.939 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m38s386ms).
+2019-05-28 05:20:23.355 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m32s708ms).
+2019-05-28 05:23:55.375 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 05:23:55.375 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 05:23:55.388 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 05:31:01.696 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m18s641ms).
+2019-05-28 05:32:36.530 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s829ms).
+2019-05-28 05:37:31.879 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m25s342ms).
+2019-05-28 05:41:02.340 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m21s954ms).
+2019-05-28 05:42:20.983 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s208ms).
+2019-05-28 05:44:27.554 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s560ms).
+2019-05-28 05:44:42.976 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 05:44:42.977 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 05:44:42.987 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 05:45:00.001 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 05:45:00.003 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 05:45:00.012 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 05:51:33.969 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m36s404ms).
+2019-05-28 05:55:25.651 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m41s388ms).
+2019-05-28 05:57:47.710 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m52s54ms).
+2019-05-28 06:00:47.368 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m15s241ms).
+2019-05-28 06:02:44.164 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s783ms).
+2019-05-28 06:07:41.583 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s502ms).
+2019-05-28 06:10:51.099 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m39s508ms).
+2019-05-28 06:14:20.013 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m17s563ms).
+2019-05-28 06:16:21.561 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m31s538ms).
+2019-05-28 06:16:23.782 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 06:16:23.782 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 06:16:23.792 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 06:17:58.985 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s412ms).
+2019-05-28 06:21:05.655 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 06:21:05.655 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 06:21:05.667 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 06:21:05.669 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 06:21:05.671 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 06:22:17.251 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m684ms).
+2019-05-28 06:26:52.552 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s541ms).
+2019-05-28 06:29:32.170 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s198ms).
+2019-05-28 06:30:57.803 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s622ms).
+2019-05-28 06:31:45.394 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s591ms).
+2019-05-28 06:34:41.561 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m17s464ms).
+2019-05-28 06:34:46.679 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 06:34:46.679 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 06:34:46.684 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 06:37:06.652 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s213ms).
+2019-05-28 06:39:13.445 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s136ms).
+2019-05-28 06:41:51.275 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s168ms).
+2019-05-28 06:44:03.689 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s403ms).
+2019-05-28 06:48:28.133 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 06:48:28.134 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 06:48:28.138 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 06:53:07.730 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s756ms).
+2019-05-28 06:54:22.970 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s229ms).
+2019-05-28 06:55:48.688 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s708ms).
+2019-05-28 06:57:39.435 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s776ms).
+2019-05-28 06:59:08.995 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s276ms).
+2019-05-28 07:01:50.179 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s46ms).
+2019-05-28 07:03:14.420 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s230ms).
+2019-05-28 07:04:15.506 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 07:04:15.506 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 07:04:15.521 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 07:09:14.921 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m43s30ms).
+2019-05-28 07:16:07.265 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m11s152ms).
+2019-05-28 07:16:15.384 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 07:16:15.385 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 07:16:15.394 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 07:16:15.397 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 07:16:15.399 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 07:17:23.979 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s711ms).
+2019-05-28 07:21:05.654 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m30s80ms).
+2019-05-28 07:21:06.571 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 07:21:06.571 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 07:21:06.575 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 07:23:11.486 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s718ms).
+2019-05-28 07:25:40.987 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s478ms).
+2019-05-28 07:27:42.579 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m31s583ms).
+2019-05-28 07:30:38.663 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m48s525ms).
+2019-05-28 07:32:02.954 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s280ms).
+2019-05-28 07:34:44.065 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 07:34:44.067 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 07:34:44.071 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 07:37:41.575 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m14s221ms).
+2019-05-28 07:40:53.296 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m37s286ms).
+2019-05-28 07:43:16.710 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s696ms).
+2019-05-28 07:45:20.498 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s965ms).
+2019-05-28 07:47:19.334 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m28s826ms).
+2019-05-28 07:49:06.788 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m17s450ms).
+2019-05-28 07:51:04.349 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s550ms).
+2019-05-28 07:51:50.503 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 07:51:50.503 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 07:51:50.510 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 07:53:12.826 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s665ms).
+2019-05-28 07:54:38.389 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s561ms).
+2019-05-28 07:56:02.182 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s787ms).
+2019-05-28 07:58:01.514 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s509ms).
+2019-05-28 08:02:25.514 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 08:02:25.515 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 08:02:25.519 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 08:04:54.738 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s337ms).
+2019-05-28 08:08:31.199 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m56s91ms).
+2019-05-28 08:09:46.340 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s129ms).
+2019-05-28 08:13:10.875 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s573ms).
+2019-05-28 08:15:12.717 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m31s835ms).
+2019-05-28 08:19:06.543 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s428ms).
+2019-05-28 08:21:11.127 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 08:21:11.128 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 08:21:11.137 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 08:21:51.391 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 08:21:51.393 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 08:21:51.401 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 08:21:51.403 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 08:21:51.405 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 08:24:05.392 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s850ms).
+2019-05-28 08:25:25.453 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s35ms).
+2019-05-28 08:26:17.505 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s52ms).
+2019-05-28 08:28:30.309 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s343ms).
+2019-05-28 08:29:53.638 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s322ms).
+2019-05-28 08:31:12.978 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s328ms).
+2019-05-28 08:33:49.328 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m6s345ms).
+2019-05-28 08:35:02.212 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 08:35:02.213 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 08:35:02.225 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 08:36:16.451 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m21s374ms).
+2019-05-28 08:38:26.714 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s257ms).
+2019-05-28 08:41:39.060 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s325ms).
+2019-05-28 08:46:31.145 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m27s119ms).
+2019-05-28 08:47:51.658 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s502ms).
+2019-05-28 08:49:58.820 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m37s150ms).
+2019-05-28 08:52:10.136 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 08:52:10.136 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 08:52:10.140 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 09:00:55.968 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 09:00:55.968 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 09:00:55.972 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 09:14:27.715 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 09:14:27.715 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 09:14:27.724 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 09:14:27.727 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 09:14:27.728 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 09:16:41.972 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 09:16:41.972 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 09:16:41.977 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 09:18:34.759 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m50s690ms).
+2019-05-28 09:21:26.791 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m22s21ms).
+2019-05-28 09:24:53.477 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m56s684ms).
+2019-05-28 09:34:40.859 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m26s960ms).
+2019-05-28 09:38:29.017 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s768ms).
+2019-05-28 09:39:22.709 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s692ms).
+2019-05-28 09:39:38.731 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 09:39:38.732 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 09:39:38.741 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 09:41:44.869 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s418ms).
+2019-05-28 09:43:04.368 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s488ms).
+2019-05-28 09:44:31.080 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s701ms).
+2019-05-28 09:45:16.717 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s637ms).
+2019-05-28 09:47:34.576 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m47s708ms).
+2019-05-28 09:47:40.158 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 09:47:40.158 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 09:47:40.162 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 09:50:15.249 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m10s589ms).
+2019-05-28 09:52:55.720 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s852ms).
+2019-05-28 09:55:16.073 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m50s346ms).
+2019-05-28 09:57:46.242 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s521ms).
+2019-05-28 10:02:06.413 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s198ms).
+2019-05-28 10:03:46.896 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s474ms).
+2019-05-28 10:05:19.304 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s408ms).
+2019-05-28 10:06:48.499 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 10:06:48.500 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 10:06:48.514 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 10:07:47.173 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s837ms).
+2019-05-28 10:09:14.650 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s466ms).
+2019-05-28 10:10:47.514 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s862ms).
+2019-05-28 10:12:54.902 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m7s388ms).
+2019-05-28 10:14:30.428 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s870ms), soft-evicting connections from pool.
+2019-05-28 10:15:34.184 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s756ms).
+2019-05-28 10:17:47.215 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m43s20ms).
+2019-05-28 10:19:08.925 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s703ms).
+2019-05-28 10:20:45.093 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s166ms).
+2019-05-28 10:20:51.670 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 10:20:51.670 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 10:20:51.684 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 10:25:39.797 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 10:25:39.798 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 10:25:39.807 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 10:25:39.810 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 10:25:39.811 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 10:30:39.444 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m23s952ms).
+2019-05-28 10:31:58.037 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 10:31:58.038 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 10:31:58.047 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 10:33:08.443 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s167ms).
+2019-05-28 10:34:55.174 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m16s719ms).
+2019-05-28 10:38:37.645 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m33s163ms).
+2019-05-28 10:40:48.669 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m41s23ms).
+2019-05-28 10:44:03.707 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m45s33ms).
+2019-05-28 10:45:58.916 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s206ms).
+2019-05-28 10:47:12.777 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m13s861ms).
+2019-05-28 10:48:37.483 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s860ms).
+2019-05-28 10:51:32.565 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m17s667ms).
+2019-05-28 10:53:29.513 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s942ms).
+2019-05-28 10:54:49.254 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s739ms).
+2019-05-28 10:55:37.787 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s533ms).
+2019-05-28 10:56:24.015 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 10:56:24.017 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 10:56:24.025 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 10:58:41.234 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s16ms).
+2019-05-28 11:01:57.334 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s1ms).
+2019-05-28 11:02:18.819 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 11:02:18.819 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 11:02:18.828 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 11:05:39.096 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m24s316ms).
+2019-05-28 11:08:35.857 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m26s756ms).
+2019-05-28 11:11:20.747 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s369ms).
+2019-05-28 11:12:59.378 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s629ms).
+2019-05-28 11:14:53.402 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s2ms).
+2019-05-28 11:16:59.890 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s482ms).
+2019-05-28 11:20:53.229 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m23s328ms).
+2019-05-28 11:22:09.868 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s628ms).
+2019-05-28 11:24:25.353 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 11:24:25.355 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 11:24:25.367 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 11:24:36.163 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 11:24:36.167 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 11:24:36.184 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 11:24:36.193 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 11:24:36.197 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 11:29:09.332 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m37s450ms).
+2019-05-28 11:30:46.823 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m37s491ms).
+2019-05-28 11:33:32.059 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 11:33:32.061 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 11:33:32.069 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 11:36:01.631 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s413ms).
+2019-05-28 11:38:12.402 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s766ms).
+2019-05-28 11:39:15.833 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s431ms).
+2019-05-28 11:40:51.479 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s625ms).
+2019-05-28 11:47:27.986 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s670ms).
+2019-05-28 11:49:50.707 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m52s711ms).
+2019-05-28 11:52:09.098 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m48s383ms).
+2019-05-28 11:52:10.582 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 11:52:10.582 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 11:52:10.591 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 11:54:59.329 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s897ms).
+2019-05-28 11:56:58.828 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m59s499ms).
+2019-05-28 11:59:37.382 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m7s818ms).
+2019-05-28 12:02:09.525 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m1s474ms).
+2019-05-28 12:06:50.690 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m14ms).
+2019-05-28 12:07:11.499 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 12:07:11.499 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 12:07:11.513 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 12:09:08.266 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s147ms).
+2019-05-28 12:12:43.936 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s30ms).
+2019-05-28 12:14:41.057 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s691ms).
+2019-05-28 12:16:32.538 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m21s472ms).
+2019-05-28 12:18:10.630 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s81ms).
+2019-05-28 12:18:19.830 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 12:18:19.830 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 12:18:19.839 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 12:19:46.545 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m5s903ms).
+2019-05-28 12:22:02.526 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s852ms).
+2019-05-28 12:22:35.838 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 12:22:35.839 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 12:22:35.861 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 12:22:35.871 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 12:22:35.878 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 12:23:34.228 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40ms).
+2019-05-28 12:26:27.634 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m18s157ms).
+2019-05-28 12:27:47.401 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s756ms).
+2019-05-28 12:30:59.344 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s790ms).
+2019-05-28 12:36:10.156 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 12:36:10.156 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 12:36:10.160 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 12:36:22.575 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m31s668ms).
+2019-05-28 12:37:47.165 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s583ms).
+2019-05-28 12:39:05.965 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m18s800ms).
+2019-05-28 12:41:13.066 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s533ms).
+2019-05-28 12:42:42.223 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s146ms).
+2019-05-28 12:45:28.711 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s924ms).
+2019-05-28 12:48:57.877 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 12:48:57.878 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 12:48:57.893 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 12:50:06.797 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m15s647ms).
+2019-05-28 12:51:27.767 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s962ms).
+2019-05-28 12:54:30.080 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m23s867ms).
+2019-05-28 12:56:25.767 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s691ms).
+2019-05-28 12:58:15.663 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m19s888ms).
+2019-05-28 12:59:56.857 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m11s187ms).
+2019-05-28 13:01:36.285 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s421ms).
+2019-05-28 13:02:55.191 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m18s906ms).
+2019-05-28 13:04:14.713 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s389ms).
+2019-05-28 13:06:00.347 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m15s140ms).
+2019-05-28 13:06:39.091 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 13:06:39.091 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 13:06:39.100 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 13:10:03.171 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m32s814ms).
+2019-05-28 13:11:20.474 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s297ms).
+2019-05-28 13:13:39.118 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m48s638ms).
+2019-05-28 13:16:06.608 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m20s24ms).
+2019-05-28 13:17:30.508 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s918ms).
+2019-05-28 13:20:14.899 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m394ms).
+2019-05-28 13:21:50.145 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m5s242ms).
+2019-05-28 13:22:24.719 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 13:22:24.719 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 13:22:24.723 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 13:22:51.386 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 13:22:51.386 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 13:22:51.408 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 13:22:51.418 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 13:22:51.425 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 13:24:31.235 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s593ms).
+2019-05-28 13:28:12.125 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m492ms).
+2019-05-28 13:29:52.802 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s672ms).
+2019-05-28 13:31:31.783 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s981ms).
+2019-05-28 13:33:53.983 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 13:33:53.984 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 13:33:53.997 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 13:39:54.059 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m34s777ms).
+2019-05-28 13:41:58.770 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s707ms).
+2019-05-28 13:44:07.626 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s849ms).
+2019-05-28 13:45:43.541 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m35s915ms).
+2019-05-28 13:48:52.507 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m29s1ms).
+2019-05-28 13:53:49.642 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m30s264ms).
+2019-05-28 13:56:17.211 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 13:56:17.212 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 13:56:17.219 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 13:57:46.524 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s477ms).
+2019-05-28 13:59:08.217 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s686ms).
+2019-05-28 14:00:51.960 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m43s743ms).
+2019-05-28 14:02:22.341 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 14:02:22.341 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 14:02:22.349 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 14:03:52.339 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m22s422ms).
+2019-05-28 14:06:01.674 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m39s323ms).
+2019-05-28 14:07:18.617 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s934ms).
+2019-05-28 14:10:30.443 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m5s274ms).
+2019-05-28 14:15:51.356 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m50s551ms).
+2019-05-28 14:18:30.425 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s186ms).
+2019-05-28 14:20:10.058 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s622ms).
+2019-05-28 14:22:18.049 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s325ms).
+2019-05-28 14:23:45.988 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s701ms).
+2019-05-28 14:27:31.512 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 14:27:31.512 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 14:27:31.527 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 14:27:31.586 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m11s280ms).
+2019-05-28 14:28:46.685 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s91ms).
+2019-05-28 14:30:31.136 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 14:30:31.136 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 14:30:31.140 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 14:30:34.689 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 14:30:34.690 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 14:30:34.707 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 14:30:34.714 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 14:30:34.719 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 14:32:37.495 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s738ms).
+2019-05-28 14:34:47.013 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m39s508ms).
+2019-05-28 14:38:09.723 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m12s114ms).
+2019-05-28 14:39:35.001 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s28ms).
+2019-05-28 14:42:54.842 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s570ms).
+2019-05-28 14:49:25.921 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s809ms).
+2019-05-28 14:51:14.001 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m18s79ms).
+2019-05-28 14:51:40.618 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 14:51:40.619 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 14:51:40.626 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 14:52:42.784 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s772ms).
+2019-05-28 14:53:45.025 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s241ms).
+2019-05-28 14:56:24.384 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s640ms).
+2019-05-28 14:58:07.904 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m13s509ms).
+2019-05-28 15:01:38.380 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m465ms).
+2019-05-28 15:03:29.205 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m20s818ms).
+2019-05-28 15:05:00.035 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m30s830ms).
+2019-05-28 15:06:51.360 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 15:06:51.360 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 15:06:51.368 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 15:10:29.696 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m51s892ms).
+2019-05-28 15:12:22.051 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m22s345ms).
+2019-05-28 15:15:46.377 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m46s781ms).
+2019-05-28 15:18:05.676 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m19s298ms).
+2019-05-28 15:21:29.729 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 15:21:29.730 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 15:21:29.757 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 15:21:29.767 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 15:21:29.773 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 15:23:04.944 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s288ms).
+2019-05-28 15:23:27.044 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 15:23:27.044 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 15:23:27.056 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 15:26:48.973 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m14s27ms).
+2019-05-28 15:28:15.431 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s458ms).
+2019-05-28 15:29:34.999 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s154ms).
+2019-05-28 15:36:33.553 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m40s614ms).
+2019-05-28 15:40:39.082 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 15:40:39.083 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 15:40:39.087 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 15:40:44.029 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m40s560ms).
+2019-05-28 15:42:14.216 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m177ms).
+2019-05-28 15:44:03.486 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m19s259ms).
+2019-05-28 15:47:17.909 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m44s419ms).
+2019-05-28 15:49:44.361 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m26s451ms).
+2019-05-28 15:50:30.872 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 15:50:30.872 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 15:50:30.881 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 15:55:11.570 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s219ms).
+2019-05-28 15:59:53.758 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m29s789ms).
+2019-05-28 16:01:23.939 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronNightlyJob         : Nightly job started.
+2019-05-28 16:01:23.939 user:  INFO 6802 --- [scheduling-1] o.p.f.p.h.HibernateSearchReindexer       : Re-index job started.
+2019-05-28 16:01:23.967 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.orga.ContractDO with scrollMode=false...
+2019-05-28 16:01:23.982 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.orga.ContractDO done.
+2019-05-28 16:01:24.003 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 9 entries (total number) of type org.projectforge.framework.persistence.user.entities.UserPrefDO with scrollMode=false...
+2019-05-28 16:01:24.332 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 17 objects of type org.projectforge.framework.persistence.user.entities.UserPrefDO done.
+2019-05-28 16:01:24.723 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 3 entries (total number) of type org.projectforge.business.fibu.EmployeeDO with scrollMode=false...
+2019-05-28 16:01:24.863 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 29 objects of type org.projectforge.business.fibu.EmployeeDO done.
+2019-05-28 16:01:25.067 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 6 entries (total number) of type org.projectforge.business.fibu.kost.Kost2ArtDO with scrollMode=false...
+2019-05-28 16:01:25.116 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 6 objects of type org.projectforge.business.fibu.kost.Kost2ArtDO done.
+2019-05-28 16:01:25.271 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.skillmatrix.TrainingDO with scrollMode=false...
+2019-05-28 16:01:25.283 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.skillmatrix.TrainingDO done.
+2019-05-28 16:01:25.315 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 4 entries (total number) of type org.projectforge.business.book.BookDO with scrollMode=false...
+2019-05-28 16:01:25.370 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 4 objects of type org.projectforge.business.book.BookDO done.
+2019-05-28 16:01:25.534 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.skillmatrix.SkillDO with scrollMode=false...
+2019-05-28 16:01:25.546 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.skillmatrix.SkillDO done.
+2019-05-28 16:01:25.569 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.vacation.model.VacationDO with scrollMode=false...
+2019-05-28 16:01:25.593 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.vacation.model.VacationDO done.
+2019-05-28 16:01:25.630 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 7 entries (total number) of type org.projectforge.business.teamcal.event.model.TeamEventDO with scrollMode=false...
+2019-05-28 16:01:25.761 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 7 objects of type org.projectforge.business.teamcal.event.model.TeamEventDO done.
+2019-05-28 16:01:25.788 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '1' not found in UserGroupCache. groupIds string was: 1,2
+2019-05-28 16:01:25.793 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 1,2
+2019-05-28 16:01:25.800 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '1' not found in UserGroupCache. groupIds string was: 1,2
+2019-05-28 16:01:25.805 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 1,2
+2019-05-28 16:01:25.820 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2
+2019-05-28 16:01:25.825 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '1' not found in UserGroupCache. groupIds string was: 1,2
+2019-05-28 16:01:25.830 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 1,2
+2019-05-28 16:01:25.834 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2
+2019-05-28 16:01:25.839 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2,1
+2019-05-28 16:01:25.842 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '1' not found in UserGroupCache. groupIds string was: 2,1
+2019-05-28 16:01:25.847 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2
+2019-05-28 16:01:26.032 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.RechnungDO with scrollMode=false...
+2019-05-28 16:01:26.113 user:  INFO 6802 --- [scheduling-1] o.p.f.c.AbstractConfiguration            : Initializing Configuration[tenant=1] (ConfigurationDO parameters) ...
+2019-05-28 16:01:26.183 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 10 objects of type org.projectforge.business.fibu.RechnungDO done.
+2019-05-28 16:01:26.356 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.licensemanagement.LicenseDO with scrollMode=false...
+2019-05-28 16:01:26.365 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.licensemanagement.LicenseDO done.
+2019-05-28 16:01:26.386 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 60 entries (total number) of type org.projectforge.framework.access.AccessEntryDO with scrollMode=false...
+2019-05-28 16:01:26.444 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 60 objects of type org.projectforge.framework.access.AccessEntryDO done.
+2019-05-28 16:01:26.580 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.humanresources.HRPlanningEntryDO with scrollMode=false...
+2019-05-28 16:01:26.594 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.humanresources.HRPlanningEntryDO done.
+2019-05-28 16:01:26.622 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 6 entries (total number) of type org.projectforge.business.address.AddressbookDO with scrollMode=false...
+2019-05-28 16:01:26.676 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 6 objects of type org.projectforge.business.address.AddressbookDO done.
+2019-05-28 16:01:26.817 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting (mass) re-indexing of 55 entries of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO...
+2019-05-28 16:01:26.960 user:  INFO 6802 --- [Hibernate Search: identifierloader-1] o.h.s.b.i.SimpleIndexingProgressMonitor  : HSEARCH000027: Going to reindex 55 entities
+2019-05-28 16:01:27.131 user:  INFO 6802 --- [Hibernate Search: entityloader-1] o.h.s.b.i.SimpleIndexingProgressMonitor  : HSEARCH000030: 50 documents indexed in 26 ms
+2019-05-28 16:01:27.135 user:  INFO 6802 --- [Hibernate Search: entityloader-1] o.h.s.b.i.SimpleIndexingProgressMonitor  : HSEARCH000031: Indexing speed: 1923,076904 documents/second; progress: 90,91%
+2019-05-28 16:01:27.384 user:  INFO 6802 --- [scheduling-1] o.h.s.b.i.SimpleIndexingProgressMonitor  : HSEARCH000028: Reindexed 55 entities
+2019-05-28 16:01:27.385 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 55 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 16:01:27.414 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.EingangsrechnungsPositionDO with scrollMode=false...
+2019-05-28 16:01:27.492 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 2 objects of type org.projectforge.business.fibu.EingangsrechnungsPositionDO done.
+2019-05-28 16:01:27.608 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.teamcal.event.model.TeamEventAttachmentDO with scrollMode=false...
+2019-05-28 16:01:27.616 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.teamcal.event.model.TeamEventAttachmentDO done.
+2019-05-28 16:01:27.639 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.orga.VisitorbookDO with scrollMode=false...
+2019-05-28 16:01:27.668 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.orga.VisitorbookDO done.
+2019-05-28 16:01:27.694 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.marketing.AddressCampaignValueDO with scrollMode=false...
+2019-05-28 16:01:27.703 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.marketing.AddressCampaignValueDO done.
+2019-05-28 16:01:27.720 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.memo.MemoDO with scrollMode=false...
+2019-05-28 16:01:27.730 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.memo.MemoDO done.
+2019-05-28 16:01:27.747 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 3 entries (total number) of type org.projectforge.business.fibu.KundeDO with scrollMode=false...
+2019-05-28 16:01:27.800 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 3 objects of type org.projectforge.business.fibu.KundeDO done.
+2019-05-28 16:01:27.932 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.todo.ToDoDO with scrollMode=false...
+2019-05-28 16:01:27.944 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.todo.ToDoDO done.
+2019-05-28 16:01:27.969 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 3 entries (total number) of type org.projectforge.business.scripting.ScriptDO with scrollMode=false...
+2019-05-28 16:01:28.016 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 3 objects of type org.projectforge.business.scripting.ScriptDO done.
+2019-05-28 16:01:28.155 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.orga.VisitorbookTimedDO with scrollMode=false...
+2019-05-28 16:01:28.171 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.orga.VisitorbookTimedDO done.
+2019-05-28 16:01:28.191 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.RechnungsPositionDO with scrollMode=false...
+2019-05-28 16:01:28.354 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 10 objects of type org.projectforge.business.fibu.RechnungsPositionDO done.
+2019-05-28 16:01:28.519 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 1 entries (total number) of type org.projectforge.framework.persistence.user.entities.TenantDO with scrollMode=false...
+2019-05-28 16:01:28.570 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 1 objects of type org.projectforge.framework.persistence.user.entities.TenantDO done.
+2019-05-28 16:01:28.902 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 1 entries (total number) of type org.projectforge.business.gantt.GanttChartDO with scrollMode=false...
+2019-05-28 16:01:28.953 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 1 objects of type org.projectforge.business.gantt.GanttChartDO done.
+2019-05-28 16:01:28.968 user:  INFO 6802 --- [scheduling-1] o.p.b.multitenancy.TenantRegistryMap     : Refreshing org.projectforge.business.multitenancy.TenantRegistry...
+2019-05-28 16:01:28.968 user:  INFO 6802 --- [scheduling-1] o.p.b.multitenancy.TenantRegistryMap     : Refreshing of org.projectforge.business.multitenancy.TenantRegistry done.
+2019-05-28 16:01:28.973 user:  INFO 6802 --- [scheduling-1] org.projectforge.business.task.TaskTree  : Initializing task tree ...
+2019-05-28 16:01:29.109 user:  INFO 6802 --- [scheduling-1] org.projectforge.business.task.TaskTree  : Initializing task tree done.
+2019-05-28 16:01:29.242 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.teamcal.event.model.TeamEventAttendeeDO with scrollMode=false...
+2019-05-28 16:01:29.254 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.teamcal.event.model.TeamEventAttendeeDO done.
+2019-05-28 16:01:29.271 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 5 entries (total number) of type org.projectforge.business.fibu.AuftragsPositionDO with scrollMode=false...
+2019-05-28 16:01:29.360 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 25 objects of type org.projectforge.business.fibu.AuftragsPositionDO done.
+2019-05-28 16:01:29.514 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.address.PersonalAddressDO with scrollMode=false...
+2019-05-28 16:01:29.527 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.address.PersonalAddressDO done.
+2019-05-28 16:01:29.548 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.EingangsrechnungDO with scrollMode=false...
+2019-05-28 16:01:29.621 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 2 objects of type org.projectforge.business.fibu.EingangsrechnungDO done.
+2019-05-28 16:01:29.622 user: ERROR 6802 --- [scheduling-1] o.p.b.f.HibernateSearchPaymentTypeBridge : PaymentType object is null.
+2019-05-28 16:01:29.622 user: ERROR 6802 --- [scheduling-1] o.p.b.f.HibernateSearchPaymentTypeBridge : PaymentType object is null.
+2019-05-28 16:01:29.752 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 4 entries (total number) of type org.projectforge.business.address.AddressDO with scrollMode=false...
+2019-05-28 16:01:29.805 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 4 objects of type org.projectforge.business.address.AddressDO done.
+2019-05-28 16:01:29.944 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 19 entries (total number) of type org.projectforge.framework.persistence.user.entities.GroupDO with scrollMode=false...
+2019-05-28 16:01:30.033 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 194 objects of type org.projectforge.framework.persistence.user.entities.GroupDO done.
+2019-05-28 16:01:30.256 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.skillmatrix.SkillRatingDO with scrollMode=false...
+2019-05-28 16:01:30.266 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.skillmatrix.SkillRatingDO done.
+2019-05-28 16:01:30.282 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.liquidityplanning.LiquidityEntryDO with scrollMode=false...
+2019-05-28 16:01:30.290 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.liquidityplanning.LiquidityEntryDO done.
+2019-05-28 16:01:30.306 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.ProjektDO with scrollMode=false...
+2019-05-28 16:01:30.372 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 2 objects of type org.projectforge.business.fibu.ProjektDO done.
+2019-05-28 16:01:30.520 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 5 entries (total number) of type org.projectforge.business.teamcal.admin.model.TeamCalDO with scrollMode=false...
+2019-05-28 16:01:30.571 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 5 objects of type org.projectforge.business.teamcal.admin.model.TeamCalDO done.
+2019-05-28 16:01:30.591 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2
+2019-05-28 16:01:30.596 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '1' not found in UserGroupCache. groupIds string was: 1,2
+2019-05-28 16:01:30.599 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 1,2
+2019-05-28 16:01:30.608 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2
+2019-05-28 16:01:30.612 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2,1
+2019-05-28 16:01:30.616 user:  WARN 6802 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '1' not found in UserGroupCache. groupIds string was: 2,1
+2019-05-28 16:01:30.750 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.meb.MebEntryDO with scrollMode=false...
+2019-05-28 16:01:30.760 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.meb.MebEntryDO done.
+2019-05-28 16:01:30.778 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 22 entries (total number) of type org.projectforge.business.task.TaskDO with scrollMode=false...
+2019-05-28 16:01:30.857 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 22 objects of type org.projectforge.business.task.TaskDO done.
+2019-05-28 16:01:31.008 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 15 entries (total number) of type org.projectforge.framework.access.GroupTaskAccessDO with scrollMode=false...
+2019-05-28 16:01:31.156 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 440 objects of type org.projectforge.framework.access.GroupTaskAccessDO done.
+2019-05-28 16:01:31.320 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 6 entries (total number) of type org.projectforge.business.fibu.kost.KostZuweisungDO with scrollMode=false...
+2019-05-28 16:01:31.516 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 22 objects of type org.projectforge.business.fibu.kost.KostZuweisungDO done.
+2019-05-28 16:01:31.648 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 10 entries (total number) of type org.projectforge.business.fibu.kost.Kost2DO with scrollMode=false...
+2019-05-28 16:01:31.743 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 10 objects of type org.projectforge.business.fibu.kost.Kost2DO done.
+2019-05-28 16:01:31.888 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 3 entries (total number) of type org.projectforge.business.fibu.KontoDO with scrollMode=false...
+2019-05-28 16:01:31.929 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 3 objects of type org.projectforge.business.fibu.KontoDO done.
+2019-05-28 16:01:32.063 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.marketing.AddressCampaignDO with scrollMode=false...
+2019-05-28 16:01:32.071 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.marketing.AddressCampaignDO done.
+2019-05-28 16:01:32.090 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.EmployeeTimedDO with scrollMode=false...
+2019-05-28 16:01:32.150 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 2 objects of type org.projectforge.business.fibu.EmployeeTimedDO done.
+2019-05-28 16:01:32.335 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.orga.PostausgangDO with scrollMode=false...
+2019-05-28 16:01:32.344 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.orga.PostausgangDO done.
+2019-05-28 16:01:32.363 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 11 entries (total number) of type org.projectforge.framework.persistence.user.entities.PFUserDO with scrollMode=false...
+2019-05-28 16:01:32.410 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 37 objects of type org.projectforge.framework.persistence.user.entities.PFUserDO done.
+2019-05-28 16:01:32.535 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.humanresources.HRPlanningDO with scrollMode=false...
+2019-05-28 16:01:32.549 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.humanresources.HRPlanningDO done.
+2019-05-28 16:01:32.568 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting (mass) re-indexing of 21 entries of type org.projectforge.business.timesheet.TimesheetDO...
+2019-05-28 16:01:32.615 user:  INFO 6802 --- [Hibernate Search: identifierloader-1] o.h.s.b.i.SimpleIndexingProgressMonitor  : HSEARCH000027: Going to reindex 21 entities
+2019-05-28 16:01:32.881 user:  INFO 6802 --- [scheduling-1] o.h.s.b.i.SimpleIndexingProgressMonitor  : HSEARCH000028: Reindexed 21 entities
+2019-05-28 16:01:32.882 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 21 objects of type org.projectforge.business.timesheet.TimesheetDO done.
+2019-05-28 16:01:32.903 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 3 entries (total number) of type org.projectforge.business.fibu.AuftragDO with scrollMode=false...
+2019-05-28 16:01:33.000 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 25 objects of type org.projectforge.business.fibu.AuftragDO done.
+2019-05-28 16:01:33.156 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.skillmatrix.TrainingAttendeeDO with scrollMode=false...
+2019-05-28 16:01:33.164 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.skillmatrix.TrainingAttendeeDO done.
+2019-05-28 16:01:33.185 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.fibu.EmployeeSalaryDO with scrollMode=false...
+2019-05-28 16:01:33.194 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.fibu.EmployeeSalaryDO done.
+2019-05-28 16:01:33.212 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 20 entries (total number) of type org.projectforge.framework.configuration.entities.ConfigurationDO with scrollMode=false...
+2019-05-28 16:01:33.253 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 20 objects of type org.projectforge.framework.configuration.entities.ConfigurationDO done.
+2019-05-28 16:01:33.388 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.orga.PosteingangDO with scrollMode=false...
+2019-05-28 16:01:33.401 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.orga.PosteingangDO done.
+2019-05-28 16:01:33.418 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 29 entries (total number) of type org.projectforge.framework.persistence.user.entities.UserRightDO with scrollMode=false...
+2019-05-28 16:01:33.496 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 29 objects of type org.projectforge.framework.persistence.user.entities.UserRightDO done.
+2019-05-28 16:01:33.647 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.fibu.kost.BuchungssatzDO with scrollMode=false...
+2019-05-28 16:01:33.670 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.fibu.kost.BuchungssatzDO done.
+2019-05-28 16:01:33.688 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 3 entries (total number) of type org.projectforge.business.fibu.kost.Kost1DO with scrollMode=false...
+2019-05-28 16:01:33.732 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 3 objects of type org.projectforge.business.fibu.kost.Kost1DO done.
+2019-05-28 16:01:33.853 user:  INFO 6802 --- [scheduling-1] o.p.f.p.h.HibernateSearchReindexer       : Re-index job finished successfully.
+2019-05-28 16:01:33.853 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronNightlyJob         : Nightly job job finished.
+2019-05-28 16:06:21.797 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m39s526ms).
+2019-05-28 16:07:14.078 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 16:07:14.079 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 16:07:14.089 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 16:08:55.879 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m24s856ms).
+2019-05-28 16:11:19.817 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s452ms).
+2019-05-28 16:13:14.972 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s146ms).
+2019-05-28 16:14:31.137 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s154ms).
+2019-05-28 16:17:10.154 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m39s17ms).
+2019-05-28 16:18:53.789 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m12s819ms).
+2019-05-28 16:22:02.600 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m38s806ms).
+2019-05-28 16:22:31.167 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 16:22:31.170 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 16:22:31.183 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 16:23:31.715 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s106ms).
+2019-05-28 16:26:41.172 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m39s447ms).
+2019-05-28 16:29:52.161 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m10s989ms).
+2019-05-28 16:32:05.329 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s47ms).
+2019-05-28 16:33:34.077 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s738ms).
+2019-05-28 16:36:50.197 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s532ms).
+2019-05-28 16:38:22.788 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 16:38:22.794 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 16:38:22.803 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 16:40:29.171 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m32s440ms).
+2019-05-28 16:43:37.393 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m37s418ms).
+2019-05-28 16:43:57.418 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 16:43:57.418 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 16:43:57.436 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 16:43:57.446 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 16:43:57.451 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 16:47:44.856 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m37s455ms).
+2019-05-28 16:50:54.115 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s758ms).
+2019-05-28 16:57:01.587 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m37s467ms).
+2019-05-28 17:01:40.452 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m38s865ms).
+2019-05-28 17:02:10.148 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s695ms), soft-evicting connections from pool.
+2019-05-28 17:08:48.641 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s494ms).
+2019-05-28 17:08:51.371 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 17:08:51.371 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 17:08:51.388 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 17:13:52.179 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m33s534ms).
+2019-05-28 17:21:07.118 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m38s496ms).
+2019-05-28 17:22:13.553 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s636ms), soft-evicting connections from pool.
+2019-05-28 17:25:52.728 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m36s205ms).
+2019-05-28 17:26:34.019 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 17:26:34.019 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 17:26:34.044 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 17:30:07.787 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m37s527ms).
+2019-05-28 17:36:10.156 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m32s359ms).
+2019-05-28 17:37:23.901 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 17:37:23.901 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 17:37:23.908 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 17:43:55.211 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s524ms).
+2019-05-28 17:49:54.484 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 17:49:54.484 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 17:49:54.490 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 17:49:54.493 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 17:49:54.494 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 17:50:02.100 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m36s877ms).
+2019-05-28 17:58:08.193 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m36s82ms).
+2019-05-28 18:06:55.208 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m40s612ms).
+2019-05-28 18:12:04.838 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m32s713ms).
+2019-05-28 18:19:13.370 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s523ms).
+2019-05-28 18:26:03.033 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 18:26:03.033 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 18:26:03.036 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 18:26:21.897 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s516ms).
+2019-05-28 18:33:30.331 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s433ms).
+2019-05-28 18:35:02.218 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m31s887ms).
+2019-05-28 18:36:40.054 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s420ms), soft-evicting connections from pool.
+2019-05-28 18:38:12.160 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 18:38:12.161 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 18:38:12.170 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 18:38:12.173 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 18:38:12.175 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 18:38:16.617 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s563ms).
+2019-05-28 18:38:24.532 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 18:38:24.533 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 18:38:24.545 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 18:47:27.733 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m33s673ms).
+2019-05-28 18:53:36.219 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m38s483ms).
+2019-05-28 18:57:21.136 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m38s476ms).
+2019-05-28 19:01:23.724 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m32s584ms).
+2019-05-28 19:08:32.307 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s581ms).
+2019-05-28 19:08:45.625 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 19:08:45.625 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 19:08:45.633 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 19:10:39.785 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m37s466ms).
+2019-05-28 19:14:16.981 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m37s196ms).
+2019-05-28 19:20:27.556 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m37s223ms).
+2019-05-28 19:29:42.898 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 19:29:42.898 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 19:29:42.915 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 19:29:45.300 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m33s658ms).
+2019-05-28 19:30:00.002 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 19:30:00.002 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 19:30:00.011 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 19:36:23.510 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s210ms).
+2019-05-28 19:36:52.802 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s292ms), soft-evicting connections from pool.
+2019-05-28 19:43:39.444 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m32s631ms).
+2019-05-28 19:46:23.255 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s314ms).
+2019-05-28 19:50:31.076 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m37s579ms).
+2019-05-28 19:53:33.703 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m32s617ms).
+2019-05-28 19:57:41.271 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m37s557ms).
+2019-05-28 20:01:31.653 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 20:01:31.653 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 20:01:31.662 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 20:01:31.664 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 20:01:31.666 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 20:01:48.803 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m37s520ms).
+2019-05-28 20:04:56.295 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m37s482ms).
+2019-05-28 20:11:30.265 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m33s970ms).
+2019-05-28 20:19:38.974 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m38s482ms).
+2019-05-28 20:24:47.441 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m38s455ms).
+2019-05-28 20:30:56.662 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m32s674ms).
+2019-05-28 20:31:47.261 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 20:31:47.261 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 20:31:47.276 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 20:38:50.171 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m40s574ms).
+2019-05-28 20:40:51.980 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m31s800ms).
+2019-05-28 20:43:04.418 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s427ms).
+2019-05-28 20:46:11.875 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m37s449ms).
+2019-05-28 20:48:50.044 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m31s658ms).
+2019-05-28 21:01:16.403 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m33s746ms).
+2019-05-28 21:04:54.925 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m38s522ms).
+2019-05-28 21:07:04.411 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m39s445ms).
+2019-05-28 21:09:13.816 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m39s418ms).
+2019-05-28 21:09:40.467 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 21:09:40.467 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 21:09:40.475 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 21:11:16.622 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s802ms).
+2019-05-28 21:15:09.822 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m39s307ms).
+2019-05-28 21:17:14.604 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s777ms).
+2019-05-28 21:20:24.004 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m39s415ms).
+2019-05-28 21:20:39.425 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 21:20:39.425 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 21:20:39.439 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 21:24:22.262 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m21s680ms).
+2019-05-28 21:25:14.330 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s68ms).
+2019-05-28 21:31:31.354 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m40s494ms).
+2019-05-28 21:35:40.820 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m39s463ms).
+2019-05-28 21:38:45.411 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m34s585ms).
+2019-05-28 21:41:26.068 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m10s646ms).
+2019-05-28 21:42:30.502 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s434ms).
+2019-05-28 21:44:11.528 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 21:44:11.530 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 21:44:11.538 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 21:45:40.658 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s399ms).
+2019-05-28 21:46:04.397 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 21:46:04.397 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 21:46:04.406 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 21:51:57.720 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m40s551ms).
+2019-05-28 21:59:03.967 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s636ms).
+2019-05-28 22:01:49.995 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s505ms).
+2019-05-28 22:06:00.522 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m40s529ms).
+2019-05-28 22:12:08.190 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m37s637ms).
+2019-05-28 22:15:49.950 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 22:15:49.951 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 22:15:49.960 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 22:20:08.424 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m36s722ms).
+2019-05-28 22:25:19.848 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m41s405ms).
+2019-05-28 22:33:40.805 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m43s461ms).
+2019-05-28 22:40:33.119 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m41s455ms).
+2019-05-28 22:44:45.442 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m34s824ms).
+2019-05-28 22:47:31.390 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s513ms).
+2019-05-28 22:47:38.763 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 22:47:38.763 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 22:47:38.788 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 22:47:38.798 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 22:47:38.804 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 22:54:44.907 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m43s510ms).
+2019-05-28 23:01:53.555 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s638ms).
+2019-05-28 23:09:06.992 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m43s427ms).
+2019-05-28 23:14:18.517 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m41s514ms).
+2019-05-28 23:15:57.179 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s662ms).
+2019-05-28 23:16:24.457 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-28 23:16:24.457 user:  INFO 6802 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-28 23:16:24.489 user:  INFO 6802 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-28 23:16:27.018 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s839ms), soft-evicting connections from pool.
+2019-05-28 23:20:02.846 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m35s828ms).
+2019-05-28 23:20:32.704 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s858ms), soft-evicting connections from pool.
+2019-05-28 23:23:12.105 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m39s401ms).
+2019-05-28 23:30:25.617 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m43s506ms).
+2019-05-28 23:37:39.023 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m43s397ms).
+2019-05-28 23:44:24.430 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m42s417ms).
+2019-05-28 23:44:54.166 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s736ms), soft-evicting connections from pool.
+2019-05-28 23:51:37.658 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m43s492ms).
+2019-05-28 23:53:13.602 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-28 23:53:13.603 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-28 23:53:13.629 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-28 23:53:13.640 user:  INFO 6802 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-28 23:53:13.649 user:  INFO 6802 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-28 23:59:34.217 user:  WARN 6802 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m39s979ms).

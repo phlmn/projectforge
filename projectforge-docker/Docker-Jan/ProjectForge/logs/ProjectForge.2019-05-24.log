@@ -1,0 +1,740 @@
+2019-05-24 00:06:55.658 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m47s832ms).
+2019-05-24 00:07:24.588 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s930ms), soft-evicting connections from pool.
+2019-05-24 00:08:57.384 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s796ms).
+2019-05-24 00:11:04.076 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s687ms).
+2019-05-24 00:13:09.023 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s939ms).
+2019-05-24 00:16:19.910 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s62ms).
+2019-05-24 00:17:27.687 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s144ms), soft-evicting connections from pool.
+2019-05-24 00:18:31.564 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 00:18:31.565 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 00:18:31.570 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 00:18:32.276 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s767ms), soft-evicting connections from pool.
+2019-05-24 00:23:19.973 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m36s85ms).
+2019-05-24 00:25:26.449 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s458ms).
+2019-05-24 00:29:38.133 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m34s865ms).
+2019-05-24 00:32:19.770 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s835ms).
+2019-05-24 01:03:48.112 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m58s340ms).
+2019-05-24 01:04:09.216 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-24 01:04:09.216 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-24 01:04:09.225 user:  INFO 7030 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-24 01:04:09.228 user:  INFO 7030 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-24 01:04:09.229 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-24 01:07:47.312 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m29s196ms).
+2019-05-24 01:10:24.619 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 01:10:24.619 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 01:10:24.624 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 01:13:36.046 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m39s22ms).
+2019-05-24 01:14:04.954 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s908ms), soft-evicting connections from pool.
+2019-05-24 01:18:39.590 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m34s636ms).
+2019-05-24 01:22:35.723 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 01:22:35.723 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 01:22:35.729 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 01:24:06.593 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s788ms).
+2019-05-24 01:25:47.671 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m41s78ms).
+2019-05-24 01:26:16.415 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s744ms), soft-evicting connections from pool.
+2019-05-24 01:28:50.525 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m34s110ms).
+2019-05-24 01:29:19.247 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s722ms), soft-evicting connections from pool.
+2019-05-24 01:36:14.279 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m35s745ms).
+2019-05-24 01:37:49.239 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 01:37:49.239 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 01:37:49.245 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 01:38:58.518 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s408ms).
+2019-05-24 01:39:27.189 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s671ms), soft-evicting connections from pool.
+2019-05-24 01:43:07.904 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m40s715ms).
+2019-05-24 02:08:39.612 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m1s699ms).
+2019-05-24 02:11:59.155 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s653ms), soft-evicting connections from pool.
+2019-05-24 02:15:36.442 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m37s287ms).
+2019-05-24 02:16:05.025 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s583ms), soft-evicting connections from pool.
+2019-05-24 02:17:18.183 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 02:17:18.183 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 02:17:18.189 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 02:18:46.822 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s50ms).
+2019-05-24 02:25:54.669 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s908ms).
+2019-05-24 02:30:07.300 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m34s906ms).
+2019-05-24 02:49:33.161 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m55s857ms).
+2019-05-24 02:54:30.127 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s615ms).
+2019-05-24 02:54:47.243 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 02:54:47.243 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 02:54:47.247 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 02:58:35.938 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m35s803ms).
+2019-05-24 03:05:23.524 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m39s829ms).
+2019-05-24 03:05:52.005 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s481ms), soft-evicting connections from pool.
+2019-05-24 03:11:34.763 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m42s758ms).
+2019-05-24 03:18:49.767 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 03:18:49.767 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 03:18:49.773 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 03:18:50.457 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m42s708ms).
+2019-05-24 03:23:28.755 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m8s291ms).
+2019-05-24 03:25:04.802 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s38ms).
+2019-05-24 03:27:15.481 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s446ms), soft-evicting connections from pool.
+2019-05-24 03:29:57.133 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s736ms).
+2019-05-24 03:33:11.645 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s871ms).
+2019-05-24 04:14:39.931 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m58s282ms).
+2019-05-24 04:16:02.651 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m22s720ms).
+2019-05-24 04:16:31.969 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s318ms), soft-evicting connections from pool.
+2019-05-24 05:08:41.334 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m9s365ms).
+2019-05-24 05:15:27.551 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m16s208ms).
+2019-05-24 05:15:36.974 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 05:15:36.974 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 05:15:36.979 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 05:17:30.505 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s935ms).
+2019-05-24 05:20:40.095 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s835ms).
+2019-05-24 05:21:47.771 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s263ms), soft-evicting connections from pool.
+2019-05-24 05:23:22.305 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s534ms).
+2019-05-24 05:23:27.924 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-24 05:23:27.924 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-24 05:23:27.933 user:  INFO 7030 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-24 05:23:27.936 user:  INFO 7030 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-24 05:23:27.938 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-24 05:23:50.457 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s152ms), soft-evicting connections from pool.
+2019-05-24 05:25:27.275 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s818ms).
+2019-05-24 05:28:35.029 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m37s748ms).
+2019-05-24 05:34:45.632 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m33s967ms).
+2019-05-24 05:35:52.370 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s150ms), soft-evicting connections from pool.
+2019-05-24 05:36:55.331 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s158ms), soft-evicting connections from pool.
+2019-05-24 05:41:15.192 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 05:41:15.192 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 05:41:15.198 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 05:42:53.639 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s176ms), soft-evicting connections from pool.
+2019-05-24 05:45:25.689 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 05:45:25.689 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 05:45:25.694 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 05:50:43.827 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m33s700ms).
+2019-05-24 05:53:33.157 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m19s329ms).
+2019-05-24 05:57:54.603 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m51s443ms).
+2019-05-24 05:59:14.156 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m19s553ms).
+2019-05-24 05:59:43.671 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s515ms), soft-evicting connections from pool.
+2019-05-24 06:00:33.883 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s212ms).
+2019-05-24 06:04:50.261 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m37s785ms).
+2019-05-24 06:08:53.104 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m32s830ms).
+2019-05-24 06:10:01.614 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s159ms), soft-evicting connections from pool.
+2019-05-24 06:11:04.613 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s260ms), soft-evicting connections from pool.
+2019-05-24 06:13:43.989 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s816ms).
+2019-05-24 06:18:53.695 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m32s717ms).
+2019-05-24 06:19:10.902 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 06:19:10.902 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 06:19:10.908 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 06:21:58.603 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m34s900ms).
+2019-05-24 06:24:40.096 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s819ms).
+2019-05-24 06:31:17.111 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m57s477ms).
+2019-05-24 06:32:59.202 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m12s92ms).
+2019-05-24 06:36:34.085 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m4s882ms).
+2019-05-24 06:37:22.682 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s597ms).
+2019-05-24 06:37:51.526 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s844ms), soft-evicting connections from pool.
+2019-05-24 06:37:57.555 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-24 06:37:57.555 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-24 06:37:57.564 user:  INFO 7030 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-24 06:37:57.567 user:  INFO 7030 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-24 06:37:57.568 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-24 06:38:42.649 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s123ms).
+2019-05-24 06:39:11.638 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s989ms), soft-evicting connections from pool.
+2019-05-24 06:40:57.722 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 06:40:57.722 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 06:40:57.728 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 06:42:40.140 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m18s578ms).
+2019-05-24 06:48:02.110 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m51s960ms).
+2019-05-24 06:50:12.467 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s13ms), soft-evicting connections from pool.
+2019-05-24 06:50:19.177 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 06:50:19.177 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 06:50:19.183 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 06:51:31.485 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m19s18ms).
+2019-05-24 06:53:16.339 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m14s843ms).
+2019-05-24 06:54:42.392 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s44ms).
+2019-05-24 06:56:52.804 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s385ms).
+2019-05-24 07:05:19.691 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m51s802ms).
+2019-05-24 07:06:54.979 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 07:06:54.979 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 07:06:54.984 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 07:07:07.579 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m17s880ms).
+2019-05-24 07:09:53.056 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s772ms).
+2019-05-24 07:10:22.158 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s102ms), soft-evicting connections from pool.
+2019-05-24 07:13:31.927 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m9s769ms).
+2019-05-24 07:15:01.754 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s816ms).
+2019-05-24 07:18:45.578 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m10s821ms).
+2019-05-24 07:18:52.046 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-24 07:18:52.046 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-24 07:18:52.055 user:  INFO 7030 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-24 07:18:52.058 user:  INFO 7030 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-24 07:18:52.059 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-24 07:21:55.896 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m40s307ms).
+2019-05-24 07:22:52.424 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s528ms).
+2019-05-24 07:23:21.379 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s955ms), soft-evicting connections from pool.
+2019-05-24 07:23:43.387 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 07:23:43.388 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 07:23:43.393 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 07:24:47.325 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s946ms).
+2019-05-24 07:25:16.227 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s902ms), soft-evicting connections from pool.
+2019-05-24 07:30:11.946 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m31s713ms).
+2019-05-24 07:34:19.629 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m37s680ms).
+2019-05-24 07:35:24.329 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s927ms), soft-evicting connections from pool.
+2019-05-24 07:35:31.126 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 07:35:31.127 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 07:35:31.132 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 07:38:33.606 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m9s277ms).
+2019-05-24 07:40:00.400 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s795ms).
+2019-05-24 07:48:24.361 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 07:48:24.362 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 07:48:24.367 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 07:49:31.358 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s975ms), soft-evicting connections from pool.
+2019-05-24 07:50:39.587 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s301ms), soft-evicting connections from pool.
+2019-05-24 07:53:38.438 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s817ms).
+2019-05-24 07:54:55.291 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s852ms).
+2019-05-24 07:56:27.023 user:  WARN 7030 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m1s730ms).
+2019-05-24 07:57:11.648 user:  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-6] o.p.business.user.filter.CookieService   : User successfully logged in using stay-logged-in method: Admin ProjectForge Administrator (jan)
+2019-05-24 07:57:11.649 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-6] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-24 07:57:11.650 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-6] o.p.f.c.AbstractConfiguration            : Initializing Configuration[tenant=1] (ConfigurationDO parameters) ...
+2019-05-24 07:57:11.652 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-6] o.p.f.c.AbstractConfiguration            : Initializing GlobalConfiguration (ConfigurationDO parameters) ...
+2019-05-24 07:57:11.722 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/menu with ip: 127.0.0.1
+2019-05-24 07:57:11.725 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.business.user.UserGroupCache         : Initializing UserGroupCache  for tenant #1 'Default tenant'...
+2019-05-24 07:57:11.725 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.business.user.UserGroupCache         : Loading all users ...
+2019-05-24 07:57:11.728 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/order/initialList with ip: 127.0.0.1
+2019-05-24 07:57:11.729 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-05-24 07:57:11.743 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.business.user.UserGroupCache         : Loading all groups ...
+2019-05-24 07:57:11.773 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.business.user.UserGroupCache         : Initializing of UserGroupCache done for tenant #1 'Default tenant'.
+2019-05-24 07:57:11.773 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.business.user.UserGroupCache         : UserGroupCache.refresh took: 50 ms.
+2019-05-24 07:57:11.788 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-05-24 07:57:11.800 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] org.projectforge.plugins.todo.ToDoCache  : Clearing cache with open to-do entries.
+2019-05-24 07:57:11.808 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.framework.persistence.api.BaseDao    : BaseDao.getList for entity class: AuftragDO took: 20 ms.
+2019-05-24 07:57:11.809 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:positionen' not found.
+2019-05-24 07:57:11.809 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.personDays' not found.
+2019-05-24 07:57:11.809 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:personDays' not found.
+2019-05-24 07:57:11.809 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.assignedPersons' not found.
+2019-05-24 07:57:11.809 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:assignedPersons' not found.
+2019-05-24 07:57:11.809 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.nettoSumme' not found.
+2019-05-24 07:57:11.809 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:nettoSumme' not found.
+2019-05-24 07:57:11.809 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.beauftragtNettoSumme' not found.
+2019-05-24 07:57:11.809 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:beauftragtNettoSumme' not found.
+2019-05-24 07:57:11.809 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:fakturiertSum' not found.
+2019-05-24 07:57:11.809 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.zuFakturierenSum' not found.
+2019-05-24 07:57:11.810 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:zuFakturierenSum' not found.
+2019-05-24 08:01:37.672 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 08:01:37.673 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 08:01:37.677 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 08:13:08.592 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-24 08:13:08.593 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-24 08:13:08.601 user:  INFO 7030 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-24 08:13:08.605 user:  INFO 7030 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-24 08:13:08.606 user:  INFO 7030 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-24 08:14:59.982 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 08:14:59.983 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 08:14:59.988 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 08:25:07.163 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/order/edit with ip: 127.0.0.1
+2019-05-24 08:25:07.322 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.nettoSumme' not found.
+2019-05-24 08:25:07.322 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:nettoSumme' not found.
+2019-05-24 08:25:07.348 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.projectforge.ui.ElementsRegistry     : Property class org.projectforge.business.fibu.AuftragDO.title not found. Can't autodetect layout.
+2019-05-24 08:25:07.348 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.projectforge.ui.ElementsRegistry     : Can't build UIElement from org.projectforge.business.fibu.AuftragDO.title.
+2019-05-24 08:25:07.349 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.nettoSumme' not found.
+2019-05-24 08:25:07.349 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:nettoSumme' not found.
+2019-05-24 08:25:07.349 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.nettoSumme' not found.
+2019-05-24 08:25:07.349 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:nettoSumme' not found.
+2019-05-24 08:25:10.412 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/order/initialList with ip: 127.0.0.1
+2019-05-24 08:25:10.435 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.p.framework.persistence.api.BaseDao    : BaseDao.getList for entity class: AuftragDO took: 22 ms.
+2019-05-24 08:25:10.436 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-2] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:positionen' not found.
+2019-05-24 08:25:10.436 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.personDays' not found.
+2019-05-24 08:25:10.436 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-2] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:personDays' not found.
+2019-05-24 08:25:10.436 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.assignedPersons' not found.
+2019-05-24 08:25:10.436 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-2] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:assignedPersons' not found.
+2019-05-24 08:25:10.436 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.nettoSumme' not found.
+2019-05-24 08:25:10.436 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-2] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:nettoSumme' not found.
+2019-05-24 08:25:10.436 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.beauftragtNettoSumme' not found.
+2019-05-24 08:25:10.436 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-2] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:beauftragtNettoSumme' not found.
+2019-05-24 08:25:10.437 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-2] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:fakturiertSum' not found.
+2019-05-24 08:25:10.437 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.zuFakturierenSum' not found.
+2019-05-24 08:25:10.437 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-2] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:zuFakturierenSum' not found.
+2019-05-24 08:25:14.591 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-3] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/order/edit with ip: 127.0.0.1
+2019-05-24 08:25:14.592 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-3] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.nettoSumme' not found.
+2019-05-24 08:25:14.592 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-3] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:nettoSumme' not found.
+2019-05-24 08:25:14.592 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-3] org.projectforge.ui.ElementsRegistry     : Can't build UIElement from org.projectforge.business.fibu.AuftragDO.title.
+2019-05-24 08:25:14.592 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-3] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.nettoSumme' not found.
+2019-05-24 08:25:14.592 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-3] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:nettoSumme' not found.
+2019-05-24 08:25:14.592 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-3] o.p.shared.storage.StorageUtils          : Field 'org.projectforge.business.fibu.AuftragDO.nettoSumme' not found.
+2019-05-24 08:25:14.593 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-3] org.projectforge.ui.ElementsRegistry     : @PropertyInfo 'class org.projectforge.business.fibu.AuftragDO:nettoSumme' not found.
+2019-05-24 08:26:13.625 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:26:13.637 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:26:13.869 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:26:13.880 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [UserSelectPanel [Component id = 6]]
+2019-05-24 08:26:13.880 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:26:13.924 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.projectforge.web.wicket.PresizedImage  : Reading image dimensions from file imageDimensions.xml ...
+2019-05-24 08:26:14.044 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.projectforge.web.wicket.PresizedImage  : Reading image dimensions from file was successful: imageDimensions.xml
+2019-05-24 08:26:14.044 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [QuickSelectMonthPanel [Component id = quickSelectMonth]]
+2019-05-24 08:26:14.088 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [QuickSelectMonthPanel [Component id = quickSelectMonth]]
+2019-05-24 08:26:14.089 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [QuickSelectMonthPanel [Component id = quickSelectMonth]]
+2019-05-24 08:26:14.092 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [QuickSelectWeekPanel [Component id = quickSelectWeek]]
+2019-05-24 08:26:14.104 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [QuickSelectWeekPanel [Component id = quickSelectWeek]]
+2019-05-24 08:26:14.106 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [QuickSelectWeekPanel [Component id = quickSelectWeek]]
+2019-05-24 08:26:14.108 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [QuickSelectMonthPanel [Component id = quickSelectMonth]]
+2019-05-24 08:26:14.109 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [QuickSelectMonthPanel [Component id = quickSelectMonth]]
+2019-05-24 08:26:14.109 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [QuickSelectMonthPanel [Component id = quickSelectMonth]]
+2019-05-24 08:26:14.110 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [QuickSelectWeekPanel [Component id = quickSelectWeek]]
+2019-05-24 08:26:14.110 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [QuickSelectWeekPanel [Component id = quickSelectWeek]]
+2019-05-24 08:26:14.111 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.apache.wicket.Localizer              : Tried to retrieve a localized string for a component that has not yet been added to the page. This can sometimes lead to an invalid or no localized resource returned. Make sure you are not calling Component#getString() inside your Component's constructor. Offending component: [QuickSelectWeekPanel [Component id = quickSelectWeek]]
+2019-05-24 08:26:14.406 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.p.framework.persistence.api.BaseDao    : BaseDao.getList for entity class: AuftragDO took: 11 ms.
+2019-05-24 08:26:14.416 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.p.business.fibu.RechnungCache          : Initializing RechnungCache ...
+2019-05-24 08:26:14.437 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] o.p.business.fibu.RechnungCache          : Initializing of RechnungCache done.
+2019-05-24 08:26:14.459 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.projectforge.business.task.TaskTree  : Initializing task tree ...
+2019-05-24 08:26:14.479 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-1] org.projectforge.business.task.TaskTree  : Initializing task tree done.
+2019-05-24 08:26:19.689 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-6] o.h.hql.internal.ast.HqlSqlWalker        : [DEPRECATION] Encountered positional parameter near line 1, column 98 in HQL: [select name from org.projectforge.framework.persistence.user.entities.UserPrefDO t where user_fk=? and areaString = ? order by name].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2019-05-24 08:26:19.690 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-6] o.h.hql.internal.ast.HqlSqlWalker        : [DEPRECATION] Encountered positional parameter near line 1, column 117 in HQL: [select name from org.projectforge.framework.persistence.user.entities.UserPrefDO t where user_fk=? and areaString = ? order by name].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2019-05-24 08:26:20.059 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-6] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.getHistoryEntries took: 8 ms.
+2019-05-24 08:26:20.059 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-6] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.getHistoryFor took: 9 ms.
+2019-05-24 08:28:13.377 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-2] org.projectforge.plugins.todo.ToDoCache  : Clearing cache with open to-do entries.
+2019-05-24 08:28:13.443 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:28:13.445 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:28:13.449 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:28:13.449 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:28:13.493 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.p.framework.persistence.api.BaseDao    : BaseDao.getList for entity class: EmployeeDO took: 4 ms.
+2019-05-24 08:28:45.572 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:28:45.573 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:28:45.577 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:28:45.578 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:28:45.609 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.framework.persistence.api.BaseDao    : BaseDao.getList for entity class: GroupDO took: 6 ms.
+2019-05-24 08:29:00.456 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/group/initialList with ip: 127.0.0.1
+2019-05-24 08:29:00.463 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-2] o.p.framework.persistence.api.BaseDao    : BaseDao.getList for entity class: GroupDO took: 4 ms.
+2019-05-24 08:29:50.291 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-3] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/group/edit with ip: 127.0.0.1
+2019-05-24 08:29:50.317 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-3] org.projectforge.ui.ElementsRegistry     : Unsupported property type 'interface java.util.Set': org.projectforge.framework.persistence.user.entities.GroupDO.assignedUsers
+2019-05-24 08:29:59.972 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 08:29:59.972 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 08:29:59.977 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 08:37:45.777 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:37:45.781 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:37:45.785 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:37:45.786 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:37:45.811 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-7] o.p.framework.persistence.api.BaseDao    : BaseDao.getList for entity class: BookDO took: 2 ms.
+2019-05-24 08:37:54.688 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:37:54.690 user:jan  WARN 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.f.p.j.i.HibernateSearchFilterUtils   : Searchfield added: org.projectforge.business.address.AddressbookDO.usersgroups
+2019-05-24 08:37:54.691 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:37:54.696 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:37:54.719 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 08:37:54.751 user:jan  INFO 7030 --- [http-nio-127.0.0.1-8080-exec-8] o.p.framework.persistence.api.BaseDao    : BaseDao.getList for entity class: AddressbookDO took: 3 ms.
+2019-05-24 08:44:59.968 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 08:44:59.968 user:  INFO 7030 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 08:44:59.971 user:  INFO 7030 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 08:51:25.144 user:  INFO 7030 --- [Thread-35] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-05-24 08:51:25.146 user:  INFO 7030 --- [Thread-35] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-24 08:51:25.147 user:  INFO 7030 --- [Thread-35] o.p.b.user.UserXmlPreferencesCache       : Syncing all user preferences to database.
+2019-05-24 08:51:25.147 user:  INFO 7030 --- [Thread-35] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-05-24 08:51:25.208 user:  INFO 7030 --- [Thread-35] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-05-24 08:51:25.245 user:  INFO 7030 --- [Thread-35] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'entityManagerFactory' threw an exception: java.lang.IllegalStateException: EntityManagerFactory is closed
+2019-05-24 08:51:25.245 user:  INFO 7030 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-24 08:51:25.247 user:  INFO 7030 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-24 08:51:25.269 user:  INFO 7030 --- [Thread-35] org.projectforge.ProjectForgeApp         : Shutdown...
+2019-05-24 08:51:25.270 user:  INFO 7030 --- [Thread-35] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-05-24 08:51:25.270 user:  INFO 7030 --- [Thread-35] org.projectforge.ProjectForgeApp         : Shutdown completed.
+2019-05-24 08:51:25.270 user:  INFO 7030 --- [Thread-35] org.apache.wicket.Application            : [wicket.app] destroy: Wicket extensions initializer
+2019-05-24 08:51:25.270 user:  INFO 7030 --- [Thread-35] org.apache.wicket.Application            : [wicket.app] destroy: Wicket core library initializer
+2019-05-24 08:59:19.549 user:  INFO 23180 --- [main] o.p.start.ProjectForgeApplication        : Starting ProjectForgeApplication on cl-2-186.micromata.priv with PID 23180 (/Users/jbruemmer/projectforge-dev/projectforge-application/target/classes started by jbruemmer in /Users/jbruemmer/projectforge-dev)
+2019-05-24 08:59:19.551 user:  INFO 23180 --- [main] o.p.start.ProjectForgeApplication        : No active profile set, falling back to default profiles: default
+2019-05-24 08:59:27.398 user:  INFO 23180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-24 08:59:27.426 user:  INFO 23180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-24 08:59:27.426 user:  INFO 23180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-24 08:59:27.592 user:  INFO 23180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-24 08:59:27.592 user:  INFO 23180 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7482 ms
+2019-05-24 08:59:27.894 user:  INFO 23180 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: org.projectforge.webapp
+	...]
+2019-05-24 08:59:27.993 user:  INFO 23180 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.5.Final}
+2019-05-24 08:59:27.996 user:  INFO 23180 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-24 08:59:27.997 user:  INFO 23180 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-05-24 08:59:28.064 user:  INFO 23180 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-05-24 08:59:28.503 user:  INFO 23180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-24 08:59:28.597 user:  INFO 23180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-24 08:59:28.615 user:  INFO 23180 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2019-05-24 08:59:29.059 user:  INFO 23180 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-24 08:59:30.329 user:  INFO 23180 --- [main] org.hibernate.search.engine.Version      : HSEARCH000034: Hibernate Search 5.5.2.Final
+2019-05-24 08:59:31.388 user:  WARN 23180 --- [main] o.h.search.engine.impl.ConfigContext     : HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified: using LUCENE_CURRENT.
+2019-05-24 08:59:33.215 user:  INFO 23180 --- [main] .f.p.a.i.AttrSchemaServiceSpringBeanImpl : AttrSchema config file loaded from 'file:/Users/jbruemmer/ProjectForge/attrschema.xml'
+2019-05-24 08:59:33.342 user:  INFO 23180 --- [main] o.p.f.persistence.api.HibernateUtils     : Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-24 08:59:33.343 user:  INFO 23180 --- [main] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-05-24 08:59:33.465 user:  INFO 23180 --- [main] o.p.framework.configuration.ConfigXml    : Using application home dir: /Users/jbruemmer/ProjectForge
+2019-05-24 08:59:33.467 user:  INFO 23180 --- [main] o.p.framework.configuration.ConfigXml    : Cannot read from config file: '/Users/jbruemmer/ProjectForge/config.xml'. OK, assuming default values.
+2019-05-24 08:59:33.467 user:  WARN 23180 --- [main] o.p.b.c.ConfigurationServiceImpl         : Can't read keystore file: jssecacerts
+2019-05-24 08:59:33.605 user:  INFO 23180 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-05-24 08:59:33.608 user:  INFO 23180 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:postgresql://localhost:15432/projectforge (PostgreSQL 11.2)
+2019-05-24 08:59:33.617 user:  WARN 23180 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 11.2 is newer than this version of Flyway and support has not been tested.
+2019-05-24 08:59:33.626 user:  WARN 23180 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:dbmigration_plugin
+2019-05-24 08:59:33.632 user:  WARN 23180 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:flyway/migrate/postgresql
+2019-05-24 08:59:33.633 user:  WARN 23180 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:org/projectforge/flyway/dbmigration
+2019-05-24 08:59:33.736 user:  INFO 23180 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.089s)
+2019-05-24 08:59:33.749 user:  INFO 23180 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 6.19.0
+2019-05-24 08:59:33.750 user:  INFO 23180 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2019-05-24 08:59:34.328 user:  WARN 23180 --- [main] o.projectforge.config.WebXMLInitializer  : *********************************
+2019-05-24 08:59:34.328 user:  WARN 23180 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-05-24 08:59:34.328 user:  WARN 23180 --- [main] o.projectforge.config.WebXMLInitializer  : *********** ATTENTION! **********
+2019-05-24 08:59:34.328 user:  WARN 23180 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-05-24 08:59:34.328 user:  WARN 23180 --- [main] o.projectforge.config.WebXMLInitializer  : *********** Running in **********
+2019-05-24 08:59:34.328 user:  WARN 23180 --- [main] o.projectforge.config.WebXMLInitializer  : *********** dev mode!  **********
+2019-05-24 08:59:34.328 user:  WARN 23180 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-05-24 08:59:34.328 user:  WARN 23180 --- [main] o.projectforge.config.WebXMLInitializer  : *********************************
+2019-05-24 08:59:34.328 user:  WARN 23180 --- [main] o.projectforge.config.WebXMLInitializer  : Don't deliver this app in dev mode due to security reasons (cross origin allowed)!
+2019-05-24 08:59:34.334 user:  INFO 23180 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter restUserFilter was not registered (possibly already registered?)
+2019-05-24 08:59:34.334 user:  INFO 23180 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter restUserFilter was not registered (possibly already registered?)
+2019-05-24 08:59:34.514 user:  INFO 23180 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket extensions initializer
+2019-05-24 08:59:34.523 user:  INFO 23180 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket core library initializer
+2019-05-24 08:59:34.525 user:  INFO 23180 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IBehaviorListener, method=public abstract void org.apache.wicket.behavior.IBehaviorListener.onRequest()]
+2019-05-24 08:59:34.525 user:  INFO 23180 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IFormSubmitListener, method=public abstract void org.apache.wicket.markup.html.form.IFormSubmitListener.onFormSubmitted()]
+2019-05-24 08:59:34.525 user:  INFO 23180 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=ILinkListener, method=public abstract void org.apache.wicket.markup.html.link.ILinkListener.onLinkClicked()]
+2019-05-24 08:59:34.526 user:  INFO 23180 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IOnChangeListener, method=public abstract void org.apache.wicket.markup.html.form.IOnChangeListener.onSelectionChanged()]
+2019-05-24 08:59:34.526 user:  INFO 23180 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IResourceListener, method=public abstract void org.apache.wicket.IResourceListener.onResourceRequested()]
+2019-05-24 08:59:34.536 user:  INFO 23180 --- [main] org.projectforge.ProjectForgeApp         : Initializing...
+2019-05-24 08:59:35.459 user:  INFO 23180 --- [main] org.projectforge.ProjectForgeApp         : Default TimeZone is: sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-05-24 08:59:35.459 user:  INFO 23180 --- [main] org.projectforge.ProjectForgeApp         : user.timezone is: UTC
+2019-05-24 08:59:35.588 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : Initializing GlobalConfiguration (ConfigurationDO parameters) ...
+2019-05-24 08:59:35.619 user:  INFO 23180 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-05-24 08:59:35.758 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: admin.multiTenancyEnabled=false
+2019-05-24 08:59:35.758 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: vacation.lastyear.enddate=31.03.
+2019-05-24 08:59:35.758 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: minPasswordLength=10
+2019-05-24 08:59:35.758 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: password.flag.checkChange=true
+2019-05-24 08:59:35.758 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: systemAdministratorEMail=admin@dev-null.com
+2019-05-24 08:59:35.759 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: snoweffect.enabled=false
+2019-05-24 08:59:35.759 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: pluginsActivated=extendemployeedata,ihkexport,licenseManagementPlugin,liquidplanning,marketing,memo,todo
+2019-05-24 08:59:35.759 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: hr.emailaddress=hr@management.de
+2019-05-24 08:59:35.759 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: messageOfTheDay=Please try user demo with password demo123. Have a lot of fun!
+2019-05-24 08:59:35.875 user:  INFO 23180 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.eed.ExtendEmployeeDataPlugin
+2019-05-24 08:59:35.901 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : Initializing Configuration[tenant=1] (ConfigurationDO parameters) ...
+2019-05-24 08:59:35.910 user:  WARN 23180 --- [main] o.h.hql.internal.ast.HqlSqlWalker        : [DEPRECATION] Encountered positional parameter near line 1, column 92 in HQL: [from org.projectforge.framework.configuration.entities.ConfigurationDO t where tenant_id = ? or tenant_id is null].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2019-05-24 08:59:35.922 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: timezone=sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-05-24 08:59:35.922 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.costConfigured=true
+2019-05-24 08:59:35.922 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: feedbackEMail=admin@dev-null.com
+2019-05-24 08:59:35.922 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: countryPhonePrefix=+49
+2019-05-24 08:59:35.922 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: excelDateFormats=DD/MM/YYYY;MM/DD/YYYY;DD.MM.YYYY
+2019-05-24 08:59:35.922 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.defaultVAT=0.19000
+2019-05-24 08:59:35.922 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: calendarDomain=projectforge.test.com
+2019-05-24 08:59:35.923 user:  INFO 23180 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: dateFormats=dd/MM/yyyy;MM/dd/yyyy;dd.MM.yyyy;yyyy-MM-dd
+2019-05-24 08:59:35.938 user:  INFO 23180 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: extendemployeedata
+2019-05-24 08:59:35.945 user:  INFO 23180 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.ihkexport.IhkExportPlugin
+2019-05-24 08:59:35.947 user:  INFO 23180 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: ihkexport
+2019-05-24 08:59:35.981 user:  INFO 23180 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.licensemanagement.LicenseManagementPlugin
+2019-05-24 08:59:35.991 user:  INFO 23180 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: licenseManagementPlugin
+2019-05-24 08:59:36.025 user:  INFO 23180 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.liquidityplanning.LiquidityPlanningPlugin
+2019-05-24 08:59:36.035 user:  INFO 23180 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: liquidplanning
+2019-05-24 08:59:36.098 user:  INFO 23180 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.marketing.MarketingPlugin
+2019-05-24 08:59:36.115 user:  INFO 23180 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: marketing
+2019-05-24 08:59:36.146 user:  INFO 23180 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.memo.MemoPlugin
+2019-05-24 08:59:36.156 user:  INFO 23180 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: memo
+2019-05-24 08:59:36.200 user:  INFO 23180 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.todo.ToDoPlugin
+2019-05-24 08:59:36.211 user:  INFO 23180 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: todo
+2019-05-24 08:59:36.241 user:  INFO 23180 --- [main] o.p.continuousdb.SystemUpdater           : Checking for database updates...
+2019-05-24 08:59:36.242 user:  INFO 23180 --- [main] o.p.f.p.database.DatabaseCoreUpdates     : Running pre-check for ProjectForge version 6.16.0
+2019-05-24 08:59:36.245 user:  INFO 23180 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address LIMIT 1
+2019-05-24 08:59:36.247 user:  INFO 23180 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address where uid is not null LIMIT 1
+2019-05-24 08:59:36.264 user:  INFO 23180 --- [main] o.p.continuousdb.SystemUpdater           : No database updates found (OK).
+2019-05-24 08:59:36.275 user:  INFO 23180 --- [main] org.projectforge.ProjectForgeApp         : ProjectForge 6.26-SNAPSHOT (2019-05-24 08:57) initialized.
+2019-05-24 08:59:36.276 user:  INFO 23180 --- [main] org.projectforge.ProjectForgeApp         : ProjectForge is now available (up and running).
+2019-05-24 08:59:36.279 user:  INFO 23180 --- [main] o.a.wicket.protocol.http.WebApplication  : [wicket.app] Started Wicket version 7.10.0 in DEPLOYMENT mode
+2019-05-24 08:59:36.321 user:  INFO 23180 --- [main] org.projectforge.business.login.Login    : LoginHandler org.projectforge.business.login.LoginDefaultHandler registered.
+2019-05-24 08:59:36.960 user:  INFO 23180 --- [main] org.projectforge.storage.StorageClient   : No storageConfig given in config.xml. Storage not available.
+2019-05-24 08:59:37.245 user:  INFO 23180 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-24 08:59:37.293 user:  WARN 23180 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-24 08:59:37.475 user:  INFO 23180 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-05-24 08:59:37.900 user:  INFO 23180 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-05-24 08:59:38.748 user:  INFO 23180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-24 08:59:38.751 user:  INFO 23180 --- [main] o.p.start.ProjectForgeApplication        : Started ProjectForgeApplication in 19.988 seconds (JVM running for 20.719)
+2019-05-24 08:59:45.120 user:  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-24 08:59:45.120 user:  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-24 08:59:45.129 user:  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-05-24 08:59:45.168 user:  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.business.user.filter.CookieService   : User successfully logged in using stay-logged-in method: Admin ProjectForge Administrator (jan)
+2019-05-24 08:59:45.176 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-24 08:59:45.733 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-2] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/menu with ip: 127.0.0.1
+2019-05-24 08:59:45.735 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-3] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/group/edit with ip: 127.0.0.1
+2019-05-24 08:59:45.739 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : Initializing UserGroupCache  for tenant #1 'Default tenant'...
+2019-05-24 08:59:45.740 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : Loading all users ...
+2019-05-24 08:59:45.767 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : Loading all groups ...
+2019-05-24 08:59:45.836 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : Initializing of UserGroupCache done for tenant #1 'Default tenant'.
+2019-05-24 08:59:45.836 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : UserGroupCache.refresh took: 101 ms.
+2019-05-24 08:59:45.985 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-4] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/user/aco with ip: 127.0.0.1
+2019-05-24 08:59:46.010 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-2] org.projectforge.plugins.todo.ToDoCache  : Clearing cache with open to-do entries.
+2019-05-24 08:59:46.160 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-2] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-05-24 08:59:46.593 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-2] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-05-24 09:00:00.000 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 09:00:00.001 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 09:00:00.007 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 09:00:00.007 user:  INFO 23180 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-24 09:00:00.007 user:  INFO 23180 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-24 09:00:00.024 user:  INFO 23180 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-24 09:00:00.071 user:  INFO 23180 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-24 09:00:00.073 user:  INFO 23180 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-24 09:02:43.871 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s157ms).
+2019-05-24 09:04:19.342 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m5s470ms).
+2019-05-24 09:07:47.961 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s319ms).
+2019-05-24 09:08:55.608 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s973ms), soft-evicting connections from pool.
+2019-05-24 09:12:14.414 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s342ms).
+2019-05-24 09:14:50.439 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s943ms).
+2019-05-24 09:18:05.123 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 09:18:05.123 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 09:18:05.129 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 09:19:26.610 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m21s447ms).
+2019-05-24 09:29:35.636 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m59s542ms).
+2019-05-24 09:30:58.887 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s249ms).
+2019-05-24 09:36:18.201 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m19s314ms).
+2019-05-24 09:37:59.799 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m11s374ms).
+2019-05-24 09:40:00.124 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m30s319ms).
+2019-05-24 09:41:05.257 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 09:41:05.257 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 09:41:05.261 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 09:42:33.243 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s120ms).
+2019-05-24 09:44:22.670 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m19s421ms).
+2019-05-24 09:46:25.996 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s334ms).
+2019-05-24 09:47:29.789 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s793ms).
+2019-05-24 09:47:47.413 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 09:47:47.414 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 09:47:47.419 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 09:47:58.567 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s778ms), soft-evicting connections from pool.
+2019-05-24 09:49:46.562 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m47s995ms).
+2019-05-24 09:50:15.859 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s297ms), soft-evicting connections from pool.
+2019-05-24 09:51:16.190 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m331ms).
+2019-05-24 09:54:09.922 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s868ms).
+2019-05-24 09:56:31.390 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m51s469ms).
+2019-05-24 10:04:44.676 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 10:04:44.676 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 10:04:44.682 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 10:08:00.958 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m5s693ms).
+2019-05-24 10:09:36.524 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m5s561ms).
+2019-05-24 10:13:54.098 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m1s672ms).
+2019-05-24 10:14:23.455 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s357ms), soft-evicting connections from pool.
+2019-05-24 10:16:32.252 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m187ms).
+2019-05-24 10:18:01.966 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 10:18:01.966 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 10:18:01.972 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 10:21:32.116 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s596ms).
+2019-05-24 10:23:43.011 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s968ms).
+2019-05-24 10:26:18.721 user:  INFO 23180 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-24 10:26:18.723 user:  INFO 23180 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-24 10:26:18.731 user:  INFO 23180 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-24 10:26:18.734 user:  INFO 23180 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-24 10:26:18.735 user:  INFO 23180 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-24 10:29:23.407 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s525ms).
+2019-05-24 10:31:46.149 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m22s742ms).
+2019-05-24 10:33:21.095 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m5s70ms).
+2019-05-24 10:34:55.719 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s613ms).
+2019-05-24 10:35:06.999 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 10:35:06.999 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 10:35:07.003 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 10:40:30.049 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m14s939ms).
+2019-05-24 10:40:59.757 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s708ms), soft-evicting connections from pool.
+2019-05-24 10:41:48.105 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s348ms).
+2019-05-24 10:45:00.765 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m28s169ms).
+2019-05-24 10:47:56.085 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 10:47:56.085 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 10:47:56.092 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 10:48:22.911 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s787ms), soft-evicting connections from pool.
+2019-05-24 10:49:25.860 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s863ms), soft-evicting connections from pool.
+2019-05-24 10:50:13.455 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s595ms).
+2019-05-24 10:53:41.419 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s329ms).
+2019-05-24 10:54:58.179 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s756ms).
+2019-05-24 10:56:17.729 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s543ms).
+2019-05-24 10:58:38.574 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s78ms).
+2019-05-24 10:59:08.135 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s561ms), soft-evicting connections from pool.
+2019-05-24 10:59:56.218 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s83ms).
+2019-05-24 11:03:32.535 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 11:03:32.536 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 11:03:32.541 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 11:03:55.325 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s494ms).
+2019-05-24 11:05:35.510 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s185ms).
+2019-05-24 11:06:04.624 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s114ms), soft-evicting connections from pool.
+2019-05-24 11:07:36.393 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m31s769ms).
+2019-05-24 11:08:05.693 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s300ms), soft-evicting connections from pool.
+2019-05-24 11:08:50.964 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s271ms).
+2019-05-24 11:12:22.523 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m58s45ms).
+2019-05-24 11:14:45.954 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m53s421ms).
+2019-05-24 11:16:08.679 user:  INFO 23180 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-24 11:16:08.680 user:  INFO 23180 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-24 11:16:08.689 user:  INFO 23180 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-24 11:16:08.692 user:  INFO 23180 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-24 11:16:08.693 user:  INFO 23180 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-24 11:16:33.104 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m17s141ms).
+2019-05-24 11:20:19.003 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m42s919ms).
+2019-05-24 11:23:14.922 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m25s909ms).
+2019-05-24 11:23:44.425 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s503ms), soft-evicting connections from pool.
+2019-05-24 11:25:57.980 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s461ms).
+2019-05-24 11:26:02.021 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 11:26:02.021 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 11:26:02.026 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 11:28:30.725 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m2s735ms).
+2019-05-24 11:29:44.071 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m13s346ms).
+2019-05-24 11:30:13.003 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s932ms), soft-evicting connections from pool.
+2019-05-24 11:31:17.435 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s432ms).
+2019-05-24 11:32:53.438 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 11:32:53.438 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 11:32:53.444 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 11:35:41.904 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s843ms), soft-evicting connections from pool.
+2019-05-24 11:41:36.315 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m21s339ms).
+2019-05-24 11:42:45.738 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s760ms), soft-evicting connections from pool.
+2019-05-24 11:43:48.706 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s777ms), soft-evicting connections from pool.
+2019-05-24 11:44:54.287 user:  WARN 23180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m5s581ms).
+2019-05-24 11:47:35.408 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 11:47:35.408 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 11:47:35.412 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 11:59:59.977 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 11:59:59.979 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 11:59:59.983 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 12:10:23.422 user:  INFO 23180 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-24 12:10:23.423 user:  INFO 23180 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-24 12:10:23.432 user:  INFO 23180 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-24 12:10:23.435 user:  INFO 23180 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-24 12:10:23.437 user:  INFO 23180 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-24 12:11:36.683 user:  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.business.user.filter.CookieService   : User successfully logged in using stay-logged-in method: Admin ProjectForge Administrator (jan)
+2019-05-24 12:11:38.939 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.business.user.UserGroupCache         : Initializing UserGroupCache  for tenant #1 'Default tenant'...
+2019-05-24 12:11:38.939 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.business.user.UserGroupCache         : Loading all users ...
+2019-05-24 12:11:38.952 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.business.user.UserGroupCache         : Loading all groups ...
+2019-05-24 12:11:38.972 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.business.user.UserGroupCache         : Initializing of UserGroupCache done for tenant #1 'Default tenant'.
+2019-05-24 12:11:38.972 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.business.user.UserGroupCache         : UserGroupCache.refresh took: 36 ms.
+2019-05-24 12:11:38.985 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.f.c.AbstractConfiguration            : Initializing Configuration[tenant=1] (ConfigurationDO parameters) ...
+2019-05-24 12:11:38.996 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] org.projectforge.plugins.todo.ToDoCache  : Clearing cache with open to-do entries.
+2019-05-24 12:11:38.998 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-05-24 12:11:39.017 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-05-24 12:11:39.452 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.f.c.AbstractConfiguration            : Initializing GlobalConfiguration (ConfigurationDO parameters) ...
+2019-05-24 12:11:39.561 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 1 ms.
+2019-05-24 12:11:39.589 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 12:11:39.874 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 12:11:39.879 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.p.f.p.history.HistoryBaseDaoAdapter    : HistoryBaseDaoAdapter.isHistorizable took: 0 ms.
+2019-05-24 12:12:20.026 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-9] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-24 12:12:20.560 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-10] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-24 12:12:21.124 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-1] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-24 12:12:21.702 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-4] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-24 12:12:22.205 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-6] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-24 12:12:22.777 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-5] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-24 12:12:22.838 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-3] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/menu with ip: 127.0.0.1
+2019-05-24 12:12:22.841 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-2] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/group/edit with ip: 127.0.0.1
+2019-05-24 12:12:22.901 user:jan  INFO 23180 --- [http-nio-127.0.0.1-8080-exec-7] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/user/aco with ip: 127.0.0.1
+2019-05-24 12:14:59.966 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 12:14:59.967 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 12:14:59.974 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 12:29:59.975 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 12:29:59.975 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 12:29:59.979 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 12:44:59.973 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-24 12:44:59.974 user:  INFO 23180 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-24 12:44:59.981 user:  INFO 23180 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-24 12:53:56.605 user:  INFO 23180 --- [Thread-44] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-05-24 12:53:56.607 user:  INFO 23180 --- [Thread-44] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-24 12:53:56.609 user:  INFO 23180 --- [Thread-44] o.p.b.user.UserXmlPreferencesCache       : Syncing all user preferences to database.
+2019-05-24 12:53:56.609 user:  INFO 23180 --- [Thread-44] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-05-24 12:53:56.640 user:  INFO 23180 --- [Thread-44] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-05-24 12:53:56.660 user:  INFO 23180 --- [Thread-44] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'entityManagerFactory' threw an exception: java.lang.IllegalStateException: EntityManagerFactory is closed
+2019-05-24 12:53:56.660 user:  INFO 23180 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-24 12:53:56.662 user:  INFO 23180 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-24 12:53:56.690 user:  INFO 23180 --- [Thread-44] org.projectforge.ProjectForgeApp         : Shutdown...
+2019-05-24 12:53:56.690 user:  INFO 23180 --- [Thread-44] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-05-24 12:53:56.690 user:  INFO 23180 --- [Thread-44] org.projectforge.ProjectForgeApp         : Shutdown completed.
+2019-05-24 12:53:56.690 user:  INFO 23180 --- [Thread-44] org.apache.wicket.Application            : [wicket.app] destroy: Wicket extensions initializer
+2019-05-24 12:53:56.690 user:  INFO 23180 --- [Thread-44] org.apache.wicket.Application            : [wicket.app] destroy: Wicket core library initializer
+2019-05-24 14:30:40.071 user:  INFO 28701 --- [main] o.p.start.ProjectForgeApplication        : Starting ProjectForgeApplication on cl-2-186.micromata.priv with PID 28701 (/Users/jbruemmer/projectforge-dev/projectforge-application/target/classes started by jbruemmer in /Users/jbruemmer/projectforge-dev)
+2019-05-24 14:30:40.072 user:  INFO 28701 --- [main] o.p.start.ProjectForgeApplication        : No active profile set, falling back to default profiles: default
+2019-05-24 14:30:43.881 user:  INFO 28701 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-24 14:30:43.910 user:  INFO 28701 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-24 14:30:43.910 user:  INFO 28701 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-24 14:30:44.088 user:  INFO 28701 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-24 14:30:44.088 user:  INFO 28701 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3464 ms
+2019-05-24 14:30:44.398 user:  INFO 28701 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: org.projectforge.webapp
+	...]
+2019-05-24 14:30:44.490 user:  INFO 28701 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.5.Final}
+2019-05-24 14:30:44.493 user:  INFO 28701 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-24 14:30:44.495 user:  INFO 28701 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-05-24 14:30:44.556 user:  INFO 28701 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-05-24 14:30:44.955 user:  INFO 28701 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-24 14:30:45.059 user:  INFO 28701 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-24 14:30:45.075 user:  INFO 28701 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2019-05-24 14:30:45.448 user:  INFO 28701 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-24 14:30:46.674 user:  INFO 28701 --- [main] org.hibernate.search.engine.Version      : HSEARCH000034: Hibernate Search 5.5.2.Final
+2019-05-24 14:30:47.716 user:  WARN 28701 --- [main] o.h.search.engine.impl.ConfigContext     : HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified: using LUCENE_CURRENT.
+2019-05-24 14:30:49.607 user:  INFO 28701 --- [main] .f.p.a.i.AttrSchemaServiceSpringBeanImpl : AttrSchema config file loaded from 'file:/Users/jbruemmer/ProjectForge/attrschema.xml'
+2019-05-24 14:30:49.727 user:  INFO 28701 --- [main] o.p.f.persistence.api.HibernateUtils     : Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-24 14:30:49.728 user:  INFO 28701 --- [main] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-05-24 14:30:49.853 user:  INFO 28701 --- [main] o.p.framework.configuration.ConfigXml    : Using application home dir: /Users/jbruemmer/ProjectForge
+2019-05-24 14:30:49.855 user:  INFO 28701 --- [main] o.p.framework.configuration.ConfigXml    : Cannot read from config file: '/Users/jbruemmer/ProjectForge/config.xml'. OK, assuming default values.
+2019-05-24 14:30:49.856 user:  WARN 28701 --- [main] o.p.b.c.ConfigurationServiceImpl         : Can't read keystore file: jssecacerts
+2019-05-24 14:30:50.011 user:  INFO 28701 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-05-24 14:30:50.015 user:  INFO 28701 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:postgresql://localhost:15432/projectforge (PostgreSQL 11.2)
+2019-05-24 14:30:50.026 user:  WARN 28701 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 11.2 is newer than this version of Flyway and support has not been tested.
+2019-05-24 14:30:50.036 user:  WARN 28701 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:dbmigration_plugin
+2019-05-24 14:30:50.042 user:  WARN 28701 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:flyway/migrate/postgresql
+2019-05-24 14:30:50.043 user:  WARN 28701 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:org/projectforge/flyway/dbmigration
+2019-05-24 14:30:50.143 user:  INFO 28701 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.081s)
+2019-05-24 14:30:50.158 user:  INFO 28701 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 6.19.0
+2019-05-24 14:30:50.159 user:  INFO 28701 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2019-05-24 14:30:50.730 user:  WARN 28701 --- [main] o.projectforge.config.WebXMLInitializer  : *********************************
+2019-05-24 14:30:50.730 user:  WARN 28701 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-05-24 14:30:50.730 user:  WARN 28701 --- [main] o.projectforge.config.WebXMLInitializer  : *********** ATTENTION! **********
+2019-05-24 14:30:50.730 user:  WARN 28701 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-05-24 14:30:50.731 user:  WARN 28701 --- [main] o.projectforge.config.WebXMLInitializer  : *********** Running in **********
+2019-05-24 14:30:50.731 user:  WARN 28701 --- [main] o.projectforge.config.WebXMLInitializer  : *********** dev mode!  **********
+2019-05-24 14:30:50.731 user:  WARN 28701 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-05-24 14:30:50.731 user:  WARN 28701 --- [main] o.projectforge.config.WebXMLInitializer  : *********************************
+2019-05-24 14:30:50.731 user:  WARN 28701 --- [main] o.projectforge.config.WebXMLInitializer  : Don't deliver this app in dev mode due to security reasons (cross origin allowed)!
+2019-05-24 14:30:50.739 user:  INFO 28701 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter restUserFilter was not registered (possibly already registered?)
+2019-05-24 14:30:50.739 user:  INFO 28701 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter restUserFilter was not registered (possibly already registered?)
+2019-05-24 14:30:50.909 user:  INFO 28701 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket extensions initializer
+2019-05-24 14:30:50.917 user:  INFO 28701 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket core library initializer
+2019-05-24 14:30:50.918 user:  INFO 28701 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IBehaviorListener, method=public abstract void org.apache.wicket.behavior.IBehaviorListener.onRequest()]
+2019-05-24 14:30:50.919 user:  INFO 28701 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IFormSubmitListener, method=public abstract void org.apache.wicket.markup.html.form.IFormSubmitListener.onFormSubmitted()]
+2019-05-24 14:30:50.919 user:  INFO 28701 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=ILinkListener, method=public abstract void org.apache.wicket.markup.html.link.ILinkListener.onLinkClicked()]
+2019-05-24 14:30:50.920 user:  INFO 28701 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IOnChangeListener, method=public abstract void org.apache.wicket.markup.html.form.IOnChangeListener.onSelectionChanged()]
+2019-05-24 14:30:50.920 user:  INFO 28701 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IResourceListener, method=public abstract void org.apache.wicket.IResourceListener.onResourceRequested()]
+2019-05-24 14:30:50.930 user:  INFO 28701 --- [main] org.projectforge.ProjectForgeApp         : Initializing...
+2019-05-24 14:30:51.814 user:  INFO 28701 --- [main] org.projectforge.ProjectForgeApp         : Default TimeZone is: sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-05-24 14:30:51.814 user:  INFO 28701 --- [main] org.projectforge.ProjectForgeApp         : user.timezone is: UTC
+2019-05-24 14:30:51.940 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : Initializing GlobalConfiguration (ConfigurationDO parameters) ...
+2019-05-24 14:30:51.971 user:  INFO 28701 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-05-24 14:30:52.108 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: systemAdministratorEMail=admin@dev-null.com
+2019-05-24 14:30:52.108 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: snoweffect.enabled=false
+2019-05-24 14:30:52.108 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: password.flag.checkChange=true
+2019-05-24 14:30:52.108 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: admin.multiTenancyEnabled=false
+2019-05-24 14:30:52.109 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: vacation.lastyear.enddate=31.03.
+2019-05-24 14:30:52.109 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: messageOfTheDay=Please try user demo with password demo123. Have a lot of fun!
+2019-05-24 14:30:52.109 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: minPasswordLength=10
+2019-05-24 14:30:52.109 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: pluginsActivated=extendemployeedata,ihkexport,licenseManagementPlugin,liquidplanning,marketing,memo,todo
+2019-05-24 14:30:52.109 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: hr.emailaddress=hr@management.de
+2019-05-24 14:30:52.234 user:  INFO 28701 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.eed.ExtendEmployeeDataPlugin
+2019-05-24 14:30:52.261 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : Initializing Configuration[tenant=1] (ConfigurationDO parameters) ...
+2019-05-24 14:30:52.269 user:  WARN 28701 --- [main] o.h.hql.internal.ast.HqlSqlWalker        : [DEPRECATION] Encountered positional parameter near line 1, column 92 in HQL: [from org.projectforge.framework.configuration.entities.ConfigurationDO t where tenant_id = ? or tenant_id is null].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2019-05-24 14:30:52.280 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: calendarDomain=projectforge.test.com
+2019-05-24 14:30:52.281 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: dateFormats=dd/MM/yyyy;MM/dd/yyyy;dd.MM.yyyy;yyyy-MM-dd
+2019-05-24 14:30:52.281 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: feedbackEMail=admin@dev-null.com
+2019-05-24 14:30:52.281 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: excelDateFormats=DD/MM/YYYY;MM/DD/YYYY;DD.MM.YYYY
+2019-05-24 14:30:52.281 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: timezone=sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-05-24 14:30:52.281 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.costConfigured=true
+2019-05-24 14:30:52.281 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.defaultVAT=0.19000
+2019-05-24 14:30:52.281 user:  INFO 28701 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: countryPhonePrefix=+49
+2019-05-24 14:30:52.296 user:  INFO 28701 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: extendemployeedata
+2019-05-24 14:30:52.303 user:  INFO 28701 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.ihkexport.IhkExportPlugin
+2019-05-24 14:30:52.304 user:  INFO 28701 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: ihkexport
+2019-05-24 14:30:52.340 user:  INFO 28701 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.licensemanagement.LicenseManagementPlugin
+2019-05-24 14:30:52.351 user:  INFO 28701 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: licenseManagementPlugin
+2019-05-24 14:30:52.385 user:  INFO 28701 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.liquidityplanning.LiquidityPlanningPlugin
+2019-05-24 14:30:52.395 user:  INFO 28701 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: liquidplanning
+2019-05-24 14:30:52.457 user:  INFO 28701 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.marketing.MarketingPlugin
+2019-05-24 14:30:52.475 user:  INFO 28701 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: marketing
+2019-05-24 14:30:52.505 user:  INFO 28701 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.memo.MemoPlugin
+2019-05-24 14:30:52.513 user:  INFO 28701 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: memo
+2019-05-24 14:30:52.548 user:  INFO 28701 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.todo.ToDoPlugin
+2019-05-24 14:30:52.560 user:  INFO 28701 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: todo
+2019-05-24 14:30:52.580 user:  INFO 28701 --- [main] o.p.continuousdb.SystemUpdater           : Checking for database updates...
+2019-05-24 14:30:52.580 user:  INFO 28701 --- [main] o.p.f.p.database.DatabaseCoreUpdates     : Running pre-check for ProjectForge version 6.16.0
+2019-05-24 14:30:52.583 user:  INFO 28701 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address LIMIT 1
+2019-05-24 14:30:52.585 user:  INFO 28701 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address where uid is not null LIMIT 1
+2019-05-24 14:30:52.604 user:  INFO 28701 --- [main] o.p.continuousdb.SystemUpdater           : No database updates found (OK).
+2019-05-24 14:30:52.609 user:  INFO 28701 --- [main] org.projectforge.ProjectForgeApp         : ProjectForge 6.26-SNAPSHOT (2019-05-24 12:53) initialized.
+2019-05-24 14:30:52.611 user:  INFO 28701 --- [main] org.projectforge.ProjectForgeApp         : ProjectForge is now available (up and running).
+2019-05-24 14:30:52.613 user:  INFO 28701 --- [main] o.a.wicket.protocol.http.WebApplication  : [wicket.app] Started Wicket version 7.10.0 in DEPLOYMENT mode
+2019-05-24 14:30:52.657 user:  INFO 28701 --- [main] org.projectforge.business.login.Login    : LoginHandler org.projectforge.business.login.LoginDefaultHandler registered.
+2019-05-24 14:30:53.322 user:  INFO 28701 --- [main] org.projectforge.storage.StorageClient   : No storageConfig given in config.xml. Storage not available.
+2019-05-24 14:30:53.609 user:  INFO 28701 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-24 14:30:53.658 user:  WARN 28701 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-24 14:30:53.841 user:  INFO 28701 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-05-24 14:30:54.262 user:  INFO 28701 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-05-24 14:30:55.240 user:  INFO 28701 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-24 14:30:55.244 user:  INFO 28701 --- [main] o.p.start.ProjectForgeApplication        : Started ProjectForgeApplication in 16.018 seconds (JVM running for 16.797)
+2019-05-24 14:31:59.552 user:  INFO 28701 --- [Thread-35] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-05-24 14:31:59.553 user:  INFO 28701 --- [Thread-35] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-24 14:31:59.555 user:  INFO 28701 --- [Thread-35] o.p.b.user.UserXmlPreferencesCache       : Syncing all user preferences to database.
+2019-05-24 14:31:59.555 user:  INFO 28701 --- [Thread-35] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-05-24 14:31:59.555 user:  INFO 28701 --- [Thread-35] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-05-24 14:31:59.568 user:  INFO 28701 --- [Thread-35] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'entityManagerFactory' threw an exception: java.lang.IllegalStateException: EntityManagerFactory is closed
+2019-05-24 14:31:59.568 user:  INFO 28701 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-24 14:31:59.573 user:  INFO 28701 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-24 14:31:59.604 user:  INFO 28701 --- [Thread-35] org.projectforge.ProjectForgeApp         : Shutdown...
+2019-05-24 14:31:59.604 user:  INFO 28701 --- [Thread-35] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-05-24 14:31:59.604 user:  INFO 28701 --- [Thread-35] org.projectforge.ProjectForgeApp         : Shutdown completed.
+2019-05-24 14:31:59.604 user:  INFO 28701 --- [Thread-35] org.apache.wicket.Application            : [wicket.app] destroy: Wicket extensions initializer
+2019-05-24 14:31:59.605 user:  INFO 28701 --- [Thread-35] org.apache.wicket.Application            : [wicket.app] destroy: Wicket core library initializer

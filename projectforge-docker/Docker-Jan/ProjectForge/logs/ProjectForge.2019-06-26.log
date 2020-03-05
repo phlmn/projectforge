@@ -1,0 +1,268 @@
+2019-06-26 09:11:55.384 user:  INFO 7533 --- [main] o.p.start.ProjectForgeApplication        : Starting ProjectForgeApplication on cl-2-186.micromata.priv with PID 7533 (/Users/jbruemmer/projectforge-dev/projectforge-application/target/classes started by jbruemmer in /Users/jbruemmer/projectforge-dev)
+2019-06-26 09:11:55.388 user:  INFO 7533 --- [main] o.p.start.ProjectForgeApplication        : No active profile set, falling back to default profiles: default
+2019-06-26 09:12:07.394 user:  INFO 7533 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 09:12:07.428 user:  INFO 7533 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 09:12:07.428 user:  INFO 7533 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-26 09:12:07.773 user:  INFO 7533 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 09:12:07.773 user:  INFO 7533 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 11846 ms
+2019-06-26 09:12:08.171 user:  INFO 7533 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: org.projectforge.webapp
+	...]
+2019-06-26 09:12:08.311 user:  INFO 7533 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.5.Final}
+2019-06-26 09:12:08.315 user:  INFO 7533 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-06-26 09:12:08.317 user:  INFO 7533 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-06-26 09:12:08.414 user:  INFO 7533 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-26 09:12:09.236 user:  INFO 7533 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-06-26 09:12:09.341 user:  INFO 7533 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-06-26 09:12:09.359 user:  INFO 7533 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2019-06-26 09:12:09.745 user:  INFO 7533 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-06-26 09:12:10.914 user:  INFO 7533 --- [main] org.hibernate.search.engine.Version      : HSEARCH000034: Hibernate Search 5.5.2.Final
+2019-06-26 09:12:12.017 user:  WARN 7533 --- [main] o.h.search.engine.impl.ConfigContext     : HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified: using LUCENE_CURRENT.
+2019-06-26 09:12:14.426 user:  INFO 7533 --- [main] .f.p.a.i.AttrSchemaServiceSpringBeanImpl : AttrSchema config file loaded from 'file:/Users/jbruemmer/ProjectForge/attrschema.xml'
+2019-06-26 09:12:14.591 user:  INFO 7533 --- [main] o.p.f.persistence.api.HibernateUtils     : Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-06-26 09:12:14.591 user:  INFO 7533 --- [main] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-06-26 09:12:14.764 user:  INFO 7533 --- [main] o.p.framework.configuration.ConfigXml    : Using application home dir: /Users/jbruemmer/ProjectForge
+2019-06-26 09:12:14.767 user:  INFO 7533 --- [main] o.p.framework.configuration.ConfigXml    : Cannot read from config file: '/Users/jbruemmer/ProjectForge/config.xml'. OK, assuming default values.
+2019-06-26 09:12:14.768 user:  WARN 7533 --- [main] o.p.b.c.ConfigurationServiceImpl         : Can't read keystore file: jssecacerts
+2019-06-26 09:12:14.968 user:  INFO 7533 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-06-26 09:12:15.018 user:  INFO 7533 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:postgresql://localhost:15432/projectforge (PostgreSQL 11.2)
+2019-06-26 09:12:15.030 user:  WARN 7533 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 11.2 is newer than this version of Flyway and support has not been tested.
+2019-06-26 09:12:15.041 user:  WARN 7533 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:dbmigration_plugin
+2019-06-26 09:12:15.049 user:  WARN 7533 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:flyway/migrate/postgresql
+2019-06-26 09:12:15.050 user:  WARN 7533 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:org/projectforge/flyway/dbmigration
+2019-06-26 09:12:15.197 user:  INFO 7533 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.126s)
+2019-06-26 09:12:15.212 user:  INFO 7533 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 6.19.0
+2019-06-26 09:12:15.213 user:  INFO 7533 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2019-06-26 09:12:15.905 user:  WARN 7533 --- [main] o.projectforge.config.WebXMLInitializer  : *********************************
+2019-06-26 09:12:15.905 user:  WARN 7533 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-06-26 09:12:15.905 user:  WARN 7533 --- [main] o.projectforge.config.WebXMLInitializer  : *********** ATTENTION! **********
+2019-06-26 09:12:15.905 user:  WARN 7533 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-06-26 09:12:15.905 user:  WARN 7533 --- [main] o.projectforge.config.WebXMLInitializer  : *********** Running in **********
+2019-06-26 09:12:15.905 user:  WARN 7533 --- [main] o.projectforge.config.WebXMLInitializer  : *********** dev mode!  **********
+2019-06-26 09:12:15.905 user:  WARN 7533 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-06-26 09:12:15.905 user:  WARN 7533 --- [main] o.projectforge.config.WebXMLInitializer  : *********************************
+2019-06-26 09:12:15.905 user:  WARN 7533 --- [main] o.projectforge.config.WebXMLInitializer  : Don't deliver this app in dev mode due to security reasons (cross origin allowed)!
+2019-06-26 09:12:15.911 user:  INFO 7533 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter restUserFilter was not registered (possibly already registered?)
+2019-06-26 09:12:15.911 user:  INFO 7533 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter restUserFilter was not registered (possibly already registered?)
+2019-06-26 09:12:16.092 user:  INFO 7533 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket extensions initializer
+2019-06-26 09:12:16.101 user:  INFO 7533 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket core library initializer
+2019-06-26 09:12:16.102 user:  INFO 7533 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IBehaviorListener, method=public abstract void org.apache.wicket.behavior.IBehaviorListener.onRequest()]
+2019-06-26 09:12:16.103 user:  INFO 7533 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IFormSubmitListener, method=public abstract void org.apache.wicket.markup.html.form.IFormSubmitListener.onFormSubmitted()]
+2019-06-26 09:12:16.103 user:  INFO 7533 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=ILinkListener, method=public abstract void org.apache.wicket.markup.html.link.ILinkListener.onLinkClicked()]
+2019-06-26 09:12:16.103 user:  INFO 7533 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IOnChangeListener, method=public abstract void org.apache.wicket.markup.html.form.IOnChangeListener.onSelectionChanged()]
+2019-06-26 09:12:16.104 user:  INFO 7533 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IResourceListener, method=public abstract void org.apache.wicket.IResourceListener.onResourceRequested()]
+2019-06-26 09:12:16.115 user:  INFO 7533 --- [main] org.projectforge.ProjectForgeApp         : Initializing...
+2019-06-26 09:12:17.081 user:  INFO 7533 --- [main] org.projectforge.ProjectForgeApp         : Default TimeZone is: sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-06-26 09:12:17.082 user:  INFO 7533 --- [main] org.projectforge.ProjectForgeApp         : user.timezone is: UTC
+2019-06-26 09:12:17.246 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : Initializing GlobalConfiguration (ConfigurationDO parameters) ...
+2019-06-26 09:12:17.277 user:  INFO 7533 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-26 09:12:17.416 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: vacation.lastyear.enddate=31.03.
+2019-06-26 09:12:17.416 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: messageOfTheDay=Please try user demo with password demo123. Have a lot of fun!
+2019-06-26 09:12:17.416 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: password.flag.checkChange=true
+2019-06-26 09:12:17.416 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: snoweffect.enabled=false
+2019-06-26 09:12:17.416 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: hr.emailaddress=hr@management.de
+2019-06-26 09:12:17.416 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: minPasswordLength=10
+2019-06-26 09:12:17.416 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: systemAdministratorEMail=admin@dev-null.com
+2019-06-26 09:12:17.416 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: pluginsActivated=extendemployeedata,ihkexport,licenseManagementPlugin,liquidplanning,marketing,memo,todo
+2019-06-26 09:12:17.417 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: admin.multiTenancyEnabled=false
+2019-06-26 09:12:17.543 user:  INFO 7533 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.eed.ExtendEmployeeDataPlugin
+2019-06-26 09:12:17.573 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : Initializing Configuration[tenant=1] (ConfigurationDO parameters) ...
+2019-06-26 09:12:17.582 user:  WARN 7533 --- [main] o.h.hql.internal.ast.HqlSqlWalker        : [DEPRECATION] Encountered positional parameter near line 1, column 92 in HQL: [from org.projectforge.framework.configuration.entities.ConfigurationDO t where tenant_id = ? or tenant_id is null].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2019-06-26 09:12:17.595 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: calendarDomain=projectforge.test.com
+2019-06-26 09:12:17.595 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: timezone=sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-06-26 09:12:17.595 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: feedbackEMail=admin@dev-null.com
+2019-06-26 09:12:17.595 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.costConfigured=true
+2019-06-26 09:12:17.595 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: dateFormats=dd/MM/yyyy;MM/dd/yyyy;dd.MM.yyyy;yyyy-MM-dd
+2019-06-26 09:12:17.595 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: excelDateFormats=DD/MM/YYYY;MM/DD/YYYY;DD.MM.YYYY
+2019-06-26 09:12:17.595 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.defaultVAT=0.19000
+2019-06-26 09:12:17.596 user:  INFO 7533 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: countryPhonePrefix=+49
+2019-06-26 09:12:17.615 user:  INFO 7533 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: extendemployeedata
+2019-06-26 09:12:17.622 user:  INFO 7533 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.ihkexport.IhkExportPlugin
+2019-06-26 09:12:17.624 user:  INFO 7533 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: ihkexport
+2019-06-26 09:12:17.663 user:  INFO 7533 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.licensemanagement.LicenseManagementPlugin
+2019-06-26 09:12:17.674 user:  INFO 7533 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: licenseManagementPlugin
+2019-06-26 09:12:17.710 user:  INFO 7533 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.liquidityplanning.LiquidityPlanningPlugin
+2019-06-26 09:12:17.721 user:  INFO 7533 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: liquidplanning
+2019-06-26 09:12:17.786 user:  INFO 7533 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.marketing.MarketingPlugin
+2019-06-26 09:12:17.804 user:  INFO 7533 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: marketing
+2019-06-26 09:12:17.841 user:  INFO 7533 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.memo.MemoPlugin
+2019-06-26 09:12:17.851 user:  INFO 7533 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: memo
+2019-06-26 09:12:17.893 user:  INFO 7533 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.todo.ToDoPlugin
+2019-06-26 09:12:17.906 user:  INFO 7533 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: todo
+2019-06-26 09:12:17.929 user:  INFO 7533 --- [main] o.p.continuousdb.SystemUpdater           : Checking for database updates...
+2019-06-26 09:12:17.929 user:  INFO 7533 --- [main] o.p.f.p.database.DatabaseCoreUpdates     : Running pre-check for ProjectForge version 6.16.0
+2019-06-26 09:12:17.933 user:  INFO 7533 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address LIMIT 1
+2019-06-26 09:12:17.936 user:  INFO 7533 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address where uid is not null LIMIT 1
+2019-06-26 09:12:17.953 user:  INFO 7533 --- [main] o.p.continuousdb.SystemUpdater           : No database updates found (OK).
+2019-06-26 09:12:17.979 user:  INFO 7533 --- [main] org.projectforge.ProjectForgeApp         : ProjectForge 6.26-SNAPSHOT (2019-06-24 09:23) initialized.
+2019-06-26 09:12:17.988 user:  INFO 7533 --- [main] org.projectforge.ProjectForgeApp         : ProjectForge is now available (up and running).
+2019-06-26 09:12:17.992 user:  INFO 7533 --- [main] o.a.wicket.protocol.http.WebApplication  : [wicket.app] Started Wicket version 7.10.0 in DEPLOYMENT mode
+2019-06-26 09:12:18.065 user:  INFO 7533 --- [main] org.projectforge.business.login.Login    : LoginHandler org.projectforge.business.login.LoginDefaultHandler registered.
+2019-06-26 09:12:18.898 user:  INFO 7533 --- [main] org.projectforge.storage.StorageClient   : No storageConfig given in config.xml. Storage not available.
+2019-06-26 09:12:19.317 user:  INFO 7533 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 09:12:19.388 user:  WARN 7533 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-26 09:12:19.651 user:  INFO 7533 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-06-26 09:12:20.130 user:  INFO 7533 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 09:12:21.048 user:  INFO 7533 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 09:12:21.051 user:  INFO 7533 --- [main] o.p.start.ProjectForgeApplication        : Started ProjectForgeApplication in 26.904 seconds (JVM running for 28.521)
+2019-06-26 09:14:59.999 user:  INFO 7533 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-06-26 09:15:00.000 user:  INFO 7533 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-06-26 09:15:00.028 user:  INFO 7533 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-06-26 09:29:59.972 user:  INFO 7533 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-06-26 09:29:59.973 user:  INFO 7533 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-06-26 09:29:59.977 user:  INFO 7533 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-06-26 09:30:08.734 user:  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 09:30:08.734 user:  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 09:30:08.748 user:  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2019-06-26 09:30:08.794 user:  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-6] o.p.business.user.filter.CookieService   : User successfully logged in using stay-logged-in method: Admin ProjectForge Administrator (jan)
+2019-06-26 09:30:08.820 user:jan  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-6] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-06-26 09:30:09.321 user:jan  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-7] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/menu with ip: 127.0.0.1
+2019-06-26 09:30:09.322 user:jan  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-8] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/index with ip: 127.0.0.1
+2019-06-26 09:30:09.326 user:jan  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-7] o.p.business.user.UserGroupCache         : Initializing UserGroupCache  for tenant #1 'Default tenant'...
+2019-06-26 09:30:09.327 user:jan  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-7] o.p.business.user.UserGroupCache         : Loading all users ...
+2019-06-26 09:30:09.353 user:jan  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-7] o.p.business.user.UserGroupCache         : Loading all groups ...
+2019-06-26 09:30:09.416 user:jan  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-7] o.p.business.user.UserGroupCache         : Initializing of UserGroupCache done for tenant #1 'Default tenant'.
+2019-06-26 09:30:09.416 user:jan  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-7] o.p.business.user.UserGroupCache         : UserGroupCache.refresh took: 93 ms.
+2019-06-26 09:30:09.560 user:jan  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-7] org.projectforge.plugins.todo.ToDoCache  : Clearing cache with open to-do entries.
+2019-06-26 09:30:09.744 user:jan  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-7] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-06-26 09:30:10.519 user:jan  INFO 7533 --- [http-nio-127.0.0.1-8080-exec-7] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-06-26 09:44:59.973 user:  INFO 7533 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-06-26 09:44:59.977 user:  INFO 7533 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-06-26 09:44:59.992 user:  INFO 7533 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-06-26 09:46:05.482 user:  INFO 7533 --- [Thread-57] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 09:46:05.486 user:  INFO 7533 --- [Thread-57] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 09:46:05.489 user:  INFO 7533 --- [Thread-57] o.p.b.user.UserXmlPreferencesCache       : Syncing all user preferences to database.
+2019-06-26 09:46:05.489 user:  INFO 7533 --- [Thread-57] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-06-26 09:46:05.520 user:  INFO 7533 --- [Thread-57] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-06-26 09:46:05.547 user:  INFO 7533 --- [Thread-57] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'entityManagerFactory' threw an exception: java.lang.IllegalStateException: EntityManagerFactory is closed
+2019-06-26 09:46:05.547 user:  INFO 7533 --- [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-06-26 09:46:05.552 user:  INFO 7533 --- [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-06-26 09:46:05.598 user:  INFO 7533 --- [Thread-57] org.projectforge.ProjectForgeApp         : Shutdown...
+2019-06-26 09:46:05.599 user:  INFO 7533 --- [Thread-57] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-06-26 09:46:05.599 user:  INFO 7533 --- [Thread-57] org.projectforge.ProjectForgeApp         : Shutdown completed.
+2019-06-26 09:46:05.599 user:  INFO 7533 --- [Thread-57] org.apache.wicket.Application            : [wicket.app] destroy: Wicket extensions initializer
+2019-06-26 09:46:05.600 user:  INFO 7533 --- [Thread-57] org.apache.wicket.Application            : [wicket.app] destroy: Wicket core library initializer
+2019-06-26 11:34:52.668 user:  INFO 13190 --- [main] o.p.start.ProjectForgeApplication        : Starting ProjectForgeApplication on cl-2-186.micromata.priv with PID 13190 (/Users/jbruemmer/projectforge-dev/projectforge-application/target/classes started by jbruemmer in /Users/jbruemmer/projectforge-dev)
+2019-06-26 11:34:52.669 user:  INFO 13190 --- [main] o.p.start.ProjectForgeApplication        : No active profile set, falling back to default profiles: default
+2019-06-26 11:34:58.404 user:  INFO 13190 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 11:34:58.433 user:  INFO 13190 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 11:34:58.434 user:  INFO 13190 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-26 11:34:58.742 user:  INFO 13190 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 11:34:58.743 user:  INFO 13190 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5578 ms
+2019-06-26 11:34:59.083 user:  INFO 13190 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: org.projectforge.webapp
+	...]
+2019-06-26 11:34:59.179 user:  INFO 13190 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.5.Final}
+2019-06-26 11:34:59.182 user:  INFO 13190 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-06-26 11:34:59.183 user:  INFO 13190 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-06-26 11:34:59.248 user:  INFO 13190 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-26 11:34:59.646 user:  INFO 13190 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-06-26 11:34:59.752 user:  INFO 13190 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-06-26 11:34:59.769 user:  INFO 13190 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2019-06-26 11:35:00.141 user:  INFO 13190 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-06-26 11:35:01.438 user:  INFO 13190 --- [main] org.hibernate.search.engine.Version      : HSEARCH000034: Hibernate Search 5.5.2.Final
+2019-06-26 11:35:02.426 user:  WARN 13190 --- [main] o.h.search.engine.impl.ConfigContext     : HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified: using LUCENE_CURRENT.
+2019-06-26 11:35:05.107 user:  INFO 13190 --- [main] .f.p.a.i.AttrSchemaServiceSpringBeanImpl : AttrSchema config file loaded from 'file:/Users/jbruemmer/ProjectForge/attrschema.xml'
+2019-06-26 11:35:05.290 user:  INFO 13190 --- [main] o.p.f.persistence.api.HibernateUtils     : Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-06-26 11:35:05.291 user:  INFO 13190 --- [main] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-06-26 11:35:05.422 user:  INFO 13190 --- [main] o.p.framework.configuration.ConfigXml    : Using application home dir: /Users/jbruemmer/ProjectForge
+2019-06-26 11:35:05.423 user:  INFO 13190 --- [main] o.p.framework.configuration.ConfigXml    : Cannot read from config file: '/Users/jbruemmer/ProjectForge/config.xml'. OK, assuming default values.
+2019-06-26 11:35:05.424 user:  WARN 13190 --- [main] o.p.b.c.ConfigurationServiceImpl         : Can't read keystore file: jssecacerts
+2019-06-26 11:35:05.582 user:  INFO 13190 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-06-26 11:35:05.586 user:  INFO 13190 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:postgresql://localhost:15432/projectforge (PostgreSQL 11.2)
+2019-06-26 11:35:05.597 user:  WARN 13190 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 11.2 is newer than this version of Flyway and support has not been tested.
+2019-06-26 11:35:05.606 user:  WARN 13190 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:dbmigration_plugin
+2019-06-26 11:35:05.613 user:  WARN 13190 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:flyway/migrate/postgresql
+2019-06-26 11:35:05.614 user:  WARN 13190 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:org/projectforge/flyway/dbmigration
+2019-06-26 11:35:05.726 user:  INFO 13190 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.092s)
+2019-06-26 11:35:05.740 user:  INFO 13190 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 6.19.0
+2019-06-26 11:35:05.741 user:  INFO 13190 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2019-06-26 11:35:06.366 user:  WARN 13190 --- [main] o.projectforge.config.WebXMLInitializer  : *********************************
+2019-06-26 11:35:06.366 user:  WARN 13190 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-06-26 11:35:06.366 user:  WARN 13190 --- [main] o.projectforge.config.WebXMLInitializer  : *********** ATTENTION! **********
+2019-06-26 11:35:06.366 user:  WARN 13190 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-06-26 11:35:06.366 user:  WARN 13190 --- [main] o.projectforge.config.WebXMLInitializer  : *********** Running in **********
+2019-06-26 11:35:06.366 user:  WARN 13190 --- [main] o.projectforge.config.WebXMLInitializer  : *********** dev mode!  **********
+2019-06-26 11:35:06.367 user:  WARN 13190 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-06-26 11:35:06.367 user:  WARN 13190 --- [main] o.projectforge.config.WebXMLInitializer  : *********************************
+2019-06-26 11:35:06.367 user:  WARN 13190 --- [main] o.projectforge.config.WebXMLInitializer  : Don't deliver this app in dev mode due to security reasons (cross origin allowed)!
+2019-06-26 11:35:06.373 user:  INFO 13190 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter restUserFilter was not registered (possibly already registered?)
+2019-06-26 11:35:06.373 user:  INFO 13190 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter restUserFilter was not registered (possibly already registered?)
+2019-06-26 11:35:06.590 user:  INFO 13190 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket extensions initializer
+2019-06-26 11:35:06.601 user:  INFO 13190 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket core library initializer
+2019-06-26 11:35:06.602 user:  INFO 13190 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IBehaviorListener, method=public abstract void org.apache.wicket.behavior.IBehaviorListener.onRequest()]
+2019-06-26 11:35:06.603 user:  INFO 13190 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IFormSubmitListener, method=public abstract void org.apache.wicket.markup.html.form.IFormSubmitListener.onFormSubmitted()]
+2019-06-26 11:35:06.603 user:  INFO 13190 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=ILinkListener, method=public abstract void org.apache.wicket.markup.html.link.ILinkListener.onLinkClicked()]
+2019-06-26 11:35:06.604 user:  INFO 13190 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IOnChangeListener, method=public abstract void org.apache.wicket.markup.html.form.IOnChangeListener.onSelectionChanged()]
+2019-06-26 11:35:06.604 user:  INFO 13190 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IResourceListener, method=public abstract void org.apache.wicket.IResourceListener.onResourceRequested()]
+2019-06-26 11:35:06.616 user:  INFO 13190 --- [main] org.projectforge.ProjectForgeApp         : Initializing...
+2019-06-26 11:35:07.539 user:  INFO 13190 --- [main] org.projectforge.ProjectForgeApp         : Default TimeZone is: sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-06-26 11:35:07.539 user:  INFO 13190 --- [main] org.projectforge.ProjectForgeApp         : user.timezone is: UTC
+2019-06-26 11:35:07.578 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : Initializing GlobalConfiguration (ConfigurationDO parameters) ...
+2019-06-26 11:35:07.613 user:  INFO 13190 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-26 11:35:07.763 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: password.flag.checkChange=true
+2019-06-26 11:35:07.763 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: systemAdministratorEMail=admin@dev-null.com
+2019-06-26 11:35:07.763 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: messageOfTheDay=Please try user demo with password demo123. Have a lot of fun!
+2019-06-26 11:35:07.763 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: vacation.lastyear.enddate=31.03.
+2019-06-26 11:35:07.763 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: minPasswordLength=10
+2019-06-26 11:35:07.763 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: snoweffect.enabled=false
+2019-06-26 11:35:07.763 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: hr.emailaddress=hr@management.de
+2019-06-26 11:35:07.763 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: admin.multiTenancyEnabled=false
+2019-06-26 11:35:07.763 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: pluginsActivated=extendemployeedata,ihkexport,licenseManagementPlugin,liquidplanning,marketing,memo,todo
+2019-06-26 11:35:07.923 user:  INFO 13190 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.eed.ExtendEmployeeDataPlugin
+2019-06-26 11:35:07.952 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : Initializing Configuration[tenant=1] (ConfigurationDO parameters) ...
+2019-06-26 11:35:07.961 user:  WARN 13190 --- [main] o.h.hql.internal.ast.HqlSqlWalker        : [DEPRECATION] Encountered positional parameter near line 1, column 92 in HQL: [from org.projectforge.framework.configuration.entities.ConfigurationDO t where tenant_id = ? or tenant_id is null].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2019-06-26 11:35:07.974 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: feedbackEMail=admin@dev-null.com
+2019-06-26 11:35:07.974 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: timezone=sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-06-26 11:35:07.974 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: dateFormats=dd/MM/yyyy;MM/dd/yyyy;dd.MM.yyyy;yyyy-MM-dd
+2019-06-26 11:35:07.974 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: countryPhonePrefix=+49
+2019-06-26 11:35:07.974 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: calendarDomain=projectforge.test.com
+2019-06-26 11:35:07.974 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: excelDateFormats=DD/MM/YYYY;MM/DD/YYYY;DD.MM.YYYY
+2019-06-26 11:35:07.974 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.defaultVAT=0.19000
+2019-06-26 11:35:07.974 user:  INFO 13190 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.costConfigured=true
+2019-06-26 11:35:07.991 user:  INFO 13190 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: extendemployeedata
+2019-06-26 11:35:07.998 user:  INFO 13190 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.ihkexport.IhkExportPlugin
+2019-06-26 11:35:07.999 user:  INFO 13190 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: ihkexport
+2019-06-26 11:35:08.036 user:  INFO 13190 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.licensemanagement.LicenseManagementPlugin
+2019-06-26 11:35:08.045 user:  INFO 13190 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: licenseManagementPlugin
+2019-06-26 11:35:08.079 user:  INFO 13190 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.liquidityplanning.LiquidityPlanningPlugin
+2019-06-26 11:35:08.089 user:  INFO 13190 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: liquidplanning
+2019-06-26 11:35:08.150 user:  INFO 13190 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.marketing.MarketingPlugin
+2019-06-26 11:35:08.168 user:  INFO 13190 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: marketing
+2019-06-26 11:35:08.202 user:  INFO 13190 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.memo.MemoPlugin
+2019-06-26 11:35:08.211 user:  INFO 13190 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: memo
+2019-06-26 11:35:08.251 user:  INFO 13190 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.todo.ToDoPlugin
+2019-06-26 11:35:08.264 user:  INFO 13190 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: todo
+2019-06-26 11:35:08.284 user:  INFO 13190 --- [main] o.p.continuousdb.SystemUpdater           : Checking for database updates...
+2019-06-26 11:35:08.285 user:  INFO 13190 --- [main] o.p.f.p.database.DatabaseCoreUpdates     : Running pre-check for ProjectForge version 6.16.0
+2019-06-26 11:35:08.287 user:  INFO 13190 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address LIMIT 1
+2019-06-26 11:35:08.290 user:  INFO 13190 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address where uid is not null LIMIT 1
+2019-06-26 11:35:08.307 user:  INFO 13190 --- [main] o.p.continuousdb.SystemUpdater           : No database updates found (OK).
+2019-06-26 11:35:08.316 user:  INFO 13190 --- [main] org.projectforge.ProjectForgeApp         : ProjectForge 6.26-SNAPSHOT (2019-06-26 10:24) initialized.
+2019-06-26 11:35:08.318 user:  INFO 13190 --- [main] org.projectforge.ProjectForgeApp         : ProjectForge is now available (up and running).
+2019-06-26 11:35:08.321 user:  INFO 13190 --- [main] o.a.wicket.protocol.http.WebApplication  : [wicket.app] Started Wicket version 7.10.0 in DEPLOYMENT mode
+2019-06-26 11:35:08.371 user:  INFO 13190 --- [main] org.projectforge.business.login.Login    : LoginHandler org.projectforge.business.login.LoginDefaultHandler registered.
+2019-06-26 11:35:09.074 user:  INFO 13190 --- [main] org.projectforge.storage.StorageClient   : No storageConfig given in config.xml. Storage not available.
+2019-06-26 11:35:09.395 user:  INFO 13190 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 11:35:09.453 user:  WARN 13190 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-26 11:35:09.679 user:  INFO 13190 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-06-26 11:35:10.078 user:  INFO 13190 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 11:35:10.984 user:  INFO 13190 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 11:35:10.987 user:  INFO 13190 --- [main] o.p.start.ProjectForgeApplication        : Started ProjectForgeApplication in 19.268 seconds (JVM running for 20.466)
+2019-06-26 11:37:33.054 user:  INFO 13190 --- [http-nio-127.0.0.1-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 11:37:33.055 user:  INFO 13190 --- [http-nio-127.0.0.1-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 11:37:33.068 user:  INFO 13190 --- [http-nio-127.0.0.1-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-06-26 11:44:59.981 user:  INFO 13190 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-06-26 11:44:59.983 user:  INFO 13190 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-06-26 11:45:00.028 user:  INFO 13190 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-06-26 11:59:59.950 user:  INFO 13190 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-06-26 11:59:59.952 user:  INFO 13190 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-06-26 12:00:00.033 user:  INFO 13190 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 56 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-06-26 12:00:00.331 user:  INFO 13190 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-06-26 12:00:00.334 user:  INFO 13190 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-06-26 12:00:00.334 user:  INFO 13190 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-06-26 12:00:00.334 user:  INFO 13190 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-06-26 12:00:00.337 user:  INFO 13190 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-06-26 12:14:59.982 user:  INFO 13190 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-06-26 12:14:59.984 user:  INFO 13190 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-06-26 12:14:59.991 user:  INFO 13190 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.

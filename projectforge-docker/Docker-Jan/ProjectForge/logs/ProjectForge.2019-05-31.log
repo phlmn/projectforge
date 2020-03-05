@@ -1,0 +1,317 @@
+2019-05-31 08:10:16.032 user:  INFO 8510 --- [main] o.p.start.ProjectForgeApplication        : Starting ProjectForgeApplication on cl-2-186.micromata.priv with PID 8510 (/Users/jbruemmer/projectforge-dev/projectforge-application/target/classes started by jbruemmer in /Users/jbruemmer/projectforge-dev)
+2019-05-31 08:10:16.034 user:  INFO 8510 --- [main] o.p.start.ProjectForgeApplication        : No active profile set, falling back to default profiles: default
+2019-05-31 08:10:22.617 user:  INFO 8510 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-31 08:10:22.647 user:  INFO 8510 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-31 08:10:22.648 user:  INFO 8510 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-31 08:10:22.912 user:  INFO 8510 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-31 08:10:22.912 user:  INFO 8510 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6449 ms
+2019-05-31 08:10:23.228 user:  INFO 8510 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: org.projectforge.webapp
+	...]
+2019-05-31 08:10:23.347 user:  INFO 8510 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.5.Final}
+2019-05-31 08:10:23.351 user:  INFO 8510 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-31 08:10:23.352 user:  INFO 8510 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-05-31 08:10:23.433 user:  INFO 8510 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-05-31 08:10:23.862 user:  INFO 8510 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-31 08:10:23.968 user:  INFO 8510 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-31 08:10:23.985 user:  INFO 8510 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2019-05-31 08:10:24.393 user:  INFO 8510 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-31 08:10:25.562 user:  INFO 8510 --- [main] org.hibernate.search.engine.Version      : HSEARCH000034: Hibernate Search 5.5.2.Final
+2019-05-31 08:10:26.816 user:  WARN 8510 --- [main] o.h.search.engine.impl.ConfigContext     : HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified: using LUCENE_CURRENT.
+2019-05-31 08:10:28.648 user:  INFO 8510 --- [main] .f.p.a.i.AttrSchemaServiceSpringBeanImpl : AttrSchema config file loaded from 'file:/Users/jbruemmer/ProjectForge/attrschema.xml'
+2019-05-31 08:10:28.802 user:  INFO 8510 --- [main] o.p.f.persistence.api.HibernateUtils     : Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-31 08:10:28.802 user:  INFO 8510 --- [main] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-05-31 08:10:28.951 user:  INFO 8510 --- [main] o.p.framework.configuration.ConfigXml    : Using application home dir: /Users/jbruemmer/ProjectForge
+2019-05-31 08:10:28.953 user:  INFO 8510 --- [main] o.p.framework.configuration.ConfigXml    : Cannot read from config file: '/Users/jbruemmer/ProjectForge/config.xml'. OK, assuming default values.
+2019-05-31 08:10:28.954 user:  WARN 8510 --- [main] o.p.b.c.ConfigurationServiceImpl         : Can't read keystore file: jssecacerts
+2019-05-31 08:10:29.134 user:  INFO 8510 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-05-31 08:10:29.139 user:  INFO 8510 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:postgresql://localhost:15432/projectforge (PostgreSQL 11.2)
+2019-05-31 08:10:29.152 user:  WARN 8510 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 11.2 is newer than this version of Flyway and support has not been tested.
+2019-05-31 08:10:29.164 user:  WARN 8510 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:dbmigration_plugin
+2019-05-31 08:10:29.171 user:  WARN 8510 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:flyway/migrate/postgresql
+2019-05-31 08:10:29.172 user:  WARN 8510 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:org/projectforge/flyway/dbmigration
+2019-05-31 08:10:29.308 user:  INFO 8510 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.113s)
+2019-05-31 08:10:29.325 user:  INFO 8510 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 6.19.0
+2019-05-31 08:10:29.326 user:  INFO 8510 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2019-05-31 08:10:30.014 user:  WARN 8510 --- [main] o.projectforge.config.WebXMLInitializer  : *********************************
+2019-05-31 08:10:30.015 user:  WARN 8510 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-05-31 08:10:30.015 user:  WARN 8510 --- [main] o.projectforge.config.WebXMLInitializer  : *********** ATTENTION! **********
+2019-05-31 08:10:30.015 user:  WARN 8510 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-05-31 08:10:30.015 user:  WARN 8510 --- [main] o.projectforge.config.WebXMLInitializer  : *********** Running in **********
+2019-05-31 08:10:30.015 user:  WARN 8510 --- [main] o.projectforge.config.WebXMLInitializer  : *********** dev mode!  **********
+2019-05-31 08:10:30.015 user:  WARN 8510 --- [main] o.projectforge.config.WebXMLInitializer  : ***********            **********
+2019-05-31 08:10:30.015 user:  WARN 8510 --- [main] o.projectforge.config.WebXMLInitializer  : *********************************
+2019-05-31 08:10:30.015 user:  WARN 8510 --- [main] o.projectforge.config.WebXMLInitializer  : Don't deliver this app in dev mode due to security reasons (cross origin allowed)!
+2019-05-31 08:10:30.023 user:  INFO 8510 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter restUserFilter was not registered (possibly already registered?)
+2019-05-31 08:10:30.023 user:  INFO 8510 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter restUserFilter was not registered (possibly already registered?)
+2019-05-31 08:10:30.198 user:  INFO 8510 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket extensions initializer
+2019-05-31 08:10:30.207 user:  INFO 8510 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket core library initializer
+2019-05-31 08:10:30.208 user:  INFO 8510 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IBehaviorListener, method=public abstract void org.apache.wicket.behavior.IBehaviorListener.onRequest()]
+2019-05-31 08:10:30.208 user:  INFO 8510 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IFormSubmitListener, method=public abstract void org.apache.wicket.markup.html.form.IFormSubmitListener.onFormSubmitted()]
+2019-05-31 08:10:30.209 user:  INFO 8510 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=ILinkListener, method=public abstract void org.apache.wicket.markup.html.link.ILinkListener.onLinkClicked()]
+2019-05-31 08:10:30.209 user:  INFO 8510 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IOnChangeListener, method=public abstract void org.apache.wicket.markup.html.form.IOnChangeListener.onSelectionChanged()]
+2019-05-31 08:10:30.209 user:  INFO 8510 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IResourceListener, method=public abstract void org.apache.wicket.IResourceListener.onResourceRequested()]
+2019-05-31 08:10:30.219 user:  INFO 8510 --- [main] org.projectforge.ProjectForgeApp         : Initializing...
+2019-05-31 08:10:31.066 user:  INFO 8510 --- [main] org.projectforge.ProjectForgeApp         : Default TimeZone is: sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-05-31 08:10:31.067 user:  INFO 8510 --- [main] org.projectforge.ProjectForgeApp         : user.timezone is: UTC
+2019-05-31 08:10:31.211 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : Initializing GlobalConfiguration (ConfigurationDO parameters) ...
+2019-05-31 08:10:31.242 user:  INFO 8510 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-05-31 08:10:31.381 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: hr.emailaddress=hr@management.de
+2019-05-31 08:10:31.382 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: vacation.lastyear.enddate=31.03.
+2019-05-31 08:10:31.382 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: password.flag.checkChange=true
+2019-05-31 08:10:31.382 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: snoweffect.enabled=false
+2019-05-31 08:10:31.382 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: admin.multiTenancyEnabled=false
+2019-05-31 08:10:31.382 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: systemAdministratorEMail=admin@dev-null.com
+2019-05-31 08:10:31.382 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: pluginsActivated=extendemployeedata,ihkexport,licenseManagementPlugin,liquidplanning,marketing,memo,todo
+2019-05-31 08:10:31.382 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: messageOfTheDay=Please try user demo with password demo123. Have a lot of fun!
+2019-05-31 08:10:31.382 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: minPasswordLength=10
+2019-05-31 08:10:31.502 user:  INFO 8510 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.eed.ExtendEmployeeDataPlugin
+2019-05-31 08:10:31.530 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : Initializing Configuration[tenant=1] (ConfigurationDO parameters) ...
+2019-05-31 08:10:31.538 user:  WARN 8510 --- [main] o.h.hql.internal.ast.HqlSqlWalker        : [DEPRECATION] Encountered positional parameter near line 1, column 92 in HQL: [from org.projectforge.framework.configuration.entities.ConfigurationDO t where tenant_id = ? or tenant_id is null].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2019-05-31 08:10:31.550 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: countryPhonePrefix=+49
+2019-05-31 08:10:31.550 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: calendarDomain=projectforge.test.com
+2019-05-31 08:10:31.550 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: dateFormats=dd/MM/yyyy;MM/dd/yyyy;dd.MM.yyyy;yyyy-MM-dd
+2019-05-31 08:10:31.550 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.costConfigured=true
+2019-05-31 08:10:31.550 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: timezone=sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-05-31 08:10:31.550 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.defaultVAT=0.19000
+2019-05-31 08:10:31.550 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: feedbackEMail=admin@dev-null.com
+2019-05-31 08:10:31.550 user:  INFO 8510 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: excelDateFormats=DD/MM/YYYY;MM/DD/YYYY;DD.MM.YYYY
+2019-05-31 08:10:31.566 user:  INFO 8510 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: extendemployeedata
+2019-05-31 08:10:31.573 user:  INFO 8510 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.ihkexport.IhkExportPlugin
+2019-05-31 08:10:31.575 user:  INFO 8510 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: ihkexport
+2019-05-31 08:10:31.611 user:  INFO 8510 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.licensemanagement.LicenseManagementPlugin
+2019-05-31 08:10:31.621 user:  INFO 8510 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: licenseManagementPlugin
+2019-05-31 08:10:31.657 user:  INFO 8510 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.liquidityplanning.LiquidityPlanningPlugin
+2019-05-31 08:10:31.667 user:  INFO 8510 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: liquidplanning
+2019-05-31 08:10:31.727 user:  INFO 8510 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.marketing.MarketingPlugin
+2019-05-31 08:10:31.744 user:  INFO 8510 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: marketing
+2019-05-31 08:10:31.777 user:  INFO 8510 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.memo.MemoPlugin
+2019-05-31 08:10:31.786 user:  INFO 8510 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: memo
+2019-05-31 08:10:31.823 user:  INFO 8510 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.todo.ToDoPlugin
+2019-05-31 08:10:31.835 user:  INFO 8510 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: todo
+2019-05-31 08:10:31.854 user:  INFO 8510 --- [main] o.p.continuousdb.SystemUpdater           : Checking for database updates...
+2019-05-31 08:10:31.854 user:  INFO 8510 --- [main] o.p.f.p.database.DatabaseCoreUpdates     : Running pre-check for ProjectForge version 6.16.0
+2019-05-31 08:10:31.857 user:  INFO 8510 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address LIMIT 1
+2019-05-31 08:10:31.860 user:  INFO 8510 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address where uid is not null LIMIT 1
+2019-05-31 08:10:31.879 user:  INFO 8510 --- [main] o.p.continuousdb.SystemUpdater           : No database updates found (OK).
+2019-05-31 08:10:31.883 user:  INFO 8510 --- [main] org.projectforge.ProjectForgeApp         : ProjectForge 6.26-SNAPSHOT (2019-05-24 14:35) initialized.
+2019-05-31 08:10:31.885 user:  INFO 8510 --- [main] org.projectforge.ProjectForgeApp         : ProjectForge is now available (up and running).
+2019-05-31 08:10:31.888 user:  INFO 8510 --- [main] o.a.wicket.protocol.http.WebApplication  : [wicket.app] Started Wicket version 7.10.0 in DEPLOYMENT mode
+2019-05-31 08:10:31.931 user:  INFO 8510 --- [main] org.projectforge.business.login.Login    : LoginHandler org.projectforge.business.login.LoginDefaultHandler registered.
+2019-05-31 08:10:32.592 user:  INFO 8510 --- [main] org.projectforge.storage.StorageClient   : No storageConfig given in config.xml. Storage not available.
+2019-05-31 08:10:32.913 user:  INFO 8510 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-31 08:10:32.976 user:  WARN 8510 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-31 08:10:33.179 user:  INFO 8510 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-05-31 08:10:33.650 user:  INFO 8510 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-05-31 08:10:34.488 user:  INFO 8510 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-31 08:10:34.491 user:  INFO 8510 --- [main] o.p.start.ProjectForgeApplication        : Started ProjectForgeApplication in 19.249 seconds (JVM running for 20.024)
+2019-05-31 08:14:59.995 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 08:14:59.996 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 08:15:00.023 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 08:29:24.700 user:  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-31 08:29:24.700 user:  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-31 08:29:24.713 user:  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-05-31 08:29:24.765 user:  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-1] o.p.business.user.filter.CookieService   : User successfully logged in using stay-logged-in method: Admin ProjectForge Administrator (jan)
+2019-05-31 08:29:24.774 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-1] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 08:29:25.287 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/menu with ip: 127.0.0.1
+2019-05-31 08:29:25.287 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-3] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/todo/edit with ip: 127.0.0.1
+2019-05-31 08:29:25.293 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : Initializing UserGroupCache  for tenant #1 'Default tenant'...
+2019-05-31 08:29:25.293 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : Loading all users ...
+2019-05-31 08:29:25.323 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : Loading all groups ...
+2019-05-31 08:29:25.395 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : Initializing of UserGroupCache done for tenant #1 'Default tenant'.
+2019-05-31 08:29:25.395 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : UserGroupCache.refresh took: 105 ms.
+2019-05-31 08:29:25.430 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-3] org.projectforge.ui.ElementsRegistry     : Property class org.projectforge.plugins.todo.ToDoDO.structureElement not found. Can't autodetect layout.
+2019-05-31 08:29:25.430 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-3] org.projectforge.ui.ElementsRegistry     : Can't build UIElement from org.projectforge.plugins.todo.ToDoDO.structureElement.
+2019-05-31 08:29:25.432 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-3] org.projectforge.ui.ElementsRegistry     : Property class org.projectforge.plugins.todo.ToDoDO.options not found. Can't autodetect layout.
+2019-05-31 08:29:25.432 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-3] org.projectforge.ui.ElementsRegistry     : Can't build UIElement from org.projectforge.plugins.todo.ToDoDO.options.
+2019-05-31 08:29:25.547 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] org.projectforge.plugins.todo.ToDoCache  : Clearing cache with open to-do entries.
+2019-05-31 08:29:25.604 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-4] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/user/aco with ip: 127.0.0.1
+2019-05-31 08:29:25.605 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-5] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/user/aco with ip: 127.0.0.1
+2019-05-31 08:29:25.798 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-05-31 08:29:26.414 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-05-31 08:29:59.972 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 08:29:59.972 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 08:29:59.976 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 08:44:59.973 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 08:44:59.974 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 08:44:59.980 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 08:59:59.898 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-31 08:59:59.900 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-31 08:59:59.920 user:  INFO 8510 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-31 08:59:59.998 user:  INFO 8510 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-31 09:00:00.000 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-31 09:00:00.000 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 09:00:00.000 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 09:00:00.002 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 09:04:20.083 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m25s807ms).
+2019-05-31 09:05:34.855 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m14s772ms).
+2019-05-31 09:07:04.474 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s316ms).
+2019-05-31 09:09:10.461 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m35s977ms).
+2019-05-31 09:13:17.511 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m37s40ms).
+2019-05-31 09:16:27.276 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m39s756ms).
+2019-05-31 09:21:08.912 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m11s634ms).
+2019-05-31 09:23:53.515 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s75ms).
+2019-05-31 09:25:20.405 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s884ms).
+2019-05-31 09:26:39.505 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s89ms).
+2019-05-31 09:29:17.827 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m38s323ms).
+2019-05-31 09:33:53.965 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m5s775ms).
+2019-05-31 09:35:22.744 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s769ms).
+2019-05-31 09:35:58.294 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 09:35:58.295 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 09:35:58.300 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 09:37:54.527 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m1s774ms).
+2019-05-31 09:39:50.385 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s848ms).
+2019-05-31 09:47:27.605 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 09:47:27.606 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 09:47:27.610 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 09:59:59.974 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 09:59:59.977 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 09:59:59.980 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 10:13:56.117 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m2s657ms).
+2019-05-31 10:16:22.346 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m56s226ms).
+2019-05-31 10:18:00.630 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s275ms).
+2019-05-31 10:19:57.008 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s372ms).
+2019-05-31 10:21:08.169 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 10:21:08.170 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 10:21:08.176 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 10:21:30.037 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s22ms).
+2019-05-31 10:23:16.288 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m46s251ms).
+2019-05-31 10:26:21.895 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m34s121ms).
+2019-05-31 10:30:24.891 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m32s990ms).
+2019-05-31 10:33:38.189 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m43s291ms).
+2019-05-31 10:36:59.747 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m51s554ms).
+2019-05-31 10:38:00.290 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m543ms).
+2019-05-31 10:40:14.999 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m43s38ms).
+2019-05-31 10:41:59.838 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m14s50ms).
+2019-05-31 10:45:59.059 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m28s507ms).
+2019-05-31 10:46:01.020 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-31 10:46:01.021 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-31 10:46:01.028 user:  INFO 8510 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-31 10:46:01.031 user:  INFO 8510 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-31 10:46:01.032 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-31 10:46:26.991 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 10:46:26.991 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 10:46:26.996 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 10:47:40.686 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m11s617ms).
+2019-05-31 10:48:56.167 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s471ms).
+2019-05-31 10:50:49.232 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m23s60ms).
+2019-05-31 10:51:43.720 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s488ms).
+2019-05-31 11:00:53.302 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m38s53ms).
+2019-05-31 11:02:32.148 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s839ms).
+2019-05-31 11:08:12.008 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m55s785ms).
+2019-05-31 11:10:49.345 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m37s337ms).
+2019-05-31 11:13:17.105 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m56s381ms).
+2019-05-31 11:14:40.319 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s214ms).
+2019-05-31 11:17:58.226 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m47s900ms).
+2019-05-31 11:20:07.269 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s676ms).
+2019-05-31 11:21:55.862 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-31 11:21:55.862 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-31 11:21:55.871 user:  INFO 8510 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-31 11:21:55.874 user:  INFO 8510 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-31 11:21:55.875 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-31 11:21:55.875 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 11:21:55.875 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 11:21:55.877 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 11:23:52.089 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m56s888ms).
+2019-05-31 11:26:32.871 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s7ms).
+2019-05-31 11:27:58.544 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s664ms).
+2019-05-31 11:29:28.967 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m30s423ms).
+2019-05-31 11:37:57.549 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m57s110ms).
+2019-05-31 11:41:07.012 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 11:41:07.014 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 11:41:07.018 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 11:44:59.992 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 11:44:59.993 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 11:44:59.997 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 11:59:59.971 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 11:59:59.972 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 11:59:59.978 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 12:02:28.353 user:  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-9] o.p.business.user.filter.CookieService   : User successfully logged in using stay-logged-in method: Admin ProjectForge Administrator (jan)
+2019-05-31 12:02:28.353 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-9] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:28.354 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-9] o.p.f.c.AbstractConfiguration            : Initializing Configuration[tenant=1] (ConfigurationDO parameters) ...
+2019-05-31 12:02:28.359 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-9] o.p.f.c.AbstractConfiguration            : Initializing GlobalConfiguration (ConfigurationDO parameters) ...
+2019-05-31 12:02:28.745 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-10] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:29.161 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-1] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:29.560 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-3] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:29.979 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-5] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:30.337 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-4] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:30.402 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/menu with ip: 127.0.0.1
+2019-05-31 12:02:30.407 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : Initializing UserGroupCache  for tenant #1 'Default tenant'...
+2019-05-31 12:02:30.407 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : Loading all users ...
+2019-05-31 12:02:30.408 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-6] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/todo/edit with ip: 127.0.0.1
+2019-05-31 12:02:30.410 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-6] org.projectforge.ui.ElementsRegistry     : Can't build UIElement from org.projectforge.plugins.todo.ToDoDO.structureElement.
+2019-05-31 12:02:30.411 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-6] org.projectforge.ui.ElementsRegistry     : Can't build UIElement from org.projectforge.plugins.todo.ToDoDO.options.
+2019-05-31 12:02:30.423 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : Loading all groups ...
+2019-05-31 12:02:30.456 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : Initializing of UserGroupCache done for tenant #1 'Default tenant'.
+2019-05-31 12:02:30.456 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.business.user.UserGroupCache         : UserGroupCache.refresh took: 53 ms.
+2019-05-31 12:02:30.472 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] org.projectforge.plugins.todo.ToDoCache  : Clearing cache with open to-do entries.
+2019-05-31 12:02:30.474 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-05-31 12:02:30.490 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-05-31 12:02:30.517 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-7] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/user/aco with ip: 127.0.0.1
+2019-05-31 12:02:30.518 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-8] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/user/aco with ip: 127.0.0.1
+2019-05-31 12:02:42.811 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-9] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:43.176 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-10] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:43.555 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-1] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:43.915 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-3] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:44.317 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-5] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:44.706 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-4] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:45.091 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-6] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:45.481 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:45.859 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-7] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:46.244 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-8] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/userStatus with ip: 127.0.0.1
+2019-05-31 12:02:46.306 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-9] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/menu with ip: 127.0.0.1
+2019-05-31 12:02:46.306 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-10] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/todo/edit with ip: 127.0.0.1
+2019-05-31 12:02:46.307 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-10] org.projectforge.ui.ElementsRegistry     : Can't build UIElement from org.projectforge.plugins.todo.ToDoDO.structureElement.
+2019-05-31 12:02:46.308 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-10] org.projectforge.ui.ElementsRegistry     : Can't build UIElement from org.projectforge.plugins.todo.ToDoDO.options.
+2019-05-31 12:02:46.420 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-1] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/user/aco with ip: 127.0.0.1
+2019-05-31 12:02:46.420 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-3] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/user/aco with ip: 127.0.0.1
+2019-05-31 12:11:06.947 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-31 12:11:06.952 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-31 12:11:06.958 user:  INFO 8510 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-31 12:11:06.961 user:  INFO 8510 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-31 12:11:06.962 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-31 12:13:15.420 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-6] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/memo/initialList with ip: 127.0.0.1
+2019-05-31 12:13:31.454 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/poll/initialList with ip: 127.0.0.1
+2019-05-31 12:13:31.473 user: ERROR 8510 --- [http-nio-127.0.0.1-8080-exec-2] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/poll/initialList with ip: 127.0.0.1: Response status not OK: status=404.
+2019-05-31 12:13:35.208 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-8] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/poll/edit with ip: 127.0.0.1
+2019-05-31 12:13:35.212 user: ERROR 8510 --- [http-nio-127.0.0.1-8080-exec-8] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/poll/edit with ip: 127.0.0.1: Response status not OK: status=404.
+2019-05-31 12:13:40.167 user:jan  INFO 8510 --- [http-nio-127.0.0.1-8080-exec-10] o.projectforge.web.rest.RestUserFilter   : User: jan calls RestURL: /rs/memo/edit with ip: 127.0.0.1
+2019-05-31 12:14:59.966 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 12:14:59.967 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 12:14:59.971 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 12:29:59.972 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 12:29:59.973 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 12:29:59.979 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 12:44:59.971 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 12:44:59.972 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 12:44:59.976 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 12:58:50.134 user:  WARN 8510 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s550ms).
+2019-05-31 13:00:17.447 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-05-31 13:00:17.447 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-05-31 13:00:17.457 user:  INFO 8510 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 55 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-05-31 13:00:17.461 user:  INFO 8510 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-05-31 13:00:17.464 user:  INFO 8510 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-05-31 13:00:17.521 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 13:00:17.522 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 13:00:17.525 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 13:14:59.969 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-05-31 13:14:59.970 user:  INFO 8510 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-05-31 13:14:59.973 user:  INFO 8510 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-05-31 13:27:00.129 user:  INFO 8510 --- [Thread-42] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-05-31 13:27:00.130 user:  INFO 8510 --- [Thread-42] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-31 13:27:00.132 user:  INFO 8510 --- [Thread-42] o.p.b.user.UserXmlPreferencesCache       : Syncing all user preferences to database.
+2019-05-31 13:27:00.132 user:  INFO 8510 --- [Thread-42] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-05-31 13:27:00.139 user:  INFO 8510 --- [Thread-42] o.p.business.user.UserGroupCache         : Initializing UserGroupCache  for tenant #1 'Default tenant'...
+2019-05-31 13:27:00.139 user:  INFO 8510 --- [Thread-42] o.p.business.user.UserGroupCache         : Loading all users ...
+2019-05-31 13:27:00.151 user:  INFO 8510 --- [Thread-42] o.p.business.user.UserGroupCache         : Loading all groups ...
+2019-05-31 13:27:00.172 user:  INFO 8510 --- [Thread-42] o.p.business.user.UserGroupCache         : Initializing of UserGroupCache done for tenant #1 'Default tenant'.
+2019-05-31 13:27:00.172 user:  INFO 8510 --- [Thread-42] o.p.business.user.UserGroupCache         : UserGroupCache.refresh took: 34 ms.
+2019-05-31 13:27:00.193 user:  INFO 8510 --- [Thread-42] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-05-31 13:27:00.208 user:  INFO 8510 --- [Thread-42] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'entityManagerFactory' threw an exception: java.lang.IllegalStateException: EntityManagerFactory is closed
+2019-05-31 13:27:00.208 user:  INFO 8510 --- [Thread-42] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-31 13:27:00.211 user:  INFO 8510 --- [Thread-42] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-31 13:27:00.237 user:  INFO 8510 --- [Thread-42] org.projectforge.ProjectForgeApp         : Shutdown...
+2019-05-31 13:27:00.237 user:  INFO 8510 --- [Thread-42] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-05-31 13:27:00.238 user:  INFO 8510 --- [Thread-42] org.projectforge.ProjectForgeApp         : Shutdown completed.
+2019-05-31 13:27:00.238 user:  INFO 8510 --- [Thread-42] org.apache.wicket.Application            : [wicket.app] destroy: Wicket extensions initializer
+2019-05-31 13:27:00.238 user:  INFO 8510 --- [Thread-42] org.apache.wicket.Application            : [wicket.app] destroy: Wicket core library initializer

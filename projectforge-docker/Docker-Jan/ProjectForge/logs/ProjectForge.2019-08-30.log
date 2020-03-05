@@ -1,0 +1,1122 @@
+2019-08-30 08:08:07.525 user:  INFO 8904 --- [main] o.p.start.ProjectForgeApplication        : Starting ProjectForgeApplication on Micromatas-MacBook-Pro-14029.local with PID 8904 (/Users/jbruemmer/projectforge-dev/projectforge-application/target/classes started by jbruemmer in /Users/jbruemmer/projectforge-dev)
+2019-08-30 08:08:07.556 user:  INFO 8904 --- [main] o.p.start.ProjectForgeApplication        : The following profiles are active: keycloak
+2019-08-30 08:08:17.017 user:  INFO 8904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-08-30 08:08:17.053 user:  INFO 8904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-30 08:08:17.054 user:  INFO 8904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-30 08:08:17.379 user:  INFO 8904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
+2019-08-30 08:08:17.379 user:  INFO 8904 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9454 ms
+2019-08-30 08:08:17.683 user:  INFO 8904 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: org.projectforge.webapp]
+2019-08-30 08:08:17.837 user:  INFO 8904 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.3.Final}
+2019-08-30 08:08:18.082 user:  INFO 8904 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-08-30 08:08:18.732 user:  INFO 8904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-30 08:08:18.844 user:  INFO 8904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-30 08:08:18.884 user:  INFO 8904 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2019-08-30 08:08:20.307 user:  WARN 8904 --- [main] org.hibernate.orm.deprecation            : HHH90000023: Encountered use of deprecated Connection handling settings [hibernate.connection.acquisition_mode]or [hibernate.connection.release_mode]; use [hibernate.connection.handling_mode] instead
+2019-08-30 08:08:20.988 user:  INFO 8904 --- [main] org.hibernate.search.engine.Version      : HSEARCH000034: Hibernate Search 5.11.2.Final
+2019-08-30 08:08:23.135 user:  INFO 8904 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-08-30 08:08:23.757 user:  WARN 8904 --- [main] o.h.s.i.i.LuceneEmbeddedIndexFamilyImpl  : HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified: using LUCENE_CURRENT.
+2019-08-30 08:08:25.880 user:  INFO 8904 --- [main] .f.p.a.i.AttrSchemaServiceSpringBeanImpl : AttrSchema config file loaded from '/Users/jbruemmer/ProjectForge/attrschema.xml'
+2019-08-30 08:08:26.049 user:  INFO 8904 --- [main] o.p.f.persistence.api.HibernateUtils     : Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-08-30 08:08:26.050 user:  INFO 8904 --- [main] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-08-30 08:08:26.243 user:  INFO 8904 --- [main] o.p.framework.configuration.ConfigXml    : Using application home dir: /Users/jbruemmer/ProjectForge
+2019-08-30 08:08:26.322 user:  INFO 8904 --- [main] o.p.framework.configuration.ConfigXml    : holidays = [org.projectforge.framework.calendar.ConfigureHoliday@68e1f0a1[label=<null>,id=XMAS_EVE,ignore=false,year=<null>,month=<null>,dayOfMonth=<null>,workingDay=true,workFraction=0.5], org.projectforge.framework.calendar.ConfigureHoliday@76577a33[label=<null>,id=SYLVESTER,ignore=false,year=<null>,month=<null>,dayOfMonth=<null>,workingDay=true,workFraction=0.5]]
+2019-08-30 08:08:26.323 user:  INFO 8904 --- [main] o.p.framework.configuration.ConfigXml    : databaseDirectory = database
+2019-08-30 08:08:26.323 user:  INFO 8904 --- [main] o.p.framework.configuration.ConfigXml    : loggingDirectory = logs
+2019-08-30 08:08:26.323 user:  INFO 8904 --- [main] o.p.framework.configuration.ConfigXml    : workingDirectory = work
+2019-08-30 08:08:26.323 user:  INFO 8904 --- [main] o.p.framework.configuration.ConfigXml    : tempDirectory = tmp
+2019-08-30 08:08:26.323 user:  INFO 8904 --- [main] o.p.framework.configuration.ConfigXml    : portletMode = false
+2019-08-30 08:08:26.324 user:  INFO 8904 --- [main] o.p.framework.configuration.ConfigXml    : accountingConfig = org.projectforge.business.fibu.kost.AccountingConfig@12cd1fe6[businessAssessment=<null>,debitorsAccountNumberRangesString=<null>,creditorsAccountNumberRangesString=<null>]
+2019-08-30 08:08:26.329 user:  INFO 8904 --- [main] o.p.framework.configuration.ConfigXml    : Config file '/Users/jbruemmer/ProjectForge/config.xml' successfully read.
+2019-08-30 08:08:26.330 user:  WARN 8904 --- [main] o.p.b.c.ConfigurationServiceImpl         : Can't read keystore file: jssecacerts
+2019-08-30 08:08:26.510 user:  INFO 8904 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-08-30 08:08:26.513 user:  INFO 8904 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:postgresql://localhost:15432/projectforge (PostgreSQL 11.2)
+2019-08-30 08:08:26.526 user:  WARN 8904 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 11.2 is newer than this version of Flyway and support has not been tested.
+2019-08-30 08:08:26.539 user:  WARN 8904 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:dbmigration_plugin
+2019-08-30 08:08:26.672 user:  INFO 8904 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.098s)
+2019-08-30 08:08:26.686 user:  INFO 8904 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 7.0.0.3
+2019-08-30 08:08:26.687 user:  INFO 8904 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2019-08-30 08:08:27.340 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : Initializing GlobalConfiguration (ConfigurationDO parameters) ...
+2019-08-30 08:08:27.455 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: admin.multiTenancyEnabled=false
+2019-08-30 08:08:27.456 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: minPasswordLength=10
+2019-08-30 08:08:27.456 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: snoweffect.enabled=false
+2019-08-30 08:08:27.456 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: vacation.lastyear.enddate=31.03.
+2019-08-30 08:08:27.456 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: messageOfTheDay=Please try user demo with password demo123. Have a lot of fun!
+2019-08-30 08:08:27.456 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: pluginsActivated=extendemployeedata,financialfairplay,ihkexport,licenseManagementPlugin,liquidplanning,marketing,memo,todo
+2019-08-30 08:08:27.456 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: systemAdministratorEMail=admin@dev-null.com
+2019-08-30 08:08:27.456 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: password.flag.checkChange=true
+2019-08-30 08:08:27.456 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: hr.emailaddress=hr@management.de
+2019-08-30 08:08:27.715 user:  INFO 8904 --- [main] o.apache.catalina.core.StandardContext   : Suspicious URL pattern: [/rs*] in context [/auth], see sections 12.1 and 12.2 of the Servlet specification
+2019-08-30 08:08:27.715 user:  INFO 8904 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter restUserFilter was not registered (possibly already registered?)
+2019-08-30 08:08:27.720 user:  INFO 8904 --- [main] o.projectforge.config.WebXMLInitializer  : **************************************************************************************************************************
+2019-08-30 08:08:27.720 user:  INFO 8904 --- [main] o.projectforge.config.WebXMLInitializer  : **************************************************************************************************************************
+2019-08-30 08:08:27.720 user:  INFO 8904 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                                                                                      **
+2019-08-30 08:08:27.720 user:  INFO 8904 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                      ATTENTION!                                                      **
+2019-08-30 08:08:27.720 user:  INFO 8904 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                                                                                      **
+2019-08-30 08:08:27.720 user:  INFO 8904 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                 Running in dev mode!                                                 **
+2019-08-30 08:08:27.721 user:  INFO 8904 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                                                                                      **
+2019-08-30 08:08:27.721 user:  INFO 8904 --- [main] o.projectforge.config.WebXMLInitializer  : **                             Don't deliver this app in dev mode due to security reasons!                              **
+2019-08-30 08:08:27.721 user:  INFO 8904 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                (cross origin allowed)                                                **
+2019-08-30 08:08:27.721 user:  INFO 8904 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                                                                                      **
+2019-08-30 08:08:27.721 user:  INFO 8904 --- [main] o.projectforge.config.WebXMLInitializer  : **************************************************************************************************************************
+2019-08-30 08:08:27.721 user:  INFO 8904 --- [main] o.projectforge.config.WebXMLInitializer  : **************************************************************************************************************************
+2019-08-30 08:08:29.014 user:  INFO 8904 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket extensions initializer
+2019-08-30 08:08:29.026 user:  INFO 8904 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket core library initializer
+2019-08-30 08:08:29.027 user:  INFO 8904 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IBehaviorListener, method=public abstract void org.apache.wicket.behavior.IBehaviorListener.onRequest()]
+2019-08-30 08:08:29.028 user:  INFO 8904 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IFormSubmitListener, method=public abstract void org.apache.wicket.markup.html.form.IFormSubmitListener.onFormSubmitted()]
+2019-08-30 08:08:29.028 user:  INFO 8904 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=ILinkListener, method=public abstract void org.apache.wicket.markup.html.link.ILinkListener.onLinkClicked()]
+2019-08-30 08:08:29.029 user:  INFO 8904 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IOnChangeListener, method=public abstract void org.apache.wicket.markup.html.form.IOnChangeListener.onSelectionChanged()]
+2019-08-30 08:08:29.029 user:  INFO 8904 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IResourceListener, method=public abstract void org.apache.wicket.IResourceListener.onResourceRequested()]
+2019-08-30 08:08:29.307 user:  INFO 8904 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.eed.ExtendEmployeeDataPlugin
+2019-08-30 08:08:29.323 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : Initializing Configuration[tenant=1] (ConfigurationDO parameters) ...
+2019-08-30 08:08:29.337 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: calendarDomain=projectforge.test.com
+2019-08-30 08:08:29.337 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: dateFormats=dd/MM/yyyy;MM/dd/yyyy;dd.MM.yyyy;yyyy-MM-dd
+2019-08-30 08:08:29.337 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.defaultVAT=0.19000
+2019-08-30 08:08:29.337 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.costConfigured=true
+2019-08-30 08:08:29.337 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: feedbackEMail=admin@dev-null.com
+2019-08-30 08:08:29.337 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: excelDateFormats=DD/MM/YYYY;MM/DD/YYYY;DD.MM.YYYY
+2019-08-30 08:08:29.337 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: timezone=sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-08-30 08:08:29.337 user:  INFO 8904 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: countryPhonePrefix=+49
+2019-08-30 08:08:29.348 user:  INFO 8904 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: extendemployeedata
+2019-08-30 08:08:29.425 user:  INFO 8904 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.ffp.FinancialFairPlayPlugin
+2019-08-30 08:08:29.440 user:  INFO 8904 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: financialfairplay
+2019-08-30 08:08:29.448 user:  INFO 8904 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.ihkexport.IhkExportPlugin
+2019-08-30 08:08:29.450 user:  INFO 8904 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: ihkexport
+2019-08-30 08:08:29.490 user:  INFO 8904 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.licensemanagement.LicenseManagementPlugin
+2019-08-30 08:08:29.499 user:  INFO 8904 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: licenseManagementPlugin
+2019-08-30 08:08:29.537 user:  INFO 8904 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.liquidityplanning.LiquidityPlanningPlugin
+2019-08-30 08:08:29.547 user:  INFO 8904 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: liquidplanning
+2019-08-30 08:08:29.618 user:  INFO 8904 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.marketing.MarketingPlugin
+2019-08-30 08:08:29.637 user:  INFO 8904 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: marketing
+2019-08-30 08:08:29.674 user:  INFO 8904 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.memo.MemoPlugin
+2019-08-30 08:08:29.684 user:  INFO 8904 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: memo
+2019-08-30 08:08:29.727 user:  INFO 8904 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.todo.ToDoPlugin
+2019-08-30 08:08:29.740 user:  INFO 8904 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: todo
+2019-08-30 08:08:29.761 user:  INFO 8904 --- [main] o.p.continuousdb.SystemUpdater           : Checking for database updates...
+2019-08-30 08:08:29.762 user:  INFO 8904 --- [main] o.p.f.p.database.DatabaseCoreUpdates     : Running pre-check for ProjectForge version 6.16.0
+2019-08-30 08:08:29.763 user:  INFO 8904 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address LIMIT 1
+2019-08-30 08:08:29.767 user:  INFO 8904 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address where uid is not null LIMIT 1
+2019-08-30 08:08:29.799 user:  INFO 8904 --- [main] o.p.continuousdb.SystemUpdater           : No database updates found (OK).
+2019-08-30 08:08:29.816 user:  INFO 8904 --- [main] o.a.wicket.protocol.http.WebApplication  : [wicket.app] Started Wicket version 7.10.0 in DEPLOYMENT mode
+2019-08-30 08:08:29.871 user:  INFO 8904 --- [main] org.projectforge.business.login.Login    : LoginHandler org.projectforge.business.login.LoginDefaultHandler registered.
+2019-08-30 08:08:31.257 user:  INFO 8904 --- [main] org.projectforge.storage.StorageClient   : No storageConfig given in config.xml. Storage not available.
+2019-08-30 08:08:31.626 user:  INFO 8904 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20520eb6, org.springframework.security.web.context.SecurityContextPersistenceFilter@4aab6203, org.springframework.security.web.header.HeaderWriterFilter@44dd4f16, org.springframework.security.web.csrf.CsrfFilter@7a364bfe, org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter@7033c58a, org.springframework.security.web.authentication.logout.LogoutFilter@3ee910d0, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter@3cb1a148, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6dd835de, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e1b56ad, org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter@454be9f6, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter@2bba7b40, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f7a7699, org.springframework.security.web.session.SessionManagementFilter@638c90f, org.springframework.security.web.access.ExceptionTranslationFilter@527372ea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d16fc4b]
+2019-08-30 08:08:31.780 user:  INFO 8904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-30 08:08:32.086 user:  INFO 8904 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-08-30 08:08:32.875 user:  INFO 8904 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-08-30 08:08:33.784 user:  INFO 8904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/auth'
+2019-08-30 08:08:33.787 user:  INFO 8904 --- [main] o.p.start.ProjectForgeApplication        : Started ProjectForgeApplication in 26.932 seconds (JVM running for 29.934)
+2019-08-30 08:08:33.790 user:  INFO 8904 --- [main] org.projectforge.ProjectForgeApp         : Initializing...
+2019-08-30 08:08:33.790 user:  INFO 8904 --- [main] org.projectforge.ProjectForgeApp         : Default TimeZone is: sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-08-30 08:08:33.790 user:  INFO 8904 --- [main] org.projectforge.ProjectForgeApp         : user.timezone is: UTC
+2019-08-30 08:08:33.794 user:  INFO 8904 --- [main] org.projectforge.ProjectForgeApp         : ProjectForge 7.0-SNAPSHOT (2019-08-28 10:50) initialized.
+2019-08-30 08:08:33.797 user:  INFO 8904 --- [main] org.projectforge.ProjectForgeApp         : **************************************************************************************************************************
+2019-08-30 08:08:33.797 user:  INFO 8904 --- [main] org.projectforge.ProjectForgeApp         : *                                                                                                                        *
+2019-08-30 08:08:33.797 user:  INFO 8904 --- [main] org.projectforge.ProjectForgeApp         : *                             ProjectForge is now available (up and running): localhost:8080                             *
+2019-08-30 08:08:33.797 user:  INFO 8904 --- [main] org.projectforge.ProjectForgeApp         : *                                        Configured domain: http://localhost:8080                                        *
+2019-08-30 08:08:33.797 user:  INFO 8904 --- [main] org.projectforge.ProjectForgeApp         : *                                                                                                                        *
+2019-08-30 08:08:33.797 user:  INFO 8904 --- [main] org.projectforge.ProjectForgeApp         : **************************************************************************************************************************
+2019-08-30 08:14:59.990 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 08:14:59.991 user:  INFO 8904 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 08:14:59.995 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 08:15:00.019 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 08:29:59.969 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 08:29:59.970 user:  INFO 8904 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 08:29:59.971 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 08:29:59.976 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 08:44:13.196 user:  INFO 8904 --- [http-nio-127.0.0.1-8080-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-30 08:44:13.196 user:  INFO 8904 --- [http-nio-127.0.0.1-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-30 08:44:13.212 user:  INFO 8904 --- [http-nio-127.0.0.1-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2019-08-30 08:44:59.981 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 08:44:59.982 user:  INFO 8904 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 08:44:59.982 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 08:44:59.987 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 08:59:59.899 user:  INFO 8904 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-08-30 08:59:59.899 user:  INFO 8904 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-08-30 08:59:59.922 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 08:59:59.930 user:  INFO 8904 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 57 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-08-30 08:59:59.932 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 08:59:59.997 user:  INFO 8904 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-08-30 09:00:00.000 user:  INFO 8904 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-08-30 09:00:00.001 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 09:00:00.001 user:  INFO 8904 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 09:00:00.001 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 09:00:00.003 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 09:14:59.973 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 09:14:59.974 user:  INFO 8904 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 09:14:59.975 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 09:14:59.981 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 09:29:59.972 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 09:29:59.973 user:  INFO 8904 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 09:29:59.974 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 09:29:59.978 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 09:44:59.973 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 09:44:59.973 user:  INFO 8904 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 09:44:59.973 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 09:44:59.977 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 09:59:59.878 user:  INFO 8904 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-08-30 09:59:59.879 user:  INFO 8904 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-08-30 09:59:59.887 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 09:59:59.890 user:  INFO 8904 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 57 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-08-30 09:59:59.890 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 09:59:59.895 user:  INFO 8904 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-08-30 09:59:59.897 user:  INFO 8904 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-08-30 09:59:59.971 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 09:59:59.971 user:  INFO 8904 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 09:59:59.971 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 09:59:59.974 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 10:49:13.236 user:  WARN 8904 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=37m23s726ms).
+2019-08-30 11:25:01.063 user:  WARN 8904 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m47s797ms).
+2019-08-30 11:25:11.483 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 11:25:11.484 user:  INFO 8904 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 11:25:11.485 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 11:25:11.492 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 11:29:59.992 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 11:29:59.992 user:  INFO 8904 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 11:29:59.993 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 11:29:59.997 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 11:44:59.971 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 11:44:59.972 user:  INFO 8904 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 11:44:59.973 user:  WARN 8904 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 11:44:59.977 user:  INFO 8904 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 11:56:32.630 user:  INFO 8904 --- [Thread-57] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-08-30 11:56:32.633 user:  INFO 8904 --- [Thread-57] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-30 11:56:32.638 user:  INFO 8904 --- [Thread-57] o.p.business.user.UserPrefCache          : Syncing all user preferences to database.
+2019-08-30 11:56:32.638 user:  INFO 8904 --- [Thread-57] o.p.business.user.UserPrefCache          : Flushing all user preferences to data-base....
+2019-08-30 11:56:32.638 user:  INFO 8904 --- [Thread-57] o.p.business.user.UserPrefCache          : Flushing of user preferences to data-base done.
+2019-08-30 11:56:32.639 user:  INFO 8904 --- [Thread-57] org.projectforge.ProjectForgeApp         : Shutdown...
+2019-08-30 11:56:32.640 user:  INFO 8904 --- [Thread-57] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-08-30 11:56:32.640 user:  INFO 8904 --- [Thread-57] org.projectforge.ProjectForgeApp         : Shutdown completed.
+2019-08-30 11:56:32.640 user:  INFO 8904 --- [Thread-57] o.p.b.user.UserXmlPreferencesCache       : Syncing all user preferences to database.
+2019-08-30 11:56:32.640 user:  INFO 8904 --- [Thread-57] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-08-30 11:56:32.641 user:  INFO 8904 --- [Thread-57] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-08-30 11:56:32.688 user:  INFO 8904 --- [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-08-30 11:56:32.691 user:  INFO 8904 --- [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-08-30 11:56:32.738 user:  INFO 8904 --- [Thread-57] org.apache.wicket.Application            : [wicket.app] destroy: Wicket extensions initializer
+2019-08-30 11:56:32.739 user:  INFO 8904 --- [Thread-57] org.apache.wicket.Application            : [wicket.app] destroy: Wicket core library initializer
+2019-08-30 11:56:41.112 user:  INFO 10722 --- [main] o.p.start.ProjectForgeApplication        : Starting ProjectForgeApplication on Micromatas-MacBook-Pro-14029.local with PID 10722 (/Users/jbruemmer/projectforge-dev/projectforge-application/target/classes started by jbruemmer in /Users/jbruemmer/projectforge-dev)
+2019-08-30 11:56:41.113 user:  INFO 10722 --- [main] o.p.start.ProjectForgeApplication        : The following profiles are active: keycloak
+2019-08-30 11:56:45.851 user:  INFO 10722 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-08-30 11:56:45.882 user:  INFO 10722 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-30 11:56:45.882 user:  INFO 10722 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-30 11:56:46.162 user:  INFO 10722 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
+2019-08-30 11:56:46.162 user:  INFO 10722 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4681 ms
+2019-08-30 11:56:46.457 user:  INFO 10722 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: org.projectforge.webapp]
+2019-08-30 11:56:46.564 user:  INFO 10722 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.3.Final}
+2019-08-30 11:56:46.793 user:  INFO 10722 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-08-30 11:56:47.233 user:  INFO 10722 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-30 11:56:47.336 user:  INFO 10722 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-30 11:56:47.371 user:  INFO 10722 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2019-08-30 11:56:48.647 user:  WARN 10722 --- [main] org.hibernate.orm.deprecation            : HHH90000023: Encountered use of deprecated Connection handling settings [hibernate.connection.acquisition_mode]or [hibernate.connection.release_mode]; use [hibernate.connection.handling_mode] instead
+2019-08-30 11:56:49.181 user:  INFO 10722 --- [main] org.hibernate.search.engine.Version      : HSEARCH000034: Hibernate Search 5.11.2.Final
+2019-08-30 11:56:50.969 user:  INFO 10722 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-08-30 11:56:51.433 user:  WARN 10722 --- [main] o.h.s.i.i.LuceneEmbeddedIndexFamilyImpl  : HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified: using LUCENE_CURRENT.
+2019-08-30 11:56:53.051 user:  INFO 10722 --- [main] .f.p.a.i.AttrSchemaServiceSpringBeanImpl : AttrSchema config file loaded from '/Users/jbruemmer/ProjectForge/attrschema.xml'
+2019-08-30 11:56:53.196 user:  INFO 10722 --- [main] o.p.f.persistence.api.HibernateUtils     : Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-08-30 11:56:53.196 user:  INFO 10722 --- [main] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-08-30 11:56:53.341 user:  INFO 10722 --- [main] o.p.framework.configuration.ConfigXml    : Using application home dir: /Users/jbruemmer/ProjectForge
+2019-08-30 11:56:53.401 user:  INFO 10722 --- [main] o.p.framework.configuration.ConfigXml    : holidays = [org.projectforge.framework.calendar.ConfigureHoliday@1a8b7423[label=<null>,id=XMAS_EVE,ignore=false,year=<null>,month=<null>,dayOfMonth=<null>,workingDay=true,workFraction=0.5], org.projectforge.framework.calendar.ConfigureHoliday@6fd53298[label=<null>,id=SYLVESTER,ignore=false,year=<null>,month=<null>,dayOfMonth=<null>,workingDay=true,workFraction=0.5]]
+2019-08-30 11:56:53.401 user:  INFO 10722 --- [main] o.p.framework.configuration.ConfigXml    : databaseDirectory = database
+2019-08-30 11:56:53.401 user:  INFO 10722 --- [main] o.p.framework.configuration.ConfigXml    : loggingDirectory = logs
+2019-08-30 11:56:53.401 user:  INFO 10722 --- [main] o.p.framework.configuration.ConfigXml    : workingDirectory = work
+2019-08-30 11:56:53.401 user:  INFO 10722 --- [main] o.p.framework.configuration.ConfigXml    : tempDirectory = tmp
+2019-08-30 11:56:53.401 user:  INFO 10722 --- [main] o.p.framework.configuration.ConfigXml    : portletMode = false
+2019-08-30 11:56:53.402 user:  INFO 10722 --- [main] o.p.framework.configuration.ConfigXml    : accountingConfig = org.projectforge.business.fibu.kost.AccountingConfig@16023bb2[businessAssessment=<null>,debitorsAccountNumberRangesString=<null>,creditorsAccountNumberRangesString=<null>]
+2019-08-30 11:56:53.406 user:  INFO 10722 --- [main] o.p.framework.configuration.ConfigXml    : Config file '/Users/jbruemmer/ProjectForge/config.xml' successfully read.
+2019-08-30 11:56:53.406 user:  WARN 10722 --- [main] o.p.b.c.ConfigurationServiceImpl         : Can't read keystore file: jssecacerts
+2019-08-30 11:56:53.565 user:  INFO 10722 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-08-30 11:56:53.567 user:  INFO 10722 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:postgresql://localhost:15432/projectforge (PostgreSQL 11.2)
+2019-08-30 11:56:53.577 user:  WARN 10722 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 11.2 is newer than this version of Flyway and support has not been tested.
+2019-08-30 11:56:53.586 user:  WARN 10722 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:dbmigration_plugin
+2019-08-30 11:56:53.707 user:  INFO 10722 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.093s)
+2019-08-30 11:56:53.718 user:  INFO 10722 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 7.0.0.3
+2019-08-30 11:56:53.719 user:  INFO 10722 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2019-08-30 11:56:54.371 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : Initializing GlobalConfiguration (ConfigurationDO parameters) ...
+2019-08-30 11:56:54.481 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: snoweffect.enabled=false
+2019-08-30 11:56:54.481 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: password.flag.checkChange=true
+2019-08-30 11:56:54.481 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: admin.multiTenancyEnabled=false
+2019-08-30 11:56:54.481 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: pluginsActivated=extendemployeedata,financialfairplay,ihkexport,licenseManagementPlugin,liquidplanning,marketing,memo,todo
+2019-08-30 11:56:54.481 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: vacation.lastyear.enddate=31.03.
+2019-08-30 11:56:54.481 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: minPasswordLength=10
+2019-08-30 11:56:54.481 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: systemAdministratorEMail=admin@dev-null.com
+2019-08-30 11:56:54.481 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: messageOfTheDay=Please try user demo with password demo123. Have a lot of fun!
+2019-08-30 11:56:54.481 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : GlobalConfiguration: hr.emailaddress=hr@management.de
+2019-08-30 11:56:54.758 user:  INFO 10722 --- [main] o.apache.catalina.core.StandardContext   : Suspicious URL pattern: [/rs*] in context [/auth], see sections 12.1 and 12.2 of the Servlet specification
+2019-08-30 11:56:54.758 user:  INFO 10722 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter restUserFilter was not registered (possibly already registered?)
+2019-08-30 11:56:54.762 user:  INFO 10722 --- [main] o.projectforge.config.WebXMLInitializer  : **************************************************************************************************************************
+2019-08-30 11:56:54.762 user:  INFO 10722 --- [main] o.projectforge.config.WebXMLInitializer  : **************************************************************************************************************************
+2019-08-30 11:56:54.762 user:  INFO 10722 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                                                                                      **
+2019-08-30 11:56:54.762 user:  INFO 10722 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                      ATTENTION!                                                      **
+2019-08-30 11:56:54.762 user:  INFO 10722 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                                                                                      **
+2019-08-30 11:56:54.762 user:  INFO 10722 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                 Running in dev mode!                                                 **
+2019-08-30 11:56:54.762 user:  INFO 10722 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                                                                                      **
+2019-08-30 11:56:54.762 user:  INFO 10722 --- [main] o.projectforge.config.WebXMLInitializer  : **                             Don't deliver this app in dev mode due to security reasons!                              **
+2019-08-30 11:56:54.763 user:  INFO 10722 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                (cross origin allowed)                                                **
+2019-08-30 11:56:54.763 user:  INFO 10722 --- [main] o.projectforge.config.WebXMLInitializer  : **                                                                                                                      **
+2019-08-30 11:56:54.763 user:  INFO 10722 --- [main] o.projectforge.config.WebXMLInitializer  : **************************************************************************************************************************
+2019-08-30 11:56:54.763 user:  INFO 10722 --- [main] o.projectforge.config.WebXMLInitializer  : **************************************************************************************************************************
+2019-08-30 11:56:56.093 user:  INFO 10722 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket extensions initializer
+2019-08-30 11:56:56.102 user:  INFO 10722 --- [main] org.apache.wicket.Application            : [wicket.app] init: Wicket core library initializer
+2019-08-30 11:56:56.104 user:  INFO 10722 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IBehaviorListener, method=public abstract void org.apache.wicket.behavior.IBehaviorListener.onRequest()]
+2019-08-30 11:56:56.104 user:  INFO 10722 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IFormSubmitListener, method=public abstract void org.apache.wicket.markup.html.form.IFormSubmitListener.onFormSubmitted()]
+2019-08-30 11:56:56.105 user:  INFO 10722 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=ILinkListener, method=public abstract void org.apache.wicket.markup.html.link.ILinkListener.onLinkClicked()]
+2019-08-30 11:56:56.105 user:  INFO 10722 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IOnChangeListener, method=public abstract void org.apache.wicket.markup.html.form.IOnChangeListener.onSelectionChanged()]
+2019-08-30 11:56:56.106 user:  INFO 10722 --- [main] o.a.wicket.RequestListenerInterface      : registered listener interface [RequestListenerInterface name=IResourceListener, method=public abstract void org.apache.wicket.IResourceListener.onResourceRequested()]
+2019-08-30 11:56:56.320 user:  INFO 10722 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.eed.ExtendEmployeeDataPlugin
+2019-08-30 11:56:56.336 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : Initializing Configuration[tenant=1] (ConfigurationDO parameters) ...
+2019-08-30 11:56:56.351 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.costConfigured=true
+2019-08-30 11:56:56.351 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: dateFormats=dd/MM/yyyy;MM/dd/yyyy;dd.MM.yyyy;yyyy-MM-dd
+2019-08-30 11:56:56.351 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: calendarDomain=projectforge.test.com
+2019-08-30 11:56:56.352 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: feedbackEMail=admin@dev-null.com
+2019-08-30 11:56:56.352 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: countryPhonePrefix=+49
+2019-08-30 11:56:56.352 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: timezone=sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-08-30 11:56:56.352 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: excelDateFormats=DD/MM/YYYY;MM/DD/YYYY;DD.MM.YYYY
+2019-08-30 11:56:56.352 user:  INFO 10722 --- [main] o.p.f.c.AbstractConfiguration            : Configuration[tenant=1]: fibu.defaultVAT=0.19000
+2019-08-30 11:56:56.362 user:  INFO 10722 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: extendemployeedata
+2019-08-30 11:56:56.444 user:  INFO 10722 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.ffp.FinancialFairPlayPlugin
+2019-08-30 11:56:56.460 user:  INFO 10722 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: financialfairplay
+2019-08-30 11:56:56.468 user:  INFO 10722 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.ihkexport.IhkExportPlugin
+2019-08-30 11:56:56.469 user:  INFO 10722 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: ihkexport
+2019-08-30 11:56:56.511 user:  INFO 10722 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.licensemanagement.LicenseManagementPlugin
+2019-08-30 11:56:56.520 user:  INFO 10722 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: licenseManagementPlugin
+2019-08-30 11:56:56.560 user:  INFO 10722 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.liquidityplanning.LiquidityPlanningPlugin
+2019-08-30 11:56:56.570 user:  INFO 10722 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: liquidplanning
+2019-08-30 11:56:56.643 user:  INFO 10722 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.marketing.MarketingPlugin
+2019-08-30 11:56:56.660 user:  INFO 10722 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: marketing
+2019-08-30 11:56:56.701 user:  INFO 10722 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.memo.MemoPlugin
+2019-08-30 11:56:56.711 user:  INFO 10722 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: memo
+2019-08-30 11:56:56.756 user:  INFO 10722 --- [main] o.p.plugins.core.AbstractPlugin          : Initializing plugin: class org.projectforge.plugins.todo.ToDoPlugin
+2019-08-30 11:56:56.768 user:  INFO 10722 --- [main] o.p.p.core.impl.PluginAdminServiceImpl   : Plugin activated: todo
+2019-08-30 11:56:56.787 user:  INFO 10722 --- [main] o.p.continuousdb.SystemUpdater           : Checking for database updates...
+2019-08-30 11:56:56.787 user:  INFO 10722 --- [main] o.p.f.p.database.DatabaseCoreUpdates     : Running pre-check for ProjectForge version 6.16.0
+2019-08-30 11:56:56.789 user:  INFO 10722 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address LIMIT 1
+2019-08-30 11:56:56.792 user:  INFO 10722 --- [main] o.p.f.p.database.DatabaseService         : select * from t_address where uid is not null LIMIT 1
+2019-08-30 11:56:56.821 user:  INFO 10722 --- [main] o.p.continuousdb.SystemUpdater           : No database updates found (OK).
+2019-08-30 11:56:56.825 user:  INFO 10722 --- [main] o.a.wicket.protocol.http.WebApplication  : [wicket.app] Started Wicket version 7.10.0 in DEPLOYMENT mode
+2019-08-30 11:56:56.878 user:  INFO 10722 --- [main] org.projectforge.business.login.Login    : LoginHandler org.projectforge.business.login.LoginDefaultHandler registered.
+2019-08-30 11:56:58.139 user:  INFO 10722 --- [main] org.projectforge.storage.StorageClient   : No storageConfig given in config.xml. Storage not available.
+2019-08-30 11:56:58.519 user:  INFO 10722 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5938638f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4df62e64, org.springframework.security.web.header.HeaderWriterFilter@366558a2, org.springframework.security.web.csrf.CsrfFilter@451211cf, org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter@3bd8032e, org.springframework.security.web.authentication.logout.LogoutFilter@3ecf69eb, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter@3de7e572, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2259490, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a1f5e2e, org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter@5e0c445f, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter@2536edc3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e0c6e2c, org.springframework.security.web.session.SessionManagementFilter@7ec594eb, org.springframework.security.web.access.ExceptionTranslationFilter@5234f6c5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38f0bba]
+2019-08-30 11:56:58.693 user:  INFO 10722 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-30 11:56:59.066 user:  INFO 10722 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-08-30 11:57:00.118 user:  INFO 10722 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-08-30 11:57:01.148 user:  INFO 10722 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/auth'
+2019-08-30 11:57:01.152 user:  INFO 10722 --- [main] o.p.start.ProjectForgeApplication        : Started ProjectForgeApplication in 20.767 seconds (JVM running for 23.33)
+2019-08-30 11:57:01.155 user:  INFO 10722 --- [main] org.projectforge.ProjectForgeApp         : Initializing...
+2019-08-30 11:57:01.155 user:  INFO 10722 --- [main] org.projectforge.ProjectForgeApp         : Default TimeZone is: sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+2019-08-30 11:57:01.155 user:  INFO 10722 --- [main] org.projectforge.ProjectForgeApp         : user.timezone is: UTC
+2019-08-30 11:57:01.157 user:  INFO 10722 --- [main] org.projectforge.ProjectForgeApp         : ProjectForge 7.0-SNAPSHOT (2019-08-28 10:50) initialized.
+2019-08-30 11:57:01.160 user:  INFO 10722 --- [main] org.projectforge.ProjectForgeApp         : **************************************************************************************************************************
+2019-08-30 11:57:01.160 user:  INFO 10722 --- [main] org.projectforge.ProjectForgeApp         : *                                                                                                                        *
+2019-08-30 11:57:01.160 user:  INFO 10722 --- [main] org.projectforge.ProjectForgeApp         : *                             ProjectForge is now available (up and running): localhost:8080                             *
+2019-08-30 11:57:01.160 user:  INFO 10722 --- [main] org.projectforge.ProjectForgeApp         : *                                        Configured domain: http://localhost:8080                                        *
+2019-08-30 11:57:01.160 user:  INFO 10722 --- [main] org.projectforge.ProjectForgeApp         : *                                                                                                                        *
+2019-08-30 11:57:01.160 user:  INFO 10722 --- [main] org.projectforge.ProjectForgeApp         : **************************************************************************************************************************
+2019-08-30 11:57:36.545 user:  INFO 10722 --- [http-nio-127.0.0.1-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-30 11:57:36.546 user:  INFO 10722 --- [http-nio-127.0.0.1-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-30 11:57:36.557 user:  INFO 10722 --- [http-nio-127.0.0.1-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-08-30 11:59:59.996 user:  INFO 10722 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-08-30 11:59:59.997 user:  INFO 10722 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-08-30 12:00:00.017 user:  WARN 10722 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 12:00:00.034 user:  INFO 10722 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 57 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-08-30 12:00:00.035 user:  WARN 10722 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 12:00:00.091 user:  INFO 10722 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-08-30 12:00:00.094 user:  INFO 10722 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-08-30 12:00:00.095 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 12:00:00.095 user:  INFO 10722 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 12:00:00.095 user:  WARN 10722 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 12:00:00.100 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 12:14:59.969 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 12:14:59.972 user:  INFO 10722 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 12:14:59.973 user:  WARN 10722 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 12:14:59.977 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 12:29:59.970 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 12:29:59.971 user:  INFO 10722 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 12:29:59.971 user:  WARN 10722 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 12:29:59.977 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 12:44:59.973 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 12:44:59.974 user:  INFO 10722 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 12:44:59.974 user:  WARN 10722 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 12:44:59.978 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 12:59:59.879 user:  INFO 10722 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-08-30 12:59:59.879 user:  INFO 10722 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-08-30 12:59:59.885 user:  WARN 10722 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 12:59:59.887 user:  INFO 10722 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 57 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-08-30 12:59:59.887 user:  WARN 10722 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 12:59:59.890 user:  INFO 10722 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-08-30 12:59:59.891 user:  INFO 10722 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-08-30 12:59:59.970 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 12:59:59.970 user:  INFO 10722 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 12:59:59.971 user:  WARN 10722 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 12:59:59.973 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 13:14:59.971 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 13:14:59.972 user:  INFO 10722 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 13:14:59.973 user:  WARN 10722 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 13:14:59.977 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 13:29:59.973 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 13:29:59.974 user:  INFO 10722 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 13:29:59.975 user:  WARN 10722 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 13:29:59.981 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 13:44:59.970 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-08-30 13:44:59.971 user:  INFO 10722 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-08-30 13:44:59.972 user:  WARN 10722 --- [scheduling-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2019-08-30 13:44:59.984 user:  WARN 10722 --- [scheduling-1] org.postgresql.jdbc.PgConnection         : Validating connection.
+
+org.postgresql.util.PSQLException: FATAL: terminating connection due to unexpected postmaster exit
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+	at org.postgresql.jdbc.PgConnection.isValid(PgConnection.java:1364)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:153)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1988)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1918)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1896)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:936)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:339)
+	at org.hibernate.loader.Loader.doList(Loader.java:2693)
+	at org.hibernate.loader.Loader.doList(Loader.java:2676)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2510)
+	at org.hibernate.loader.Loader.list(Loader.java:2505)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:109)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1998)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:370)
+	at org.projectforge.framework.persistence.api.BaseDaoLegacyQueryBuilder.internalGetList(BaseDaoLegacyQueryBuilder.java:153)
+	at org.projectforge.framework.persistence.api.BaseDao.internalGetList(BaseDao.java:341)
+	at org.projectforge.framework.persistence.api.BaseDao$$FastClassBySpringCGLIB$$e4ab5c98.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.projectforge.business.teamcal.admin.TeamCalDao$$EnhancerBySpringCGLIB$$77d28279.internalGetList(<generated>)
+	at org.projectforge.business.teamcal.externalsubscription.TeamEventExternalSubscriptionCache.updateCache(TeamEventExternalSubscriptionCache.java:85)
+	at org.projectforge.business.jobs.ExternalCalendarSubscriptionJob.execute(ExternalCalendarSubscriptionJob.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-08-30 13:44:59.985 user:  WARN 10722 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1903b82 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2019-08-30 13:44:59.987 user:  WARN 10722 --- [scheduling-1] org.postgresql.jdbc.PgConnection         : Validating connection.
+
+org.postgresql.util.PSQLException: FATAL: terminating connection due to unexpected postmaster exit
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+	at org.postgresql.jdbc.PgConnection.isValid(PgConnection.java:1364)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:153)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1988)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1918)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1896)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:936)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:339)
+	at org.hibernate.loader.Loader.doList(Loader.java:2693)
+	at org.hibernate.loader.Loader.doList(Loader.java:2676)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2510)
+	at org.hibernate.loader.Loader.list(Loader.java:2505)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:109)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1998)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:370)
+	at org.projectforge.framework.persistence.api.BaseDaoLegacyQueryBuilder.internalGetList(BaseDaoLegacyQueryBuilder.java:153)
+	at org.projectforge.framework.persistence.api.BaseDao.internalGetList(BaseDao.java:341)
+	at org.projectforge.framework.persistence.api.BaseDao$$FastClassBySpringCGLIB$$e4ab5c98.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.projectforge.business.teamcal.admin.TeamCalDao$$EnhancerBySpringCGLIB$$77d28279.internalGetList(<generated>)
+	at org.projectforge.business.teamcal.externalsubscription.TeamEventExternalSubscriptionCache.updateCache(TeamEventExternalSubscriptionCache.java:85)
+	at org.projectforge.business.jobs.ExternalCalendarSubscriptionJob.execute(ExternalCalendarSubscriptionJob.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-08-30 13:44:59.988 user:  WARN 10722 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@37b75ec5 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2019-08-30 13:44:59.990 user:  WARN 10722 --- [scheduling-1] org.postgresql.jdbc.PgConnection         : Validating connection.
+
+org.postgresql.util.PSQLException: FATAL: terminating connection due to unexpected postmaster exit
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+	at org.postgresql.jdbc.PgConnection.isValid(PgConnection.java:1364)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:153)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1988)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1918)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1896)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:936)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:339)
+	at org.hibernate.loader.Loader.doList(Loader.java:2693)
+	at org.hibernate.loader.Loader.doList(Loader.java:2676)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2510)
+	at org.hibernate.loader.Loader.list(Loader.java:2505)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:109)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1998)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:370)
+	at org.projectforge.framework.persistence.api.BaseDaoLegacyQueryBuilder.internalGetList(BaseDaoLegacyQueryBuilder.java:153)
+	at org.projectforge.framework.persistence.api.BaseDao.internalGetList(BaseDao.java:341)
+	at org.projectforge.framework.persistence.api.BaseDao$$FastClassBySpringCGLIB$$e4ab5c98.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.projectforge.business.teamcal.admin.TeamCalDao$$EnhancerBySpringCGLIB$$77d28279.internalGetList(<generated>)
+	at org.projectforge.business.teamcal.externalsubscription.TeamEventExternalSubscriptionCache.updateCache(TeamEventExternalSubscriptionCache.java:85)
+	at org.projectforge.business.jobs.ExternalCalendarSubscriptionJob.execute(ExternalCalendarSubscriptionJob.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-08-30 13:44:59.991 user:  WARN 10722 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@526d03bf (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2019-08-30 13:44:59.994 user:  WARN 10722 --- [scheduling-1] org.postgresql.jdbc.PgConnection         : Validating connection.
+
+org.postgresql.util.PSQLException: FATAL: terminating connection due to unexpected postmaster exit
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+	at org.postgresql.jdbc.PgConnection.isValid(PgConnection.java:1364)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:153)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1988)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1918)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1896)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:936)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:339)
+	at org.hibernate.loader.Loader.doList(Loader.java:2693)
+	at org.hibernate.loader.Loader.doList(Loader.java:2676)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2510)
+	at org.hibernate.loader.Loader.list(Loader.java:2505)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:109)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1998)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:370)
+	at org.projectforge.framework.persistence.api.BaseDaoLegacyQueryBuilder.internalGetList(BaseDaoLegacyQueryBuilder.java:153)
+	at org.projectforge.framework.persistence.api.BaseDao.internalGetList(BaseDao.java:341)
+	at org.projectforge.framework.persistence.api.BaseDao$$FastClassBySpringCGLIB$$e4ab5c98.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.projectforge.business.teamcal.admin.TeamCalDao$$EnhancerBySpringCGLIB$$77d28279.internalGetList(<generated>)
+	at org.projectforge.business.teamcal.externalsubscription.TeamEventExternalSubscriptionCache.updateCache(TeamEventExternalSubscriptionCache.java:85)
+	at org.projectforge.business.jobs.ExternalCalendarSubscriptionJob.execute(ExternalCalendarSubscriptionJob.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-08-30 13:44:59.995 user:  WARN 10722 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@52216e5b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2019-08-30 13:44:59.997 user:  WARN 10722 --- [scheduling-1] org.postgresql.jdbc.PgConnection         : Validating connection.
+
+org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:333)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+	at org.postgresql.jdbc.PgConnection.isValid(PgConnection.java:1364)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:153)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1988)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1918)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1896)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:936)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:339)
+	at org.hibernate.loader.Loader.doList(Loader.java:2693)
+	at org.hibernate.loader.Loader.doList(Loader.java:2676)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2510)
+	at org.hibernate.loader.Loader.list(Loader.java:2505)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:109)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1998)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:370)
+	at org.projectforge.framework.persistence.api.BaseDaoLegacyQueryBuilder.internalGetList(BaseDaoLegacyQueryBuilder.java:153)
+	at org.projectforge.framework.persistence.api.BaseDao.internalGetList(BaseDao.java:341)
+	at org.projectforge.framework.persistence.api.BaseDao$$FastClassBySpringCGLIB$$e4ab5c98.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.projectforge.business.teamcal.admin.TeamCalDao$$EnhancerBySpringCGLIB$$77d28279.internalGetList(<generated>)
+	at org.projectforge.business.teamcal.externalsubscription.TeamEventExternalSubscriptionCache.updateCache(TeamEventExternalSubscriptionCache.java:85)
+	at org.projectforge.business.jobs.ExternalCalendarSubscriptionJob.execute(ExternalCalendarSubscriptionJob.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.EOFException: null
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:295)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1947)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	... 59 common frames omitted
+
+2019-08-30 13:44:59.998 user:  WARN 10722 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@369522c8 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2019-08-30 13:45:00.001 user:  WARN 10722 --- [scheduling-1] org.postgresql.jdbc.PgConnection         : Validating connection.
+
+org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:333)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+	at org.postgresql.jdbc.PgConnection.isValid(PgConnection.java:1364)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:153)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1988)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1918)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1896)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:936)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:339)
+	at org.hibernate.loader.Loader.doList(Loader.java:2693)
+	at org.hibernate.loader.Loader.doList(Loader.java:2676)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2510)
+	at org.hibernate.loader.Loader.list(Loader.java:2505)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:109)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1998)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:370)
+	at org.projectforge.framework.persistence.api.BaseDaoLegacyQueryBuilder.internalGetList(BaseDaoLegacyQueryBuilder.java:153)
+	at org.projectforge.framework.persistence.api.BaseDao.internalGetList(BaseDao.java:341)
+	at org.projectforge.framework.persistence.api.BaseDao$$FastClassBySpringCGLIB$$e4ab5c98.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.projectforge.business.teamcal.admin.TeamCalDao$$EnhancerBySpringCGLIB$$77d28279.internalGetList(<generated>)
+	at org.projectforge.business.teamcal.externalsubscription.TeamEventExternalSubscriptionCache.updateCache(TeamEventExternalSubscriptionCache.java:85)
+	at org.projectforge.business.jobs.ExternalCalendarSubscriptionJob.execute(ExternalCalendarSubscriptionJob.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.EOFException: null
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:295)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1947)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	... 59 common frames omitted
+
+2019-08-30 13:45:00.002 user:  WARN 10722 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3bd913a9 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2019-08-30 13:45:00.003 user:  WARN 10722 --- [scheduling-1] org.postgresql.jdbc.PgConnection         : Validating connection.
+
+org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:333)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+	at org.postgresql.jdbc.PgConnection.isValid(PgConnection.java:1364)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:153)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1988)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1918)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1896)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:936)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:339)
+	at org.hibernate.loader.Loader.doList(Loader.java:2693)
+	at org.hibernate.loader.Loader.doList(Loader.java:2676)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2510)
+	at org.hibernate.loader.Loader.list(Loader.java:2505)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:109)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1998)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:370)
+	at org.projectforge.framework.persistence.api.BaseDaoLegacyQueryBuilder.internalGetList(BaseDaoLegacyQueryBuilder.java:153)
+	at org.projectforge.framework.persistence.api.BaseDao.internalGetList(BaseDao.java:341)
+	at org.projectforge.framework.persistence.api.BaseDao$$FastClassBySpringCGLIB$$e4ab5c98.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.projectforge.business.teamcal.admin.TeamCalDao$$EnhancerBySpringCGLIB$$77d28279.internalGetList(<generated>)
+	at org.projectforge.business.teamcal.externalsubscription.TeamEventExternalSubscriptionCache.updateCache(TeamEventExternalSubscriptionCache.java:85)
+	at org.projectforge.business.jobs.ExternalCalendarSubscriptionJob.execute(ExternalCalendarSubscriptionJob.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.EOFException: null
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:295)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1947)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	... 59 common frames omitted
+
+2019-08-30 13:45:00.004 user:  WARN 10722 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1939f96 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2019-08-30 13:45:00.006 user:  WARN 10722 --- [scheduling-1] org.postgresql.jdbc.PgConnection         : Validating connection.
+
+org.postgresql.util.PSQLException: FATAL: terminating connection due to unexpected postmaster exit
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+	at org.postgresql.jdbc.PgConnection.isValid(PgConnection.java:1364)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:153)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1988)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1918)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1896)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:936)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:339)
+	at org.hibernate.loader.Loader.doList(Loader.java:2693)
+	at org.hibernate.loader.Loader.doList(Loader.java:2676)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2510)
+	at org.hibernate.loader.Loader.list(Loader.java:2505)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:109)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1998)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:370)
+	at org.projectforge.framework.persistence.api.BaseDaoLegacyQueryBuilder.internalGetList(BaseDaoLegacyQueryBuilder.java:153)
+	at org.projectforge.framework.persistence.api.BaseDao.internalGetList(BaseDao.java:341)
+	at org.projectforge.framework.persistence.api.BaseDao$$FastClassBySpringCGLIB$$e4ab5c98.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.projectforge.business.teamcal.admin.TeamCalDao$$EnhancerBySpringCGLIB$$77d28279.internalGetList(<generated>)
+	at org.projectforge.business.teamcal.externalsubscription.TeamEventExternalSubscriptionCache.updateCache(TeamEventExternalSubscriptionCache.java:85)
+	at org.projectforge.business.jobs.ExternalCalendarSubscriptionJob.execute(ExternalCalendarSubscriptionJob.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-08-30 13:45:00.007 user:  WARN 10722 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@58997a49 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2019-08-30 13:45:00.008 user:  WARN 10722 --- [scheduling-1] org.postgresql.jdbc.PgConnection         : Validating connection.
+
+org.postgresql.util.PSQLException: FATAL: terminating connection due to unexpected postmaster exit
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+	at org.postgresql.jdbc.PgConnection.isValid(PgConnection.java:1364)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:153)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1988)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1918)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1896)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:936)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:339)
+	at org.hibernate.loader.Loader.doList(Loader.java:2693)
+	at org.hibernate.loader.Loader.doList(Loader.java:2676)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2510)
+	at org.hibernate.loader.Loader.list(Loader.java:2505)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:109)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1998)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:370)
+	at org.projectforge.framework.persistence.api.BaseDaoLegacyQueryBuilder.internalGetList(BaseDaoLegacyQueryBuilder.java:153)
+	at org.projectforge.framework.persistence.api.BaseDao.internalGetList(BaseDao.java:341)
+	at org.projectforge.framework.persistence.api.BaseDao$$FastClassBySpringCGLIB$$e4ab5c98.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.projectforge.business.teamcal.admin.TeamCalDao$$EnhancerBySpringCGLIB$$77d28279.internalGetList(<generated>)
+	at org.projectforge.business.teamcal.externalsubscription.TeamEventExternalSubscriptionCache.updateCache(TeamEventExternalSubscriptionCache.java:85)
+	at org.projectforge.business.jobs.ExternalCalendarSubscriptionJob.execute(ExternalCalendarSubscriptionJob.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-08-30 13:45:00.009 user:  WARN 10722 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@478590f0 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2019-08-30 13:45:00.012 user:  WARN 10722 --- [scheduling-1] org.postgresql.jdbc.PgConnection         : Validating connection.
+
+org.postgresql.util.PSQLException: FATAL: terminating connection due to unexpected postmaster exit
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+	at org.postgresql.jdbc.PgConnection.isValid(PgConnection.java:1364)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:153)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1988)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1918)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1896)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:936)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:339)
+	at org.hibernate.loader.Loader.doList(Loader.java:2693)
+	at org.hibernate.loader.Loader.doList(Loader.java:2676)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2510)
+	at org.hibernate.loader.Loader.list(Loader.java:2505)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:109)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1998)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:370)
+	at org.projectforge.framework.persistence.api.BaseDaoLegacyQueryBuilder.internalGetList(BaseDaoLegacyQueryBuilder.java:153)
+	at org.projectforge.framework.persistence.api.BaseDao.internalGetList(BaseDao.java:341)
+	at org.projectforge.framework.persistence.api.BaseDao$$FastClassBySpringCGLIB$$e4ab5c98.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.projectforge.business.teamcal.admin.TeamCalDao$$EnhancerBySpringCGLIB$$77d28279.internalGetList(<generated>)
+	at org.projectforge.business.teamcal.externalsubscription.TeamEventExternalSubscriptionCache.updateCache(TeamEventExternalSubscriptionCache.java:85)
+	at org.projectforge.business.jobs.ExternalCalendarSubscriptionJob.execute(ExternalCalendarSubscriptionJob.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-08-30 13:45:00.012 user:  WARN 10722 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@343297f2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2019-08-30 13:45:00.015 user:  WARN 10722 --- [scheduling-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
+2019-08-30 13:45:00.015 user: ERROR 10722 --- [scheduling-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "t_calendar" does not exist
+  Position: 814
+2019-08-30 13:45:00.024 user: ERROR 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : Exception while executing ExternalCalendarSubscriptionJob: could not extract ResultSet
+
+org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:106)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:69)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2171)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1934)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1896)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:936)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:339)
+	at org.hibernate.loader.Loader.doList(Loader.java:2693)
+	at org.hibernate.loader.Loader.doList(Loader.java:2676)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2510)
+	at org.hibernate.loader.Loader.list(Loader.java:2505)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:109)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1998)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:370)
+	at org.projectforge.framework.persistence.api.BaseDaoLegacyQueryBuilder.internalGetList(BaseDaoLegacyQueryBuilder.java:153)
+	at org.projectforge.framework.persistence.api.BaseDao.internalGetList(BaseDao.java:341)
+	at org.projectforge.framework.persistence.api.BaseDao$$FastClassBySpringCGLIB$$e4ab5c98.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.projectforge.business.teamcal.admin.TeamCalDao$$EnhancerBySpringCGLIB$$77d28279.internalGetList(<generated>)
+	at org.projectforge.business.teamcal.externalsubscription.TeamEventExternalSubscriptionCache.updateCache(TeamEventExternalSubscriptionCache.java:85)
+	at org.projectforge.business.jobs.ExternalCalendarSubscriptionJob.execute(ExternalCalendarSubscriptionJob.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "t_calendar" does not exist
+  Position: 814
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:118)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:60)
+	... 42 common frames omitted
+
+2019-08-30 13:45:00.025 user:  INFO 10722 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-08-30 13:45:25.730 user:  INFO 10722 --- [Thread-45] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-08-30 13:45:25.732 user:  INFO 10722 --- [Thread-45] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-30 13:45:25.735 user:  INFO 10722 --- [Thread-45] o.p.business.user.UserPrefCache          : Syncing all user preferences to database.
+2019-08-30 13:45:25.735 user:  INFO 10722 --- [Thread-45] o.p.business.user.UserPrefCache          : Flushing all user preferences to data-base....
+2019-08-30 13:45:25.736 user:  INFO 10722 --- [Thread-45] o.p.business.user.UserPrefCache          : Flushing of user preferences to data-base done.
+2019-08-30 13:45:25.736 user:  INFO 10722 --- [Thread-45] org.projectforge.ProjectForgeApp         : Shutdown...
+2019-08-30 13:45:25.737 user:  INFO 10722 --- [Thread-45] o.p.continuousdb.DatabaseSupport         : Setting database dialect to: org.hibernate.dialect.PostgreSQLDialect
+2019-08-30 13:45:25.737 user:  INFO 10722 --- [Thread-45] org.projectforge.ProjectForgeApp         : Shutdown completed.
+2019-08-30 13:45:25.737 user:  INFO 10722 --- [Thread-45] o.p.b.user.UserXmlPreferencesCache       : Syncing all user preferences to database.
+2019-08-30 13:45:25.737 user:  INFO 10722 --- [Thread-45] o.p.b.user.UserXmlPreferencesCache       : Flushing all user preferences to data-base....
+2019-08-30 13:45:25.737 user:  INFO 10722 --- [Thread-45] o.p.b.user.UserXmlPreferencesCache       : Flushing of user preferences to data-base done.
+2019-08-30 13:45:25.772 user:  INFO 10722 --- [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-08-30 13:45:25.776 user:  INFO 10722 --- [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-08-30 13:45:25.805 user:  INFO 10722 --- [Thread-45] org.apache.wicket.Application            : [wicket.app] destroy: Wicket extensions initializer
+2019-08-30 13:45:25.806 user:  INFO 10722 --- [Thread-45] org.apache.wicket.Application            : [wicket.app] destroy: Wicket core library initializer

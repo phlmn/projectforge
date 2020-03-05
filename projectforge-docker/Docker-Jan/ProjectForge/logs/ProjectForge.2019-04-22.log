@@ -1,0 +1,554 @@
+2019-04-22 00:14:59.970 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 00:14:59.983 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 00:14:59.991 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 00:29:59.970 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 00:29:59.972 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 00:29:59.984 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 00:44:59.972 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 00:44:59.973 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 00:44:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 00:59:59.875 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 00:59:59.876 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 00:59:59.883 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 00:59:59.886 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 00:59:59.887 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 00:59:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 00:59:59.975 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 00:59:59.981 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 01:14:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 01:14:59.970 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 01:14:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 01:29:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 01:29:59.980 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 01:29:59.985 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 01:44:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 01:44:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 01:44:59.986 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 01:59:59.877 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 01:59:59.877 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 01:59:59.882 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 01:59:59.886 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 01:59:59.887 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 01:59:59.977 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 01:59:59.977 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 01:59:59.981 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 02:14:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 02:14:59.970 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 02:14:59.973 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 02:29:56.961 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronNightlyJob         : Nightly job started.
+2019-04-22 02:29:56.962 user:  INFO 6368 --- [scheduling-1] o.p.f.p.h.HibernateSearchReindexer       : Re-index job started.
+2019-04-22 02:29:56.971 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.skillmatrix.TrainingAttendeeDO with scrollMode=false...
+2019-04-22 02:29:56.972 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.skillmatrix.TrainingAttendeeDO done.
+2019-04-22 02:29:56.975 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting (mass) re-indexing of 21 entries of type org.projectforge.business.timesheet.TimesheetDO...
+2019-04-22 02:29:57.086 user:  INFO 6368 --- [Hibernate Search: identifierloader-1] o.h.s.b.i.SimpleIndexingProgressMonitor  : HSEARCH000027: Going to reindex 21 entities
+2019-04-22 02:29:57.106 user:  INFO 6368 --- [Hibernate Search: entityloader-1] o.p.b.multitenancy.TenantRegistryMap     : Refreshing org.projectforge.business.multitenancy.TenantRegistry...
+2019-04-22 02:29:57.107 user:  INFO 6368 --- [Hibernate Search: entityloader-1] o.p.b.multitenancy.TenantRegistryMap     : Refreshing of org.projectforge.business.multitenancy.TenantRegistry done.
+2019-04-22 02:29:57.109 user:  INFO 6368 --- [Hibernate Search: entityloader-1] org.projectforge.business.task.TaskTree  : Initializing task tree ...
+2019-04-22 02:29:57.156 user:  INFO 6368 --- [Hibernate Search: entityloader-1] org.projectforge.business.task.TaskTree  : Initializing task tree done.
+2019-04-22 02:29:57.215 user:  INFO 6368 --- [scheduling-1] o.h.s.b.i.SimpleIndexingProgressMonitor  : HSEARCH000028: Reindexed 21 entities
+2019-04-22 02:29:57.215 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 21 objects of type org.projectforge.business.timesheet.TimesheetDO done.
+2019-04-22 02:29:57.218 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 5 entries (total number) of type org.projectforge.business.fibu.AuftragsPositionDO with scrollMode=false...
+2019-04-22 02:29:57.268 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 25 objects of type org.projectforge.business.fibu.AuftragsPositionDO done.
+2019-04-22 02:29:57.342 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 7 entries (total number) of type org.projectforge.business.teamcal.event.model.TeamEventDO with scrollMode=false...
+2019-04-22 02:29:57.375 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 7 objects of type org.projectforge.business.teamcal.event.model.TeamEventDO done.
+2019-04-22 02:29:57.384 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '1' not found in UserGroupCache. groupIds string was: 1,2
+2019-04-22 02:29:57.385 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 1,2
+2019-04-22 02:29:57.386 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '1' not found in UserGroupCache. groupIds string was: 1,2
+2019-04-22 02:29:57.387 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 1,2
+2019-04-22 02:29:57.389 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2
+2019-04-22 02:29:57.390 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '1' not found in UserGroupCache. groupIds string was: 1,2
+2019-04-22 02:29:57.391 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 1,2
+2019-04-22 02:29:57.392 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2
+2019-04-22 02:29:57.393 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2,1
+2019-04-22 02:29:57.394 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '1' not found in UserGroupCache. groupIds string was: 2,1
+2019-04-22 02:29:57.394 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2
+2019-04-22 02:29:57.428 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.EingangsrechnungsPositionDO with scrollMode=false...
+2019-04-22 02:29:57.441 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 2 objects of type org.projectforge.business.fibu.EingangsrechnungsPositionDO done.
+2019-04-22 02:29:57.471 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.memo.MemoDO with scrollMode=false...
+2019-04-22 02:29:57.471 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.memo.MemoDO done.
+2019-04-22 02:29:57.473 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.fibu.EmployeeSalaryDO with scrollMode=false...
+2019-04-22 02:29:57.474 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.fibu.EmployeeSalaryDO done.
+2019-04-22 02:29:57.476 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 20 entries (total number) of type org.projectforge.framework.configuration.entities.ConfigurationDO with scrollMode=false...
+2019-04-22 02:29:57.493 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 20 objects of type org.projectforge.framework.configuration.entities.ConfigurationDO done.
+2019-04-22 02:29:57.529 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.skillmatrix.TrainingDO with scrollMode=false...
+2019-04-22 02:29:57.530 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.skillmatrix.TrainingDO done.
+2019-04-22 02:29:57.532 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 60 entries (total number) of type org.projectforge.framework.access.AccessEntryDO with scrollMode=false...
+2019-04-22 02:29:57.540 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 60 objects of type org.projectforge.framework.access.AccessEntryDO done.
+2019-04-22 02:29:57.563 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.humanresources.HRPlanningDO with scrollMode=false...
+2019-04-22 02:29:57.566 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.humanresources.HRPlanningDO done.
+2019-04-22 02:29:57.568 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 10 entries (total number) of type org.projectforge.business.fibu.kost.Kost2DO with scrollMode=false...
+2019-04-22 02:29:57.584 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 10 objects of type org.projectforge.business.fibu.kost.Kost2DO done.
+2019-04-22 02:29:57.664 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.ProjektDO with scrollMode=false...
+2019-04-22 02:29:57.674 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 2 objects of type org.projectforge.business.fibu.ProjektDO done.
+2019-04-22 02:29:57.736 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 9 entries (total number) of type org.projectforge.framework.persistence.user.entities.UserPrefDO with scrollMode=false...
+2019-04-22 02:29:57.748 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 17 objects of type org.projectforge.framework.persistence.user.entities.UserPrefDO done.
+2019-04-22 02:29:57.786 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.orga.PostausgangDO with scrollMode=false...
+2019-04-22 02:29:57.787 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.orga.PostausgangDO done.
+2019-04-22 02:29:57.789 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 1 entries (total number) of type org.projectforge.business.address.AddressbookDO with scrollMode=false...
+2019-04-22 02:29:57.799 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 1 objects of type org.projectforge.business.address.AddressbookDO done.
+2019-04-22 02:29:57.832 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 22 entries (total number) of type org.projectforge.business.task.TaskDO with scrollMode=false...
+2019-04-22 02:29:57.857 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 22 objects of type org.projectforge.business.task.TaskDO done.
+2019-04-22 02:29:57.891 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.todo.ToDoDO with scrollMode=false...
+2019-04-22 02:29:57.892 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.todo.ToDoDO done.
+2019-04-22 02:29:57.894 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.meb.MebEntryDO with scrollMode=false...
+2019-04-22 02:29:57.895 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.meb.MebEntryDO done.
+2019-04-22 02:29:57.897 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.fibu.kost.BuchungssatzDO with scrollMode=false...
+2019-04-22 02:29:57.903 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.fibu.kost.BuchungssatzDO done.
+2019-04-22 02:29:57.906 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.liquidityplanning.LiquidityEntryDO with scrollMode=false...
+2019-04-22 02:29:57.908 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.liquidityplanning.LiquidityEntryDO done.
+2019-04-22 02:29:57.909 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 3 entries (total number) of type org.projectforge.business.fibu.AuftragDO with scrollMode=false...
+2019-04-22 02:29:57.938 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 25 objects of type org.projectforge.business.fibu.AuftragDO done.
+2019-04-22 02:29:57.976 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.address.PersonalAddressDO with scrollMode=false...
+2019-04-22 02:29:57.977 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.address.PersonalAddressDO done.
+2019-04-22 02:29:57.979 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.vacation.model.VacationDO with scrollMode=false...
+2019-04-22 02:29:57.985 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.vacation.model.VacationDO done.
+2019-04-22 02:29:57.987 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting (mass) re-indexing of 41 entries of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO...
+2019-04-22 02:29:57.996 user:  INFO 6368 --- [Hibernate Search: identifierloader-1] o.h.s.b.i.SimpleIndexingProgressMonitor  : HSEARCH000027: Going to reindex 41 entities
+2019-04-22 02:29:58.041 user:  INFO 6368 --- [scheduling-1] o.h.s.b.i.SimpleIndexingProgressMonitor  : HSEARCH000028: Reindexed 41 entities
+2019-04-22 02:29:58.041 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 41 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 02:29:58.045 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.marketing.AddressCampaignValueDO with scrollMode=false...
+2019-04-22 02:29:58.046 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.marketing.AddressCampaignValueDO done.
+2019-04-22 02:29:58.049 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 4 entries (total number) of type org.projectforge.business.teamcal.admin.model.TeamCalDO with scrollMode=false...
+2019-04-22 02:29:58.082 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 4 objects of type org.projectforge.business.teamcal.admin.model.TeamCalDO done.
+2019-04-22 02:29:58.088 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2
+2019-04-22 02:29:58.088 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '1' not found in UserGroupCache. groupIds string was: 1,2
+2019-04-22 02:29:58.089 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 1,2
+2019-04-22 02:29:58.090 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2
+2019-04-22 02:29:58.091 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '2' not found in UserGroupCache. groupIds string was: 2,1
+2019-04-22 02:29:58.091 user:  WARN 6368 --- [scheduling-1] b.t.a.m.HibernateSearchUsersGroupsBridge : Group with id '1' not found in UserGroupCache. groupIds string was: 2,1
+2019-04-22 02:29:58.133 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 1 entries (total number) of type org.projectforge.business.gantt.GanttChartDO with scrollMode=false...
+2019-04-22 02:29:58.143 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 1 objects of type org.projectforge.business.gantt.GanttChartDO done.
+2019-04-22 02:29:58.185 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 11 entries (total number) of type org.projectforge.framework.persistence.user.entities.PFUserDO with scrollMode=false...
+2019-04-22 02:29:58.195 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 37 objects of type org.projectforge.framework.persistence.user.entities.PFUserDO done.
+2019-04-22 02:29:58.241 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 29 entries (total number) of type org.projectforge.framework.persistence.user.entities.UserRightDO with scrollMode=false...
+2019-04-22 02:29:58.353 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 29 objects of type org.projectforge.framework.persistence.user.entities.UserRightDO done.
+2019-04-22 02:29:58.406 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.skillmatrix.SkillRatingDO with scrollMode=false...
+2019-04-22 02:29:58.407 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.skillmatrix.SkillRatingDO done.
+2019-04-22 02:29:58.411 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.EingangsrechnungDO with scrollMode=false...
+2019-04-22 02:29:58.413 user:  INFO 6368 --- [scheduling-1] o.p.f.c.AbstractConfiguration            : Initializing Configuration[tenant=1] (ConfigurationDO parameters) ...
+2019-04-22 02:29:58.423 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 2 objects of type org.projectforge.business.fibu.EingangsrechnungDO done.
+2019-04-22 02:29:58.424 user: ERROR 6368 --- [scheduling-1] o.p.b.f.HibernateSearchPaymentTypeBridge : PaymentType object is null.
+2019-04-22 02:29:58.424 user: ERROR 6368 --- [scheduling-1] o.p.b.f.HibernateSearchPaymentTypeBridge : PaymentType object is null.
+2019-04-22 02:29:58.503 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 15 entries (total number) of type org.projectforge.framework.access.GroupTaskAccessDO with scrollMode=false...
+2019-04-22 02:29:58.534 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 440 objects of type org.projectforge.framework.access.GroupTaskAccessDO done.
+2019-04-22 02:29:58.598 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 4 entries (total number) of type org.projectforge.business.book.BookDO with scrollMode=false...
+2019-04-22 02:29:58.608 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 4 objects of type org.projectforge.business.book.BookDO done.
+2019-04-22 02:29:58.662 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.EmployeeTimedDO with scrollMode=false...
+2019-04-22 02:29:58.674 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 2 objects of type org.projectforge.business.fibu.EmployeeTimedDO done.
+2019-04-22 02:29:58.725 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.licensemanagement.LicenseDO with scrollMode=false...
+2019-04-22 02:29:58.726 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.licensemanagement.LicenseDO done.
+2019-04-22 02:29:58.729 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 6 entries (total number) of type org.projectforge.business.fibu.kost.KostZuweisungDO with scrollMode=false...
+2019-04-22 02:29:58.768 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 22 objects of type org.projectforge.business.fibu.kost.KostZuweisungDO done.
+2019-04-22 02:29:58.796 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 1 entries (total number) of type org.projectforge.framework.persistence.user.entities.TenantDO with scrollMode=false...
+2019-04-22 02:29:58.802 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 1 objects of type org.projectforge.framework.persistence.user.entities.TenantDO done.
+2019-04-22 02:29:58.865 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.orga.VisitorbookTimedDO with scrollMode=false...
+2019-04-22 02:29:58.867 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.orga.VisitorbookTimedDO done.
+2019-04-22 02:29:58.869 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.RechnungDO with scrollMode=false...
+2019-04-22 02:29:58.903 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 10 objects of type org.projectforge.business.fibu.RechnungDO done.
+2019-04-22 02:29:58.944 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.marketing.AddressCampaignDO with scrollMode=false...
+2019-04-22 02:29:58.945 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.marketing.AddressCampaignDO done.
+2019-04-22 02:29:58.947 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 3 entries (total number) of type org.projectforge.business.scripting.ScriptDO with scrollMode=false...
+2019-04-22 02:29:58.958 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 3 objects of type org.projectforge.business.scripting.ScriptDO done.
+2019-04-22 02:29:58.985 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 6 entries (total number) of type org.projectforge.business.fibu.kost.Kost2ArtDO with scrollMode=false...
+2019-04-22 02:29:58.992 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 6 objects of type org.projectforge.business.fibu.kost.Kost2ArtDO done.
+2019-04-22 02:29:59.019 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.EmployeeDO with scrollMode=false...
+2019-04-22 02:29:59.031 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 17 objects of type org.projectforge.business.fibu.EmployeeDO done.
+2019-04-22 02:29:59.115 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.RechnungsPositionDO with scrollMode=false...
+2019-04-22 02:29:59.131 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 10 objects of type org.projectforge.business.fibu.RechnungsPositionDO done.
+2019-04-22 02:29:59.162 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.plugins.skillmatrix.SkillDO with scrollMode=false...
+2019-04-22 02:29:59.163 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.plugins.skillmatrix.SkillDO done.
+2019-04-22 02:29:59.165 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.orga.VisitorbookDO with scrollMode=false...
+2019-04-22 02:29:59.169 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.orga.VisitorbookDO done.
+2019-04-22 02:29:59.171 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.orga.ContractDO with scrollMode=false...
+2019-04-22 02:29:59.172 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.orga.ContractDO done.
+2019-04-22 02:29:59.174 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.teamcal.event.model.TeamEventAttachmentDO with scrollMode=false...
+2019-04-22 02:29:59.174 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.teamcal.event.model.TeamEventAttachmentDO done.
+2019-04-22 02:29:59.176 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.teamcal.event.model.TeamEventAttendeeDO with scrollMode=false...
+2019-04-22 02:29:59.177 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.teamcal.event.model.TeamEventAttendeeDO done.
+2019-04-22 02:29:59.179 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 1 entries (total number) of type org.projectforge.business.fibu.KontoDO with scrollMode=false...
+2019-04-22 02:29:59.184 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 1 objects of type org.projectforge.business.fibu.KontoDO done.
+2019-04-22 02:29:59.214 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.address.AddressDO with scrollMode=false...
+2019-04-22 02:29:59.231 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 2 objects of type org.projectforge.business.address.AddressDO done.
+2019-04-22 02:29:59.267 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 2 entries (total number) of type org.projectforge.business.fibu.KundeDO with scrollMode=false...
+2019-04-22 02:29:59.274 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 2 objects of type org.projectforge.business.fibu.KundeDO done.
+2019-04-22 02:29:59.304 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 3 entries (total number) of type org.projectforge.business.fibu.kost.Kost1DO with scrollMode=false...
+2019-04-22 02:29:59.313 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 3 objects of type org.projectforge.business.fibu.kost.Kost1DO done.
+2019-04-22 02:29:59.380 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 19 entries (total number) of type org.projectforge.framework.persistence.user.entities.GroupDO with scrollMode=false...
+2019-04-22 02:29:59.399 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 194 objects of type org.projectforge.framework.persistence.user.entities.GroupDO done.
+2019-04-22 02:29:59.471 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.humanresources.HRPlanningEntryDO with scrollMode=false...
+2019-04-22 02:29:59.473 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.humanresources.HRPlanningEntryDO done.
+2019-04-22 02:29:59.475 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 0 entries (total number) of type org.projectforge.business.orga.PosteingangDO with scrollMode=false...
+2019-04-22 02:29:59.475 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.business.orga.PosteingangDO done.
+2019-04-22 02:29:59.476 user:  INFO 6368 --- [scheduling-1] o.p.f.p.h.HibernateSearchReindexer       : Re-index job finished successfully.
+2019-04-22 02:29:59.476 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronNightlyJob         : Nightly job job finished.
+2019-04-22 02:29:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 02:29:59.975 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 02:29:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 02:44:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 02:44:59.978 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 02:44:59.982 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 02:59:59.874 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 02:59:59.875 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 02:59:59.882 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 02:59:59.885 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 02:59:59.886 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 02:59:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 02:59:59.975 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 02:59:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 03:14:59.977 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 03:14:59.978 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 03:14:59.981 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 03:29:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 03:29:59.977 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 03:29:59.984 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 03:44:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 03:44:59.976 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 03:44:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 03:59:59.881 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 03:59:59.882 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 03:59:59.889 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 03:59:59.891 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 03:59:59.892 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 03:59:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 03:59:59.978 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 03:59:59.981 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 04:14:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 04:14:59.978 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 04:14:59.980 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 04:29:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 04:29:59.980 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 04:29:59.987 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 04:44:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 04:44:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 04:44:59.982 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 04:59:59.878 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 04:59:59.879 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 04:59:59.885 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 04:59:59.887 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 04:59:59.888 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 04:59:59.968 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 04:59:59.968 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 04:59:59.971 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 05:14:59.971 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 05:14:59.972 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 05:14:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 05:29:59.973 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 05:29:59.974 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 05:29:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 05:44:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 05:44:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 05:44:59.982 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 05:59:59.881 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 05:59:59.882 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 05:59:59.889 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 05:59:59.892 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 05:59:59.894 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 05:59:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 05:59:59.975 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 05:59:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 06:14:59.972 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 06:14:59.973 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 06:14:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 06:29:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 06:29:59.970 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 06:29:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 06:44:59.973 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 06:44:59.974 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 06:44:59.977 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 06:59:59.874 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 06:59:59.875 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 06:59:59.882 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 06:59:59.884 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 06:59:59.885 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 06:59:59.972 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 06:59:59.972 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 06:59:59.977 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 07:14:59.970 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 07:14:59.971 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 07:14:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 07:29:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 07:29:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 07:29:59.983 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 07:44:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 07:44:59.970 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 07:44:59.973 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 07:59:59.874 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 07:59:59.875 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 07:59:59.881 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 07:59:59.883 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 07:59:59.884 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 07:59:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 07:59:59.969 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 07:59:59.973 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 08:14:59.970 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 08:14:59.972 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 08:14:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 08:29:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 08:29:59.980 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 08:29:59.985 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 08:44:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 08:44:59.976 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 08:44:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 08:59:59.874 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 08:59:59.875 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 08:59:59.881 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 08:59:59.884 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 08:59:59.885 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 08:59:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 08:59:59.970 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 08:59:59.973 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 09:14:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 09:14:59.974 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 09:14:59.977 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 09:29:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 09:29:59.980 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 09:29:59.984 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 09:44:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 09:44:59.970 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 09:44:59.972 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 09:59:59.883 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 09:59:59.884 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 09:59:59.893 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 09:59:59.895 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 09:59:59.896 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 09:59:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 09:59:59.975 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 09:59:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 10:14:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 10:14:59.980 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 10:14:59.982 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 10:29:59.977 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 10:29:59.978 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 10:29:59.983 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 10:44:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 10:44:59.975 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 10:44:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 10:59:59.875 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 10:59:59.876 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 10:59:59.881 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 10:59:59.884 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 10:59:59.885 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 10:59:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 10:59:59.976 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 10:59:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 11:14:59.972 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 11:14:59.973 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 11:14:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 11:29:59.973 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 11:29:59.974 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 11:29:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 11:44:59.970 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 11:44:59.971 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 11:44:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 11:59:59.881 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 11:59:59.883 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 11:59:59.888 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 11:59:59.891 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 11:59:59.892 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 11:59:59.972 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 11:59:59.972 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 11:59:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 12:14:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 12:14:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 12:14:59.985 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 12:29:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 12:29:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 12:29:59.984 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 12:44:59.970 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 12:44:59.971 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 12:44:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 12:59:59.880 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 12:59:59.882 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 12:59:59.892 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 12:59:59.894 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 12:59:59.895 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 12:59:59.968 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 12:59:59.968 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 12:59:59.971 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 13:14:59.972 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 13:14:59.973 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 13:14:59.977 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 13:29:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 13:29:59.976 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 13:29:59.981 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 13:44:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 13:44:59.975 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 13:44:59.980 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 13:59:59.878 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 13:59:59.878 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 13:59:59.884 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 13:59:59.886 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 13:59:59.887 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 13:59:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 13:59:59.978 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 13:59:59.981 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 14:14:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 14:14:59.975 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 14:14:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 14:29:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 14:29:59.971 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 14:29:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 14:44:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 14:44:59.977 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 14:44:59.982 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 14:59:59.875 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 14:59:59.877 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 14:59:59.884 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 14:59:59.888 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 14:59:59.890 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 14:59:59.970 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 14:59:59.970 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 14:59:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 15:14:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 15:14:59.970 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 15:14:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 15:29:59.973 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 15:29:59.974 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 15:29:59.980 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 15:44:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 15:44:59.970 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 15:44:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 15:59:59.873 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 15:59:59.874 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 15:59:59.881 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 15:59:59.884 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 15:59:59.886 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 15:59:59.973 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 15:59:59.973 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 15:59:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 16:14:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 16:14:59.977 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 16:14:59.981 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 16:29:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 16:29:59.977 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 16:29:59.982 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 16:44:59.977 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 16:44:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 16:44:59.984 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 16:59:59.880 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 16:59:59.881 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 16:59:59.888 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 16:59:59.890 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 16:59:59.891 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 16:59:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 16:59:59.969 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 16:59:59.972 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 17:14:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 17:14:59.976 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 17:14:59.982 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 17:29:59.970 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 17:29:59.972 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 17:29:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 17:44:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 17:44:59.975 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 17:44:59.980 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 17:59:59.878 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 17:59:59.881 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 17:59:59.887 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 17:59:59.889 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 17:59:59.890 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 17:59:59.971 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 17:59:59.971 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 17:59:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 18:14:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 18:14:59.976 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 18:14:59.981 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 18:29:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 18:29:59.980 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 18:29:59.986 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 18:44:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 18:44:59.978 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 18:44:59.983 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 18:59:59.875 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 18:59:59.876 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 18:59:59.881 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 18:59:59.892 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 18:59:59.893 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 18:59:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 18:59:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 18:59:59.987 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 19:14:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 19:14:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 19:14:59.985 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 19:29:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 19:29:59.970 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 19:29:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 19:44:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 19:44:59.980 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 19:44:59.988 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 19:59:59.880 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 19:59:59.881 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 19:59:59.887 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 19:59:59.889 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 19:59:59.891 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 19:59:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 19:59:59.975 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 19:59:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 20:14:59.970 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 20:14:59.971 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 20:14:59.976 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 20:29:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 20:29:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 20:29:59.982 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 20:44:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 20:44:59.976 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 20:44:59.980 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 20:59:59.876 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 20:59:59.877 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 20:59:59.883 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 20:59:59.885 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 20:59:59.886 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 20:59:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 20:59:59.981 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 20:59:59.990 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 21:14:59.973 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 21:14:59.975 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 21:14:59.980 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 21:29:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 21:29:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 21:29:59.983 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 21:44:59.971 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 21:44:59.972 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 21:44:59.977 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 21:59:59.877 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 21:59:59.878 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 21:59:59.883 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 21:59:59.894 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 21:59:59.895 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 21:59:59.972 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 21:59:59.973 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 21:59:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 22:14:59.970 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 22:14:59.971 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 22:14:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 22:29:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 22:29:59.971 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 22:29:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 22:44:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 22:44:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 22:44:59.985 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 22:59:59.883 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 22:59:59.885 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 22:59:59.891 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 22:59:59.894 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 22:59:59.895 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 22:59:59.975 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 22:59:59.977 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 22:59:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 23:14:59.978 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 23:14:59.980 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 23:14:59.986 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 23:29:59.977 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 23:29:59.979 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 23:29:59.982 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 23:44:59.974 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 23:44:59.975 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 23:44:59.979 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
+2019-04-22 23:59:59.873 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job started.
+2019-04-22 23:59:59.874 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Starting (re-)indexing of history entries of the last 24 hours.
+2019-04-22 23:59:59.880 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Starting re-indexing of 41 entries (total number) of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO with scrollMode=false...
+2019-04-22 23:59:59.882 user:  INFO 6368 --- [scheduling-1] o.p.f.persistence.database.DatabaseDao   : Re-indexing of 0 objects of type org.projectforge.framework.persistence.history.entities.PfHistoryMasterDO done.
+2019-04-22 23:59:59.883 user:  INFO 6368 --- [scheduling-1] o.p.business.jobs.CronHourlyJob          : Hourly job job finished.
+2019-04-22 23:59:59.969 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job started.
+2019-04-22 23:59:59.969 user:  INFO 6368 --- [scheduling-1] b.t.e.TeamEventExternalSubscriptionCache : Start updating TeamEventExternalSubscriptionCache.
+2019-04-22 23:59:59.971 user:  INFO 6368 --- [scheduling-1] o.p.b.j.ExternalCalendarSubscriptionJob  : External calendar subscriptions job finished.
