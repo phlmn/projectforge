@@ -3,11 +3,7 @@
 
 name: Build and Run Tests
 
-on:
-  push:
-    branches: any
-  pull_request:
-    branches: any
+on: [push, pull_request]
 
 jobs:
   build:
